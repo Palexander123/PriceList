@@ -1,0 +1,542 @@
+{
+ "meta": {
+  "generated_at": "2026-10-22T22:06:54Z",
+  "location": "Lyngby",
+  "sample": true,
+  "notes": [
+   "Sample data - not real offers"
+  ],
+  "errors": [],
+  "count": 24
+ },
+ "chains": [
+  {
+   "id": "Netto",
+   "label": "Netto",
+   "color": "#FFD950"
+  },
+  {
+   "id": "Føtex",
+   "label": "Føtex",
+   "color": "#1B4F9C"
+  },
+  {
+   "id": "SuperBrugsen",
+   "label": "SuperBrugsen",
+   "color": "#C31314"
+  }
+ ],
+ "categories": [
+  {
+   "id": "frost",
+   "label": "Frost"
+  },
+  {
+   "id": "fisk",
+   "label": "Fisk & skaldyr"
+  },
+  {
+   "id": "koed",
+   "label": "Kød & pålæg"
+  },
+  {
+   "id": "groent",
+   "label": "Frugt & grønt"
+  },
+  {
+   "id": "mejeri",
+   "label": "Mejeri & æg"
+  },
+  {
+   "id": "bagning",
+   "label": "Brød & bagning"
+  },
+  {
+   "id": "drikke",
+   "label": "Drikkevarer"
+  },
+  {
+   "id": "snacks",
+   "label": "Snacks & slik"
+  },
+  {
+   "id": "kolonial",
+   "label": "Kolonial"
+  },
+  {
+   "id": "husholdning",
+   "label": "Husholdning & pleje"
+  },
+  {
+   "id": "andet",
+   "label": "Andet"
+  }
+ ],
+ "offers": [
+  {
+   "id": "sal:sal-foetex-1:114",
+   "chain": "Føtex",
+   "kind": "clearance",
+   "store": "føtex Lyngby, Lyngby Storcenter 2",
+   "title": "Salatmix 150 g",
+   "description": "Tæt på udløb. 9 tilbage.",
+   "price": 7.0,
+   "was_price": 17.0,
+   "discount_pct": 59,
+   "unit_price": null,
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzRhNCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U2FsYXRtaXggMTUwPC90ZXh0Pjwvc3ZnPg==",
+   "valid_from": "2026-10-20T05:00:00Z",
+   "valid_to": "2026-10-24T21:00:00Z",
+   "url": null,
+   "category": "groent"
+  },
+  {
+   "id": "sal:sal-foetex-1:113",
+   "chain": "Føtex",
+   "kind": "clearance",
+   "store": "føtex Lyngby, Lyngby Storcenter 2",
+   "title": "Rugbrød hel 1 stk.",
+   "description": "Tæt på udløb. 3 tilbage.",
+   "price": 8.0,
+   "was_price": 18.0,
+   "discount_pct": 56,
+   "unit_price": null,
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzY1NCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UnVnYnLDuGQgaGVsIDwvdGV4dD48L3N2Zz4=",
+   "valid_from": "2026-10-20T05:00:00Z",
+   "valid_to": "2026-10-24T21:00:00Z",
+   "url": null,
+   "category": "bagning"
+  },
+  {
+   "id": "sal:sal-netto-1:112",
+   "chain": "Netto",
+   "kind": "clearance",
+   "store": "Netto Lyngby, Lyngby Hovedgade 1",
+   "title": "Skyr naturel 1 kg",
+   "description": "Tæt på udløb. 6 tilbage.",
+   "price": 10.0,
+   "was_price": 20.0,
+   "discount_pct": 50,
+   "unit_price": null,
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2RkZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U2t5ciBuYXR1cmVsPC90ZXh0Pjwvc3ZnPg==",
+   "valid_from": "2026-10-20T05:00:00Z",
+   "valid_to": "2026-10-24T21:00:00Z",
+   "url": null,
+   "category": "mejeri"
+  },
+  {
+   "id": "sal:sal-netto-1:111",
+   "chain": "Netto",
+   "kind": "clearance",
+   "store": "Netto Lyngby, Lyngby Hovedgade 1",
+   "title": "Hakkede kyllingelår 500 g",
+   "description": "Tæt på udløb. 4 tilbage.",
+   "price": 20.0,
+   "was_price": 40.0,
+   "discount_pct": 50,
+   "unit_price": null,
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2E4NicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SGFra2VkZSBreWxsPC90ZXh0Pjwvc3ZnPg==",
+   "valid_from": "2026-10-20T05:00:00Z",
+   "valid_to": "2026-10-24T21:00:00Z",
+   "url": null,
+   "category": "koed"
+  },
+  {
+   "id": "tjek:f5",
+   "chain": "Føtex",
+   "kind": "weekly",
+   "store": null,
+   "title": "Shampoo eller balsam",
+   "description": "400 ml",
+   "price": 25.0,
+   "was_price": 45.0,
+   "discount_pct": 44,
+   "unit_price": {
+    "value": 62.5,
+    "per": "l"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzVhOGZiMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U2hhbXBvbyBlbGxlciA8L3RleHQ+PC9zdmc+",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f5",
+   "category": "husholdning"
+  },
+  {
+   "id": "tjek:f1",
+   "chain": "Føtex",
+   "kind": "weekly",
+   "store": null,
+   "title": "Laks i skiver",
+   "description": "Røget, 200 g",
+   "price": 39.0,
+   "was_price": 59.0,
+   "discount_pct": 34,
+   "unit_price": {
+    "value": 195.0,
+    "per": "kg"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2Q5Nzc0ZicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGFrcyBpIHNraXZlcjwvdGV4dD48L3N2Zz4=",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f1",
+   "category": "fisk"
+  },
+  {
+   "id": "tjek:f3",
+   "chain": "Føtex",
+   "kind": "weekly",
+   "store": null,
+   "title": "Mozzarella",
+   "description": "125 g, 3 stk",
+   "price": 20.0,
+   "was_price": 30.0,
+   "discount_pct": 33,
+   "unit_price": {
+    "value": 53.33,
+    "per": "kg"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZTBjMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TW96emFyZWxsYTwvdGV4dD48L3N2Zz4=",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f3",
+   "category": "mejeri"
+  },
+  {
+   "id": "tjek:f6",
+   "chain": "Føtex",
+   "kind": "weekly",
+   "store": null,
+   "title": "Pommes frites",
+   "description": "Frost, 1 kg",
+   "price": 15.0,
+   "was_price": 22.0,
+   "discount_pct": 32,
+   "unit_price": {
+    "value": 15.0,
+    "per": "kg"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2Q0YTAxNycvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UG9tbWVzIGZyaXRlczwvdGV4dD48L3N2Zz4=",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f6",
+   "category": "frost"
+  },
+  {
+   "id": "tjek:s4",
+   "chain": "SuperBrugsen",
+   "kind": "weekly",
+   "store": null,
+   "title": "Chips",
+   "description": "Kims, 170 g",
+   "price": 15.0,
+   "was_price": 22.0,
+   "discount_pct": 32,
+   "unit_price": {
+    "value": 88.24,
+    "per": "kg"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2QwYTAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q2hpcHM8L3RleHQ+PC9zdmc+",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/SuperBrugsen?publication=cat0b1e8&offer=s4",
+   "category": "snacks"
+  },
+  {
+   "id": "tjek:s3",
+   "chain": "SuperBrugsen",
+   "kind": "weekly",
+   "store": null,
+   "title": "Kaffe formalet",
+   "description": "Merrild, 400 g",
+   "price": 40.0,
+   "was_price": 59.0,
+   "discount_pct": 32,
+   "unit_price": {
+    "value": 100.0,
+    "per": "kg"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzRiMmUxZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S2FmZmUgZm9ybWFsZXQ8L3RleHQ+PC9zdmc+",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/SuperBrugsen?publication=cat0b1e8&offer=s3",
+   "category": "drikke"
+  },
+  {
+   "id": "tjek:s5",
+   "chain": "SuperBrugsen",
+   "kind": "weekly",
+   "store": null,
+   "title": "Smør",
+   "description": "Lurpak, 200 g",
+   "price": 18.0,
+   "was_price": 26.0,
+   "discount_pct": 31,
+   "unit_price": {
+    "value": 90.0,
+    "per": "kg"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/SuperBrugsen?publication=cat0b1e8&offer=s5",
+   "category": "mejeri"
+  },
+  {
+   "id": "tjek:s2",
+   "chain": "SuperBrugsen",
+   "kind": "weekly",
+   "store": null,
+   "title": "Æbler Pink Lady",
+   "description": "1 kg",
+   "price": 20.0,
+   "was_price": 29.0,
+   "discount_pct": 31,
+   "unit_price": {
+    "value": 20.0,
+    "per": "kg"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2MwNDA2MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZibGVyIFBpbmsgTGFkPC90ZXh0Pjwvc3ZnPg==",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/SuperBrugsen?publication=cat0b1e8&offer=s2",
+   "category": "groent"
+  },
+  {
+   "id": "tjek:s1",
+   "chain": "SuperBrugsen",
+   "kind": "weekly",
+   "store": null,
+   "title": "Svinekotelet med ben",
+   "description": "Dansk, pr. kg",
+   "price": 45.0,
+   "was_price": 65.0,
+   "discount_pct": 31,
+   "unit_price": {
+    "value": 45.0,
+    "per": "kg"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzljNGE0YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U3ZpbmVrb3RlbGV0IG08L3RleHQ+PC9zdmc+",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/SuperBrugsen?publication=cat0b1e8&offer=s1",
+   "category": "koed"
+  },
+  {
+   "id": "tjek:f2",
+   "chain": "Føtex",
+   "kind": "weekly",
+   "store": null,
+   "title": "Tomater i bakke",
+   "description": "Danske, 500 g",
+   "price": 18.0,
+   "was_price": 25.0,
+   "discount_pct": 28,
+   "unit_price": {
+    "value": 36.0,
+    "per": "kg"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2IyMjIyMicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VG9tYXRlciBpIGJha2s8L3RleHQ+PC9zdmc+",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f2",
+   "category": "groent"
+  },
+  {
+   "id": "tjek:f4",
+   "chain": "Føtex",
+   "kind": "weekly",
+   "store": null,
+   "title": "Hvedemel",
+   "description": "2 kg",
+   "price": 14.0,
+   "was_price": 19.0,
+   "discount_pct": 26,
+   "unit_price": {
+    "value": 7.0,
+    "per": "kg"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2JmYTc3YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SHZlZGVtZWw8L3RleHQ+PC9zdmc+",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f4",
+   "category": "bagning"
+  },
+  {
+   "id": "tjek:n3",
+   "chain": "Netto",
+   "kind": "weekly",
+   "store": null,
+   "title": "Letmælk 1 liter",
+   "description": "Arla",
+   "price": 9.0,
+   "was_price": null,
+   "discount_pct": null,
+   "unit_price": {
+    "value": 9.0,
+    "per": "l"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzRhN2ZiNScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGV0bcOmbGsgMSBsaXRlPC90ZXh0Pjwvc3ZnPg==",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n3",
+   "category": "mejeri"
+  },
+  {
+   "id": "tjek:n6",
+   "chain": "Netto",
+   "kind": "weekly",
+   "store": null,
+   "title": "Rugbrød i skiver",
+   "description": "Gammeldags, 750 g",
+   "price": 12.0,
+   "was_price": null,
+   "discount_pct": null,
+   "unit_price": {
+    "value": 16.0,
+    "per": "kg"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzZiNGEyYicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UnVnYnLDuGQgaSBza2l2PC90ZXh0Pjwvc3ZnPg==",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n6",
+   "category": "bagning"
+  },
+  {
+   "id": "tjek:n2",
+   "chain": "Netto",
+   "kind": "weekly",
+   "store": null,
+   "title": "Økologiske bananer",
+   "description": "1 kg",
+   "price": 15.0,
+   "was_price": null,
+   "discount_pct": null,
+   "unit_price": {
+    "value": 15.0,
+    "per": "kg"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2M5YTQwMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w5hrb2xvZ2lza2UgYmFuPC90ZXh0Pjwvc3ZnPg==",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n2",
+   "category": "groent"
+  },
+  {
+   "id": "tjek:s6",
+   "chain": "SuperBrugsen",
+   "kind": "weekly",
+   "store": null,
+   "title": "Æg, frilands",
+   "description": "10 stk.",
+   "price": 22.0,
+   "was_price": null,
+   "discount_pct": null,
+   "unit_price": null,
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2NhYTg2YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZnLCBmcmlsYW5kczwvdGV4dD48L3N2Zz4=",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/SuperBrugsen?publication=cat0b1e8&offer=s6",
+   "category": "mejeri"
+  },
+  {
+   "id": "tjek:n8",
+   "chain": "Netto",
+   "kind": "weekly",
+   "store": null,
+   "title": "Kommende: Julekalender chokolade",
+   "description": "Næste uge",
+   "price": 25.0,
+   "was_price": null,
+   "discount_pct": null,
+   "unit_price": {
+    "value": 250.0,
+    "per": "kg"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzdhMmE1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S29tbWVuZGU6IEp1bGU8L3RleHQ+PC9zdmc+",
+   "valid_from": "2030-01-01T00:00:00Z",
+   "valid_to": "2030-01-08T00:00:00Z",
+   "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n8",
+   "category": "snacks"
+  },
+  {
+   "id": "tjek:n1",
+   "chain": "Netto",
+   "kind": "weekly",
+   "store": null,
+   "title": "Hakket oksekød 8-12%",
+   "description": "Dansk, 500 g",
+   "price": 32.0,
+   "was_price": null,
+   "discount_pct": null,
+   "unit_price": {
+    "value": 64.0,
+    "per": "kg"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzhhM2IyZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SGFra2V0IG9rc2Vrw7hkPC90ZXh0Pjwvc3ZnPg==",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n1",
+   "category": "koed"
+  },
+  {
+   "id": "tjek:n5",
+   "chain": "Netto",
+   "kind": "weekly",
+   "store": null,
+   "title": "Kyllingebrystfilet",
+   "description": "Frost, 1 kg",
+   "price": 49.0,
+   "was_price": null,
+   "discount_pct": null,
+   "unit_price": {
+    "value": 49.0,
+    "per": "kg"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2M5OGQ1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S3lsbGluZ2VicnlzdGY8L3RleHQ+PC9zdmc+",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n5",
+   "category": "koed"
+  },
+  {
+   "id": "tjek:n4",
+   "chain": "Netto",
+   "kind": "weekly",
+   "store": null,
+   "title": "Coca-Cola, Fanta eller Sprite",
+   "description": "8 x 50 cl",
+   "price": 79.0,
+   "was_price": null,
+   "discount_pct": null,
+   "unit_price": {
+    "value": 19.75,
+    "per": "l"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2IwMjAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q29jYS1Db2xhLCBGYW48L3RleHQ+PC9zdmc+",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n4",
+   "category": "drikke"
+  },
+  {
+   "id": "tjek:n7",
+   "chain": "Netto",
+   "kind": "weekly",
+   "store": null,
+   "title": "Tuborg Classic",
+   "description": "24 x 33 cl",
+   "price": 119.0,
+   "was_price": null,
+   "discount_pct": null,
+   "unit_price": {
+    "value": 15.03,
+    "per": "l"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzJkNmEzZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VHVib3JnIENsYXNzaWM8L3RleHQ+PC9zdmc+",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n7",
+   "category": "drikke"
+  }
+ ]
+}

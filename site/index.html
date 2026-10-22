@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tilbud i Lyngby</title>
+<meta name="description" content="Ugens tilbud og madspild fra Netto, Føtex og SuperBrugsen i Lyngby, samlet ét sted.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23ffd23f'/%3E%3Ctext x='16' y='23' font-size='20' font-weight='800' text-anchor='middle' font-family='sans-serif' fill='%231a1500'%3Ekr%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #edf0f3;
+    --surface: #ffffff;
+    --ink: #15202b;
+    --muted: #596675;
+    --line: #d6dce3;
+    --tag: #ffd23f;
+    --tag-ink: #1a1500;
+    --save: #0a7a49;
+    --save-bg: #dcf3e7;
+    --focus: #1b5fd1;
+    --heart: #d6244a;
+    --font: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #10161c; --surface: #19222b; --ink: #eef2f6; --muted: #9aa8b6;
+      --line: #2b3844; --save: #55d69b; --save-bg: #123a29; --focus: #6aa2ff; --heart: #ff6b8a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.45 var(--font); }
+  button, input, select { font: inherit; color: inherit; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 16px; }
+
+  header { padding: 28px 0 12px; }
+  h1 { margin: 0; font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1; font-weight: 800; font-stretch: 75%; letter-spacing: -0.01em; }
+  .sub { margin: 8px 0 0; color: var(--muted); }
+  .notice { margin: 12px 0 0; padding: 10px 14px; border-radius: 10px; background: var(--tag); color: var(--tag-ink); font-weight: 600; }
+  .notice.warn { background: transparent; border: 1px solid var(--line); color: var(--muted); font-weight: 400; }
+
+  .controls { padding: 10px 0 12px; border-bottom: 1px solid var(--line); }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
+  .row:first-child { margin-top: 0; }
+  .search { flex: 1 1 240px; min-width: 0; padding: 11px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); }
+  .select { padding: 11px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); }
+
+  .chip { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; white-space: nowrap; font-weight: 600; }
+  .chip:hover { border-color: var(--muted); }
+  .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .chip .dot { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,.25); flex: none; }
+  .chip.store[aria-pressed="true"] { background: var(--c); border-color: var(--c); color: var(--cink); }
+  .chip.store[aria-pressed="true"] .dot { background: var(--cink); border-color: transparent; }
+  .chips-scroll { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: thin; width: 100%; }
+  .fav-chip[aria-pressed="true"] { background: var(--heart); border-color: var(--heart); color: #fff; }
+  .toggle { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); cursor: pointer; }
+  .toggle input { width: 18px; height: 18px; accent-color: var(--ink); }
+
+  .count { margin: 16px 0 12px; color: var(--muted); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; padding: 0 0 56px; list-style: none; margin: 0; }
+  .card { position: relative; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .pic { position: relative; aspect-ratio: 4 / 3; background: #fff; display: grid; place-items: center; }
+  .pic img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; display: block; }
+  .pic .ph { position: absolute; inset: 0; display: grid; place-items: center; font-size: 3rem; font-weight: 800; color: rgba(255,255,255,.9); background: var(--c); }
+  .store-tag { z-index: 2; position: absolute; left: 10px; top: 10px; padding: 3px 10px; border-radius: 999px; background: var(--c); color: var(--cink); font-size: .8rem; font-weight: 700; box-shadow: 0 1px 2px rgba(0,0,0,.25); }
+  .heart { z-index: 2; position: absolute; right: 8px; top: 8px; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,.25); }
+  .heart svg { width: 22px; height: 22px; fill: none; stroke: #55616e; stroke-width: 2; transition: transform .15s; }
+  .heart[aria-pressed="true"] svg { fill: var(--heart); stroke: var(--heart); transform: scale(1.1); }
+  .body { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px 14px; flex: 1; }
+  .title { margin: 0; font-size: 1.02rem; font-weight: 700; line-height: 1.25; }
+  .desc { margin: 0; color: var(--muted); font-size: .88rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .store-line { margin: 0; color: var(--muted); font-size: .82rem; }
+
+  /* The price tag imitates a Danish shelf label: large kroner, small raised øre. */
+  .price-row { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 8px; margin-top: auto; padding-top: 10px; }
+  .tag { background: var(--tag); color: var(--tag-ink); border-radius: 6px 6px 6px 0; padding: 4px 12px 6px; display: inline-flex; align-items: flex-start; line-height: .95; font-stretch: 75%; font-weight: 800; }
+  .tag .kr { font-size: 2.4rem; letter-spacing: -.02em; }
+  .tag .ore { font-size: 1.05rem; margin-top: 3px; margin-left: 2px; }
+  .tag .dash { font-size: 1.6rem; margin: 0 0 0 1px; align-self: flex-end; line-height: 1; }
+  .valid a { color: var(--focus); font-weight: 600; }
+  .side { text-align: right; display: flex; flex-direction: column; gap: 3px; align-items: flex-end; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 6px; background: var(--save-bg); color: var(--save); font-weight: 800; font-size: .95rem; }
+  .was { color: var(--muted); text-decoration: line-through; font-size: .88rem; }
+  .unit { color: var(--muted); font-size: .8rem; }
+  .valid { margin: 8px 0 0; padding-top: 8px; border-top: 1px dashed var(--line); font-size: .82rem; color: var(--muted); display: flex; justify-content: space-between; gap: 8px; }
+  .madspild { font-weight: 700; color: var(--save); }
+
+  .empty { grid-column: 1 / -1; text-align: center; padding: 56px 16px; color: var(--muted); }
+  .empty h2 { margin: 0 0 6px; color: var(--ink); font-size: 1.3rem; }
+  .btn { margin-top: 14px; padding: 10px 18px; border-radius: 10px; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); font-weight: 700; cursor: pointer; }
+
+  footer { padding: 0 0 40px; color: var(--muted); font-size: .85rem; }
+  footer p { margin: 4px 0; max-width: 70ch; }
+
+  @media (max-width: 520px) { .grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } .tag .kr { font-size: 2rem; } .body { padding: 10px; } }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <h1>Tilbud i Lyngby</h1>
+  <p class="sub" id="sub">Henter tilbud…</p>
+  <div id="notices"></div>
+</header>
+
+<div class="controls">
+  <div class="wrap">
+    <div class="row">
+      <input class="search" id="q" type="search" placeholder="Søg efter fx smør, kylling eller kaffe" aria-label="Søg i tilbud" autocomplete="off">
+      <select class="select" id="sort" aria-label="Sortér efter">
+        <option value="discount">Største rabat</option>
+        <option value="price">Laveste pris</option>
+        <option value="unit">Laveste kilopris</option>
+        <option value="ending">Slutter snarest</option>
+      </select>
+    </div>
+    <div class="row"><div class="chips-scroll" id="stores" role="group" aria-label="Butikker"></div></div>
+    <div class="row"><div class="chips-scroll" id="cats" role="group" aria-label="Kategorier"></div></div>
+    <div class="row">
+      <button class="chip fav-chip" id="favOnly" aria-pressed="false">♥ Mine favoritter <span id="favCount"></span></button>
+      <label class="toggle"><input type="checkbox" id="upcoming"> Vis også kommende tilbud</label>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <p class="count" id="count" aria-live="polite"></p>
+  <ul class="grid" id="grid"></ul>
+</main>
+
+<footer class="wrap">
+  <p>Priserne kommer fra butikkernes ugeaviser og fra Salling Groups madspild-oversigt. Tjek altid prisen i butikken, da tilbud kan variere fra butik til butik.</p>
+  <p>Favoriter gemmes kun i denne browser. Rydder du browserens data, forsvinder de.</p>
+</footer>
+
+<script>
+(() => {
+  const FAV_KEY = "tilbud:favoritter:v1";
+  const $ = (id) => document.getElementById(id);
+  const state = { data: null, q: "", sort: "discount", stores: new Set(), cat: "alle", favOnly: false, upcoming: false, favs: {} };
+
+  // ---- favourites (per product name, so they survive the weekly leaflet change)
+  const favKey = (title) => title.toLowerCase().replace(/\s+/g, " ").trim();
+  const loadFavs = () => { try { return JSON.parse(localStorage.getItem(FAV_KEY)) || {}; } catch { return {}; } };
+  const saveFavs = () => { try { localStorage.setItem(FAV_KEY, JSON.stringify(state.favs)); } catch {} };
+
+  // ---- formatting
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const money = (n) => n.toLocaleString("da-DK", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const day = (iso) => new Date(iso).toLocaleDateString("da-DK", { weekday: "short", day: "numeric", month: "short", timeZone: "Europe/Copenhagen" });
+  const inkFor = (hex) => {
+    const n = parseInt(hex.slice(1), 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255;
+    return (0.299 * r + 0.587 * g + 0.114 * b) > 160 ? "#15202b" : "#ffffff";
+  };
+  function priceTag(p) {
+    const whole = Math.floor(p + 1e-9), ore = Math.round((p - whole) * 100);
+    return `<span class="tag" aria-label="${money(p)} kroner"><span class="kr">${whole}</span>${ore ? `<span class="ore">${String(ore).padStart(2, "0")}</span>` : `<span class="dash">,-</span>`}</span>`;
+  }
+
+  // ---- filtering and sorting
+  function visible() {
+    const now = Date.now(), q = state.q.trim().toLowerCase();
+    let list = state.data.offers.filter((o) => {
+      if (!state.upcoming && o.valid_from && Date.parse(o.valid_from) > now) return false;
+      if (state.stores.size && !state.stores.has(o.chain)) return false;
+      if (state.cat !== "alle" && o.category !== state.cat) return false;
+      if (state.favOnly && !state.favs[favKey(o.title)]) return false;
+      if (q && !(o.title + " " + (o.description || "")).toLowerCase().includes(q)) return false;
+      return true;
+    });
+    const by = {
+      discount: (a, b) => (b.discount_pct || 0) - (a.discount_pct || 0) || a.price - b.price,
+      price: (a, b) => a.price - b.price,
+      unit: (a, b) => (a.unit_price ? a.unit_price.value : 1e9) - (b.unit_price ? b.unit_price.value : 1e9) || a.price - b.price,
+      ending: (a, b) => Date.parse(a.valid_to || "2100-01-01") - Date.parse(b.valid_to || "2100-01-01"),
+    }[state.sort];
+    return list.sort(by);
+  }
+
+  // ---- rendering
+  function cardHtml(o, chains) {
+    const c = chains[o.chain] || { color: "#555" };
+    const fav = !!state.favs[favKey(o.title)];
+    const upcoming = o.valid_from && Date.parse(o.valid_from) > Date.now();
+    const unit = o.unit_price ? `${money(o.unit_price.value)} kr/${o.unit_price.per === "l" ? "l" : "kg"}` : "";
+    const valid = upcoming ? `Fra ${day(o.valid_from)}` : o.valid_to ? `Til ${day(o.valid_to)}` : "";
+    const link = o.url ? `<a href="${esc(o.url)}" target="_blank" rel="noopener">Se i avis</a>` : "";
+    return `<li class="card" style="--c:${c.color};--cink:${inkFor(c.color)}" data-key="${esc(favKey(o.title))}">
+      <div class="pic">
+        <span class="ph" aria-hidden="true">${esc(o.title.charAt(0))}</span>
+        ${o.image ? `<img src="${esc(o.image)}" alt="" loading="lazy" decoding="async">` : ""}
+        <span class="store-tag">${esc(o.chain)}</span>
+        <button class="heart" aria-pressed="${fav}" aria-label="${fav ? "Fjern fra favoritter" : "Gem som favorit"}: ${esc(o.title)}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.7 5 6.1 5c2 0 3.4 1.1 4.2 2.4h3.4C14.5 6.1 15.9 5 17.9 5c3.4 0 5.2 3.4 3.7 6.8C19.5 16.4 12 21 12 21z"/></svg>
+        </button>
+      </div>
+      <div class="body">
+        <h2 class="title">${esc(o.title)}</h2>
+        ${o.description && o.kind !== "clearance" ? `<p class="desc">${esc(o.description)}</p>` : ""}
+        ${o.store ? `<p class="store-line">${esc(o.store)}</p>` : ""}
+        <div class="price-row">
+          ${priceTag(o.price)}
+          <div class="side">
+            ${o.discount_pct ? `<span class="badge">−${o.discount_pct}%</span>` : ""}
+            ${o.was_price ? `<span class="was">${money(o.was_price)} kr</span>` : ""}
+            ${unit ? `<span class="unit">${unit}</span>` : ""}
+          </div>
+        </div>
+        <p class="valid"><span>${o.kind === "clearance" ? '<span class="madspild">Madspild</span> ' : ""}${valid}</span>${link}</p>
+      </div>
+    </li>`;
+  }
+
+  function render() {
+    const chains = Object.fromEntries(state.data.chains.map((c) => [c.label, c]));
+    const list = visible();
+    $("count").textContent = list.length === 1 ? "1 tilbud" : `${list.length} tilbud`;
+    $("favCount").textContent = Object.keys(state.favs).length ? `(${Object.keys(state.favs).length})` : "";
+    $("favOnly").setAttribute("aria-pressed", state.favOnly);
+    document.querySelectorAll("#cats .chip").forEach((b) => b.setAttribute("aria-pressed", b.dataset.cat === state.cat));
+    document.querySelectorAll("#stores .chip").forEach((b) => b.setAttribute("aria-pressed", state.stores.has(b.dataset.store)));
+    if (!list.length) {
+      const noFavs = state.favOnly && !Object.keys(state.favs).length;
+      $("grid").innerHTML = `<li class="empty"><h2>${noFavs ? "Du har ingen favoritter endnu" : "Ingen tilbud matcher"}</h2>
+        <p>${noFavs ? "Tryk på hjertet på et tilbud for at gemme produktet. Så kan du se det her, hver gang det er på tilbud." : "Prøv at fjerne et filter eller søge efter noget andet."}</p>
+        <button class="btn" id="reset">Nulstil filtre</button></li>`;
+      return;
+    }
+    $("grid").innerHTML = list.map((o) => cardHtml(o, chains)).join("");
+  }
+
+  function buildControls() {
+    const { chains, categories, offers } = state.data;
+    $("stores").innerHTML = chains.map((c) =>
+      `<button class="chip store" style="--c:${c.color};--cink:${inkFor(c.color)}" data-store="${esc(c.label)}" aria-pressed="false"><span class="dot" style="background:${c.color}"></span>${esc(c.label)}</button>`).join("");
+    const present = new Set(offers.map((o) => o.category));
+    $("cats").innerHTML = `<button class="chip" data-cat="alle" aria-pressed="true">Alle</button>` +
+      categories.filter((c) => present.has(c.id)).map((c) => `<button class="chip" data-cat="${esc(c.id)}" aria-pressed="false">${esc(c.label)}</button>`).join("");
+  }
+
+  function header() {
+    const m = state.data.meta;
+    const when = new Date(m.generated_at).toLocaleString("da-DK", { weekday: "long", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Copenhagen" });
+    $("sub").textContent = `Netto, Føtex og SuperBrugsen. Opdateret ${when}.`;
+    let html = "";
+    if (m.sample) html += `<p class="notice">Det her er eksempeldata, ikke rigtige tilbud. Kør hentningen for at se de rigtige priser.</p>`;
+    if (m.errors && m.errors.length) html += `<p class="notice warn">Nogle tilbud kunne ikke hentes ved sidste opdatering: ${esc(m.errors.join("; "))}</p>`;
+    $("notices").innerHTML = html;
+  }
+
+  // ---- events
+  document.addEventListener("click", (e) => {
+    const t = e.target;
+    const heart = t.closest(".heart");
+    if (heart) {
+      const card = heart.closest(".card"), key = card.dataset.key;
+      const title = card.querySelector(".title").textContent;
+      if (state.favs[key]) delete state.favs[key]; else state.favs[key] = title;
+      saveFavs();
+      // update every card with this product without re-rendering the whole grid
+      document.querySelectorAll(".card").forEach((c) => {
+        if (c.dataset.key !== key) return;
+        const b = c.querySelector(".heart"), on = !!state.favs[key];
+        b.setAttribute("aria-pressed", on);
+        b.setAttribute("aria-label", `${on ? "Fjern fra favoritter" : "Gem som favorit"}: ${title}`);
+      });
+      $("favCount").textContent = Object.keys(state.favs).length ? `(${Object.keys(state.favs).length})` : "";
+      if (state.favOnly && !state.favs[key]) render();
+      return;
+    }
+    const store = t.closest("[data-store]");
+    if (store) { const s = store.dataset.store; state.stores.has(s) ? state.stores.delete(s) : state.stores.add(s); return render(); }
+    const cat = t.closest("[data-cat]");
+    if (cat) { state.cat = cat.dataset.cat; return render(); }
+    if (t.closest("#favOnly")) { state.favOnly = !state.favOnly; return render(); }
+    if (t.closest("#reset")) {
+      Object.assign(state, { q: "", stores: new Set(), cat: "alle", favOnly: false });
+      $("q").value = ""; return render();
+    }
+  });
+  $("q").addEventListener("input", (e) => { state.q = e.target.value; render(); });
+  $("sort").addEventListener("change", (e) => { state.sort = e.target.value; render(); });
+  $("upcoming").addEventListener("change", (e) => { state.upcoming = e.target.checked; render(); });
+  // image load errors do not bubble, so listen in the capture phase
+  document.addEventListener("error", (e) => { if (e.target.tagName === "IMG") e.target.remove(); }, true);
+
+  // ---- start
+  state.favs = loadFavs();
+  fetch("data/offers.json", { cache: "no-cache" })
+    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((data) => { state.data = data; header(); buildControls(); render(); })
+    .catch(() => {
+      $("sub").textContent = "Tilbuddene kunne ikke indlæses.";
+      $("grid").innerHTML = `<li class="empty"><h2>Der er ingen data endnu</h2><p>Siden henter tilbud fra data/offers.json. Kør hentningen, eller vent på næste automatiske opdatering.</p></li>`;
+    });
+})();
+</script>
+</body>
+</html>

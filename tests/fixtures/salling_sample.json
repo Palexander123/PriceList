@@ -1,0 +1,100 @@
+[
+ {
+  "store": {
+   "id": "sal-netto-1",
+   "brand": "netto",
+   "name": "Netto Lyngby",
+   "address": {
+    "street": "Lyngby Hovedgade 1",
+    "zip": "2800"
+   }
+  },
+  "clearances": [
+   {
+    "offer": {
+     "newPrice": 20,
+     "originalPrice": 40,
+     "percentDiscount": 50.0,
+     "startTime": "2026-10-20T05:00:00.000Z",
+     "endTime": "2026-10-24T21:00:00.000Z",
+     "stock": 4
+    },
+    "product": {
+     "description": "Hakkede kyllingelår 500 g",
+     "ean": "111",
+     "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2E4NicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SGFra2VkZSBreWxsPC90ZXh0Pjwvc3ZnPg==",
+     "categories": {
+      "da": "kød"
+     }
+    }
+   },
+   {
+    "offer": {
+     "newPrice": 10,
+     "originalPrice": 20,
+     "percentDiscount": 50.0,
+     "startTime": "2026-10-20T05:00:00.000Z",
+     "endTime": "2026-10-24T21:00:00.000Z",
+     "stock": 6
+    },
+    "product": {
+     "description": "Skyr naturel 1 kg",
+     "ean": "112",
+     "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2RkZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U2t5ciBuYXR1cmVsPC90ZXh0Pjwvc3ZnPg==",
+     "categories": {
+      "da": "mejeri"
+     }
+    }
+   }
+  ]
+ },
+ {
+  "store": {
+   "id": "sal-foetex-1",
+   "brand": "foetex",
+   "name": "føtex Lyngby",
+   "address": {
+    "street": "Lyngby Storcenter 2",
+    "zip": "2800"
+   }
+  },
+  "clearances": [
+   {
+    "offer": {
+     "newPrice": 8,
+     "originalPrice": 18,
+     "percentDiscount": 55.6,
+     "startTime": "2026-10-20T05:00:00.000Z",
+     "endTime": "2026-10-24T21:00:00.000Z",
+     "stock": 3
+    },
+    "product": {
+     "description": "Rugbrød hel 1 stk.",
+     "ean": "113",
+     "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzY1NCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UnVnYnLDuGQgaGVsIDwvdGV4dD48L3N2Zz4=",
+     "categories": {
+      "da": "brød"
+     }
+    }
+   },
+   {
+    "offer": {
+     "newPrice": 7,
+     "originalPrice": 17,
+     "percentDiscount": 58.8,
+     "startTime": "2026-10-20T05:00:00.000Z",
+     "endTime": "2026-10-24T21:00:00.000Z",
+     "stock": 9
+    },
+    "product": {
+     "description": "Salatmix 150 g",
+     "ean": "114",
+     "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzRhNCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U2FsYXRtaXggMTUwPC90ZXh0Pjwvc3ZnPg==",
+     "categories": {
+      "da": "frugt og grønt"
+     }
+    }
+   }
+  ]
+ }
+]
