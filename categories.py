@@ -26,7 +26,7 @@ CONSUMABLE, JUNK, OTHER_GROUP = "consumable", "junk", "other"
 JUNK_RULES = [
     ("menu", "Menuer & buffet", JUNK, [
         "julefrokost", "nytårsbuffet", "buffet", "kuvert", "catering", "^menu",
-        "julemenu", "påskemenu", "selskabsmad", "forudbestil", "^brunch", "tapasbord",
+        "julemenu", "påskemenu", "selskabsmad", "forudbestil", "^brunch ", "tapasbord",
         "gaveæske", "madkasse", "mad ud af huset",
     ]),
     ("legetoej", "Legetøj & spil", JUNK, [
@@ -35,6 +35,11 @@ JUNK_RULES = [
         "fodbold", "sparkecykel", "skateboard", "trampolin", "pokemon", "pokémon",
         "nerf", "squishmallow", "klistermærke", "malebog", "farveblyant", "kreakasse",
         "^bold ", "gokart", "samlebilleder", "byttekort",
+        "byggeri", "hovedkvarter", "rideskole", "hestestald", "legesæt", "forvandlings",
+        "^mech", "ninja", "brandbil", "entreprenørmaskine", "glampinghytte", "dyrlægeklinik",
+        "trailer", "vandland", "racerbil", "dragebæst", "spiderman", "spidey", "minecraft",
+        "paw patrol", "peppa", "disney", "marvel", "bluey", "^tog med", "fartøj",
+        "motorcykeltransporter", "affaldssorteringsvogn", "pizzeria med", "kreativt",
     ]),
     ("elektronik", "Elektronik", JUNK, [
         "^tv ", "^tv-", "fjernsyn", "høretelefon", "hovedtelefon", "earbuds",
@@ -61,8 +66,14 @@ JUNK_RULES = [
 ]
 
 FOOD_RULES = [
+    # Drinks that contain a fruit or similar word ("æblejuice") must be caught before the
+    # fruit rule. The category appears once in the site's list.
+    ("drikke", "Drikkevarer", CONSUMABLE, [
+        "juice", "smoothie", "sodavand", "energidrik", "danskvand", "lemonade", "iste",
+        "kakaomælk", "booster", "cocktail", "ready to drink",
+    ]),
     ("frost", "Frost", CONSUMABLE, [
-        "frost", "frys", "isbæger", "kæmpeis", "flødeis", "pinde-is", "pizza",
+        "frost", "frysevare", "isbæger", "kæmpeis", "flødeis", "pinde-is", "pizza",
         "pommes", "nuggets",
     ]),
     ("fisk", "Fisk & skaldyr", CONSUMABLE, [
@@ -73,11 +84,11 @@ FOOD_RULES = [
         "kød", "oksekød", "svinekød", "kylling", "kalkun", "bacon", "pølse",
         "frikadelle", "medister", "kotelet", "mørbrad", "bøf", "steg", "culotte",
         "schnitzel", "pålæg", "skinke", "hakket", "flæsk", "ribbe", "leverpostej",
-        "salami", "bryst", "lår", "and ", "gris", "okse", "lam", "kebab",
+        "salami", "pepperoni", "bryst", "lår", "and ", "gris", "okse", "lam", "kebab",
         "spegepølse", "hotdog", "pulled",
     ]),
     ("groent", "Frugt & grønt", CONSUMABLE, [
-        "æble", "pære", "banan", "appelsin", "citron", "lime", "melon", "drue",
+        "æble", "pære", "banan", "appelsin", "citron", "lime", "melon", "*druer",
         "jordbær", "blåbær", "hindbær", "bær", "mango", "ananas", "avocado",
         "tomat", "agurk", "salat", "spinat", "kål", "broccoli", "blomkål",
         "gulerod", "kartof", "løg", "hvidløg", "peberfrugt", "squash", "svampe",
@@ -91,14 +102,17 @@ FOOD_RULES = [
         "minimælk", "letmælk", "kærnemælk", "lurpak", "arla", "cheasy", "hytteost",
     ]),
     ("bagning", "Brød & bagning", CONSUMABLE, [
-        "brød", "rugbrød", "toast", "bolle", "kage", "croissant", "tebirkes",
+        "*brød", "toast", "bolle", "kage", "croissant", "tebirkes",
         "wienerbrød", "mel", "sukker", "gær", "bagepulver", "vanille", "kakao",
         "bagning", "flormelis", "marcipan", "tærte", "boller", "baguette",
         "morgenbrød", "kiks", "muffin", "pandekage", "dej", "cupcake",
         "hvedemel", "bagemel", "durummel", "rugmel", "fuldkornsmel",
     ]),
     ("drikke", "Drikkevarer", CONSUMABLE, [
-        "øl", "vin", "cola", "sodavand", "juice", "vand", "danskvand", "saft",
+        "øl", "^vin ", "cola", "sodavand", "juice", "^vand ", "danskvand", "saft",
+        "appassimento", "kildevand", "chardonnay", "merlot", "cabernet", "sauvignon",
+        "rioja", "chianti", "pinot", "shiraz", "malbec", "primitivo", "^cava ", "julebryg",
+        "påskebryg", "kondi", "faxe", "harboe", "^vila ", "coteaux", "ripasso", "amarone",
         "cider", "sprit", "vodka", "whisky", "gin", "rom ", "kaffe", "te ",
         "energidrik", "monster", "red bull", "tuborg", "carlsberg", "fanta",
         "sprite", "pepsi", "smoothie", "lemonade", "kakaomælk", "iste", "bouillon",
@@ -106,7 +120,7 @@ FOOD_RULES = [
         "havredrik", "plantedrik", "sojadrik", "mandeldrik",
     ]),
     ("snacks", "Snacks & slik", CONSUMABLE, [
-        "chips", "slik", "chokolade", "lakrids", "vingummi", "popcorn", "nødder",
+        "chips", "slik", "chokolade", "lakrids", "mentos", "tyggegummi", "vingummi", "popcorn", "nødder",
         "peanuts", "snack", "bolsjer", "karamel", "kex", "is ", "flødeboller",
         "marabou", "toms", "haribo", "nougat", "bland selv",
     ]),
@@ -137,11 +151,12 @@ MENU_DESCRIPTION_HINTS = ("kuvert", "bestil senest", "afhentning", "forudbestil"
 def _kw_pattern(w: str) -> str:
     w = w.lower()
     explicit_start = w.startswith("^")
-    w = w.lstrip("^")
+    anywhere = w.startswith("*")   # "*brød" also matches the end of "levebrød"
+    w = w.lstrip("^*")
     end_bound = w.endswith(" ")
     core = w.strip()
     body = re.escape(core)
-    if explicit_start or len(core) < 5:
+    if explicit_start or (len(core) < 5 and not anywhere):
         body = r"(?<![a-zæøå])" + body
     if end_bound:
         body += r"(?![a-zæøå])"
@@ -165,19 +180,36 @@ def _match(compiled, text: str):
     return None
 
 
-def categorize(title: str, description: str = "") -> str:
-    """Return a category id. Junk is judged by the title, food by the title first
-    and the description as a fallback ("Kyllingebryst, frost" is meat, not frost)."""
-    hit = _match(_JUNK, title)
-    if hit:
-        return hit
+def classify(title: str, description: str = ""):
+    """Return (category id, reason). The reason is the keyword that triggered a junk
+    rule, so a wrong match is easy to find; it is None for everything else.
+
+    Junk is judged by the title, food by the title first and the description as a
+    fallback ("Kyllingebryst, frost" is meat, not frost)."""
+    t = (title or "").lower()
+    for cid, _label, _group, pattern in _JUNK:
+        m = pattern.search(t)
+        if m:
+            return cid, m.group(0).strip()
     desc = (description or "").lower()
-    if any(h in desc for h in MENU_DESCRIPTION_HINTS):
-        return "menu"
-    return _match(_FOOD, title) or _match(_FOOD, f"{title} {description}") or OTHER[0]
+    for hint in MENU_DESCRIPTION_HINTS:
+        if hint in desc:
+            return "menu", f"beskrivelse: {hint}"
+    cat = _match(_FOOD, title) or _match(_FOOD, f"{title} {description}") or OTHER[0]
+    return cat, None
+
+
+def categorize(title: str, description: str = "") -> str:
+    """Return just the category id."""
+    return classify(title, description)[0]
 
 
 def category_list():
     """Ordered [{id, label, group}] for the site's filter chips."""
-    rules = FOOD_RULES + [OTHER[:2] + (OTHER[2], [])] + JUNK_RULES
-    return [{"id": cid, "label": label, "group": group} for cid, label, group, _ in rules]
+    rules = FOOD_RULES + [(OTHER[0], OTHER[1], OTHER[2], [])] + JUNK_RULES
+    seen, items = set(), []
+    for cid, label, group, _ in rules:
+        if cid not in seen:  # a category can have several rule lists
+            seen.add(cid)
+            items.append({"id": cid, "label": label, "group": group})
+    return items

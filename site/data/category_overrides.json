@@ -1,0 +1,3621 @@
+{
+ "version": 1,
+ "items": {
+  "vila annone": {
+   "c": "drikke",
+   "t": "rødvin"
+  },
+  "veronia appassimento": {
+   "c": "drikke",
+   "t": "rødvin"
+  },
+  "mutti tomater": {
+   "c": "kolonial",
+   "t": "tomat"
+  },
+  "jam shed": {
+   "c": "drikke",
+   "t": "rødvin"
+  },
+  "gropper iskaffe": {
+   "c": "drikke",
+   "t": "iskaffe"
+  },
+  "ready to drink cocktail": {
+   "c": "drikke",
+   "t": "cocktail"
+  },
+  "løg": {
+   "c": "groent",
+   "t": "løg"
+  },
+  "egelykke paté med champignon/grønne peberkorn": {
+   "c": "koed",
+   "t": "leverpostej"
+  },
+  "center": {
+   "c": "snacks",
+   "t": "chokolade"
+  },
+  "kohberg fuldkornsburgerboller": {
+   "c": "bagning",
+   "t": "burgerbolle"
+  },
+  "mamone tranebær": {
+   "c": "snacks",
+   "t": "tranebær"
+  },
+  "dream": {
+   "c": "drikke",
+   "t": "rødvin"
+  },
+  "kreativt byggeri – medium": {
+   "c": "legetoej",
+   "t": "byggelegetøj"
+  },
+  "pizzeria med udbringningsfartøjer": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "team spideys hovedkvarter": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "hestestald og rideskole": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "glampinghytte i naturen": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "coteaux d´aix en provence eller district 7": {
+   "c": "drikke",
+   "t": "rødvin"
+  },
+  "hardys stamp": {
+   "c": "drikke",
+   "t": "rødvin"
+  },
+  "sjov dag i vandland": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "heste- og føltrailer": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "wyldfyres forvandlingsdrage-mech": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "kreativ dukkehuskuffert": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "x-1 ninjabil – 15-års jubilæum": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "motorcykeltransporter": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "zilvar og dragebæstet grimtak": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "tog med tal – lær at tælle": {
+   "c": "legetoej",
+   "t": "tog"
+  },
+  "kasse med klodser": {
+   "c": "legetoej",
+   "t": "byggeklodser"
+  },
+  "dyrlægeklinik": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "brandbil med slange og brandmand": {
+   "c": "legetoej",
+   "t": "brandbil"
+  },
+  "traktor og marked": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "kreative fartøjer": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "3-i-1 entreprenørmaskiner": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "jays forvandlingsbil": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "morel gigondas, fragments de loire sancerre eller villa da vinci sto ippolito": {
+   "c": "drikke",
+   "t": "rødvin"
+  },
+  "affaldssorteringsvogn": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "enhjørningedrømmecafé": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "lianns families hus": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "vogn til mountainbike-eventyr": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "harboe julebryg": {
+   "c": "drikke",
+   "t": "juleøl"
+  },
+  "harboe øl": {
+   "c": "drikke",
+   "t": "øl"
+  },
+  "øgo økologisk æblejuice": {
+   "c": "drikke",
+   "t": "æblejuice"
+  },
+  "cheasy skyr vanilje top cup": {
+   "c": "mejeri",
+   "t": "skyr"
+  },
+  "brunchy bacon i skiver": {
+   "c": "koed",
+   "t": "bacon"
+  },
+  "royal eller heineken alkoholfri øl": {
+   "c": "drikke",
+   "t": "alkoholfri øl"
+  },
+  "bagepapir i ark, træk&luk 15, 20 eller 30 liter eller fryseposer 4 eller 8 liter": {
+   "c": "husholdning",
+   "t": "bagepapir"
+  },
+  "skiveskårne champignon": {
+   "c": "kolonial",
+   "t": "champignon"
+  },
+  "corny big myslibar": {
+   "c": "snacks",
+   "t": "myslibar"
+  },
+  "amper energy": {
+   "c": "drikke",
+   "t": "energidrik"
+  },
+  "mentos": {
+   "c": "snacks",
+   "t": "pastil"
+  },
+  "riceup! zero sugar risbar": {
+   "c": "snacks",
+   "t": "risbar"
+  },
+  "coop snacknudler": {
+   "c": "kolonial",
+   "t": "nudler"
+  },
+  "kick, mini-muh eller skippers pipes": {
+   "c": "snacks",
+   "t": "slik"
+  },
+  "harvest best bønner eller kikærter": {
+   "c": "kolonial",
+   "t": "bønner"
+  },
+  "rød peber": {
+   "c": "groent",
+   "t": "peberfrugt"
+  },
+  "samsø rødløg": {
+   "c": "groent",
+   "t": "rødløg"
+  },
+  "øgo økologiske majssnacks": {
+   "c": "snacks",
+   "t": "majssnacks"
+  },
+  "hello sensitive vådservietter": {
+   "c": "husholdning",
+   "t": "vådservietter"
+  },
+  "kalenderlys": {
+   "c": "boligting",
+   "t": "kalenderlys"
+  },
+  "udendørslys": {
+   "c": "boligting",
+   "t": "udendørslys"
+  },
+  "coop finthakkede tomater": {
+   "c": "kolonial",
+   "t": "tomat"
+  },
+  "schulstad levebrød": {
+   "c": "bagning",
+   "t": "rugbrød"
+  },
+  "schulstad levebrød kernegrov rugbrød": {
+   "c": "bagning",
+   "t": "rugbrød"
+  },
+  "næmt pizzadej eller pølsehornsdej": {
+   "c": "bagning",
+   "t": "pizzadej"
+  },
+  "harvest best grøntsager": {
+   "c": "frost",
+   "t": "grøntsager"
+  },
+  "3-stjernet pålæg": {
+   "c": "koed",
+   "t": "pålæg"
+  },
+  "næmt pepperoni": {
+   "c": "koed",
+   "t": "pepperoni"
+  },
+  "øgo økologiske riskiks med havsalt": {
+   "c": "snacks",
+   "t": "riskiks"
+  },
+  "bloklys": {
+   "c": "boligting",
+   "t": "bloklys"
+  },
+  "bland selv slik": {
+   "c": "snacks",
+   "t": "slik"
+  },
+  "coca-cola sodavand": {
+   "c": "drikke",
+   "t": "sodavand"
+  },
+  "danske kyllingeunderlår eller -overlår": {
+   "c": "koed",
+   "t": "kylling"
+  },
+  "bakkedal smørbar": {
+   "c": "mejeri",
+   "t": "smør"
+  },
+  "faxe kondi booster": {
+   "c": "drikke",
+   "t": "energidrik"
+  },
+  "den grønne slagter pålæg": {
+   "c": "koed",
+   "t": "pålæg"
+  },
+  "spir plantedrik": {
+   "c": "mejeri",
+   "t": "plantedrik"
+  },
+  "cremefine madlavning eller piske": {
+   "c": "mejeri",
+   "t": "fløde"
+  },
+  "shaker eller royal club": {
+   "c": "drikke",
+   "t": "sodavand"
+  },
+  "den grønne slagter kyllingebryst": {
+   "c": "koed",
+   "t": "kylling"
+  },
+  "toms guldbarre": {
+   "c": "snacks",
+   "t": "chokolade"
+  },
+  "at home rengøring": {
+   "c": "husholdning",
+   "t": "rengøringsmiddel"
+  },
+  "mamone græskarkerner": {
+   "c": "kolonial",
+   "t": "græskarkerner"
+  },
+  "clementiner": {
+   "c": "groent",
+   "t": "clementin"
+  },
+  "øgo økologisk hummus": {
+   "c": "kolonial",
+   "t": "hummus"
+  },
+  "næmt butterdej": {
+   "c": "frost",
+   "t": "butterdej"
+  },
+  "rynkeby frugtdrik eller ice tea": {
+   "c": "drikke",
+   "t": "frugtdrik"
+  },
+  "nordic spirit håndsæbe": {
+   "c": "husholdning",
+   "t": "håndsæbe"
+  },
+  "la campagna pesto alla genovese": {
+   "c": "kolonial",
+   "t": "pesto"
+  },
+  "chenille handsker": {
+   "c": "boligting",
+   "t": "handsker"
+  },
+  "øgo økologiske danske rødbeder": {
+   "c": "groent",
+   "t": "rødbede"
+  },
+  "næmt tærtedej": {
+   "c": "frost",
+   "t": "tærtedej"
+  },
+  "gudlox hydra eller glycolic hårpleje": {
+   "c": "husholdning",
+   "t": "hårpleje"
+  },
+  "billys eller gorbys pizzasnack": {
+   "c": "frost",
+   "t": "pizzasnack"
+  },
+  "øgo økologiske frugtstænger": {
+   "c": "snacks",
+   "t": "frugtstang"
+  },
+  "øgo økologisk grød smoothie": {
+   "c": "kolonial",
+   "t": "grødsmoothie"
+  },
+  "oyakata kopnudler": {
+   "c": "kolonial",
+   "t": "kopnudler"
+  },
+  "the protein kitchen instant havregrød": {
+   "c": "kolonial",
+   "t": "havregrød"
+  },
+  "lyons toffypops": {
+   "c": "snacks",
+   "t": "kiks"
+  },
+  "fiona&friends eller imperial leather håndsæbe": {
+   "c": "husholdning",
+   "t": "håndsæbe"
+  },
+  "hello sensitive skumklude": {
+   "c": "husholdning",
+   "t": "skumklude"
+  },
+  "de jong men, body-x fuze deodorant eller showergel": {
+   "c": "husholdning",
+   "t": "deodorant"
+  },
+  "kort med kuvert": {
+   "c": "boligting",
+   "t": "kort"
+  },
+  "yeauty beauty": {
+   "c": "husholdning",
+   "t": "skønhedsprodukt"
+  },
+  "sence håndcreme": {
+   "c": "husholdning",
+   "t": "håndcreme"
+  },
+  "cremefine": {
+   "c": "mejeri",
+   "t": "fløde"
+  },
+  "pålækker pålæg": {
+   "c": "koed",
+   "t": "pålæg"
+  },
+  "coop pesto": {
+   "c": "kolonial",
+   "t": "pesto"
+  },
+  "revet topping": {
+   "c": "mejeri",
+   "t": "revet ost"
+  },
+  "onsdagssnegl": {
+   "c": "bagning",
+   "t": "kanelsnegl"
+  },
+  "rahbek indbagt fisk": {
+   "c": "frost",
+   "t": "fisk"
+  },
+  "onsdagssnegl*": {
+   "c": "bagning",
+   "t": "kanelsnegl"
+  },
+  "knorr sauce, bouillon eller fond du chef": {
+   "c": "kolonial",
+   "t": "sauce"
+  },
+  "änglamark økologisk plantedrik": {
+   "c": "mejeri",
+   "t": "plantedrik"
+  },
+  "coop bacon i skiver eller i tern": {
+   "c": "koed",
+   "t": "bacon"
+  },
+  "ama flydende, let, bagning eller stegning": {
+   "c": "mejeri",
+   "t": "smør"
+  },
+  "änglamark økologiske jordskokker": {
+   "c": "groent",
+   "t": "jordskok"
+  },
+  "taffel chips": {
+   "c": "snacks",
+   "t": "chips"
+  },
+  "lays, doritos eller bugles chips": {
+   "c": "snacks",
+   "t": "chips"
+  },
+  "cheasy yoghurt": {
+   "c": "mejeri",
+   "t": "yoghurt"
+  },
+  "philadelphia": {
+   "c": "mejeri",
+   "t": "flødeost"
+  },
+  "la campagna udenlandske specialiteter": {
+   "c": "kolonial",
+   "t": "specialitet"
+  },
+  "arla protein drik": {
+   "c": "mejeri",
+   "t": "proteindrik"
+  },
+  "salatmesteren pålægssalat": {
+   "c": "koed",
+   "t": "pålægssalat"
+  },
+  "red bull": {
+   "c": "drikke",
+   "t": "energidrik"
+  },
+  "buko smelteost": {
+   "c": "mejeri",
+   "t": "smelteost"
+  },
+  "kohberg brød": {
+   "c": "bagning",
+   "t": "brød"
+  },
+  "bistronne andelår": {
+   "c": "koed",
+   "t": "andelår"
+  },
+  "scoop eller fun": {
+   "c": "frost",
+   "t": "is"
+  },
+  "dansk broccoli": {
+   "c": "groent",
+   "t": "broccoli"
+  },
+  "curré pebernødder eller brunkager": {
+   "c": "bagning",
+   "t": "småkager"
+  },
+  "nåbe eller vitamin well": {
+   "c": "drikke",
+   "t": "vitamindrik"
+  },
+  "popz mikrobølgeovns popcorn 3-pak": {
+   "c": "snacks",
+   "t": "popcorn"
+  },
+  "øgo økologisk bladselleri": {
+   "c": "groent",
+   "t": "bladselleri"
+  },
+  "løgismose økologisk fraiche 9%": {
+   "c": "mejeri",
+   "t": "fraiche"
+  },
+  "dansk knoldselleri": {
+   "c": "groent",
+   "t": "knoldselleri"
+  },
+  "kleenex": {
+   "c": "husholdning",
+   "t": "papirlommetørklæder"
+  },
+  "samsø løg": {
+   "c": "groent",
+   "t": "løg"
+  },
+  "tjia hytteostsalat": {
+   "c": "mejeri",
+   "t": "hytteostsalat"
+  },
+  "alpro soya cream": {
+   "c": "mejeri",
+   "t": "plantefløde"
+  },
+  "malaco strimler, snøre eller stjerner": {
+   "c": "snacks",
+   "t": "slik"
+  },
+  "øgo økologisk friland leverpostej": {
+   "c": "koed",
+   "t": "leverpostej"
+  },
+  "egelykke spegepølse": {
+   "c": "koed",
+   "t": "spegepølse"
+  },
+  "laktosefri mozzarella": {
+   "c": "mejeri",
+   "t": "mozzarella"
+  },
+  "wasa knækbrød": {
+   "c": "bagning",
+   "t": "knækbrød"
+  },
+  "julemand, chokoladenet, chokolade slikkepinde eller engle i pose": {
+   "c": "snacks",
+   "t": "chokolade"
+  },
+  "yoggi yoghurt": {
+   "c": "mejeri",
+   "t": "yoghurt"
+  },
+  "faxe kondi eller pepsi max": {
+   "c": "drikke",
+   "t": "sodavand"
+  },
+  "arla laktosefri fraiche": {
+   "c": "mejeri",
+   "t": "fraiche"
+  },
+  "shaker": {
+   "c": "drikke",
+   "t": "sodavand"
+  },
+  "corona eller leffe øl": {
+   "c": "drikke",
+   "t": "øl"
+  },
+  "änglamark økologiske rosiner": {
+   "c": "kolonial",
+   "t": "rosiner"
+  },
+  "graasten sønderjyske fristelser pålægssalat": {
+   "c": "koed",
+   "t": "pålægssalat"
+  },
+  "taffel chips eller nødder": {
+   "c": "snacks",
+   "t": "chips"
+  },
+  "snack tomater": {
+   "c": "groent",
+   "t": "tomat"
+  },
+  "mon ami brie, rødkitost eller camembert": {
+   "c": "mejeri",
+   "t": "ost"
+  },
+  "skoleagurker": {
+   "c": "groent",
+   "t": "agurk"
+  },
+  "harpic wc-rens": {
+   "c": "husholdning",
+   "t": "wc-rens"
+  },
+  "danske økologiske orangerødder": {
+   "c": "groent",
+   "t": "gulerod"
+  },
+  "næmt grønkål": {
+   "c": "groent",
+   "t": "grønkål"
+  },
+  "udvalgte gastromax køkkenredskaber": {
+   "c": "boligting",
+   "t": "køkkenredskab"
+  },
+  "yummylab brusetabletter": {
+   "c": "drikke",
+   "t": "brusetablet"
+  },
+  "ovnklar dansk flæskesteg": {
+   "c": "koed",
+   "t": "flæskesteg"
+  },
+  "lurpak smør eller smørbar": {
+   "c": "mejeri",
+   "t": "smør"
+  },
+  "kitchen joy cube": {
+   "c": "frost",
+   "t": "færdigret"
+  },
+  "bistronne andebryst": {
+   "c": "koed",
+   "t": "andebryst"
+  },
+  "løgismose økologisk fløde": {
+   "c": "mejeri",
+   "t": "fløde"
+  },
+  "næmt kyllingestrimler": {
+   "c": "koed",
+   "t": "kylling"
+  },
+  "castello dessertost": {
+   "c": "mejeri",
+   "t": "dessertost"
+  },
+  "løgismose økologisk sødmælk": {
+   "c": "mejeri",
+   "t": "sødmælk"
+  },
+  "øgo økologisk dansk hokkaido græskar": {
+   "c": "groent",
+   "t": "hokkaidogræskar"
+  },
+  "bornholmerslagteren postej": {
+   "c": "koed",
+   "t": "postej"
+  },
+  "øgo økologisk dansk rodfrugtmix": {
+   "c": "groent",
+   "t": "rodfrugter"
+  },
+  "næmt granatæblekerner": {
+   "c": "groent",
+   "t": "granatæble"
+  },
+  "zelected pasta tortiglioni": {
+   "c": "kolonial",
+   "t": "pasta"
+  },
+  "løgismose økologisk yoghurt": {
+   "c": "mejeri",
+   "t": "yoghurt"
+  },
+  "mutti tomatpuré": {
+   "c": "kolonial",
+   "t": "tomatpuré"
+  },
+  "øgo økologisk friland pålæg": {
+   "c": "koed",
+   "t": "pålæg"
+  },
+  "soft akryl": {
+   "c": "boligting",
+   "t": "akrylgarn"
+  },
+  "frosch rengøring": {
+   "c": "husholdning",
+   "t": "rengøringsmiddel"
+  },
+  "halloweenmuffin, halloweenkage eller spøgelseskage": {
+   "c": "bagning",
+   "t": "kage"
+  },
+  "dekopynt eller bånd": {
+   "c": "boligting",
+   "t": "pynt"
+  },
+  "arla laktosefri piskefløde": {
+   "c": "mejeri",
+   "t": "piskefløde"
+  },
+  "coop grøntsager": {
+   "c": "frost",
+   "t": "grøntsager"
+  },
+  "san pellegrino eller perrier": {
+   "c": "drikke",
+   "t": "mineralvand"
+  },
+  "dansk rødkål": {
+   "c": "groent",
+   "t": "rødkål"
+  },
+  "coop glutenfri pasta": {
+   "c": "kolonial",
+   "t": "pasta"
+  },
+  "dava danske frilandsæg": {
+   "c": "mejeri",
+   "t": "æg"
+  },
+  "hellmann's mayonnaise eller dressing": {
+   "c": "kolonial",
+   "t": "mayonnaise"
+  },
+  "karolines køkken risalamande": {
+   "c": "mejeri",
+   "t": "risalamande"
+  },
+  "faxe kondi eller pepsi max sodavand": {
+   "c": "drikke",
+   "t": "sodavand"
+  },
+  "hellmann's plantebaseret mayonnaise": {
+   "c": "kolonial",
+   "t": "mayonnaise"
+  },
+  "k-salat bearnaise-sauce": {
+   "c": "kolonial",
+   "t": "bearnaisesauce"
+  },
+  "snck proteinbar": {
+   "c": "snacks",
+   "t": "proteinbar"
+  },
+  "karolines køkken sauce": {
+   "c": "kolonial",
+   "t": "sauce"
+  },
+  "pågen gifflar": {
+   "c": "bagning",
+   "t": "gifler"
+  },
+  "sunshine delights dates": {
+   "c": "snacks",
+   "t": "dadler"
+  },
+  "cheese makers treasures skiveost": {
+   "c": "mejeri",
+   "t": "skiveost"
+  },
+  "nissin soba kopnudler": {
+   "c": "kolonial",
+   "t": "kopnudler"
+  },
+  "k-salat remoulade eller mayonnaise": {
+   "c": "kolonial",
+   "t": "remoulade"
+  },
+  "stay strong skyr": {
+   "c": "mejeri",
+   "t": "skyr"
+  },
+  "arla laktosefri mælk": {
+   "c": "mejeri",
+   "t": "mælk"
+  },
+  "coop ciabatta baguette, hvidløgsbrød eller panini": {
+   "c": "bagning",
+   "t": "brød"
+  },
+  "santa maria asiatisk marked": {
+   "c": "kolonial",
+   "t": "asiatiske varer"
+  },
+  "änglamark økologisk rodfrugtmix fra brogaarden": {
+   "c": "groent",
+   "t": "rodfrugter"
+  },
+  "thise økologisk kefir": {
+   "c": "mejeri",
+   "t": "kefir"
+  },
+  "løgismose økologisk kefir": {
+   "c": "mejeri",
+   "t": "kefir"
+  },
+  "pågen brød": {
+   "c": "bagning",
+   "t": "brød"
+  },
+  "velsmag hakket dansk grise- og kalvekød 8-12%": {
+   "c": "koed",
+   "t": "hakket kød"
+  },
+  "samsø kartofler": {
+   "c": "groent",
+   "t": "kartofler"
+  },
+  "andoni pizza": {
+   "c": "frost",
+   "t": "pizza"
+  },
+  "dairy goood hytteost": {
+   "c": "mejeri",
+   "t": "hytteost"
+  },
+  "daim, oreo, toblerone eller philadelphia cheesecake": {
+   "c": "snacks",
+   "t": "chokolade"
+  },
+  "hindbær": {
+   "c": "groent",
+   "t": "hindbær"
+  },
+  "øgo økologiske kiwi": {
+   "c": "groent",
+   "t": "kiwi"
+  },
+  "thisted bryghus limfjords porter": {
+   "c": "drikke",
+   "t": "porter"
+  },
+  "øgo økologiske surdejsboller": {
+   "c": "bagning",
+   "t": "surdejsbolle"
+  },
+  "curré julekager": {
+   "c": "bagning",
+   "t": "småkager"
+  },
+  "thy, refsvindinge eller ørbæk øl": {
+   "c": "drikke",
+   "t": "øl"
+  },
+  "svaneke, ærø eller to øl": {
+   "c": "drikke",
+   "t": "øl"
+  },
+  "glyngøre makrel": {
+   "c": "fisk",
+   "t": "makrel"
+  },
+  "refsvindinge, thy eller ørbæk øl": {
+   "c": "drikke",
+   "t": "øl"
+  },
+  "velsmag hakket dansk grisekød 8-12% eller koteletter": {
+   "c": "koed",
+   "t": "svinekød"
+  },
+  "egelykke bacon i skiver": {
+   "c": "koed",
+   "t": "bacon"
+  },
+  "kærgården smørbar": {
+   "c": "mejeri",
+   "t": "smør"
+  },
+  "navito panerede fisk, fiskepinde, blæksprutteringe eller tempurarejer": {
+   "c": "frost",
+   "t": "fisk"
+  },
+  "casa czaja udenlandske specialiteter": {
+   "c": "kolonial",
+   "t": "specialitet"
+  },
+  "slt økologiske frø, tørret bær eller kakao nibs": {
+   "c": "kolonial",
+   "t": "frø"
+  },
+  "daloon økologiske mini forårsruller": {
+   "c": "frost",
+   "t": "forårsruller"
+  },
+  "øgo økologisk blomsterhonning squeeze": {
+   "c": "kolonial",
+   "t": "honning"
+  },
+  "kitchen joy færdigret eller vici gyoza": {
+   "c": "frost",
+   "t": "færdigret"
+  },
+  "dolmio eller ben's sauce": {
+   "c": "kolonial",
+   "t": "sauce"
+  },
+  "næmt tø og server": {
+   "c": "frost",
+   "t": "færdigret"
+  },
+  "navito vannameirejer": {
+   "c": "frost",
+   "t": "rejer"
+  },
+  "dadler": {
+   "c": "kolonial",
+   "t": "dadler"
+  },
+  "purella granola": {
+   "c": "kolonial",
+   "t": "granola"
+  },
+  "næmt risengrød": {
+   "c": "mejeri",
+   "t": "risengrød"
+  },
+  "hot & spicy kyllingefingre eller halloween nuggets": {
+   "c": "frost",
+   "t": "kyllingefingre"
+  },
+  "samsø æbler": {
+   "c": "groent",
+   "t": "æble"
+  },
+  "fresini flydende vask": {
+   "c": "husholdning",
+   "t": "vaskemiddel"
+  },
+  "led lyskæde": {
+   "c": "boligting",
+   "t": "lyskæde"
+  },
+  "strømpegarn": {
+   "c": "boligting",
+   "t": "garn"
+  },
+  "katjes slikpose": {
+   "c": "snacks",
+   "t": "slik"
+  },
+  "clipper økologiske tebreve": {
+   "c": "drikke",
+   "t": "te"
+  },
+  "bref wc-stick eller cillit bang": {
+   "c": "husholdning",
+   "t": "wc-rens"
+  },
+  "figner med mel": {
+   "c": "kolonial",
+   "t": "figner"
+  },
+  "schulstad det gode grainy sandwich": {
+   "c": "bagning",
+   "t": "sandwichbrød"
+  },
+  "nordthy skumfiduser": {
+   "c": "snacks",
+   "t": "skumfiduser"
+  },
+  "kitkat plade": {
+   "c": "snacks",
+   "t": "chokolade"
+  },
+  "akryl med følgetråd": {
+   "c": "boligting",
+   "t": "akrylgarn"
+  },
+  "øgo økologisk peanutbutter": {
+   "c": "kolonial",
+   "t": "peanutbutter"
+  },
+  "chavroux gedeost": {
+   "c": "mejeri",
+   "t": "gedeost"
+  },
+  "salling princip fyldt pasta": {
+   "c": "kolonial",
+   "t": "fyldt pasta"
+  },
+  "stryhns bacon/peber postej eller let grovhakket postej": {
+   "c": "koed",
+   "t": "leverpostej"
+  },
+  "h.c. andersen skiveost": {
+   "c": "mejeri",
+   "t": "skiveost"
+  },
+  "øgo økologisk feta": {
+   "c": "mejeri",
+   "t": "feta"
+  },
+  "udklædningstilbehør": {
+   "c": "boligting",
+   "t": "udklædning"
+  },
+  "marineret tykstegsbøf": {
+   "c": "koed",
+   "t": "oksekød"
+  },
+  "øgo økologisk bacon i skiver": {
+   "c": "koed",
+   "t": "bacon"
+  },
+  "tennisstrømper": {
+   "c": "boligting",
+   "t": "strømper"
+  },
+  "curré chokoladekranse": {
+   "c": "bagning",
+   "t": "småkager"
+  },
+  "opbevaringskurv med håndtag": {
+   "c": "boligting",
+   "t": "opbevaringskurv"
+  },
+  "lyskæde med figurer": {
+   "c": "boligting",
+   "t": "lyskæde"
+  },
+  "cykellygtesæt": {
+   "c": "boligting",
+   "t": "cykellygter"
+  },
+  "skittles": {
+   "c": "snacks",
+   "t": "slik"
+  },
+  "refleksbånd 2-pak, refleksbånd med led, eller clips med led": {
+   "c": "boligting",
+   "t": "refleksbånd"
+  },
+  "gravlys": {
+   "c": "boligting",
+   "t": "gravlys"
+  },
+  "chenille hue": {
+   "c": "boligting",
+   "t": "hue"
+  },
+  "coop pålægschokolade": {
+   "c": "snacks",
+   "t": "pålægschokolade"
+  },
+  "fejø udvalgte æbler": {
+   "c": "groent",
+   "t": "æble"
+  },
+  "coop asia cubes eller dumplings": {
+   "c": "frost",
+   "t": "dumplings"
+  },
+  "20% medlemsrabat på alt fra thise": {
+   "c": "mejeri",
+   "t": "mejeriprodukt"
+  },
+  "jensens køkken sauce": {
+   "c": "kolonial",
+   "t": "sauce"
+  },
+  "änglamark økologiske bananer": {
+   "c": "groent",
+   "t": "banan"
+  },
+  "7-morgen morgenmad": {
+   "c": "kolonial",
+   "t": "morgenmad"
+  },
+  "schulstad signaturbrød": {
+   "c": "bagning",
+   "t": "brød"
+  },
+  "dolmio pastasauce eller rummo pasta": {
+   "c": "kolonial",
+   "t": "pasta"
+  },
+  "lambi classic toiletpapir eller køkkenrulle": {
+   "c": "husholdning",
+   "t": "toiletpapir"
+  },
+  "godmorgen classic juice eller shots": {
+   "c": "drikke",
+   "t": "juice"
+  },
+  "irma økologisk tørsaltet bacon i skiver": {
+   "c": "koed",
+   "t": "bacon"
+  },
+  "dumle slikkepinde": {
+   "c": "snacks",
+   "t": "slikkepind"
+  },
+  "formodnede avocadoer": {
+   "c": "groent",
+   "t": "avocado"
+  },
+  "dansk halloween græskar": {
+   "c": "groent",
+   "t": "græskar"
+  },
+  "salling princip briocheburgerboller": {
+   "c": "bagning",
+   "t": "burgerbolle"
+  },
+  "marabou cookies": {
+   "c": "snacks",
+   "t": "cookies"
+  },
+  "løgismose survarer": {
+   "c": "kolonial",
+   "t": "survarer"
+  },
+  "head & shoulders shampoo": {
+   "c": "husholdning",
+   "t": "shampoo"
+  },
+  "labello, taft eller poly swing styling": {
+   "c": "husholdning",
+   "t": "hårstyling"
+  },
+  "alpro plantgurt": {
+   "c": "mejeri",
+   "t": "planteyoghurt"
+  },
+  "kaki": {
+   "c": "groent",
+   "t": "kaki"
+  },
+  "dan cake kager eller trøffelkugler": {
+   "c": "bagning",
+   "t": "kage"
+  },
+  "coop giant køkkenrulle": {
+   "c": "husholdning",
+   "t": "køkkenrulle"
+  },
+  "änglamark økologisk peanutbutter": {
+   "c": "kolonial",
+   "t": "peanutbutter"
+  },
+  "stryhns leverpostej": {
+   "c": "koed",
+   "t": "leverpostej"
+  },
+  "cheese makers treasures dessertost": {
+   "c": "mejeri",
+   "t": "dessertost"
+  },
+  "cheasy skyr": {
+   "c": "mejeri",
+   "t": "skyr"
+  },
+  "velsmag dansk nakkefilet eller ribbenssteg uden ben": {
+   "c": "koed",
+   "t": "svinekød"
+  },
+  "steff houlberg pølser": {
+   "c": "koed",
+   "t": "pølser"
+  },
+  "casa tarradellas pizza": {
+   "c": "frost",
+   "t": "pizza"
+  },
+  "heinz ketchup": {
+   "c": "kolonial",
+   "t": "ketchup"
+  },
+  "pølsemesteren pølser": {
+   "c": "koed",
+   "t": "pølser"
+  },
+  "valsølille juice, lemonade eller smoothie": {
+   "c": "drikke",
+   "t": "juice"
+  },
+  "dansk kyllingebrystfilet": {
+   "c": "koed",
+   "t": "kylling"
+  },
+  "løgismose blå ost eller økologisk skiveost": {
+   "c": "mejeri",
+   "t": "ost"
+  },
+  "curré mandler": {
+   "c": "snacks",
+   "t": "mandel"
+  },
+  "président brie, salling princip cheddar eller danablu": {
+   "c": "mejeri",
+   "t": "ost"
+  },
+  "nutella": {
+   "c": "kolonial",
+   "t": "chokoladepålæg"
+  },
+  "salling princip stenfrie røde druer": {
+   "c": "groent",
+   "t": "vindrue"
+  },
+  "curré marcipanbrød eller chokoladeknapper": {
+   "c": "snacks",
+   "t": "marcipanbrød"
+  },
+  "hakket dansk kyllingekød 7-10% eller kyllingelårfilet": {
+   "c": "koed",
+   "t": "kylling"
+  },
+  "h.c. andersen eventyroste": {
+   "c": "mejeri",
+   "t": "skæreost"
+  },
+  "mackays marmelade eller lemon curd": {
+   "c": "kolonial",
+   "t": "marmelade"
+  },
+  "hälsans kök færdigret": {
+   "c": "frost",
+   "t": "færdigret"
+  },
+  "cykel- eller løbelygtesæt": {
+   "c": "elektronik",
+   "t": "cykellygter"
+  },
+  "premieur pommes gigant": {
+   "c": "frost",
+   "t": "pommes frites"
+  },
+  "kunstig blomsterstilk": {
+   "c": "boligting",
+   "t": "kunstblomst"
+  },
+  "uldgarn med viskose af bambus": {
+   "c": "boligting",
+   "t": "garn"
+  },
+  "neutral shower gel": {
+   "c": "husholdning",
+   "t": "showergel"
+  },
+  "skandi multibrænder eller fyrfadslighter": {
+   "c": "boligting",
+   "t": "lighter"
+  },
+  "curré mint bites eller jordnøddebrud mix": {
+   "c": "snacks",
+   "t": "chokolade"
+  },
+  "biotex vaskemiddel eller dun-let skyllemiddel": {
+   "c": "husholdning",
+   "t": "vaskemiddel"
+  },
+  "coop slik eller toms karameller": {
+   "c": "snacks",
+   "t": "slik"
+  },
+  "nescafe specialiteter eller fredsted chai latté": {
+   "c": "drikke",
+   "t": "kaffe"
+  },
+  "coop hakket grisekød 8-12% eller medister": {
+   "c": "koed",
+   "t": "hakket svinekød"
+  },
+  "coop glutenfri håndværkere eller havrebrød": {
+   "c": "bagning",
+   "t": "brød"
+  },
+  "coop hakket okse/grønt 35%": {
+   "c": "koed",
+   "t": "hakket oksekød"
+  },
+  "nescafe specialiteter eller fredsted chai latte": {
+   "c": "drikke",
+   "t": "kaffe"
+  },
+  "marcipanhjerter eller spangsberg jul": {
+   "c": "snacks",
+   "t": "marcipan"
+  },
+  "lun lørdag": {
+   "c": "menu",
+   "t": "smørrebrød"
+  },
+  "mou specialsuppe": {
+   "c": "kolonial",
+   "t": "suppe"
+  },
+  "änglamark økologiske krydderurter fra rosborg": {
+   "c": "groent",
+   "t": "krydderurt"
+  },
+  "dekofad eller krans": {
+   "c": "boligting",
+   "t": "dekoration"
+  },
+  "coop kyllingebryst": {
+   "c": "koed",
+   "t": "kylling"
+  },
+  "spangsberg flødeboller 4-pak, kinder surprise 3-pak eller kinder multipack": {
+   "c": "snacks",
+   "t": "chokolade"
+  },
+  "magnum is": {
+   "c": "frost",
+   "t": "is"
+  },
+  "skovlyst ellebryg jul 0,5% eller julebryg": {
+   "c": "drikke",
+   "t": "juleøl"
+  },
+  "athena græsk yoghurt": {
+   "c": "mejeri",
+   "t": "græsk yoghurt"
+  },
+  "glutenfri kylling nuggets": {
+   "c": "frost",
+   "t": "kyllingenuggets"
+  },
+  "yogi te": {
+   "c": "drikke",
+   "t": "te"
+  },
+  "ribena": {
+   "c": "drikke",
+   "t": "saft"
+  },
+  "libresse eller tena": {
+   "c": "husholdning",
+   "t": "hygiejnebind"
+  },
+  "naturli' isbæger eller iskasse": {
+   "c": "frost",
+   "t": "is"
+  },
+  "starbucks kaffekapsler": {
+   "c": "drikke",
+   "t": "kaffekapsler"
+  },
+  "salling princip udenlandske specialiteter": {
+   "c": "kolonial",
+   "t": "specialitet"
+  },
+  "træfad": {
+   "c": "boligting",
+   "t": "træfad"
+  },
+  "kurv i søgræs": {
+   "c": "boligting",
+   "t": "kurv"
+  },
+  "irma æble- eller bærgløgg": {
+   "c": "drikke",
+   "t": "gløgg"
+  },
+  "riberhus skiveost": {
+   "c": "mejeri",
+   "t": "skæreost"
+  },
+  "änglamark vaskemiddel": {
+   "c": "husholdning",
+   "t": "vaskemiddel"
+  },
+  "torsdagssmørrebrød*": {
+   "c": "menu",
+   "t": "smørrebrød"
+  },
+  "coop sild": {
+   "c": "fisk",
+   "t": "sild"
+  },
+  "netto hakket kyllingekød 3-7% eller -overlår": {
+   "c": "koed",
+   "t": "kylling"
+  },
+  "øgo økologiske æg": {
+   "c": "mejeri",
+   "t": "æg"
+  },
+  "innocent juice eller smoothie": {
+   "c": "drikke",
+   "t": "juice"
+  },
+  "elvital shampoo eller balsam": {
+   "c": "husholdning",
+   "t": "shampoo"
+  },
+  "landana gedeost eller grimaldos manchego": {
+   "c": "mejeri",
+   "t": "gedeost"
+  },
+  "blodigt pynt": {
+   "c": "boligting",
+   "t": "pynt"
+  },
+  "slagter lampe spegepølse": {
+   "c": "koed",
+   "t": "spegepølse"
+  },
+  "hjemmesko": {
+   "c": "boligting",
+   "t": "hjemmesko"
+  },
+  "strømper": {
+   "c": "boligting",
+   "t": "strømper"
+  },
+  "hyggestrømper med kraftigt for": {
+   "c": "boligting",
+   "t": "strømper"
+  },
+  "løgismose svesker uden sten": {
+   "c": "kolonial",
+   "t": "svesker"
+  },
+  "refleksvest, refleksovertræk til hjelm-, rygsæk eller cykelkurv": {
+   "c": "boligting",
+   "t": "refleksvest"
+  },
+  "carrs kiks til ost": {
+   "c": "bagning",
+   "t": "kiks"
+  },
+  "monsterhandsker": {
+   "c": "boligting",
+   "t": "handsker"
+  },
+  "ladekabel eller opladestik": {
+   "c": "elektronik",
+   "t": "ladekabel"
+  },
+  "udklædningsforklæde med kniv": {
+   "c": "boligting",
+   "t": "udklædning"
+  },
+  "udklædningsvåben": {
+   "c": "legetoej",
+   "t": "legetøjsvåben"
+  },
+  "fletkurv i piletræ": {
+   "c": "boligting",
+   "t": "fletkurv"
+  },
+  "kravlestrømper": {
+   "c": "boligting",
+   "t": "kravlestrømper"
+  },
+  "kravlestrømpebukser": {
+   "c": "boligting",
+   "t": "strømpebukser"
+  },
+  "curré marcipansnitter eller praliner": {
+   "c": "snacks",
+   "t": "marcipan"
+  },
+  "jacobsen golden naked christmas ale": {
+   "c": "drikke",
+   "t": "juleøl"
+  },
+  "leffe winter": {
+   "c": "drikke",
+   "t": "juleøl"
+  },
+  "squishy": {
+   "c": "legetoej",
+   "t": "squishy"
+  },
+  "topps premier league cards": {
+   "c": "legetoej",
+   "t": "samlekort"
+  },
+  "zendium tandpasta": {
+   "c": "husholdning",
+   "t": "tandpasta"
+  },
+  "blåbær eller jordbær": {
+   "c": "groent",
+   "t": "bær"
+  },
+  "nestlé poser": {
+   "c": "husholdning",
+   "t": "babyposer"
+  },
+  "julesmåkager*": {
+   "c": "bagning",
+   "t": "småkager"
+  },
+  "premier is isbæger eller iskasse": {
+   "c": "frost",
+   "t": "is"
+  },
+  "løgismose økologisk græsk-inspireret yoghurt": {
+   "c": "mejeri",
+   "t": "græsk yoghurt"
+  },
+  "castello hård ost": {
+   "c": "mejeri",
+   "t": "hård ost"
+  },
+  "irma økologisk pizzabund, mexibøf eller crispy falafel": {
+   "c": "frost",
+   "t": "pizzabund"
+  },
+  "jakobsens dansk blomsterhonning": {
+   "c": "kolonial",
+   "t": "honning"
+  },
+  "store mandariner": {
+   "c": "groent",
+   "t": "mandarin"
+  },
+  "sanex shower gel": {
+   "c": "husholdning",
+   "t": "showergel"
+  },
+  "netto hakket oksekød 8-12%": {
+   "c": "koed",
+   "t": "hakket oksekød"
+  },
+  "bki formalet kaffe": {
+   "c": "drikke",
+   "t": "kaffe"
+  },
+  "merrild specialristet formalet kaffe": {
+   "c": "drikke",
+   "t": "kaffe"
+  },
+  "salling princip sockeye, røget eller gravad laks": {
+   "c": "fisk",
+   "t": "laks"
+  },
+  "batterier": {
+   "c": "elektronik",
+   "t": "batteri"
+  },
+  "deglet nour dadler": {
+   "c": "kolonial",
+   "t": "dadler"
+  },
+  "bådsmand varmrøget laks": {
+   "c": "fisk",
+   "t": "laks"
+  },
+  "salling princip berberi andelår": {
+   "c": "koed",
+   "t": "andelår"
+  },
+  "næmt mini kødboller": {
+   "c": "koed",
+   "t": "kødboller"
+  },
+  "salling princip havarti eller vadehavsost": {
+   "c": "mejeri",
+   "t": "ost"
+  },
+  "mørbrad med svampesauce": {
+   "c": "koed",
+   "t": "mørbrad"
+  },
+  "thisted bryghus christmas bock eller jule sten": {
+   "c": "drikke",
+   "t": "juleøl"
+  },
+  "tarteletter med høns i asparges": {
+   "c": "menu",
+   "t": "tarteletter"
+  },
+  "ostebord med tre delikate oste, kiks og marmelade": {
+   "c": "menu",
+   "t": "ostebord"
+  },
+  "glaseret skinke med grønlangkål": {
+   "c": "menu",
+   "t": "skinke"
+  },
+  "laks med røræg og asparges": {
+   "c": "menu",
+   "t": "laks"
+  },
+  "frikadeller med rødkål": {
+   "c": "menu",
+   "t": "frikadeller"
+  },
+  "kikkoman soya": {
+   "c": "kolonial",
+   "t": "sojasauce"
+  },
+  "chia eller mørkt durumkerne rugbrød": {
+   "c": "bagning",
+   "t": "rugbrød"
+  },
+  "usb lighter": {
+   "c": "elektronik",
+   "t": "lighter"
+  },
+  "purina latz menuboks": {
+   "c": "husholdning",
+   "t": "kattemad"
+  },
+  "glyngøre fiske- eller laksefars": {
+   "c": "fisk",
+   "t": "fiskefars"
+  },
+  "coop hel spegepølse": {
+   "c": "koed",
+   "t": "spegepølse"
+  },
+  "kalenderlys eller usb lighter*": {
+   "c": "boligting",
+   "t": "kalenderlys"
+  },
+  "coop kyllingelårfilet, -inderfilet, -overlår eller -underlår": {
+   "c": "koed",
+   "t": "kylling"
+  },
+  "steff houlberg maxiret eller tulip minifrikadeller": {
+   "c": "koed",
+   "t": "frikadeller"
+  },
+  "frisko favoritter isbæger eller carte d'or vaniljeis": {
+   "c": "frost",
+   "t": "is"
+  },
+  "dr. oetker suprema pizza": {
+   "c": "frost",
+   "t": "pizza"
+  },
+  "lambi toiletpapir": {
+   "c": "husholdning",
+   "t": "toiletpapir"
+  },
+  "salling princip marineret, krydder eller karrysild": {
+   "c": "fisk",
+   "t": "sild"
+  },
+  "dunlet, vanish, calgon eller a+ winter crisp flydende vaskemiddel": {
+   "c": "husholdning",
+   "t": "vaskemiddel"
+  },
+  "la ptite pierre, hans geissler, charles aine & fils rhone eller il capolavoro": {
+   "c": "drikke",
+   "t": "rødvin"
+  },
+  "husk ekstra papir til dit kamera til 39,-": {
+   "c": "elektronik",
+   "t": "fotopapir"
+  },
+  "xtra! kyllingebryst eller -inderfilet": {
+   "c": "koed",
+   "t": "kylling"
+  },
+  "xtra! marineret kyllingebryst med citron/rosmarin eller bbq": {
+   "c": "koed",
+   "t": "kylling"
+  },
+  "madopbevaringssæt 3-pak*": {
+   "c": "boligting",
+   "t": "opbevaringsboks"
+  },
+  "cloetta eller haribo juleskum": {
+   "c": "snacks",
+   "t": "slik"
+  },
+  "urtekram økologisk æblecidereddike": {
+   "c": "kolonial",
+   "t": "æblecidereddike"
+  },
+  "coop spareribs eller pulled pork": {
+   "c": "koed",
+   "t": "spareribs"
+  },
+  "suppeskål*": {
+   "c": "boligting",
+   "t": "suppeskål"
+  },
+  "coop hakket oksekød 8-12%": {
+   "c": "koed",
+   "t": "hakket oksekød"
+  },
+  "netto hakket oksekød 4-7% eller øgo økologisk hakket oksekød 14-18%": {
+   "c": "koed",
+   "t": "hakket oksekød"
+  },
+  "burger boost af dansk okse": {
+   "c": "koed",
+   "t": "burgerbøf"
+  },
+  "kronelys": {
+   "c": "boligting",
+   "t": "kronelys"
+  },
+  "sadelcover eller cykellås": {
+   "c": "boligting",
+   "t": "cykellås"
+  },
+  "akrylgarn": {
+   "c": "boligting",
+   "t": "akrylgarn"
+  },
+  "ragstrømper": {
+   "c": "boligting",
+   "t": "strømper"
+  },
+  "salling princip camembert": {
+   "c": "mejeri",
+   "t": "camembert"
+  },
+  "cykelovertræk": {
+   "c": "boligting",
+   "t": "cykelovertræk"
+  },
+  "vinduesdekoration": {
+   "c": "boligting",
+   "t": "vinduespynt"
+  },
+  "curré julemix": {
+   "c": "snacks",
+   "t": "juleslik"
+  },
+  "kransekagekonfekt 8 stk.": {
+   "c": "bagning",
+   "t": "kransekage"
+  },
+  "squishy cube": {
+   "c": "legetoej",
+   "t": "squishy"
+  },
+  "samlealbum": {
+   "c": "legetoej",
+   "t": "samlealbum"
+  },
+  "mou kød- og melboller eller kødboller": {
+   "c": "frost",
+   "t": "kødboller"
+  },
+  "adventslys*": {
+   "c": "boligting",
+   "t": "adventslys"
+  },
+  "art of the refill eller silverboom": {
+   "c": "drikke",
+   "t": "vin"
+  },
+  "haribo slikpose": {
+   "c": "snacks",
+   "t": "slik"
+  },
+  "kellogg's morgenmad": {
+   "c": "kolonial",
+   "t": "morgenmadsprodukt"
+  },
+  "bravo negroamaro-zinfandel, noble house eller kingpin": {
+   "c": "drikke",
+   "t": "rødvin"
+  },
+  "fiskedisken kulmulefileter": {
+   "c": "fisk",
+   "t": "kulmule"
+  },
+  "kransekagestænger": {
+   "c": "bagning",
+   "t": "kransekage"
+  },
+  "irma burger": {
+   "c": "frost",
+   "t": "burger"
+  },
+  "bornholmergrisen flæskesteg": {
+   "c": "koed",
+   "t": "flæskesteg"
+  },
+  "klovborg skæreost": {
+   "c": "mejeri",
+   "t": "skæreost"
+  },
+  "dansk kyllingebrystfilet, -inderfilet eller hakket kyllingekød 3-7%": {
+   "c": "koed",
+   "t": "kylling"
+  },
+  "sæby makrel i tomat 4-pak": {
+   "c": "fisk",
+   "t": "makrel"
+  },
+  "bistronne hel pekingand": {
+   "c": "koed",
+   "t": "and"
+  },
+  "zendium": {
+   "c": "husholdning",
+   "t": "tandpasta"
+  },
+  "netto svinekæber": {
+   "c": "koed",
+   "t": "svinekæber"
+  },
+  "løgismose confiteret andelår": {
+   "c": "koed",
+   "t": "andelår"
+  },
+  "opbevaring med låg": {
+   "c": "boligting",
+   "t": "opbevaringsboks"
+  },
+  "toilettaske med print": {
+   "c": "boligting",
+   "t": "toilettaske"
+  },
+  "dekorationsbakke": {
+   "c": "boligting",
+   "t": "dekorationsbakke"
+  },
+  "dekorationsfad": {
+   "c": "boligting",
+   "t": "dekorationsfad"
+  },
+  "dekorationsskål": {
+   "c": "boligting",
+   "t": "dekorationsskål"
+  },
+  "pembe squishy-nøglering": {
+   "c": "legetoej",
+   "t": "squishy"
+  },
+  "rossini laks eller diskobay kutterrejer": {
+   "c": "fisk",
+   "t": "laks"
+  },
+  "fyrfadslys": {
+   "c": "boligting",
+   "t": "fyrfadslys"
+  },
+  "løgismose no.": {
+   "c": "drikke",
+   "t": "vin"
+  },
+  "bog med paddington": {
+   "c": "legetoej",
+   "t": "børnebog"
+  },
+  "stofbleer": {
+   "c": "husholdning",
+   "t": "stofbleer"
+  },
+  "vaser": {
+   "c": "boligting",
+   "t": "vase"
+  },
+  "hagesmæk": {
+   "c": "husholdning",
+   "t": "hagesmæk"
+  },
+  "computer sleeve": {
+   "c": "elektronik",
+   "t": "computertaske"
+  },
+  "led-spejl": {
+   "c": "elektronik",
+   "t": "led-spejl"
+  },
+  "bluse": {
+   "c": "boligting",
+   "t": "bluse"
+  },
+  "juletræ med pailletter": {
+   "c": "boligting",
+   "t": "julepynt"
+  },
+  "baby bodystocking": {
+   "c": "boligting",
+   "t": "body"
+  },
+  "bukser eller bluse": {
+   "c": "boligting",
+   "t": "tøj"
+  },
+  "juletræer på træstub": {
+   "c": "boligting",
+   "t": "julepynt"
+  },
+  "taba squishy": {
+   "c": "legetoej",
+   "t": "squishy"
+  },
+  "san pellegrino 6-pak": {
+   "c": "drikke",
+   "t": "mineralvand"
+  },
+  "jacob´s creek eller spier moscato": {
+   "c": "drikke",
+   "t": "hvidvin"
+  },
+  "hello sensitive bleer": {
+   "c": "husholdning",
+   "t": "bleer"
+  },
+  "fersk italiensk salsiccia": {
+   "c": "koed",
+   "t": "salsiccia"
+  },
+  "peter larsen kaffe, merrild eller café noir formalet kaffe": {
+   "c": "drikke",
+   "t": "kaffe"
+  },
+  "marinerede nakkekoteletter eller dansk hakket grise- og kalvekød 8-12%": {
+   "c": "koed",
+   "t": "svinekød"
+  },
+  "netto flæsk i skiver eller koteletter": {
+   "c": "koed",
+   "t": "svinekød"
+  },
+  "øgo økologisk hakket oksekød 8-12%": {
+   "c": "koed",
+   "t": "hakket oksekød"
+  },
+  "brachetto nivasco": {
+   "c": "drikke",
+   "t": "rødvin"
+  },
+  "coop torskeportioner": {
+   "c": "fisk",
+   "t": "torsk"
+  },
+  "irma is fra aabybro mejeri": {
+   "c": "frost",
+   "t": "is"
+  },
+  "salling princip grønlandske rejer": {
+   "c": "fisk",
+   "t": "rejer"
+  },
+  "fersk laksestykker": {
+   "c": "fisk",
+   "t": "laks"
+  },
+  "tørsaltet peber bacon": {
+   "c": "koed",
+   "t": "bacon"
+  },
+  "pfaff cuvée riesling, la burgondie bourgogne eller baron de ley reserva": {
+   "c": "drikke",
+   "t": "vin"
+  },
+  "cirkel kaffe eller lavazza formalet kaffe eller cirkel kaffe hele bønner": {
+   "c": "drikke",
+   "t": "kaffe"
+  },
+  "ripasso terre di verona, die weinmacher eller gran baron": {
+   "c": "drikke",
+   "t": "rødvin"
+  },
+  "skelethoved eller græskar": {
+   "c": "boligting",
+   "t": "halloweenpynt"
+  },
+  "stor squishy": {
+   "c": "legetoej",
+   "t": "squishy"
+  },
+  "nice cube swirl": {
+   "c": "legetoej",
+   "t": "squishy"
+  },
+  "coca cola, fanta eller sprite sodavand": {
+   "c": "drikke",
+   "t": "sodavand"
+  },
+  "dansk kyllingelårfilet": {
+   "c": "koed",
+   "t": "kylling"
+  },
+  "nescafé instant kaffe": {
+   "c": "drikke",
+   "t": "instantkaffe"
+  },
+  "royal pilsner eller classic": {
+   "c": "drikke",
+   "t": "øl"
+  },
+  "libero comfort eller up&go bleer": {
+   "c": "husholdning",
+   "t": "bleer"
+  },
+  "vinmarked": {
+   "c": "drikke",
+   "t": "vin"
+  },
+  "premieur røget eller gravad laks": {
+   "c": "fisk",
+   "t": "laks"
+  },
+  "black coffee roasters, christgau eller peter larsen hele kaffebønner": {
+   "c": "drikke",
+   "t": "kaffebønner"
+  },
+  "änglamark økologisk ribbensteg": {
+   "c": "koed",
+   "t": "ribbensteg"
+  },
+  "coop lakseportioner": {
+   "c": "fisk",
+   "t": "laks"
+  },
+  "svansø nødder eller mandler": {
+   "c": "snacks",
+   "t": "nødder"
+  },
+  "biotex flydende vaskemiddel": {
+   "c": "husholdning",
+   "t": "vaskemiddel"
+  },
+  "heineken eller royal": {
+   "c": "drikke",
+   "t": "øl"
+  },
+  "peter larsen helbønner, gevalia eller café noir instant kaffe": {
+   "c": "drikke",
+   "t": "kaffe"
+  },
+  "say cheese mozzarellatern, klovborg eller riberhus skæreost": {
+   "c": "mejeri",
+   "t": "ost"
+  },
+  "soilmates avokado olie": {
+   "c": "kolonial",
+   "t": "avocadoolie"
+  },
+  "stor toilettaske med print": {
+   "c": "boligting",
+   "t": "toilettaske"
+  },
+  "toilettaske med håndtag og print": {
+   "c": "boligting",
+   "t": "toilettaske"
+  },
+  "pude": {
+   "c": "boligting",
+   "t": "pude"
+  },
+  "squishmallow nøglering": {
+   "c": "legetoej",
+   "t": "squishy"
+  },
+  "frijsenborg hel kylling": {
+   "c": "koed",
+   "t": "kylling"
+  },
+  "district 7 eller coteaux d´aix en provence": {
+   "c": "drikke",
+   "t": "rødvin"
+  },
+  "glyngøre fersk laksefilet": {
+   "c": "fisk",
+   "t": "laks"
+  },
+  "irma gløgg": {
+   "c": "drikke",
+   "t": "gløgg"
+  },
+  "coop koteletter eller rose hele kyllingelår": {
+   "c": "koed",
+   "t": "svinekød"
+  },
+  "okseculotte": {
+   "c": "koed",
+   "t": "okseculotte"
+  },
+  "tuborg øl": {
+   "c": "drikke",
+   "t": "øl"
+  },
+  "hel fransk majskylling": {
+   "c": "koed",
+   "t": "kylling"
+  },
+  "premium oksemedaljon, tykstegsbøffer eller peberbøffer": {
+   "c": "koed",
+   "t": "oksebøf"
+  },
+  "fredagsbøf entrecote eller ribeye": {
+   "c": "koed",
+   "t": "oksebøf"
+  },
+  "fredagsbøf entrecote eller ribeye*": {
+   "c": "koed",
+   "t": "oksebøf"
+  },
+  "baileys original": {
+   "c": "drikke",
+   "t": "likør"
+  },
+  "mammen skæreost": {
+   "c": "mejeri",
+   "t": "skæreost"
+  },
+  "velsmag lakseside": {
+   "c": "fisk",
+   "t": "laks"
+  },
+  "samyang nudler 5-pak": {
+   "c": "kolonial",
+   "t": "nudler"
+  },
+  "træbakke med glas til fyrfadslys": {
+   "c": "boligting",
+   "t": "træbakke"
+  },
+  "strikke- eller broderibog": {
+   "c": "boligting",
+   "t": "hobbybog"
+  },
+  "loftslampe": {
+   "c": "boligting",
+   "t": "loftslampe"
+  },
+  "kalenderlys med led": {
+   "c": "boligting",
+   "t": "led-lys"
+  },
+  "nytårsmad til børn - prøv vores børnehapsermenu til kun": {
+   "c": "menu",
+   "t": "børnemenu"
+  },
+  "dino raptor": {
+   "c": "legetoej",
+   "t": "dinosaur"
+  },
+  "nytårsmad til børn - prøv vores børnehapsermenu": {
+   "c": "menu",
+   "t": "børnemenu"
+  },
+  "thunder fury": {
+   "c": "legetoej",
+   "t": "legetøjsdrage"
+  },
+  "flip 7": {
+   "c": "legetoej",
+   "t": "kortspil"
+  },
+  "coca-cola, monster, somersby eller tuborg øl": {
+   "c": "drikke",
+   "t": "øl"
+  },
+  "gammeldags oksegrydesteg af bov eller tykkam": {
+   "c": "koed",
+   "t": "oksegryde"
+  },
+  "castillo de maria, bio logico eller diamond hill bag-in-box": {
+   "c": "drikke",
+   "t": "vin"
+  },
+  "klemmelampe": {
+   "c": "boligting",
+   "t": "klemmelampe"
+  },
+  "mini alkoholtester": {
+   "c": "elektronik",
+   "t": "alkoholtester"
+  },
+  "portia 10 meses ribera del duero": {
+   "c": "drikke",
+   "t": "rødvin"
+  },
+  "snebolde eller toffifee": {
+   "c": "snacks",
+   "t": "chokolade"
+  },
+  "livol eller gerimax vitaminer": {
+   "c": "husholdning",
+   "t": "vitaminer"
+  },
+  "mazzei fonterutoli no. 10, m. chapoutier côtes-du-rhône, pagos del rey 409 eller landgraf riesling spätlese": {
+   "c": "drikke",
+   "t": "vin"
+  },
+  "copenhagen roaster helbønner": {
+   "c": "drikke",
+   "t": "kaffebønner"
+  },
+  "urtekram økologisk ekstra jomfru olivenolie": {
+   "c": "kolonial",
+   "t": "olivenolie"
+  },
+  "bistronne peking and": {
+   "c": "koed",
+   "t": "and"
+  },
+  "il capolavoro eller jean marie garnier bag-in-box": {
+   "c": "drikke",
+   "t": "vin"
+  },
+  "amora eller øgo økologiske helbønner": {
+   "c": "drikke",
+   "t": "kaffebønner"
+  },
+  "feuerheerds 10yo tawny": {
+   "c": "drikke",
+   "t": "portvin"
+  },
+  "fitness pharma kosttilskud": {
+   "c": "husholdning",
+   "t": "kosttilskud"
+  },
+  "klyngelyskæde med 240 led": {
+   "c": "boligting",
+   "t": "lyskæde"
+  },
+  "gamingudstyr med led": {
+   "c": "elektronik",
+   "t": "gamingudstyr"
+  },
+  "lyskæde med 500 led": {
+   "c": "boligting",
+   "t": "lyskæde"
+  },
+  "høretelefoner": {
+   "c": "elektronik",
+   "t": "høretelefoner"
+  },
+  "traditionel andemenu": {
+   "c": "menu",
+   "t": "andemenu"
+  },
+  "francois martenot petit chablis": {
+   "c": "drikke",
+   "t": "hvidvin"
+  },
+  "flæskestegsmenu": {
+   "c": "menu",
+   "t": "flæskestegsmenu"
+  },
+  "kaffesæt i træ": {
+   "c": "boligting",
+   "t": "kaffesæt"
+  },
+  "krus eller muslingeskål med porcelænstusser": {
+   "c": "boligting",
+   "t": "krus"
+  },
+  "vinylkugle": {
+   "c": "legetoej",
+   "t": "vinylkugle"
+  },
+  "shoppingpose": {
+   "c": "boligting",
+   "t": "shoppingpose"
+  },
+  "5-pak biler": {
+   "c": "legetoej",
+   "t": "legetøjsbiler"
+  },
+  "insanity manic": {
+   "c": "drikke",
+   "t": "energidrik"
+  },
+  "politi-legesæt": {
+   "c": "legetoej",
+   "t": "legesæt"
+  },
+  "hår- eller glamoursæt": {
+   "c": "legetoej",
+   "t": "hårlegesæt"
+  },
+  "hvem er jeg eller hvem er jeg med dyr": {
+   "c": "legetoej",
+   "t": "selskabsspil"
+  },
+  "køretøj": {
+   "c": "legetoej",
+   "t": "køretøj"
+  },
+  "x-shot maske": {
+   "c": "legetoej",
+   "t": "maske"
+  },
+  "bueskydningssæt": {
+   "c": "legetoej",
+   "t": "bueskydningssæt"
+  },
+  "min første smartphone": {
+   "c": "legetoej",
+   "t": "legetøjstelefon"
+  },
+  "pop up pirat": {
+   "c": "legetoej",
+   "t": "piratspil"
+  },
+  "nøglering": {
+   "c": "boligting",
+   "t": "nøglering"
+  },
+  "blind ramen kop": {
+   "c": "kolonial",
+   "t": "ramen"
+  },
+  "fiskespil": {
+   "c": "legetoej",
+   "t": "fiskespil"
+  },
+  "dukke emma": {
+   "c": "legetoej",
+   "t": "dukke"
+  },
+  "fairy opvasketabs": {
+   "c": "husholdning",
+   "t": "opvasketabs"
+  },
+  "savanha eller diablo golden chardonnay i boks": {
+   "c": "drikke",
+   "t": "hvidvin"
+  },
+  "faustino 1 gran reserva, cattin grand cru eller burmester 10 year old tawny": {
+   "c": "drikke",
+   "t": "vin"
+  },
+  "blomsterdekoration i skjuler": {
+   "c": "boligting",
+   "t": "blomsterdekoration"
+  },
+  "andemenu": {
+   "c": "menu",
+   "t": "andemenu"
+  },
+  "mortensaften": {
+   "c": "menu",
+   "t": "mortensaftenmenu"
+  },
+  "entrecote eller ribeye": {
+   "c": "koed",
+   "t": "oksebøf"
+  },
+  "led kalenderlys": {
+   "c": "boligting",
+   "t": "led-lys"
+  },
+  "vulkansæt": {
+   "c": "legetoej",
+   "t": "vulkansæt"
+  },
+  "rummet gravesæt": {
+   "c": "legetoej",
+   "t": "gravesæt"
+  },
+  "carlsberg eller tuborg øl": {
+   "c": "drikke",
+   "t": "øl"
+  },
+  "spiritusmarked": {
+   "c": "drikke",
+   "t": "spiritus"
+  },
+  "neophos opvasketabs": {
+   "c": "husholdning",
+   "t": "opvasketabs"
+  },
+  "champagne moussekage": {
+   "c": "bagning",
+   "t": "moussekage"
+  },
+  "gateau marcel moussekage": {
+   "c": "bagning",
+   "t": "moussekage"
+  },
+  "tullamore dew whiskey, 1-enkelt bitter, sierra tequila eller berger pastis": {
+   "c": "drikke",
+   "t": "spiritus"
+  },
+  "bornholmergrisen pakkemarked": {
+   "c": "koed",
+   "t": "svinekød"
+  },
+  "fernet branca, jack daniel's whiskey, jägermeister, tanqueray gin eller tullamore dew whiskey": {
+   "c": "drikke",
+   "t": "spiritus"
+  },
+  "3d led kugle": {
+   "c": "elektronik",
+   "t": "led-lampe"
+  },
+  "den klassiske julefrokost": {
+   "c": "menu",
+   "t": "julefrokost"
+  },
+  "moderne andemenu": {
+   "c": "menu",
+   "t": "andemenu"
+  },
+  "vægtet bamse": {
+   "c": "legetoej",
+   "t": "bamse"
+  },
+  "axolotl": {
+   "c": "legetoej",
+   "t": "plysdyr"
+  },
+  "blue nun riesling eller piccini appassimento i boks": {
+   "c": "drikke",
+   "t": "hvidvin"
+  },
+  "coop eller gevalia hele kaffebønner": {
+   "c": "drikke",
+   "t": "kaffebønner"
+  },
+  "kung fu girl, golden zin, lindemans, il capolavoro appassimento bag-in-box": {
+   "c": "drikke",
+   "t": "vin"
+  },
+  "klyngelyskæde med 400 led kugler": {
+   "c": "boligting",
+   "t": "lyskæde"
+  },
+  "adventslys med led": {
+   "c": "boligting",
+   "t": "adventslys"
+  },
+  "ramen nudler": {
+   "c": "kolonial",
+   "t": "nudler"
+  },
+  "krea-kasse": {
+   "c": "legetoej",
+   "t": "kreativsæt"
+  },
+  "fantus, trumle eller børste": {
+   "c": "legetoej",
+   "t": "bamse"
+  },
+  "codenames": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "telefon": {
+   "c": "elektronik",
+   "t": "telefon"
+  },
+  "dino køretøj": {
+   "c": "legetoej",
+   "t": "køretøj"
+  },
+  "rummikub": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "fjernstyret bil": {
+   "c": "legetoej",
+   "t": "fjernstyret bil"
+  },
+  "plys": {
+   "c": "legetoej",
+   "t": "plysdyr"
+  },
+  "enhjørningesæt": {
+   "c": "legetoej",
+   "t": "enhjørningesæt"
+  },
+  "loopin’ louie, ali baba, vildkatten eller the upside down challenge": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "codenames duet": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "360 fjernstyret bil": {
+   "c": "legetoej",
+   "t": "fjernstyret bil"
+  },
+  "dragesæt": {
+   "c": "legetoej",
+   "t": "dragesæt"
+  },
+  "battle spinner": {
+   "c": "legetoej",
+   "t": "battle spinner"
+  },
+  "brandredningskøretøj": {
+   "c": "legetoej",
+   "t": "brandbil"
+  },
+  "peely og sparkplugs lejr": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "hønsefarm": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "talende bamse": {
+   "c": "legetoej",
+   "t": "bamse"
+  },
+  "magnetisk bygning": {
+   "c": "legetoej",
+   "t": "magnetbyggeri"
+  },
+  "vandlegemåtte": {
+   "c": "legetoej",
+   "t": "vandlegemåtte"
+  },
+  "klassisk julefrokost": {
+   "c": "menu",
+   "t": "julefrokost"
+  },
+  "suppegryde med låg eller hybridpande": {
+   "c": "boligting",
+   "t": "gryde"
+  },
+  "hardys crest i boks": {
+   "c": "drikke",
+   "t": "rødvin"
+  },
+  "kransekagetop med 8 ringe": {
+   "c": "bagning",
+   "t": "kransekage"
+  },
+  "is-sæt i træ": {
+   "c": "legetoej",
+   "t": "issæt"
+  },
+  "hønsejockey-ørkenangreb": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "partners duo": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "disney yuyus stitch eller peter plys": {
+   "c": "legetoej",
+   "t": "plysdyr"
+  },
+  "mit første trommesæt": {
+   "c": "legetoej",
+   "t": "trommesæt"
+  },
+  "dansk kalvegrydesteg": {
+   "c": "koed",
+   "t": "kalvekød"
+  },
+  "gummistøvler": {
+   "c": "boligting",
+   "t": "gummistøvler"
+  },
+  "eksternt drev": {
+   "c": "elektronik",
+   "t": "eksternt drev"
+  },
+  "træhylde": {
+   "c": "boligting",
+   "t": "træhylde"
+  },
+  "topps match attax cl mega tin": {
+   "c": "legetoej",
+   "t": "samlekort"
+  },
+  "tattoo sæt": {
+   "c": "legetoej",
+   "t": "tattoosæt"
+  },
+  "baby spinners": {
+   "c": "legetoej",
+   "t": "babyspinnere"
+  },
+  "fredagsslik": {
+   "c": "snacks",
+   "t": "slik"
+  },
+  "topps premier league mega tin": {
+   "c": "legetoej",
+   "t": "samlekort"
+  },
+  "it’s bananas": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "biltransporter, ambulance eller helikopter": {
+   "c": "legetoej",
+   "t": "køretøj"
+  },
+  "klaptelefon": {
+   "c": "legetoej",
+   "t": "klaptelefon"
+  },
+  "krystalsæt": {
+   "c": "legetoej",
+   "t": "krystalsæt"
+  },
+  "prinsessesæt": {
+   "c": "legetoej",
+   "t": "prinsessesæt"
+  },
+  "fjernstyret helikopter": {
+   "c": "legetoej",
+   "t": "fjernstyret helikopter"
+  },
+  "gå på planken": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "doktorsæt": {
+   "c": "legetoej",
+   "t": "doktorsæt"
+  },
+  "pull my finger": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "byggepose": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "slam heroes brainrot figur": {
+   "c": "legetoej",
+   "t": "figur"
+  },
+  "mini magnetslot": {
+   "c": "legetoej",
+   "t": "magnetlegetøj"
+  },
+  "musikbog": {
+   "c": "legetoej",
+   "t": "musikbog"
+  },
+  "fjernstyret køretøj": {
+   "c": "legetoej",
+   "t": "fjernstyret køretøj"
+  },
+  "den store julefrokost": {
+   "c": "menu",
+   "t": "julefrokost"
+  },
+  "midi perler": {
+   "c": "legetoej",
+   "t": "perler"
+  },
+  "electro før skolealderen eller electro logiske problemer": {
+   "c": "legetoej",
+   "t": "læringsspil"
+  },
+  "afrikas stjerne": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "figurpakke": {
+   "c": "legetoej",
+   "t": "figurer"
+  },
+  "coco crazy": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "matador": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "fredagstapas*": {
+   "c": "menu",
+   "t": "tapas"
+  },
+  "fredagstapas": {
+   "c": "menu",
+   "t": "tapas"
+  },
+  "bamsetårn": {
+   "c": "legetoej",
+   "t": "bamsetårn"
+  },
+  "juletræ med lyskæde": {
+   "c": "boligting",
+   "t": "juletræ"
+  },
+  "moderne julefrokost": {
+   "c": "menu",
+   "t": "julefrokost"
+  },
+  "moderne vegetarisk julefrokost": {
+   "c": "menu",
+   "t": "vegetarmenu"
+  },
+  "partners trio": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "hitster eller hitster guilty pleasure": {
+   "c": "legetoej",
+   "t": "musikspil"
+  },
+  "sequence junior": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "rhinsten mikrofon": {
+   "c": "legetoej",
+   "t": "mikrofon"
+  },
+  "træk sparegris": {
+   "c": "legetoej",
+   "t": "sparegris"
+  },
+  "lynet mcqueen": {
+   "c": "legetoej",
+   "t": "legetøjsbil"
+  },
+  "sequence jacks go wild": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "johnnie walker black label 12 års whisky eller skagerrak gin": {
+   "c": "drikke",
+   "t": "spiritus"
+  },
+  "kransekage 2027 i tinæske": {
+   "c": "bagning",
+   "t": "kransekage"
+  },
+  "ronaldo - højdepunkter": {
+   "c": "legetoej",
+   "t": "fodboldbog"
+  },
+  "messi - højdepunkter": {
+   "c": "legetoej",
+   "t": "fodboldbog"
+  },
+  "kransekageur": {
+   "c": "bagning",
+   "t": "kransekage"
+  },
+  "dukke med enhjørning": {
+   "c": "legetoej",
+   "t": "dukke"
+  },
+  "tapple": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "deluxe dukke": {
+   "c": "legetoej",
+   "t": "dukke"
+  },
+  "interaktiv skydeskive": {
+   "c": "legetoej",
+   "t": "skydeskive"
+  },
+  "donutshop": {
+   "c": "legetoej",
+   "t": "legesæt"
+  },
+  "squishmallow plys": {
+   "c": "legetoej",
+   "t": "plysdyr"
+  },
+  "ferrari sf90 xx stradale-sportsvogn": {
+   "c": "legetoej",
+   "t": "legetøjsbil"
+  },
+  "armbåndsmaskine": {
+   "c": "legetoej",
+   "t": "armbåndsmaskine"
+  },
+  "hvem er hvem pokémon?": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "hvem er hvem?": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "hundehvalp": {
+   "c": "legetoej",
+   "t": "hundehvalp"
+  },
+  "bugatti vision gt-hypersportsvogn": {
+   "c": "legetoej",
+   "t": "legetøjsbil"
+  },
+  "volvo minigraver": {
+   "c": "legetoej",
+   "t": "gravemaskine"
+  },
+  "bmw m3 (e30)": {
+   "c": "legetoej",
+   "t": "legetøjsbil"
+  },
+  "tidsmaskinen fra tilbage til fremtiden": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "labyrinth": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "elmarked": {
+   "c": "elektronik",
+   "t": "elprodukt"
+  },
+  "nytårsbuffet": {
+   "c": "menu",
+   "t": "nytårsbuffet"
+  },
+  "ismaskine": {
+   "c": "elektronik",
+   "t": "ismaskine"
+  },
+  "monster jam sparkle smash pull-back": {
+   "c": "legetoej",
+   "t": "legetøjsbil"
+  },
+  "diskokugle": {
+   "c": "boligting",
+   "t": "diskokugle"
+  },
+  "sequence": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "loopin’ louie double trouble": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "tyngdebamse": {
+   "c": "legetoej",
+   "t": "tyngdebamse"
+  },
+  "garderobestativ": {
+   "c": "boligting",
+   "t": "garderobestativ"
+  },
+  "kunstig granguirlande med lyskæde": {
+   "c": "boligting",
+   "t": "granguirlande"
+  },
+  "luksus julefrokost": {
+   "c": "menu",
+   "t": "julefrokost"
+  },
+  "sony on-ear": {
+   "c": "elektronik",
+   "t": "høretelefoner"
+  },
+  "husk film til dit kamera": {
+   "c": "elektronik",
+   "t": "kamerafilm"
+  },
+  "pengeskab": {
+   "c": "boligting",
+   "t": "pengeskab"
+  },
+  "philips kabel on-ear": {
+   "c": "elektronik",
+   "t": "høretelefoner"
+  },
+  "køleskab": {
+   "c": "elektronik",
+   "t": "køleskab"
+  },
+  "walkie talkie": {
+   "c": "elektronik",
+   "t": "walkie-talkie"
+  },
+  "magnetklodser": {
+   "c": "legetoej",
+   "t": "magnetklodser"
+  },
+  "dansende lama": {
+   "c": "legetoej",
+   "t": "lama"
+  },
+  "baby legesæt": {
+   "c": "legetoej",
+   "t": "legesæt"
+  },
+  "tuschfabrik": {
+   "c": "legetoej",
+   "t": "tuschfabrik"
+  },
+  "kravle- og lærebold": {
+   "c": "legetoej",
+   "t": "læringsbold"
+  },
+  "insanity blitz hammer": {
+   "c": "legetoej",
+   "t": "legetøjshammer"
+  },
+  "interaktiv elefant": {
+   "c": "legetoej",
+   "t": "elefant"
+  },
+  "sallys far elsker buffet": {
+   "c": "legetoej",
+   "t": "børnebog"
+  },
+  "sminke- og frisørhoved": {
+   "c": "legetoej",
+   "t": "sminkehoved"
+  },
+  "triominos": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "mastermind": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "unicorn, dinosaurs eller capybara megasæt": {
+   "c": "legetoej",
+   "t": "legesæt"
+  },
+  "magnetisk glimmer- eller diamantsæt": {
+   "c": "legetoej",
+   "t": "kreativsæt"
+  },
+  "højstol": {
+   "c": "boligting",
+   "t": "højstol"
+  },
+  "panda": {
+   "c": "legetoej",
+   "t": "panda"
+  },
+  "shadow og batcycle": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "insanity berzerko": {
+   "c": "legetoej",
+   "t": "legetøjsfigur"
+  },
+  "t-rex": {
+   "c": "legetoej",
+   "t": "dinosaur"
+  },
+  "pudebamse": {
+   "c": "legetoej",
+   "t": "pudebamse"
+  },
+  "gående pingvin": {
+   "c": "legetoej",
+   "t": "pingvin"
+  },
+  "karaoke med 2 mikrofoner": {
+   "c": "elektronik",
+   "t": "karaokemaskine"
+  },
+  "monster jam grave digger fire and ice": {
+   "c": "legetoej",
+   "t": "monstertruck"
+  },
+  "skraldebil": {
+   "c": "legetoej",
+   "t": "skraldebil"
+  },
+  "forræder": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "larve": {
+   "c": "legetoej",
+   "t": "larve"
+  },
+  "feltet": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "dobbeltsidet stuntbil": {
+   "c": "legetoej",
+   "t": "stuntbil"
+  },
+  "peekimo": {
+   "c": "legetoej",
+   "t": "figur"
+  },
+  "fjernstyrede biler": {
+   "c": "legetoej",
+   "t": "fjernstyret bil"
+  },
+  "astrobot": {
+   "c": "legetoej",
+   "t": "figur"
+  },
+  "color reveal dukke": {
+   "c": "legetoej",
+   "t": "dukke"
+  },
+  "dj legemåtte": {
+   "c": "legetoej",
+   "t": "dansemåtte"
+  },
+  "cabriolet": {
+   "c": "legetoej",
+   "t": "legetøjsbil"
+  },
+  "sallys far bandekassespillet": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "talisker skye single malt whisky, aviation gin, normandin vsop cognac eller père françois calvados vsop": {
+   "c": "drikke",
+   "t": "spiritus"
+  },
+  "tapas til nytårsaften": {
+   "c": "menu",
+   "t": "tapas"
+  },
+  "the sims": {
+   "c": "legetoej",
+   "t": "videospil"
+  },
+  "pikachu plys": {
+   "c": "legetoej",
+   "t": "plysdyr"
+  },
+  "mamacorn surprise": {
+   "c": "legetoej",
+   "t": "enhjørning"
+  },
+  "2-i-1 armbåndssæt": {
+   "c": "legetoej",
+   "t": "armbåndssæt"
+  },
+  "autostol": {
+   "c": "boligting",
+   "t": "autostol"
+  },
+  "pladespiller": {
+   "c": "elektronik",
+   "t": "pladespiller"
+  },
+  "stitch eller angel baby paws": {
+   "c": "legetoej",
+   "t": "plysdyr"
+  },
+  "bezzerwizzer original": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "lyskæde til flagstang": {
+   "c": "boligting",
+   "t": "lyskæde"
+  },
+  "støvsuger": {
+   "c": "elektronik",
+   "t": "støvsuger"
+  },
+  "twinmarkers": {
+   "c": "legetoej",
+   "t": "tuscher"
+  },
+  "denver børnekamera": {
+   "c": "elektronik",
+   "t": "børnekamera"
+  },
+  "hitster battle of generations": {
+   "c": "legetoej",
+   "t": "musikspil"
+  },
+  "squish maskine": {
+   "c": "legetoej",
+   "t": "squishmaskine"
+  },
+  "elsa dukke med udklædning": {
+   "c": "legetoej",
+   "t": "dukke"
+  },
+  "hitster bingo": {
+   "c": "legetoej",
+   "t": "musikspil"
+  },
+  "bamse": {
+   "c": "legetoej",
+   "t": "bamse"
+  },
+  "robothånd": {
+   "c": "legetoej",
+   "t": "robothånd"
+  },
+  "dukke med kuffert": {
+   "c": "legetoej",
+   "t": "dukke"
+  },
+  "slimmaskine": {
+   "c": "legetoej",
+   "t": "slimemaskine"
+  },
+  "klomaskine": {
+   "c": "legetoej",
+   "t": "klomaskine"
+  },
+  "lol den der ler sidst spillet": {
+   "c": "legetoej",
+   "t": "selskabsspil"
+  },
+  "hulk hænder": {
+   "c": "legetoej",
+   "t": "hulk-hænder"
+  },
+  "rubble redningskøretøj": {
+   "c": "legetoej",
+   "t": "redningskøretøj"
+  },
+  "vildkatten stitch": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "spruttende hval": {
+   "c": "legetoej",
+   "t": "hval"
+  },
+  "gør-det-selv sæt": {
+   "c": "legetoej",
+   "t": "kreativsæt"
+  },
+  "hover shot": {
+   "c": "legetoej",
+   "t": "skydespil"
+  },
+  "derpy": {
+   "c": "legetoej",
+   "t": "figur"
+  },
+  "farm traktor": {
+   "c": "legetoej",
+   "t": "traktor"
+  },
+  "mommy cappy og baby": {
+   "c": "legetoej",
+   "t": "legetøjsfigur"
+  },
+  "f1 grid start banesæt": {
+   "c": "legetoej",
+   "t": "bilbane"
+  },
+  "krypteret": {
+   "c": "legetoej",
+   "t": "brætspil"
+  },
+  "furby vibes": {
+   "c": "legetoej",
+   "t": "interaktivt legetøj"
+  },
+  "8-pak minifigurer": {
+   "c": "legetoej",
+   "t": "minifigurer"
+  },
+  "magnetisk slot": {
+   "c": "legetoej",
+   "t": "magnetklodser"
+  },
+  "klapvogn": {
+   "c": "boligting",
+   "t": "klapvogn"
+  },
+  "magnetisk byggesæt": {
+   "c": "legetoej",
+   "t": "magnetbyggeri"
+  },
+  "rock tumbler": {
+   "c": "legetoej",
+   "t": "krystalsæt"
+  },
+  "tandlægesæt": {
+   "c": "legetoej",
+   "t": "tandlægesæt"
+  },
+  "perleboks med 4 skuffer": {
+   "c": "legetoej",
+   "t": "perleboks"
+  },
+  "rådhustårn med 10 ringe og konfekt": {
+   "c": "bagning",
+   "t": "kransekage"
+  },
+  "kransekagekurv med konfekt": {
+   "c": "bagning",
+   "t": "kransekage"
+  },
+  "byggesæt": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "safaridyr": {
+   "c": "legetoej",
+   "t": "safaridyr"
+  },
+  "supply drop": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "udrykningscenter": {
+   "c": "legetoej",
+   "t": "byggesæt"
+  },
+  "nytårsmenu": {
+   "c": "menu",
+   "t": "nytårsmenu"
+  },
+  "jasmin bendy buddy": {
+   "c": "legetoej",
+   "t": "figur"
+  },
+  "løgismose frilandsberberieand": {
+   "c": "koed",
+   "t": "and"
+  },
+  "webblaster": {
+   "c": "legetoej",
+   "t": "webblaster"
+  },
+  "værktøjskasse": {
+   "c": "boligting",
+   "t": "værktøjskasse"
+  },
+  "hundebørnehave": {
+   "c": "legetoej",
+   "t": "hundehvalp"
+  },
+  "spidermanfigur": {
+   "c": "legetoej",
+   "t": "figur"
+  },
+  "mine første 100 dyr": {
+   "c": "legetoej",
+   "t": "børnebog"
+  },
+  "magnetisk legesæt": {
+   "c": "legetoej",
+   "t": "magnetlegetøj"
+  },
+  "roadmax gummiged": {
+   "c": "legetoej",
+   "t": "gummiged"
+  },
+  "skelettet": {
+   "c": "legetoej",
+   "t": "skelet"
+  },
+  "2-i-1 puf med ryglæn og opbevaring": {
+   "c": "boligting",
+   "t": "puf"
+  },
+  "accutime smart watch": {
+   "c": "elektronik",
+   "t": "smartwatch"
+  },
+  "dukke ella": {
+   "c": "legetoej",
+   "t": "dukke"
+  },
+  "magisk rapunzel dukke": {
+   "c": "legetoej",
+   "t": "dukke"
+  },
+  "gotta go giraffe": {
+   "c": "legetoej",
+   "t": "giraff"
+  },
+  "boksebold på fod": {
+   "c": "legetoej",
+   "t": "boksebold"
+  },
+  "dukke": {
+   "c": "legetoej",
+   "t": "dukke"
+  },
+  "bumper road rage": {
+   "c": "legetoej",
+   "t": "legetøjsbil"
+  },
+  "club pakke": {
+   "c": "andet",
+   "t": "pakke"
+  },
+  "bondegård": {
+   "c": "legetoej",
+   "t": "bondegård"
+  },
+  "labradoodle": {
+   "c": "legetoej",
+   "t": "hund"
+  },
+  "køkkenlegesæt": {
+   "c": "legetoej",
+   "t": "køkkenlegesæt"
+  },
+  "2-i-1 stylinghoved og legesæt": {
+   "c": "legetoej",
+   "t": "stylinghoved"
+  },
+  "multipakke": {
+   "c": "legetoej",
+   "t": "multipakke"
+  },
+  "min første porche": {
+   "c": "legetoej",
+   "t": "legetøjsbil"
+  },
+  "læringscomputer original eller stitch": {
+   "c": "legetoej",
+   "t": "læringscomputer"
+  },
+  "fjernstyret stuntbil": {
+   "c": "legetoej",
+   "t": "stuntbil"
+  },
+  "byg-selv-hule": {
+   "c": "legetoej",
+   "t": "hulebyggesæt"
+  },
+  "fjernstyret drage": {
+   "c": "legetoej",
+   "t": "fjernstyret drage"
+  },
+  "dobbelt loop banesæt": {
+   "c": "legetoej",
+   "t": "bilbane"
+  },
+  "dansemåtte": {
+   "c": "legetoej",
+   "t": "dansemåtte"
+  },
+  "kasseapparat med touch-skærm": {
+   "c": "legetoej",
+   "t": "kasseapparat"
+  },
+  "pink eller camouflage walkie talkies": {
+   "c": "elektronik",
+   "t": "walkie-talkie"
+  },
+  "fairy sugar glider": {
+   "c": "legetoej",
+   "t": "sukkerglider"
+  },
+  "kpop demon hunters": {
+   "c": "legetoej",
+   "t": "figurer"
+  },
+  "vandmandslampe": {
+   "c": "boligting",
+   "t": "lampe"
+  },
+  "dukke ingeborg": {
+   "c": "legetoej",
+   "t": "dukke"
+  },
+  "hobbykuffert": {
+   "c": "boligting",
+   "t": "hobbykuffert"
+  },
+  "fjernstyret edderkop": {
+   "c": "legetoej",
+   "t": "fjernstyret edderkop"
+  },
+  "hobbykommode": {
+   "c": "boligting",
+   "t": "hobbykommode"
+  },
+  "champagne": {
+   "c": "drikke",
+   "t": "champagne"
+  },
+  "keyboard": {
+   "c": "elektronik",
+   "t": "keyboard"
+  },
+  "magicorn": {
+   "c": "legetoej",
+   "t": "enhjørning"
+  },
+  "juletræ i papir": {
+   "c": "boligting",
+   "t": "juletræ"
+  },
+  "stegt hel and med andesauce": {
+   "c": "menu",
+   "t": "andemenu"
+  },
+  "fødselsdags-familiehus": {
+   "c": "legetoej",
+   "t": "dukkehus"
+  },
+  "ultimativ makeup-sæt": {
+   "c": "legetoej",
+   "t": "makeupsæt"
+  },
+  "magic bunny": {
+   "c": "legetoej",
+   "t": "kanin"
+  },
+  "mega redningssæt": {
+   "c": "legetoej",
+   "t": "redningssæt"
+  },
+  "buket pink roser": {
+   "c": "boligting",
+   "t": "blomsterbuket"
+  },
+  "enhjørning": {
+   "c": "legetoej",
+   "t": "enhjørning"
+  },
+  "3-i-1 kreative ramper med køretøjer": {
+   "c": "legetoej",
+   "t": "rampe"
+  },
+  "bumper drone": {
+   "c": "legetoej",
+   "t": "drone"
+  },
+  "fjernstyret racerbil": {
+   "c": "legetoej",
+   "t": "racerbil"
+  },
+  "ouchies kitty": {
+   "c": "legetoej",
+   "t": "plysdyr"
+  },
+  "overflødighedshorn med konfekt": {
+   "c": "bagning",
+   "t": "kransekage"
+  },
+  "ender-dragen": {
+   "c": "legetoej",
+   "t": "drage"
+  },
+  "pink blomsterbuket": {
+   "c": "boligting",
+   "t": "blomsterbuket"
+  },
+  "eevee": {
+   "c": "legetoej",
+   "t": "figur"
+  },
+  "ferrari 488 pista-bil": {
+   "c": "legetoej",
+   "t": "legetøjsbil"
+  },
+  "dukke eleanor": {
+   "c": "legetoej",
+   "t": "dukke"
+  },
+  "nytårstapas": {
+   "c": "menu",
+   "t": "tapas"
+  },
+  "sandyland kuffert": {
+   "c": "legetoej",
+   "t": "legesæt"
+  },
+  "trust gaming headset": {
+   "c": "elektronik",
+   "t": "gamingheadset"
+  },
+  "neglestudie": {
+   "c": "legetoej",
+   "t": "neglestudie"
+  },
+  "sovende derpy": {
+   "c": "legetoej",
+   "t": "plysdyr"
+  },
+  "philips trådløse on-ear": {
+   "c": "elektronik",
+   "t": "høretelefoner"
+  },
+  "robo rage": {
+   "c": "legetoej",
+   "t": "robot"
+  },
+  "magnetisk deluxe legesæt": {
+   "c": "legetoej",
+   "t": "magnetlegetøj"
+  },
+  "brøl & udforsk timmy": {
+   "c": "legetoej",
+   "t": "interaktivt legetøj"
+  },
+  "motor battles": {
+   "c": "legetoej",
+   "t": "bilbane"
+  },
+  "deluxe klædeskab": {
+   "c": "legetoej",
+   "t": "klædeskab"
+  },
+  "pinball maskine": {
+   "c": "legetoej",
+   "t": "flippermaskine"
+  },
+  "hundehvalpen benny": {
+   "c": "legetoej",
+   "t": "hundehvalp"
+  },
+  "lufthavnsbrandbil": {
+   "c": "legetoej",
+   "t": "brandbil"
+  },
+  "munchlax": {
+   "c": "legetoej",
+   "t": "plysdyr"
+  },
+  "messi - legende": {
+   "c": "legetoej",
+   "t": "fodboldbog"
+  },
+  "ronaldo - legende": {
+   "c": "legetoej",
+   "t": "fodboldbog"
+  },
+  "hel andemenu": {
+   "c": "menu",
+   "t": "andemenu"
+  },
+  "laser handtank attack": {
+   "c": "legetoej",
+   "t": "laserspil"
+  },
+  "mama surprise": {
+   "c": "legetoej",
+   "t": "dukke"
+  },
+  "gavesæt": {
+   "c": "andet",
+   "t": "gavesæt"
+  },
+  "robot hund": {
+   "c": "legetoej",
+   "t": "robothund"
+  },
+  "pony": {
+   "c": "legetoej",
+   "t": "pony"
+  },
+  "fjernstyret t-rex monstertruck": {
+   "c": "legetoej",
+   "t": "monstertruck"
+  },
+  "megasaurus dinokøretøj": {
+   "c": "legetoej",
+   "t": "dinokøretøj"
+  },
+  "switch 2: ea sports fc 27": {
+   "c": "elektronik",
+   "t": "videospil"
+  },
+  "instax mini 12 kamera": {
+   "c": "elektronik",
+   "t": "kamera"
+  },
+  "ps5: ea sports fc 27": {
+   "c": "elektronik",
+   "t": "videospil"
+  },
+  "ps5 dualsense trådløs controller": {
+   "c": "elektronik",
+   "t": "controller"
+  },
+  "canyon kids smartwatch 4g": {
+   "c": "elektronik",
+   "t": "smartwatch"
+  },
+  "brandbil": {
+   "c": "legetoej",
+   "t": "brandbil"
+  },
+  "switch joy-con 2 controllers": {
+   "c": "elektronik",
+   "t": "controller"
+  },
+  "denver 8” tablet til børn": {
+   "c": "elektronik",
+   "t": "børnetablet"
+  },
+  "messi - jubelscene": {
+   "c": "legetoej",
+   "t": "fodboldfigur"
+  },
+  "nintendo switch 2 konsol": {
+   "c": "elektronik",
+   "t": "spilkonsol"
+  },
+  "ps5 slim digital edition": {
+   "c": "elektronik",
+   "t": "spilkonsol"
+  },
+  "ps5 standard e-chassis slim edition": {
+   "c": "elektronik",
+   "t": "spilkonsol"
+  }
+ }
+}

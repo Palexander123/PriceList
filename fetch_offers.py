@@ -25,7 +25,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-from categories import categorize, category_list
+from categories import classify, category_list
 
 ROOT = Path(__file__).resolve().parent
 TJEK_BASE = "https://squid-api.tjek.com/v2"
@@ -158,7 +158,8 @@ def normalize_tjek(o: dict, chain: str):
     if o.get("catalog_id") and o.get("id"):
         link = f"https://etilbudsavis.dk/{slug}?publication={o['catalog_id']}&offer={o['id']}"
     description = (o.get("description") or "").strip()
-    return {
+    category, why = classify(title, description)
+    item = {
         "id": f"tjek:{o.get('id')}",
         "chain": chain,
         "kind": "weekly",
@@ -173,8 +174,11 @@ def normalize_tjek(o: dict, chain: str):
         "valid_from": parse_iso(o.get("run_from")),
         "valid_to": parse_iso(o.get("run_till")),
         "url": link,
-        "category": categorize(title, description),
+        "category": category,
     }
+    if why:
+        item["junk_reason"] = why
+    return item
 
 
 def fetch_tjek(cfg: dict):
@@ -234,7 +238,8 @@ def normalize_salling(entry: dict, store: dict):
     if addr.get("street"):
         store_label = f"{store_label}, {addr['street']}"
     pct = num(offer.get("percentDiscount"))
-    return {
+    category, why = classify(title, cat_text)
+    item = {
         "id": f"sal:{store.get('id')}:{product.get('ean') or title}",
         "chain": chain,
         "kind": "clearance",
@@ -249,8 +254,11 @@ def normalize_salling(entry: dict, store: dict):
         "valid_from": parse_iso(offer.get("startTime")),
         "valid_to": parse_iso(offer.get("endTime")),
         "url": None,
-        "category": categorize(title, cat_text),
+        "category": category,
     }
+    if why:
+        item["junk_reason"] = why
+    return item
 
 
 def fetch_salling(cfg: dict, api_key: str):
@@ -273,6 +281,52 @@ def fetch_salling(cfg: dict, api_key: str):
         notes.append(f"Salling: {n_stores} stores in {zip_code}")
         time.sleep(pause)
     return offers, notes
+
+
+# --------------------------------------------------------------------------- #
+# manual / AI sorting (site/data/category_overrides.json, made with site/sorter.html)
+# --------------------------------------------------------------------------- #
+OVERRIDES_PATH = ROOT / "site" / "data" / "category_overrides.json"
+
+
+def norm_title(title):
+    """Same normalisation as the sorter page: lowercase, single spaces."""
+    return " ".join((title or "").lower().split())
+
+
+def load_overrides(valid_ids, path=None):
+    """Return ({normalised title: {"c": category, "t": type}}, warning or None).
+    Entries with an unknown category are ignored."""
+    try:
+        raw = json.loads((path or OVERRIDES_PATH).read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return {}, None
+    except (OSError, json.JSONDecodeError) as e:
+        return {}, f"Sorting file ignored: {e}"
+    items = raw.get("items", {}) if isinstance(raw, dict) else {}
+    out = {}
+    for key, val in items.items():
+        if isinstance(val, dict) and val.get("c") in valid_ids:
+            out[key] = {"c": val["c"], "t": str(val.get("t") or "").strip()[:60]}
+    return out, None
+
+
+def apply_overrides(offers, overrides, groups):
+    """Let the saved sorting win over the keyword rules. Returns how many offers changed."""
+    changed = 0
+    for o in offers:
+        ov = overrides.get(norm_title(o["title"]))
+        if not ov:
+            continue
+        o["category"] = ov["c"]
+        if ov["t"]:
+            o["type"] = ov["t"]
+        if groups.get(ov["c"]) == "junk":
+            o["junk_reason"] = "sortering"
+        else:
+            o.pop("junk_reason", None)
+        changed += 1
+    return changed
 
 
 # --------------------------------------------------------------------------- #
@@ -315,7 +369,11 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--sample", action="store_true", help="build from tests/fixtures instead of the network")
     parser.add_argument("--out", default=str(ROOT / "site" / "data" / "offers.json"))
+    parser.add_argument("--no-prompt", action="store_true", help="do not write the AI labeling prompt files")
     args = parser.parse_args(argv)
+    for stream in (sys.stdout, sys.stderr):      # old Windows consoles choke on unusual characters
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(errors="replace")
 
     load_dotenv(ROOT / ".env")
     cfg = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
@@ -355,6 +413,14 @@ def main(argv=None) -> int:
         else:
             notes.append("Salling: skipped, SALLING_API_KEY is not set")
 
+    cats = category_list()
+    overrides, warning = load_overrides({c["id"] for c in cats})
+    if warning:
+        errors.append(warning)
+    if overrides:
+        n = apply_overrides(offers, overrides, {c["id"]: c["group"] for c in cats})
+        notes.append(f"Sorting: {n} offers use category_overrides.json ({len(overrides)} saved products)")
+
     out = build_output(offers, notes, errors, cfg, sample=args.sample)
     for line in notes + errors:
         print(line)
@@ -368,6 +434,14 @@ def main(argv=None) -> int:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"Wrote {out['meta']['count']} offers to {path}")
+
+    # On your own PC, also prepare the copy-and-paste prompt for the AI (skipped on GitHub).
+    if not args.no_prompt and not os.environ.get("CI"):
+        try:
+            import labels
+            labels.announce_prompts(ROOT, out["offers"])
+        except Exception as e:  # labelling trouble must never break a scrape
+            print(f"(Could not prepare the labeling prompts: {e})")
     return 0
 
 

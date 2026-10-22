@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hjælp med at sortere varer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23ffd23f'/%3E%3Ctext x='16' y='23' font-size='20' font-weight='800' text-anchor='middle' font-family='sans-serif' fill='%231a1500'%3Ekr%3C/text%3E%3C/svg%3E">
+<style>
+  :root { --bg:#edf0f3; --surface:#fff; --ink:#15202b; --muted:#596675; --line:#d6dce3; --tag:#ffd23f; --tag-ink:#1a1500;
+          --save:#0a7a49; --save-bg:#dcf3e7; --warn:#b3261e; --focus:#1b5fd1; --font:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#10161c; --surface:#19222b; --ink:#eef2f6; --muted:#9aa8b6; --line:#2b3844;
+          --save:#55d69b; --save-bg:#123a29; --warn:#ff8a80; --focus:#6aa2ff; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:400 16px/1.5 var(--font); }
+  button, input, select, textarea { font:inherit; color:inherit; }
+  :focus-visible { outline:3px solid var(--focus); outline-offset:2px; border-radius:6px; }
+  .wrap { max-width:1000px; margin:0 auto; padding:0 16px 56px; }
+  h1 { margin:28px 0 4px; font-size:clamp(1.8rem,5vw,2.6rem); line-height:1.05; font-weight:800; font-stretch:75%; }
+  h2 { margin:0 0 8px; font-size:1.2rem; }
+  .lead { margin:0 0 20px; color:var(--muted); max-width:62ch; }
+  .back { display:inline-block; margin-top:20px; color:var(--focus); font-weight:600; }
+  .step { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:18px; margin:0 0 16px; }
+  .step > p { margin:0 0 12px; color:var(--muted); max-width:70ch; }
+  .row { display:flex; flex-wrap:wrap; gap:10px 18px; align-items:center; margin:0 0 12px; }
+  .row label { display:inline-flex; align-items:center; gap:8px; cursor:pointer; }
+  select, input[type=text] { padding:8px 10px; border-radius:8px; border:1px solid var(--line); background:var(--bg); }
+  textarea { width:100%; min-height:200px; padding:10px 12px; border-radius:10px; border:1px solid var(--line); background:var(--bg); font:13px/1.4 ui-monospace,Consolas,monospace; resize:vertical; }
+  .btn { padding:10px 18px; border-radius:10px; border:1px solid var(--ink); background:var(--ink); color:var(--bg); font-weight:700; cursor:pointer; }
+  .btn.alt { background:var(--tag); border-color:var(--tag); color:var(--tag-ink); }
+  .btn.ghost { background:transparent; color:var(--ink); border-color:var(--line); }
+  .btn:disabled { opacity:.45; cursor:not-allowed; }
+  .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+  .status { margin:10px 0 0; font-weight:600; }
+  .status.ok { color:var(--save); } .status.bad { color:var(--warn); }
+  .tablewrap { max-height:520px; overflow:auto; border:1px solid var(--line); border-radius:10px; margin-top:10px; }
+  table { border-collapse:collapse; width:100%; font-size:.92rem; }
+  th, td { padding:6px 10px; text-align:left; border-bottom:1px solid var(--line); vertical-align:middle; }
+  th { position:sticky; top:0; background:var(--surface); z-index:1; }
+  tr.changed td { background:var(--save-bg); }
+  tr.invalid td { background:rgba(179,38,30,.12); }
+  td.title { min-width:200px; font-weight:600; }
+  td input[type=text] { width:100%; min-width:120px; }
+  .small { color:var(--muted); font-size:.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">Tilbage til tilbuddene</a>
+  <h1>Hjælp med at sortere varer</h1>
+  <p class="lead">Lad en gratis AI-chat, fx ChatGPT, give hver vare en kategori og en varetype. Du kopierer et spørgsmål, indsætter svaret her og tjekker resultatet. Varer du allerede har sorteret, skal du ikke gøre igen.</p>
+
+  <section class="step" aria-labelledby="s1">
+    <h2 id="s1">1. Kopiér spørgsmålet</h2>
+    <p>Vælg hvilke varer og hvor mange ad gangen. Små dele er mere sikre, fordi gratis chats ofte afbryder lange svar.</p>
+    <div class="row">
+      <label><input type="radio" name="mode" value="todo" checked> Kun usorterede (<span id="nTodo">0</span>)</label>
+      <label><input type="radio" name="mode" value="all"> Alle varer (<span id="nAll">0</span>)</label>
+      <label>Varer pr. del <select id="size"><option>100</option><option>200</option><option selected>300</option><option>500</option><option value="100000">Alle</option></select></label>
+      <label>Del <select id="part"></select></label>
+    </div>
+    <textarea id="prompt" readonly aria-label="Spørgsmål til AI-chatten"></textarea>
+    <div class="actions">
+      <button class="btn alt" id="copy">Kopiér spørgsmålet</button>
+      <span class="small" id="promptInfo"></span>
+    </div>
+  </section>
+
+  <section class="step" aria-labelledby="s2">
+    <h2 id="s2">2. Indsæt svaret</h2>
+    <p>Indsæt spørgsmålet i chatten, og kopiér hele svaret herind. Hvis chatten stopper midt i, så skriv «fortsæt» til den og indsæt det hele her, også den første del.</p>
+    <textarea id="reply" placeholder="1|koed|hakket oksekød&#10;2|drikke|sodavand&#10;…" aria-label="Svar fra AI-chatten"></textarea>
+    <div class="actions">
+      <button class="btn" id="read">Læs svar</button>
+      <button class="btn ghost" id="missing" hidden>Lav nyt spørgsmål til dem der mangler</button>
+    </div>
+    <p class="status" id="readStatus" role="status"></p>
+  </section>
+
+  <section class="step" aria-labelledby="s3">
+    <h2 id="s3">3. Tjek og gem</h2>
+    <p>Grønne rækker er ændringer i forhold til nu. Ret en kategori eller varetype, hvis AI'en tog fejl, og fjern fluebenet ved dem du ikke vil gemme.</p>
+    <div class="row">
+      <label><input type="checkbox" id="onlyChanged"> Vis kun ændringer</label>
+      <span class="small" id="previewInfo"></span>
+    </div>
+    <div class="tablewrap"><table id="table" hidden>
+      <thead><tr><th>Tag med</th><th>Vare</th><th>Nu</th><th>Ny kategori</th><th>Varetype</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+    <div class="actions">
+      <button class="btn alt" id="save" disabled>Gem de valgte</button>
+      <button class="btn" id="download">Hent category_overrides.json</button>
+    </div>
+    <p class="status" id="saveStatus" role="status"></p>
+    <p class="small">«Gem» virker med det samme i din egen browser. Hvis alle skal se resultatet, så hent filen, læg den i mappen <b>site\data</b> i projektet (overskriv den gamle) og push i GitHub Desktop. Den daglige opdatering bruger den bagefter.</p>
+  </section>
+</div>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const OV_KEY = "tilbud:sortering:v1";
+  const norm = (s) => String(s || "").toLowerCase().split(/\s+/).filter(Boolean).join(" ");
+  const DESC = {
+    frost: "frozen food", fisk: "fish and seafood", koed: "meat and cold cuts",
+    groent: "fruit and vegetables", mejeri: "dairy and eggs", bagning: "bread, cakes, flour and baking",
+    drikke: "drinks: soda, juice, beer, wine, coffee, tea", snacks: "snacks, sweets and chocolate",
+    kolonial: "pantry: pasta, rice, sauces, canned goods, oil, spices, cereal",
+    husholdning: "household and personal care that gets used up (toilet paper, soap, shampoo, detergent, pet food)",
+    menu: "ready-made party menus and buffets", legetoej: "toys and games",
+    elektronik: "electronics and appliances", boligting: "clothing, home, garden and tools",
+    andet: "only if you truly cannot tell",
+  };
+  const ALIASES = { "kød": "koed", "pålæg": "koed", "kødogpålæg": "koed", "grønt": "groent", "frugt": "groent", "frugtgrønt": "groent",
+    "legetøj": "legetoej", "legetøjspil": "legetoej", "toys": "legetoej", "meat": "koed", "fish": "fisk", "dairy": "mejeri",
+    "bread": "bagning", "baking": "bagning", "drinks": "drikke", "drink": "drikke", "pantry": "kolonial", "household": "husholdning",
+    "frozen": "frost", "other": "andet", "unknown": "andet", "electronics": "elektronik", "home": "boligting" };
+
+  let data, cats = [], catIds = new Set(), lookup = {}, repoOv = {}, work = {};
+  const products = new Map();     // normalised title -> { key, title, cat }
+  let current = [];               // items in the prompt: [{key, title}]
+  let rows = [];                  // preview rows
+
+  const clean = (s) => String(s || "").toLowerCase().replace(/[^a-zæøå]/g, "");
+  function categoryFrom(text) {
+    const k = clean(text);
+    return lookup[k] || null;
+  }
+
+  // ---------------- storage
+  const loadWork = () => { try { return (JSON.parse(localStorage.getItem(OV_KEY)) || {}).items || {}; } catch { return {}; } };
+  const saveWork = () => { try { localStorage.setItem(OV_KEY, JSON.stringify({ version: 1, items: work })); return true; } catch { return false; } };
+
+  // ---------------- step 1: build the prompt
+  function todoKeys() {
+    const mode = document.querySelector('input[name="mode"]:checked').value;
+    const all = [...products.keys()];
+    return mode === "all" ? all : all.filter((k) => !repoOv[k] && !work[k]);
+  }
+  function refreshParts() {
+    const keys = todoKeys(), size = +$("size").value;
+    $("nAll").textContent = products.size;
+    $("nTodo").textContent = [...products.keys()].filter((k) => !repoOv[k] && !work[k]).length;
+    const parts = Math.max(1, Math.ceil(keys.length / size));
+    const old = +$("part").value || 1;
+    $("part").innerHTML = Array.from({ length: parts }, (_, i) => `<option value="${i + 1}">${i + 1} af ${parts}</option>`).join("");
+    $("part").value = String(Math.min(old, parts));
+    const p = +$("part").value;
+    current = keys.slice((p - 1) * size, p * size).map((k) => ({ key: k, title: products.get(k).title }));
+    buildPrompt();
+  }
+  function buildPrompt() {
+    if (!current.length) { $("prompt").value = "Der er ingen varer at sortere her. Vælg «Alle varer» for at gennemgå dem igen."; $("promptInfo").textContent = ""; return; }
+    const legend = cats.map((c) => `${c.id} = ${DESC[c.id] || c.label}`).join("\n");
+    const list = current.map((it, i) => `${i + 1}|${it.title.replace(/\|/g, "/")}`).join("\n");
+    $("prompt").value =
+`You are labelling Danish supermarket offers. For each numbered product below, reply with ONE line in this exact format:
+id|category|type
+
+category must be exactly one of these ids:
+${legend}
+
+type = the generic product a shopper would search for, in lowercase Danish, singular, at most 3 words (examples: pasta, pesto, rødvin, hakket oksekød, toiletpapir, lego). Use the same word for the same kind of product, so that spaghetti and penne both get "pasta".
+
+Rules: reply with the lines only. No code block, no explanations, no header, no blank lines. One line per product, same order, do not skip any product. If you must stop early, stop after a complete line.
+
+Example input:
+1|Barilla spaghetti 500 g
+2|Faxe Kondi 1,5 l
+Example reply:
+1|kolonial|pasta
+2|drikke|sodavand
+
+Products:
+${list}`;
+    $("promptInfo").textContent = `${current.length} varer, ca. ${Math.round($("prompt").value.length / 4).toLocaleString("da-DK")} ord-stykker`;
+  }
+  $("copy").addEventListener("click", async () => {
+    const t = $("prompt").value;
+    try { await navigator.clipboard.writeText(t); } catch { $("prompt").select(); document.execCommand("copy"); }
+    $("copy").textContent = "Kopieret";
+    setTimeout(() => { $("copy").textContent = "Kopiér spørgsmålet"; }, 1800);
+  });
+  document.querySelectorAll('input[name="mode"]').forEach((r) => r.addEventListener("change", () => { $("part").value = "1"; refreshParts(); }));
+  $("size").addEventListener("change", () => { $("part").value = "1"; refreshParts(); });
+  $("part").addEventListener("change", refreshParts);
+
+  // ---------------- step 2: read the reply
+  // Accepts "1|koed|pasta", bullets, code fences, markdown tables, ";" or tab separators.
+  function parseReply(text) {
+    const found = new Map();
+    String(text || "").replace(/```[a-z]*/gi, "").split(/\r?\n/).forEach((raw) => {
+      let line = raw.trim().replace(/^[-*•\d.)]*\s*(?=\d+\s*[|;\t])/, "").replace(/[\t;]/g, "|").replace(/^\|+|\|+$/g, "");
+      const f = line.split("|").map((s) => s.trim());
+      if (f.length < 2 || !/^\d+$/.test(f[0])) return;
+      const id = +f[0];
+      if (id < 1 || id > current.length) return;
+      found.set(id, { catText: f[1], type: (f[2] || "").toLowerCase().slice(0, 60) });
+    });
+    return found;
+  }
+  $("read").addEventListener("click", () => {
+    const found = parseReply($("reply").value);
+    rows = [];
+    const missing = [];
+    current.forEach((it, i) => {
+      const r = found.get(i + 1);
+      if (!r) { missing.push(it); return; }
+      const cat = categoryFrom(r.catText);
+      rows.push({ key: it.key, title: it.title, now: products.get(it.key).cat, cat: cat || products.get(it.key).cat,
+                  type: r.type, invalid: !cat, badText: r.catText, take: !!cat });
+    });
+    const ok = rows.length, bad = rows.filter((r) => r.invalid).length;
+    const st = $("readStatus");
+    if (!ok) { st.className = "status bad"; st.textContent = "Jeg kunne ikke finde nogen linjer i svaret. Hver linje skal se ud som 1|koed|pasta."; }
+    else {
+      st.className = "status " + (missing.length || bad ? "bad" : "ok");
+      st.textContent = `Læste ${ok} af ${current.length} varer.` + (missing.length ? ` ${missing.length} mangler.` : "") + (bad ? ` ${bad} har en kategori jeg ikke kender (røde rækker, vælg selv).` : "");
+    }
+    $("missing").hidden = !missing.length;
+    $("missing")._items = missing;
+    renderRows();
+  });
+  $("missing").addEventListener("click", () => {
+    current = $("missing")._items;
+    $("reply").value = ""; rows = []; renderRows(); buildPrompt();
+    $("missing").hidden = true; $("readStatus").textContent = "";
+    $("prompt").scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+
+  // ---------------- step 3: preview and save (built with DOM calls, so product names are never treated as HTML)
+  function renderRows() {
+    const body = $("rows"), only = $("onlyChanged").checked;
+    body.textContent = "";
+    $("table").hidden = !rows.length;
+    $("save").disabled = !rows.length;
+    let changed = 0;
+    rows.forEach((r) => {
+      const isChanged = r.cat !== r.now;
+      if (isChanged) changed++;
+      if (only && !isChanged && !r.invalid) return;
+      const tr = document.createElement("tr");
+      if (r.invalid) tr.className = "invalid"; else if (isChanged) tr.className = "changed";
+      const td = () => tr.appendChild(document.createElement("td"));
+      const cb = document.createElement("input"); cb.type = "checkbox"; cb.checked = r.take; cb.setAttribute("aria-label", "Tag med: " + r.title);
+      cb.addEventListener("change", () => { r.take = cb.checked; });
+      td().appendChild(cb);
+      const t = td(); t.className = "title"; t.textContent = r.title;
+      td().textContent = (cats.find((c) => c.id === r.now) || {}).label || r.now;
+      const sel = document.createElement("select"); sel.setAttribute("aria-label", "Kategori for " + r.title);
+      cats.forEach((c) => { const o = document.createElement("option"); o.value = c.id; o.textContent = c.label; sel.appendChild(o); });
+      sel.value = r.cat;
+      sel.addEventListener("change", () => { r.cat = sel.value; r.invalid = false; r.take = true; renderRows(); });
+      td().appendChild(sel);
+      const inp = document.createElement("input"); inp.type = "text"; inp.value = r.type; inp.maxLength = 60; inp.setAttribute("aria-label", "Varetype for " + r.title);
+      inp.addEventListener("input", () => { r.type = inp.value.toLowerCase(); });
+      td().appendChild(inp);
+      body.appendChild(tr);
+    });
+    $("previewInfo").textContent = rows.length ? `${rows.length} varer, ${changed} ændres` : "";
+  }
+  $("onlyChanged").addEventListener("change", renderRows);
+
+  $("save").addEventListener("click", () => {
+    let n = 0;
+    rows.forEach((r) => { if (r.take && !r.invalid) { work[r.key] = { c: r.cat, t: r.type.trim() }; n++; } });
+    const ok = saveWork();
+    $("saveStatus").className = "status " + (ok ? "ok" : "bad");
+    $("saveStatus").textContent = ok ? `Gemte ${n} varer i denne browser. Hent filen herunder, hvis alle skal se dem.` : "Browseren ville ikke gemme. Hent filen i stedet.";
+    rows = []; renderRows(); $("reply").value = ""; $("readStatus").textContent = ""; $("missing").hidden = true;
+    refreshParts();
+  });
+  $("download").addEventListener("click", () => {
+    const items = { ...repoOv, ...work };
+    const blob = new Blob([JSON.stringify({ version: 1, items }, null, 1)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = "category_overrides.json";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    $("saveStatus").className = "status ok";
+    $("saveStatus").textContent = `Hentede en fil med ${Object.keys(items).length} sorterede varer.`;
+  });
+
+  // ---------------- start
+  Promise.all([
+    fetch("data/offers.json", { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+    fetch("data/category_overrides.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+  ]).then(([d, ov]) => {
+    data = d; cats = d.categories; catIds = new Set(cats.map((c) => c.id));
+    cats.forEach((c) => { lookup[c.id] = c.id; lookup[clean(c.label)] = c.id; });
+    Object.entries(ALIASES).forEach(([k, v]) => { if (catIds.has(v)) lookup[clean(k)] = v; });
+    repoOv = (ov && ov.items) || {};
+    work = loadWork();
+    d.offers.forEach((o) => { const k = norm(o.title); if (!products.has(k)) products.set(k, { key: k, title: o.title, cat: o.category }); });
+    refreshParts();
+  }).catch(() => { $("prompt").value = "Kunne ikke hente varerne. Åbn siden fra tilbudssiden, og prøv igen."; });
+})();
+</script>
+</body>
+</html>

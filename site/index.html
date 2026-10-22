@@ -66,11 +66,13 @@
 
   .count { margin: 16px 0 12px; color: var(--muted); }
 
-  /* Columns instead of a row grid: every card keeps its natural height, so a short
-     card never leaves a gap under it. The trade-off is that the sort order reads
-     down each column rather than across. */
-  .grid { column-width: 210px; column-gap: 14px; padding: 0 0 56px; list-style: none; margin: 0; }
-  .card { position: relative; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; break-inside: avoid; margin: 0 0 14px; }
+  /* Independent columns: each card is assigned to a column once (in sort order, left
+     to right), so every card keeps its natural height with no gaps under short ones.
+     Images loading later only push cards down within their own column; cards never
+     jump between columns. */
+  .grid { display: flex; align-items: flex-start; gap: 14px; padding: 0 0 56px; }
+  .col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+  .card { position: relative; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
   .pic { position: relative; min-height: 110px; background: #fff; display: grid; place-items: center; }
   .pic img { position: relative; z-index: 1; width: 100%; height: auto; display: block; }
   .pic .ph { position: absolute; inset: 0; display: grid; place-items: center; font-size: 3rem; font-weight: 800; color: rgba(255,255,255,.9); background: var(--c); }
@@ -82,6 +84,7 @@
   .title { margin: 0; font-size: 1.02rem; font-weight: 700; line-height: 1.25; }
   .desc { margin: 0; color: var(--muted); font-size: .88rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   .store-line { margin: 0; color: var(--muted); font-size: .82rem; }
+  .debug { margin: 0; color: var(--heart); font-size: .82rem; font-weight: 600; }
 
   /* The price tag imitates a Danish shelf label: large kroner, small raised øre. */
   .price-row { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 8px; margin-top: auto; padding-top: 10px; }
@@ -97,14 +100,14 @@
   .valid { margin: 8px 0 0; padding-top: 8px; border-top: 1px dashed var(--line); font-size: .82rem; color: var(--muted); display: flex; justify-content: space-between; gap: 8px; }
   .madspild { font-weight: 700; color: var(--save); }
 
-  .empty { display: block; column-span: all; text-align: center; padding: 56px 16px; color: var(--muted); }
+  .empty { flex: 1; text-align: center; padding: 56px 16px; color: var(--muted); }
   .empty h2 { margin: 0 0 6px; color: var(--ink); font-size: 1.3rem; }
   .btn { margin-top: 14px; padding: 10px 18px; border-radius: 10px; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); font-weight: 700; cursor: pointer; }
 
   footer { padding: 0 0 40px; color: var(--muted); font-size: .85rem; }
   footer p { margin: 4px 0; max-width: 70ch; }
 
-  @media (max-width: 520px) { .grid { column-width: 150px; column-gap: 10px; } .card { margin-bottom: 10px; } .tag .kr { font-size: 2rem; } .body { padding: 10px; } }
+  @media (max-width: 520px) { .grid, .col { gap: 10px; } .tag .kr { font-size: 2rem; } .body { padding: 10px; } }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 </head>
@@ -119,6 +122,7 @@
   <div class="wrap">
     <div class="row">
       <input class="search" id="q" type="search" placeholder="Søg efter fx smør, kylling eller kaffe" aria-label="Søg i tilbud" autocomplete="off">
+      <label class="toggle"><input type="checkbox" id="wholeWord"><span>Kun hele ord</span></label>
       <select class="select" id="sort" aria-label="Sortér efter">
         <option value="discount">Største rabat</option>
         <option value="price">Laveste pris</option>
@@ -134,6 +138,7 @@
         <label class="toggle"><input type="checkbox" id="hideJunk"><span>Skjul skrammel (legetøj, elektronik, menuer, tøj og bolig)</span></label>
         <label class="toggle"><input type="checkbox" id="consumables"><span>Kun forbrugsvarer (mad, drikke og husholdning)</span></label>
         <label class="toggle"><input type="checkbox" id="upcoming"><span>Vis også kommende tilbud</span></label>
+        <label class="toggle"><input type="checkbox" id="onlyJunk"><span>Vis kun skrammel (til fejlfinding)</span></label>
       </div>
     </div>
   </div>
@@ -141,7 +146,7 @@
 
 <main class="wrap">
   <p class="count" id="count" aria-live="polite"></p>
-  <ul class="grid" id="grid"></ul>
+  <div class="grid" id="grid"></div>
 </main>
 
 <footer class="wrap">
@@ -155,7 +160,7 @@
   const $ = (id) => document.getElementById(id);
   const PREF_KEY = "tilbud:filtre:v1";
   const state = { data: null, q: "", sort: "discount", stores: new Set(), cat: "alle", favOnly: false, upcoming: false,
-                  hideJunk: true, consumables: false, groups: {}, favs: {} };
+                  hideJunk: true, consumables: false, onlyJunk: false, wholeWord: false, groups: {}, favs: {} };
   const loadPrefs = () => { try { return JSON.parse(localStorage.getItem(PREF_KEY)) || {}; } catch { return {}; } };
   const savePrefs = () => { try { localStorage.setItem(PREF_KEY, JSON.stringify({ hideJunk: state.hideJunk, consumables: state.consumables })); } catch {} };
 
@@ -181,15 +186,26 @@
   // skipCat: ignore the selected category, used to count how many offers each category chip would show
   function visible(skipCat) {
     const now = Date.now(), q = state.q.trim().toLowerCase();
+    const tokens = q ? q.split(/\s+/) : [];
     let list = state.data.offers.filter((o) => {
       const group = state.groups[o.category] || "other";
-      if (state.consumables && group !== "consumable") return false;
-      if (state.hideJunk && group === "junk") return false;
+      if (state.onlyJunk) { if (group !== "junk") return false; }   // debugging view
+      else {
+        if (state.consumables && group !== "consumable") return false;
+        if (state.hideJunk && group === "junk") return false;
+      }
       if (!state.upcoming && o.valid_from && Date.parse(o.valid_from) > now) return false;
       if (state.stores.size && !state.stores.has(o.chain)) return false;
       if (!skipCat && state.cat !== "alle" && o.category !== state.cat) return false;
       if (state.favOnly && !state.favs[favKey(o.title)]) return false;
-      if (q && !(o.title + " " + (o.description || "")).toLowerCase().includes(q)) return false;
+      if (tokens.length) {
+        // Words, not letters: "øl" must not find "pølse". A search term matches a word
+        // that starts with it ("smør" finds "smørrebrød"), or only an exact word when
+        // "Kun hele ord" is ticked. Every term has to match.
+        o._words = o._words || (o.title + " " + (o.description || "") + " " + (o.type || "")).toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+        const hit = (t) => state.wholeWord ? o._words.includes(t) : o._words.some((w) => w.startsWith(t));
+        if (!tokens.every(hit)) return false;
+      }
       return true;
     });
     const by = {
@@ -209,7 +225,7 @@
     const unit = o.unit_price ? `${money(o.unit_price.value)} kr/${o.unit_price.per === "l" ? "l" : "kg"}` : "";
     const valid = upcoming ? `Fra ${day(o.valid_from)}` : o.valid_to ? `Til ${day(o.valid_to)}` : "";
     const link = o.url ? `<a href="${esc(o.url)}" target="_blank" rel="noopener">Se i avis</a>` : "";
-    return `<li class="card" style="--c:${c.color};--cink:${inkFor(c.color)}" data-key="${esc(favKey(o.title))}">
+    return `<article class="card" style="--c:${c.color};--cink:${inkFor(c.color)}" data-key="${esc(favKey(o.title))}">
       <div class="pic">
         <span class="ph" aria-hidden="true">${esc(o.title.charAt(0))}</span>
         ${o.image ? `<img src="${esc(o.image)}" alt="" loading="lazy" decoding="async">` : ""}
@@ -222,6 +238,7 @@
         <h2 class="title">${esc(o.title)}</h2>
         ${o.description && o.kind !== "clearance" ? `<p class="desc">${esc(o.description)}</p>` : ""}
         ${o.store ? `<p class="store-line">${esc(o.store)}</p>` : ""}
+        ${state.onlyJunk && o.junk_reason ? `<p class="debug">Skrammel pga. «${esc(o.junk_reason)}»</p>` : ""}
         <div class="price-row">
           ${priceTag(o.price)}
           <div class="side">
@@ -232,7 +249,7 @@
         </div>
         <p class="valid"><span>${o.kind === "clearance" ? '<span class="madspild">Madspild</span> ' : ""}${valid}</span>${link}</p>
       </div>
-    </li>`;
+    </article>`;
   }
 
   function renderCats() {
@@ -251,8 +268,10 @@
   function render() {
     const chains = Object.fromEntries(state.data.chains.map((c) => [c.label, c]));
     $("hideJunk").checked = state.hideJunk || state.consumables;
-    $("hideJunk").disabled = state.consumables;
+    $("hideJunk").disabled = state.consumables || state.onlyJunk;
     $("consumables").checked = state.consumables;
+    $("consumables").disabled = state.onlyJunk;
+    $("onlyJunk").checked = state.onlyJunk;
     renderCats();
     const list = visible();
     $("count").textContent = list.length === 1 ? "1 tilbud" : `${list.length} tilbud`;
@@ -261,13 +280,25 @@
     document.querySelectorAll("#stores .chip").forEach((b) => b.setAttribute("aria-pressed", state.stores.has(b.dataset.store)));
     if (!list.length) {
       const noFavs = state.favOnly && !Object.keys(state.favs).length;
-      $("grid").innerHTML = `<li class="empty"><h2>${noFavs ? "Du har ingen favoritter endnu" : "Ingen tilbud matcher"}</h2>
+      $("grid").innerHTML = `<div class="empty"><h2>${noFavs ? "Du har ingen favoritter endnu" : "Ingen tilbud matcher"}</h2>
         <p>${noFavs ? "Tryk på hjertet på et tilbud for at gemme produktet. Så kan du se det her, hver gang det er på tilbud." : "Prøv at fjerne et filter eller søge efter noget andet."}</p>
-        <button class="btn" id="reset">Nulstil filtre</button></li>`;
+        <button class="btn" id="reset">Nulstil filtre</button></div>`;
       return;
     }
-    $("grid").innerHTML = list.map((o) => cardHtml(o, chains)).join("");
+    // deal cards out to the columns left to right, so the best offers fill the top row
+    const n = lastCols = colCount();
+    const cols = Array.from({ length: n }, () => []);
+    list.forEach((o, i) => cols[i % n].push(cardHtml(o, chains)));
+    $("grid").innerHTML = cols.map((c) => `<div class="col">${c.join("")}</div>`).join("");
   }
+
+  const colCount = () => {
+    const narrow = window.innerWidth <= 520, gap = narrow ? 10 : 14, min = narrow ? 150 : 210;
+    const width = $("grid").clientWidth || window.innerWidth - 32;
+    return Math.max(2, Math.floor((width + gap) / (min + gap)));
+  };
+  let lastCols = 0;
+  window.addEventListener("resize", () => { if (state.data && colCount() !== lastCols) render(); });
 
   function buildControls() {
     const { chains, categories } = state.data;
@@ -321,6 +352,8 @@
   $("upcoming").addEventListener("change", (e) => { state.upcoming = e.target.checked; render(); });
   $("hideJunk").addEventListener("change", (e) => { state.hideJunk = e.target.checked; savePrefs(); render(); });
   $("consumables").addEventListener("change", (e) => { state.consumables = e.target.checked; savePrefs(); render(); });
+  $("onlyJunk").addEventListener("change", (e) => { state.onlyJunk = e.target.checked; render(); });
+  $("wholeWord").addEventListener("change", (e) => { state.wholeWord = e.target.checked; render(); });
   // image load errors do not bubble, so listen in the capture phase
   document.addEventListener("error", (e) => { if (e.target.tagName === "IMG") e.target.remove(); }, true);
 
@@ -334,7 +367,7 @@
     .then((data) => { state.data = data; header(); buildControls(); render(); })
     .catch(() => {
       $("sub").textContent = "Tilbuddene kunne ikke indlæses.";
-      $("grid").innerHTML = `<li class="empty"><h2>Der er ingen data endnu</h2><p>Siden henter tilbud fra data/offers.json. Kør hentningen, eller vent på næste automatiske opdatering.</p></li>`;
+      $("grid").innerHTML = `<div class="empty"><h2>Der er ingen data endnu</h2><p>Siden henter tilbud fra data/offers.json. Kør hentningen, eller vent på næste automatiske opdatering.</p></div>`;
     });
 })();
 </script>

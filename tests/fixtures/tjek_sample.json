@@ -1517,5 +1517,152 @@
   },
   "catalog_id": "cat0b1e8",
   "category_ids": []
+ },
+ {
+  "id": "x1",
+  "heading": "Pølser 8 stk",
+  "description": "Hotdog-pølser, 400 g",
+  "catalog_page": 3,
+  "pricing": {
+   "price": 29,
+   "pre_price": 39,
+   "currency": "DKK"
+  },
+  "quantity": {
+   "unit": {
+    "symbol": "g",
+    "si": {
+     "symbol": "kg",
+     "factor": 0.001
+    }
+   },
+   "size": {
+    "from": 200,
+    "to": 200
+   },
+   "pieces": {
+    "from": 1,
+    "to": 1,
+    "min": null,
+    "max": null
+   }
+  },
+  "images": {
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+"
+  },
+  "run_from": "2026-10-20T00:00:00+0000",
+  "run_till": "2026-12-31T21:59:59+0000",
+  "dealer_id": "0b1e8",
+  "dealer": {
+   "name": "SuperBrugsen",
+   "markets": [
+    {
+     "slug": "SuperBrugsen",
+     "country_code": "DK"
+    }
+   ]
+  },
+  "catalog_id": "cat0b1e8",
+  "category_ids": []
+ },
+ {
+  "id": "x2",
+  "heading": "Classic øl 6 pak",
+  "description": "6 x 33 cl",
+  "catalog_page": 3,
+  "pricing": {
+   "price": 29,
+   "pre_price": 39,
+   "currency": "DKK"
+  },
+  "quantity": {
+   "unit": {
+    "symbol": "g",
+    "si": {
+     "symbol": "kg",
+     "factor": 0.001
+    }
+   },
+   "size": {
+    "from": 200,
+    "to": 200
+   },
+   "pieces": {
+    "from": 1,
+    "to": 1,
+    "min": null,
+    "max": null
+   }
+  },
+  "images": {
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+"
+  },
+  "run_from": "2026-10-20T00:00:00+0000",
+  "run_till": "2026-12-31T21:59:59+0000",
+  "dealer_id": "0b1e8",
+  "dealer": {
+   "name": "SuperBrugsen",
+   "markets": [
+    {
+     "slug": "SuperBrugsen",
+     "country_code": "DK"
+    }
+   ]
+  },
+  "catalog_id": "cat0b1e8",
+  "category_ids": []
+ },
+ {
+  "id": "x3",
+  "heading": "Ølpølser",
+  "description": "Med øl",
+  "catalog_page": 3,
+  "pricing": {
+   "price": 29,
+   "pre_price": 39,
+   "currency": "DKK"
+  },
+  "quantity": {
+   "unit": {
+    "symbol": "g",
+    "si": {
+     "symbol": "kg",
+     "factor": 0.001
+    }
+   },
+   "size": {
+    "from": 200,
+    "to": 200
+   },
+   "pieces": {
+    "from": 1,
+    "to": 1,
+    "min": null,
+    "max": null
+   }
+  },
+  "images": {
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+"
+  },
+  "run_from": "2026-10-20T00:00:00+0000",
+  "run_till": "2026-12-31T21:59:59+0000",
+  "dealer_id": "0b1e8",
+  "dealer": {
+   "name": "SuperBrugsen",
+   "markets": [
+    {
+     "slug": "SuperBrugsen",
+     "country_code": "DK"
+    }
+   ]
+  },
+  "catalog_id": "cat0b1e8",
+  "category_ids": []
  }
 ]

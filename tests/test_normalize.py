@@ -35,6 +35,25 @@ class Categories(unittest.TestCase):
         self.assertEqual(categorize("Kaffemaskine"), "elektronik")
         self.assertEqual(categorize("Børnetrøjer 2 stk."), "boligting")
 
+    def test_junk_reason_names_the_keyword(self):
+        from categories import classify
+        self.assertEqual(classify("LEGO City politistation"), ("legetoej", "lego"))
+        self.assertEqual(classify("Mad til fest", "Pr. kuvert"), ("menu", "beskrivelse: kuvert"))
+        self.assertEqual(classify("Hvedemel"), ("bagning", None))
+
+    def test_real_titles_from_the_live_site(self):
+        cases = {
+            "Veronia Appassimento": "drikke", "ØGO økologisk æblejuice": "drikke",
+            "Harboe julebryg": "drikke", "Sjov dag i vandland": "legetoej",
+            "Team Spideys hovedkvarter": "legetoej", "Brunchy bacon i skiver": "koed",
+            "Bagepapir i ark, Træk&Luk fryseposer": "husholdning", "Pølser 8 stk": "koed",
+            "Pesto rosso": "kolonial", "Vindruer": "groent", "Schulstad levebrød": "bagning",
+            "Næmt pepperoni": "koed", "Mentos": "snacks",
+        }
+        for title, expected in cases.items():
+            with self.subTest(title=title):
+                self.assertEqual(categorize(title), expected)
+
     def test_food_is_not_mistaken_for_junk(self):
         self.assertEqual(categorize("Pandekager", "Frost"), "bagning")
         self.assertEqual(categorize("Kaffe formalet"), "drikke")
@@ -98,6 +117,44 @@ class Normalisation(unittest.TestCase):
     def test_salling_ignores_other_brands(self):
         entry = {"offer": {"newPrice": 5, "originalPrice": 10}, "product": {"description": "Noget", "ean": "1"}}
         self.assertIsNone(fo.normalize_salling(entry, {"id": "s", "brand": "bilka", "name": "Bilka"}))
+
+
+class Overrides(unittest.TestCase):
+    def setUp(self):
+        import tempfile
+        self.tmp = tempfile.TemporaryDirectory()
+        self.old = fo.OVERRIDES_PATH
+        fo.OVERRIDES_PATH = Path(self.tmp.name) / "category_overrides.json"
+
+    def tearDown(self):
+        fo.OVERRIDES_PATH = self.old
+        self.tmp.cleanup()
+
+    def test_missing_file_is_fine(self):
+        self.assertEqual(fo.load_overrides({"drikke"}), ({}, None))
+
+    def test_broken_file_is_ignored_with_a_warning(self):
+        fo.OVERRIDES_PATH.write_text("{not json", encoding="utf-8")
+        out, warning = fo.load_overrides({"drikke"})
+        self.assertEqual(out, {})
+        self.assertIn("ignored", warning)
+
+    def test_unknown_categories_are_dropped(self):
+        fo.OVERRIDES_PATH.write_text(json.dumps({"version": 1, "items": {
+            "vila annone": {"c": "drikke", "t": "rødvin"}, "x": {"c": "nonsense"}}}), encoding="utf-8")
+        out, _ = fo.load_overrides({"drikke"})
+        self.assertEqual(out, {"vila annone": {"c": "drikke", "t": "rødvin"}})
+
+    def test_override_beats_the_keyword_rules(self):
+        offers = [{"title": "  Vila   ANNONE ", "category": "andet"},
+                  {"title": "Pølser", "category": "koed", "junk_reason": "x"},
+                  {"title": "Ukendt", "category": "andet"}]
+        ov = {"vila annone": {"c": "drikke", "t": "rødvin"}, "pølser": {"c": "legetoej", "t": ""}}
+        n = fo.apply_overrides(offers, ov, {"drikke": "consumable", "legetoej": "junk"})
+        self.assertEqual(n, 2)
+        self.assertEqual((offers[0]["category"], offers[0]["type"]), ("drikke", "rødvin"))
+        self.assertEqual(offers[1]["junk_reason"], "sortering")
+        self.assertEqual(offers[2]["category"], "andet")
 
 
 if __name__ == "__main__":
