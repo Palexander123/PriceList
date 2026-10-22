@@ -29,9 +29,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzhhM2IyZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SGFra2V0IG9rc2Vrw7hkPC90ZXh0Pjwvc3ZnPg==",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzhhM2IyZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SGFra2V0IG9rc2Vrw7hkPC90ZXh0Pjwvc3ZnPg==",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzhhM2IyZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SGFra2V0IG9rc2Vrw7hkPC90ZXh0Pjwvc3ZnPg=="
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjYwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI2MCcgZmlsbD0nIzhhM2IyZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTMwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SGFra2V0IG9rc2Vrw7hkIDg8L3RleHQ+PC9zdmc+",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjYwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI2MCcgZmlsbD0nIzhhM2IyZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTMwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SGFra2V0IG9rc2Vrw7hkIDg8L3RleHQ+PC9zdmc+",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjYwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI2MCcgZmlsbD0nIzhhM2IyZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTMwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SGFra2V0IG9rc2Vrw7hkIDg8L3RleHQ+PC9zdmc+"
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -78,9 +78,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2M5YTQwMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w5hrb2xvZ2lza2UgYmFuPC90ZXh0Pjwvc3ZnPg==",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2M5YTQwMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w5hrb2xvZ2lza2UgYmFuPC90ZXh0Pjwvc3ZnPg==",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2M5YTQwMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w5hrb2xvZ2lza2UgYmFuPC90ZXh0Pjwvc3ZnPg=="
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzIwMCcgZmlsbD0nI2M5YTQwMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTAwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w5hrb2xvZ2lza2UgYmFuYW48L3RleHQ+PC9zdmc+",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzIwMCcgZmlsbD0nI2M5YTQwMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTAwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w5hrb2xvZ2lza2UgYmFuYW48L3RleHQ+PC9zdmc+",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzIwMCcgZmlsbD0nI2M5YTQwMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTAwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w5hrb2xvZ2lza2UgYmFuYW48L3RleHQ+PC9zdmc+"
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -127,9 +127,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzRhN2ZiNScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGV0bcOmbGsgMSBsaXRlPC90ZXh0Pjwvc3ZnPg==",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzRhN2ZiNScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGV0bcOmbGsgMSBsaXRlPC90ZXh0Pjwvc3ZnPg==",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzRhN2ZiNScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGV0bcOmbGsgMSBsaXRlPC90ZXh0Pjwvc3ZnPg=="
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDIwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzQyMCcgZmlsbD0nIzRhN2ZiNScvPjx0ZXh0IHg9JzIwMCcgeT0nMjEwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGV0bcOmbGsgMSBsaXRlcjwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDIwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzQyMCcgZmlsbD0nIzRhN2ZiNScvPjx0ZXh0IHg9JzIwMCcgeT0nMjEwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGV0bcOmbGsgMSBsaXRlcjwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDIwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzQyMCcgZmlsbD0nIzRhN2ZiNScvPjx0ZXh0IHg9JzIwMCcgeT0nMjEwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGV0bcOmbGsgMSBsaXRlcjwvdGV4dD48L3N2Zz4="
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -176,9 +176,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2IwMjAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q29jYS1Db2xhLCBGYW48L3RleHQ+PC9zdmc+",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2IwMjAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q29jYS1Db2xhLCBGYW48L3RleHQ+PC9zdmc+",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2IwMjAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q29jYS1Db2xhLCBGYW48L3RleHQ+PC9zdmc+"
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzMwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMzMCcgZmlsbD0nI2IwMjAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTY1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q29jYS1Db2xhLCBGYW50YTwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzMwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMzMCcgZmlsbD0nI2IwMjAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTY1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q29jYS1Db2xhLCBGYW50YTwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzMwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMzMCcgZmlsbD0nI2IwMjAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTY1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q29jYS1Db2xhLCBGYW50YTwvdGV4dD48L3N2Zz4="
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -225,9 +225,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2M5OGQ1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S3lsbGluZ2VicnlzdGY8L3RleHQ+PC9zdmc+",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2M5OGQ1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S3lsbGluZ2VicnlzdGY8L3RleHQ+PC9zdmc+",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2M5OGQ1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S3lsbGluZ2VicnlzdGY8L3RleHQ+PC9zdmc+"
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjQwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI0MCcgZmlsbD0nI2M5OGQ1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTIwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S3lsbGluZ2VicnlzdGZpbDwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjQwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI0MCcgZmlsbD0nI2M5OGQ1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTIwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S3lsbGluZ2VicnlzdGZpbDwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjQwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI0MCcgZmlsbD0nI2M5OGQ1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTIwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S3lsbGluZ2VicnlzdGZpbDwvdGV4dD48L3N2Zz4="
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -274,9 +274,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzZiNGEyYicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UnVnYnLDuGQgaSBza2l2PC90ZXh0Pjwvc3ZnPg==",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzZiNGEyYicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UnVnYnLDuGQgaSBza2l2PC90ZXh0Pjwvc3ZnPg==",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzZiNGEyYicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UnVnYnLDuGQgaSBza2l2PC90ZXh0Pjwvc3ZnPg=="
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzZiNGEyYicvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UnVnYnLDuGQgaSBza2l2ZXI8L3RleHQ+PC9zdmc+",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzZiNGEyYicvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UnVnYnLDuGQgaSBza2l2ZXI8L3RleHQ+PC9zdmc+",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzZiNGEyYicvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UnVnYnLDuGQgaSBza2l2ZXI8L3RleHQ+PC9zdmc+"
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -323,9 +323,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzJkNmEzZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VHVib3JnIENsYXNzaWM8L3RleHQ+PC9zdmc+",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzJkNmEzZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VHVib3JnIENsYXNzaWM8L3RleHQ+PC9zdmc+",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzJkNmEzZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VHVib3JnIENsYXNzaWM8L3RleHQ+PC9zdmc+"
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzgwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM4MCcgZmlsbD0nIzJkNmEzZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTkwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VHVib3JnIENsYXNzaWM8L3RleHQ+PC9zdmc+",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzgwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM4MCcgZmlsbD0nIzJkNmEzZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTkwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VHVib3JnIENsYXNzaWM8L3RleHQ+PC9zdmc+",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzgwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM4MCcgZmlsbD0nIzJkNmEzZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTkwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VHVib3JnIENsYXNzaWM8L3RleHQ+PC9zdmc+"
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -372,12 +372,208 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzdhMmE1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S29tbWVuZGU6IEp1bGU8L3RleHQ+PC9zdmc+",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzdhMmE1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S29tbWVuZGU6IEp1bGU8L3RleHQ+PC9zdmc+",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzdhMmE1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S29tbWVuZGU6IEp1bGU8L3RleHQ+PC9zdmc+"
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzdhMmE1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S29tbWVuZGU6IEp1bGVrYTwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzdhMmE1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S29tbWVuZGU6IEp1bGVrYTwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzdhMmE1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S29tbWVuZGU6IEp1bGVrYTwvdGV4dD48L3N2Zz4="
   },
   "run_from": "2030-01-01T00:00:00+0000",
   "run_till": "2030-01-08T00:00:00+0000",
+  "dealer_id": "9ba51",
+  "dealer": {
+   "name": "Netto",
+   "markets": [
+    {
+     "slug": "Netto",
+     "country_code": "DK"
+    }
+   ]
+  },
+  "catalog_id": "cat9ba51",
+  "category_ids": []
+ },
+ {
+  "id": "n9",
+  "heading": "LEGO City politistation",
+  "description": "Fra 6 år",
+  "catalog_page": 3,
+  "pricing": {
+   "price": 199,
+   "pre_price": null,
+   "currency": "DKK"
+  },
+  "quantity": {
+   "unit": {
+    "symbol": "stk",
+    "si": {
+     "symbol": "stk",
+     "factor": 1
+    }
+   },
+   "size": {
+    "from": 1,
+    "to": 1
+   },
+   "pieces": {
+    "from": 1,
+    "to": 1,
+    "min": null,
+    "max": null
+   }
+  },
+  "images": {
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2QwMjAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TEVHTyBDaXR5IHBvbGl0aTwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2QwMjAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TEVHTyBDaXR5IHBvbGl0aTwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2QwMjAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TEVHTyBDaXR5IHBvbGl0aTwvdGV4dD48L3N2Zz4="
+  },
+  "run_from": "2026-10-20T00:00:00+0000",
+  "run_till": "2026-12-31T21:59:59+0000",
+  "dealer_id": "9ba51",
+  "dealer": {
+   "name": "Netto",
+   "markets": [
+    {
+     "slug": "Netto",
+     "country_code": "DK"
+    }
+   ]
+  },
+  "catalog_id": "cat9ba51",
+  "category_ids": []
+ },
+ {
+  "id": "n10",
+  "heading": "Hovedtelefoner trådløse",
+  "description": "Bluetooth",
+  "catalog_page": 3,
+  "pricing": {
+   "price": 149,
+   "pre_price": null,
+   "currency": "DKK"
+  },
+  "quantity": {
+   "unit": {
+    "symbol": "stk",
+    "si": {
+     "symbol": "stk",
+     "factor": 1
+    }
+   },
+   "size": {
+    "from": 1,
+    "to": 1
+   },
+   "pieces": {
+    "from": 1,
+    "to": 1,
+    "min": null,
+    "max": null
+   }
+  },
+  "images": {
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjIwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzIyMCcgZmlsbD0nIzIyMicvPjx0ZXh0IHg9JzIwMCcgeT0nMTEwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SG92ZWR0ZWxlZm9uZXIgdDwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjIwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzIyMCcgZmlsbD0nIzIyMicvPjx0ZXh0IHg9JzIwMCcgeT0nMTEwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SG92ZWR0ZWxlZm9uZXIgdDwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjIwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzIyMCcgZmlsbD0nIzIyMicvPjx0ZXh0IHg9JzIwMCcgeT0nMTEwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SG92ZWR0ZWxlZm9uZXIgdDwvdGV4dD48L3N2Zz4="
+  },
+  "run_from": "2026-10-20T00:00:00+0000",
+  "run_till": "2026-12-31T21:59:59+0000",
+  "dealer_id": "9ba51",
+  "dealer": {
+   "name": "Netto",
+   "markets": [
+    {
+     "slug": "Netto",
+     "country_code": "DK"
+    }
+   ]
+  },
+  "catalog_id": "cat9ba51",
+  "category_ids": []
+ },
+ {
+  "id": "n11",
+  "heading": "Toiletpapir 16 ruller",
+  "description": "Softesse",
+  "catalog_page": 3,
+  "pricing": {
+   "price": 39,
+   "pre_price": null,
+   "currency": "DKK"
+  },
+  "quantity": {
+   "unit": {
+    "symbol": "stk",
+    "si": {
+     "symbol": "stk",
+     "factor": 1
+    }
+   },
+   "size": {
+    "from": 16,
+    "to": 16
+   },
+   "pieces": {
+    "from": 1,
+    "to": 1,
+    "min": null,
+    "max": null
+   }
+  },
+  "images": {
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzQwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM0MCcgZmlsbD0nIzlhYycvPjx0ZXh0IHg9JzIwMCcgeT0nMTcwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VG9pbGV0cGFwaXIgMTYgcjwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzQwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM0MCcgZmlsbD0nIzlhYycvPjx0ZXh0IHg9JzIwMCcgeT0nMTcwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VG9pbGV0cGFwaXIgMTYgcjwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzQwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM0MCcgZmlsbD0nIzlhYycvPjx0ZXh0IHg9JzIwMCcgeT0nMTcwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VG9pbGV0cGFwaXIgMTYgcjwvdGV4dD48L3N2Zz4="
+  },
+  "run_from": "2026-10-20T00:00:00+0000",
+  "run_till": "2026-12-31T21:59:59+0000",
+  "dealer_id": "9ba51",
+  "dealer": {
+   "name": "Netto",
+   "markets": [
+    {
+     "slug": "Netto",
+     "country_code": "DK"
+    }
+   ]
+  },
+  "catalog_id": "cat9ba51",
+  "category_ids": []
+ },
+ {
+  "id": "n12",
+  "heading": "Håndsæbe 250 ml",
+  "description": "Pumpe",
+  "catalog_page": 3,
+  "pricing": {
+   "price": 12,
+   "pre_price": null,
+   "currency": "DKK"
+  },
+  "quantity": {
+   "unit": {
+    "symbol": "ml",
+    "si": {
+     "symbol": "l",
+     "factor": 0.001
+    }
+   },
+   "size": {
+    "from": 250,
+    "to": 250
+   },
+   "pieces": {
+    "from": 1,
+    "to": 1,
+    "min": null,
+    "max": null
+   }
+  },
+  "images": {
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjgwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI4MCcgZmlsbD0nIzdiZCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTQwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SMOlbmRzw6ZiZSAyNTAgbWw8L3RleHQ+PC9zdmc+",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjgwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI4MCcgZmlsbD0nIzdiZCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTQwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SMOlbmRzw6ZiZSAyNTAgbWw8L3RleHQ+PC9zdmc+",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjgwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI4MCcgZmlsbD0nIzdiZCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTQwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SMOlbmRzw6ZiZSAyNTAgbWw8L3RleHQ+PC9zdmc+"
+  },
+  "run_from": "2026-10-20T00:00:00+0000",
+  "run_till": "2026-12-31T21:59:59+0000",
   "dealer_id": "9ba51",
   "dealer": {
    "name": "Netto",
@@ -421,9 +617,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2Q5Nzc0ZicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGFrcyBpIHNraXZlcjwvdGV4dD48L3N2Zz4=",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2Q5Nzc0ZicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGFrcyBpIHNraXZlcjwvdGV4dD48L3N2Zz4=",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2Q5Nzc0ZicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGFrcyBpIHNraXZlcjwvdGV4dD48L3N2Zz4="
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2Q5Nzc0ZicvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGFrcyBpIHNraXZlcjwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2Q5Nzc0ZicvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGFrcyBpIHNraXZlcjwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2Q5Nzc0ZicvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGFrcyBpIHNraXZlcjwvdGV4dD48L3N2Zz4="
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -470,9 +666,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2IyMjIyMicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VG9tYXRlciBpIGJha2s8L3RleHQ+PC9zdmc+",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2IyMjIyMicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VG9tYXRlciBpIGJha2s8L3RleHQ+PC9zdmc+",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2IyMjIyMicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VG9tYXRlciBpIGJha2s8L3RleHQ+PC9zdmc+"
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjUwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI1MCcgZmlsbD0nI2IyMjIyMicvPjx0ZXh0IHg9JzIwMCcgeT0nMTI1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VG9tYXRlciBpIGJha2tlPC90ZXh0Pjwvc3ZnPg==",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjUwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI1MCcgZmlsbD0nI2IyMjIyMicvPjx0ZXh0IHg9JzIwMCcgeT0nMTI1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VG9tYXRlciBpIGJha2tlPC90ZXh0Pjwvc3ZnPg==",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjUwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI1MCcgZmlsbD0nI2IyMjIyMicvPjx0ZXh0IHg9JzIwMCcgeT0nMTI1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VG9tYXRlciBpIGJha2tlPC90ZXh0Pjwvc3ZnPg=="
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -519,9 +715,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZTBjMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TW96emFyZWxsYTwvdGV4dD48L3N2Zz4=",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZTBjMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TW96emFyZWxsYTwvdGV4dD48L3N2Zz4=",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZTBjMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TW96emFyZWxsYTwvdGV4dD48L3N2Zz4="
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzYwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM2MCcgZmlsbD0nI2U4ZTBjMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTgwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TW96emFyZWxsYTwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzYwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM2MCcgZmlsbD0nI2U4ZTBjMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTgwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TW96emFyZWxsYTwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzYwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM2MCcgZmlsbD0nI2U4ZTBjMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTgwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TW96emFyZWxsYTwvdGV4dD48L3N2Zz4="
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -568,9 +764,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2JmYTc3YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SHZlZGVtZWw8L3RleHQ+PC9zdmc+",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2JmYTc3YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SHZlZGVtZWw8L3RleHQ+PC9zdmc+",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2JmYTc3YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SHZlZGVtZWw8L3RleHQ+PC9zdmc+"
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjkwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI5MCcgZmlsbD0nI2JmYTc3YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTQ1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SHZlZGVtZWw8L3RleHQ+PC9zdmc+",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjkwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI5MCcgZmlsbD0nI2JmYTc3YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTQ1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SHZlZGVtZWw8L3RleHQ+PC9zdmc+",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjkwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI5MCcgZmlsbD0nI2JmYTc3YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTQ1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SHZlZGVtZWw8L3RleHQ+PC9zdmc+"
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -617,9 +813,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzVhOGZiMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U2hhbXBvbyBlbGxlciA8L3RleHQ+PC9zdmc+",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzVhOGZiMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U2hhbXBvbyBlbGxlciA8L3RleHQ+PC9zdmc+",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzVhOGZiMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U2hhbXBvbyBlbGxlciA8L3RleHQ+PC9zdmc+"
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzQwMCcgZmlsbD0nIzVhOGZiMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMjAwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U2hhbXBvbyBlbGxlciBiYTwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzQwMCcgZmlsbD0nIzVhOGZiMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMjAwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U2hhbXBvbyBlbGxlciBiYTwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzQwMCcgZmlsbD0nIzVhOGZiMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMjAwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U2hhbXBvbyBlbGxlciBiYTwvdGV4dD48L3N2Zz4="
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -666,9 +862,254 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2Q0YTAxNycvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UG9tbWVzIGZyaXRlczwvdGV4dD48L3N2Zz4=",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2Q0YTAxNycvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UG9tbWVzIGZyaXRlczwvdGV4dD48L3N2Zz4=",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2Q0YTAxNycvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UG9tbWVzIGZyaXRlczwvdGV4dD48L3N2Zz4="
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjMwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzIzMCcgZmlsbD0nI2Q0YTAxNycvPjx0ZXh0IHg9JzIwMCcgeT0nMTE1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UG9tbWVzIGZyaXRlczwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjMwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzIzMCcgZmlsbD0nI2Q0YTAxNycvPjx0ZXh0IHg9JzIwMCcgeT0nMTE1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UG9tbWVzIGZyaXRlczwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjMwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzIzMCcgZmlsbD0nI2Q0YTAxNycvPjx0ZXh0IHg9JzIwMCcgeT0nMTE1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UG9tbWVzIGZyaXRlczwvdGV4dD48L3N2Zz4="
+  },
+  "run_from": "2026-10-20T00:00:00+0000",
+  "run_till": "2026-12-31T21:59:59+0000",
+  "dealer_id": "foetex-sample",
+  "dealer": {
+   "name": "Føtex",
+   "markets": [
+    {
+     "slug": "Føtex",
+     "country_code": "DK"
+    }
+   ]
+  },
+  "catalog_id": "catfoetex-sample",
+  "category_ids": []
+ },
+ {
+  "id": "f7",
+  "heading": "Den klassiske julefrokost",
+  "description": "Marinerede sild med løgringe og karrysalat. Pr. kuvert.",
+  "catalog_page": 3,
+  "pricing": {
+   "price": 119,
+   "pre_price": null,
+   "currency": "DKK"
+  },
+  "quantity": {
+   "unit": {
+    "symbol": "stk",
+    "si": {
+     "symbol": "stk",
+     "factor": 1
+    }
+   },
+   "size": {
+    "from": 1,
+    "to": 1
+   },
+   "pieces": {
+    "from": 1,
+    "to": 1,
+    "min": null,
+    "max": null
+   }
+  },
+  "images": {
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDMwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzQzMCcgZmlsbD0nI2EzMycvPjx0ZXh0IHg9JzIwMCcgeT0nMjE1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+RGVuIGtsYXNzaXNrZSBqdTwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDMwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzQzMCcgZmlsbD0nI2EzMycvPjx0ZXh0IHg9JzIwMCcgeT0nMjE1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+RGVuIGtsYXNzaXNrZSBqdTwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDMwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzQzMCcgZmlsbD0nI2EzMycvPjx0ZXh0IHg9JzIwMCcgeT0nMjE1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+RGVuIGtsYXNzaXNrZSBqdTwvdGV4dD48L3N2Zz4="
+  },
+  "run_from": "2026-10-20T00:00:00+0000",
+  "run_till": "2026-12-31T21:59:59+0000",
+  "dealer_id": "foetex-sample",
+  "dealer": {
+   "name": "Føtex",
+   "markets": [
+    {
+     "slug": "Føtex",
+     "country_code": "DK"
+    }
+   ]
+  },
+  "catalog_id": "catfoetex-sample",
+  "category_ids": []
+ },
+ {
+  "id": "f8",
+  "heading": "Nytårsbuffet",
+  "description": "Ønsker du, at menuen skal stå på valgmuligheder",
+  "catalog_page": 3,
+  "pricing": {
+   "price": 189,
+   "pre_price": null,
+   "currency": "DKK"
+  },
+  "quantity": {
+   "unit": {
+    "symbol": "stk",
+    "si": {
+     "symbol": "stk",
+     "factor": 1
+    }
+   },
+   "size": {
+    "from": 1,
+    "to": 1
+   },
+   "pieces": {
+    "from": 1,
+    "to": 1,
+    "min": null,
+    "max": null
+   }
+  },
+  "images": {
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzgwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM4MCcgZmlsbD0nI2E2MycvPjx0ZXh0IHg9JzIwMCcgeT0nMTkwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Tnl0w6Vyc2J1ZmZldDwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzgwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM4MCcgZmlsbD0nI2E2MycvPjx0ZXh0IHg9JzIwMCcgeT0nMTkwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Tnl0w6Vyc2J1ZmZldDwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzgwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM4MCcgZmlsbD0nI2E2MycvPjx0ZXh0IHg9JzIwMCcgeT0nMTkwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Tnl0w6Vyc2J1ZmZldDwvdGV4dD48L3N2Zz4="
+  },
+  "run_from": "2026-10-20T00:00:00+0000",
+  "run_till": "2026-12-31T21:59:59+0000",
+  "dealer_id": "foetex-sample",
+  "dealer": {
+   "name": "Føtex",
+   "markets": [
+    {
+     "slug": "Føtex",
+     "country_code": "DK"
+    }
+   ]
+  },
+  "catalog_id": "catfoetex-sample",
+  "category_ids": []
+ },
+ {
+  "id": "f9",
+  "heading": "Børnetrøjer 2 stk.",
+  "description": "Str. 92-128",
+  "catalog_page": 3,
+  "pricing": {
+   "price": 60,
+   "pre_price": 100,
+   "currency": "DKK"
+  },
+  "quantity": {
+   "unit": {
+    "symbol": "stk",
+    "si": {
+     "symbol": "stk",
+     "factor": 1
+    }
+   },
+   "size": {
+    "from": 2,
+    "to": 2
+   },
+   "pieces": {
+    "from": 1,
+    "to": 1,
+    "min": null,
+    "max": null
+   }
+  },
+  "images": {
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzY4YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+QsO4cm5ldHLDuGplciAyIHN0PC90ZXh0Pjwvc3ZnPg==",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzY4YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+QsO4cm5ldHLDuGplciAyIHN0PC90ZXh0Pjwvc3ZnPg==",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzY4YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+QsO4cm5ldHLDuGplciAyIHN0PC90ZXh0Pjwvc3ZnPg=="
+  },
+  "run_from": "2026-10-20T00:00:00+0000",
+  "run_till": "2026-12-31T21:59:59+0000",
+  "dealer_id": "foetex-sample",
+  "dealer": {
+   "name": "Føtex",
+   "markets": [
+    {
+     "slug": "Føtex",
+     "country_code": "DK"
+    }
+   ]
+  },
+  "catalog_id": "catfoetex-sample",
+  "category_ids": []
+ },
+ {
+  "id": "f10",
+  "heading": "Airfryer 4 liter",
+  "description": "Digital",
+  "catalog_page": 3,
+  "pricing": {
+   "price": 399,
+   "pre_price": 599,
+   "currency": "DKK"
+  },
+  "quantity": {
+   "unit": {
+    "symbol": "stk",
+    "si": {
+     "symbol": "stk",
+     "factor": 1
+    }
+   },
+   "size": {
+    "from": 1,
+    "to": 1
+   },
+   "pieces": {
+    "from": 1,
+    "to": 1,
+    "min": null,
+    "max": null
+   }
+  },
+  "images": {
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzMzMycvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+QWlyZnJ5ZXIgNCBsaXRlcjwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzMzMycvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+QWlyZnJ5ZXIgNCBsaXRlcjwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzMzMycvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+QWlyZnJ5ZXIgNCBsaXRlcjwvdGV4dD48L3N2Zz4="
+  },
+  "run_from": "2026-10-20T00:00:00+0000",
+  "run_till": "2026-12-31T21:59:59+0000",
+  "dealer_id": "foetex-sample",
+  "dealer": {
+   "name": "Føtex",
+   "markets": [
+    {
+     "slug": "Føtex",
+     "country_code": "DK"
+    }
+   ]
+  },
+  "catalog_id": "catfoetex-sample",
+  "category_ids": []
+ },
+ {
+  "id": "f11",
+  "heading": "Pandekagepander",
+  "description": "Til 4 stk.",
+  "catalog_page": 3,
+  "pricing": {
+   "price": 59,
+   "pre_price": 79,
+   "currency": "DKK"
+  },
+  "quantity": {
+   "unit": {
+    "symbol": "stk",
+    "si": {
+     "symbol": "stk",
+     "factor": 1
+    }
+   },
+   "size": {
+    "from": 1,
+    "to": 1
+   },
+   "pieces": {
+    "from": 1,
+    "to": 1,
+    "min": null,
+    "max": null
+   }
+  },
+  "images": {
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzU1NScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UGFuZGVrYWdlcGFuZGVyPC90ZXh0Pjwvc3ZnPg==",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzU1NScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UGFuZGVrYWdlcGFuZGVyPC90ZXh0Pjwvc3ZnPg==",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzU1NScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UGFuZGVrYWdlcGFuZGVyPC90ZXh0Pjwvc3ZnPg=="
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -715,9 +1156,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzljNGE0YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U3ZpbmVrb3RlbGV0IG08L3RleHQ+PC9zdmc+",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzljNGE0YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U3ZpbmVrb3RlbGV0IG08L3RleHQ+PC9zdmc+",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzljNGE0YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U3ZpbmVrb3RlbGV0IG08L3RleHQ+PC9zdmc+"
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzIwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMyMCcgZmlsbD0nIzljNGE0YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U3ZpbmVrb3RlbGV0IG1lZDwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzIwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMyMCcgZmlsbD0nIzljNGE0YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U3ZpbmVrb3RlbGV0IG1lZDwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzIwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMyMCcgZmlsbD0nIzljNGE0YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U3ZpbmVrb3RlbGV0IG1lZDwvdGV4dD48L3N2Zz4="
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -764,9 +1205,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2MwNDA2MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZibGVyIFBpbmsgTGFkPC90ZXh0Pjwvc3ZnPg==",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2MwNDA2MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZibGVyIFBpbmsgTGFkPC90ZXh0Pjwvc3ZnPg==",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2MwNDA2MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZibGVyIFBpbmsgTGFkPC90ZXh0Pjwvc3ZnPg=="
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjEwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzIxMCcgZmlsbD0nI2MwNDA2MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTA1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZibGVyIFBpbmsgTGFkeTwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjEwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzIxMCcgZmlsbD0nI2MwNDA2MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTA1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZibGVyIFBpbmsgTGFkeTwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjEwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzIxMCcgZmlsbD0nI2MwNDA2MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTA1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZibGVyIFBpbmsgTGFkeTwvdGV4dD48L3N2Zz4="
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -813,9 +1254,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzRiMmUxZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S2FmZmUgZm9ybWFsZXQ8L3RleHQ+PC9zdmc+",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzRiMmUxZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S2FmZmUgZm9ybWFsZXQ8L3RleHQ+PC9zdmc+",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzRiMmUxZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S2FmZmUgZm9ybWFsZXQ8L3RleHQ+PC9zdmc+"
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzUwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM1MCcgZmlsbD0nIzRiMmUxZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTc1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S2FmZmUgZm9ybWFsZXQ8L3RleHQ+PC9zdmc+",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzUwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM1MCcgZmlsbD0nIzRiMmUxZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTc1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S2FmZmUgZm9ybWFsZXQ8L3RleHQ+PC9zdmc+",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzUwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM1MCcgZmlsbD0nIzRiMmUxZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTc1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S2FmZmUgZm9ybWFsZXQ8L3RleHQ+PC9zdmc+"
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -862,9 +1303,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2QwYTAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q2hpcHM8L3RleHQ+PC9zdmc+",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2QwYTAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q2hpcHM8L3RleHQ+PC9zdmc+",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2QwYTAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q2hpcHM8L3RleHQ+PC9zdmc+"
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjYwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI2MCcgZmlsbD0nI2QwYTAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTMwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q2hpcHM8L3RleHQ+PC9zdmc+",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjYwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI2MCcgZmlsbD0nI2QwYTAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTMwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q2hpcHM8L3RleHQ+PC9zdmc+",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjYwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI2MCcgZmlsbD0nI2QwYTAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTMwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q2hpcHM8L3RleHQ+PC9zdmc+"
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -911,9 +1352,9 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+"
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+"
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",
@@ -960,9 +1401,107 @@
    }
   },
   "images": {
-   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2NhYTg2YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZnLCBmcmlsYW5kczwvdGV4dD48L3N2Zz4=",
-   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2NhYTg2YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZnLCBmcmlsYW5kczwvdGV4dD48L3N2Zz4=",
-   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2NhYTg2YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZnLCBmcmlsYW5kczwvdGV4dD48L3N2Zz4="
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjQwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI0MCcgZmlsbD0nI2NhYTg2YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTIwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZnLCBmcmlsYW5kczwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjQwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI0MCcgZmlsbD0nI2NhYTg2YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTIwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZnLCBmcmlsYW5kczwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjQwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI0MCcgZmlsbD0nI2NhYTg2YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTIwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZnLCBmcmlsYW5kczwvdGV4dD48L3N2Zz4="
+  },
+  "run_from": "2026-10-20T00:00:00+0000",
+  "run_till": "2026-12-31T21:59:59+0000",
+  "dealer_id": "0b1e8",
+  "dealer": {
+   "name": "SuperBrugsen",
+   "markets": [
+    {
+     "slug": "SuperBrugsen",
+     "country_code": "DK"
+    }
+   ]
+  },
+  "catalog_id": "cat0b1e8",
+  "category_ids": []
+ },
+ {
+  "id": "s7",
+  "heading": "Brætspil for hele familien",
+  "description": "Fra 8 år",
+  "catalog_page": 3,
+  "pricing": {
+   "price": 99,
+   "pre_price": 149,
+   "currency": "DKK"
+  },
+  "quantity": {
+   "unit": {
+    "symbol": "stk",
+    "si": {
+     "symbol": "stk",
+     "factor": 1
+    }
+   },
+   "size": {
+    "from": 1,
+    "to": 1
+   },
+   "pieces": {
+    "from": 1,
+    "to": 1,
+    "min": null,
+    "max": null
+   }
+  },
+  "images": {
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzYzOScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+QnLDpnRzcGlsIGZvciBoZWw8L3RleHQ+PC9zdmc+",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzYzOScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+QnLDpnRzcGlsIGZvciBoZWw8L3RleHQ+PC9zdmc+",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzYzOScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+QnLDpnRzcGlsIGZvciBoZWw8L3RleHQ+PC9zdmc+"
+  },
+  "run_from": "2026-10-20T00:00:00+0000",
+  "run_till": "2026-12-31T21:59:59+0000",
+  "dealer_id": "0b1e8",
+  "dealer": {
+   "name": "SuperBrugsen",
+   "markets": [
+    {
+     "slug": "SuperBrugsen",
+     "country_code": "DK"
+    }
+   ]
+  },
+  "catalog_id": "cat0b1e8",
+  "category_ids": []
+ },
+ {
+  "id": "s8",
+  "heading": "Mystisk ukendt vare",
+  "description": "Uden søgeord",
+  "catalog_page": 3,
+  "pricing": {
+   "price": 10,
+   "pre_price": 15,
+   "currency": "DKK"
+  },
+  "quantity": {
+   "unit": {
+    "symbol": "stk",
+    "si": {
+     "symbol": "stk",
+     "factor": 1
+    }
+   },
+   "size": {
+    "from": 1,
+    "to": 1
+   },
+   "pieces": {
+    "from": 1,
+    "to": 1,
+    "min": null,
+    "max": null
+   }
+  },
+  "images": {
+   "thumb": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzk5OScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TXlzdGlzayB1a2VuZHQgdjwvdGV4dD48L3N2Zz4=",
+   "view": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzk5OScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TXlzdGlzayB1a2VuZHQgdjwvdGV4dD48L3N2Zz4=",
+   "zoom": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzk5OScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TXlzdGlzayB1a2VuZHQgdjwvdGV4dD48L3N2Zz4="
   },
   "run_from": "2026-10-20T00:00:00+0000",
   "run_till": "2026-12-31T21:59:59+0000",

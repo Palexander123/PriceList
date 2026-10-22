@@ -56,17 +56,23 @@
   .chip .dot { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,.25); flex: none; }
   .chip.store[aria-pressed="true"] { background: var(--c); border-color: var(--c); color: var(--cink); }
   .chip.store[aria-pressed="true"] .dot { background: var(--cink); border-color: transparent; }
-  .chips-scroll { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: thin; width: 100%; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; width: 100%; }
+  .chip .n { opacity: .65; font-weight: 500; }
+  .toggles { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+  .toggle input:disabled + span { opacity: .55; }
   .fav-chip[aria-pressed="true"] { background: var(--heart); border-color: var(--heart); color: #fff; }
   .toggle { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); cursor: pointer; }
   .toggle input { width: 18px; height: 18px; accent-color: var(--ink); }
 
   .count { margin: 16px 0 12px; color: var(--muted); }
 
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; padding: 0 0 56px; list-style: none; margin: 0; }
-  .card { position: relative; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-  .pic { position: relative; aspect-ratio: 4 / 3; background: #fff; display: grid; place-items: center; }
-  .pic img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; display: block; }
+  /* Columns instead of a row grid: every card keeps its natural height, so a short
+     card never leaves a gap under it. The trade-off is that the sort order reads
+     down each column rather than across. */
+  .grid { column-width: 210px; column-gap: 14px; padding: 0 0 56px; list-style: none; margin: 0; }
+  .card { position: relative; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; break-inside: avoid; margin: 0 0 14px; }
+  .pic { position: relative; min-height: 110px; background: #fff; display: grid; place-items: center; }
+  .pic img { position: relative; z-index: 1; width: 100%; height: auto; display: block; }
   .pic .ph { position: absolute; inset: 0; display: grid; place-items: center; font-size: 3rem; font-weight: 800; color: rgba(255,255,255,.9); background: var(--c); }
   .store-tag { z-index: 2; position: absolute; left: 10px; top: 10px; padding: 3px 10px; border-radius: 999px; background: var(--c); color: var(--cink); font-size: .8rem; font-weight: 700; box-shadow: 0 1px 2px rgba(0,0,0,.25); }
   .heart { z-index: 2; position: absolute; right: 8px; top: 8px; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,.25); }
@@ -91,14 +97,14 @@
   .valid { margin: 8px 0 0; padding-top: 8px; border-top: 1px dashed var(--line); font-size: .82rem; color: var(--muted); display: flex; justify-content: space-between; gap: 8px; }
   .madspild { font-weight: 700; color: var(--save); }
 
-  .empty { grid-column: 1 / -1; text-align: center; padding: 56px 16px; color: var(--muted); }
+  .empty { display: block; column-span: all; text-align: center; padding: 56px 16px; color: var(--muted); }
   .empty h2 { margin: 0 0 6px; color: var(--ink); font-size: 1.3rem; }
   .btn { margin-top: 14px; padding: 10px 18px; border-radius: 10px; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); font-weight: 700; cursor: pointer; }
 
   footer { padding: 0 0 40px; color: var(--muted); font-size: .85rem; }
   footer p { margin: 4px 0; max-width: 70ch; }
 
-  @media (max-width: 520px) { .grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } .tag .kr { font-size: 2rem; } .body { padding: 10px; } }
+  @media (max-width: 520px) { .grid { column-width: 150px; column-gap: 10px; } .card { margin-bottom: 10px; } .tag .kr { font-size: 2rem; } .body { padding: 10px; } }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 </head>
@@ -120,11 +126,15 @@
         <option value="ending">Slutter snarest</option>
       </select>
     </div>
-    <div class="row"><div class="chips-scroll" id="stores" role="group" aria-label="Butikker"></div></div>
-    <div class="row"><div class="chips-scroll" id="cats" role="group" aria-label="Kategorier"></div></div>
+    <div class="row"><div class="chips" id="stores" role="group" aria-label="Butikker"></div></div>
+    <div class="row"><div class="chips" id="cats" role="group" aria-label="Kategorier"></div></div>
     <div class="row">
       <button class="chip fav-chip" id="favOnly" aria-pressed="false">♥ Mine favoritter <span id="favCount"></span></button>
-      <label class="toggle"><input type="checkbox" id="upcoming"> Vis også kommende tilbud</label>
+      <div class="toggles">
+        <label class="toggle"><input type="checkbox" id="hideJunk"><span>Skjul skrammel (legetøj, elektronik, menuer, tøj og bolig)</span></label>
+        <label class="toggle"><input type="checkbox" id="consumables"><span>Kun forbrugsvarer (mad, drikke og husholdning)</span></label>
+        <label class="toggle"><input type="checkbox" id="upcoming"><span>Vis også kommende tilbud</span></label>
+      </div>
     </div>
   </div>
 </div>
@@ -143,7 +153,11 @@
 (() => {
   const FAV_KEY = "tilbud:favoritter:v1";
   const $ = (id) => document.getElementById(id);
-  const state = { data: null, q: "", sort: "discount", stores: new Set(), cat: "alle", favOnly: false, upcoming: false, favs: {} };
+  const PREF_KEY = "tilbud:filtre:v1";
+  const state = { data: null, q: "", sort: "discount", stores: new Set(), cat: "alle", favOnly: false, upcoming: false,
+                  hideJunk: true, consumables: false, groups: {}, favs: {} };
+  const loadPrefs = () => { try { return JSON.parse(localStorage.getItem(PREF_KEY)) || {}; } catch { return {}; } };
+  const savePrefs = () => { try { localStorage.setItem(PREF_KEY, JSON.stringify({ hideJunk: state.hideJunk, consumables: state.consumables })); } catch {} };
 
   // ---- favourites (per product name, so they survive the weekly leaflet change)
   const favKey = (title) => title.toLowerCase().replace(/\s+/g, " ").trim();
@@ -164,12 +178,16 @@
   }
 
   // ---- filtering and sorting
-  function visible() {
+  // skipCat: ignore the selected category, used to count how many offers each category chip would show
+  function visible(skipCat) {
     const now = Date.now(), q = state.q.trim().toLowerCase();
     let list = state.data.offers.filter((o) => {
+      const group = state.groups[o.category] || "other";
+      if (state.consumables && group !== "consumable") return false;
+      if (state.hideJunk && group === "junk") return false;
       if (!state.upcoming && o.valid_from && Date.parse(o.valid_from) > now) return false;
       if (state.stores.size && !state.stores.has(o.chain)) return false;
-      if (state.cat !== "alle" && o.category !== state.cat) return false;
+      if (!skipCat && state.cat !== "alle" && o.category !== state.cat) return false;
       if (state.favOnly && !state.favs[favKey(o.title)]) return false;
       if (q && !(o.title + " " + (o.description || "")).toLowerCase().includes(q)) return false;
       return true;
@@ -217,13 +235,29 @@
     </li>`;
   }
 
+  function renderCats() {
+    const counts = {};
+    visible(true).forEach((o) => { counts[o.category] = (counts[o.category] || 0) + 1; });
+    if (state.cat !== "alle" && !counts[state.cat]) state.cat = "alle";
+    const total = Object.values(counts).reduce((a, b) => a + b, 0);
+    const focused = document.activeElement && document.activeElement.dataset ? document.activeElement.dataset.cat : null;
+    $("cats").innerHTML =
+      `<button class="chip" data-cat="alle" aria-pressed="${state.cat === "alle"}">Alle <span class="n">${total}</span></button>` +
+      state.data.categories.filter((c) => counts[c.id]).map((c) =>
+        `<button class="chip" data-cat="${esc(c.id)}" aria-pressed="${state.cat === c.id}">${esc(c.label)} <span class="n">${counts[c.id]}</span></button>`).join("");
+    if (focused) { const el = $("cats").querySelector(`[data-cat="${focused}"]`); if (el) el.focus(); }
+  }
+
   function render() {
     const chains = Object.fromEntries(state.data.chains.map((c) => [c.label, c]));
+    $("hideJunk").checked = state.hideJunk || state.consumables;
+    $("hideJunk").disabled = state.consumables;
+    $("consumables").checked = state.consumables;
+    renderCats();
     const list = visible();
     $("count").textContent = list.length === 1 ? "1 tilbud" : `${list.length} tilbud`;
     $("favCount").textContent = Object.keys(state.favs).length ? `(${Object.keys(state.favs).length})` : "";
     $("favOnly").setAttribute("aria-pressed", state.favOnly);
-    document.querySelectorAll("#cats .chip").forEach((b) => b.setAttribute("aria-pressed", b.dataset.cat === state.cat));
     document.querySelectorAll("#stores .chip").forEach((b) => b.setAttribute("aria-pressed", state.stores.has(b.dataset.store)));
     if (!list.length) {
       const noFavs = state.favOnly && !Object.keys(state.favs).length;
@@ -236,12 +270,10 @@
   }
 
   function buildControls() {
-    const { chains, categories, offers } = state.data;
+    const { chains, categories } = state.data;
+    state.groups = Object.fromEntries(categories.map((c) => [c.id, c.group]));
     $("stores").innerHTML = chains.map((c) =>
       `<button class="chip store" style="--c:${c.color};--cink:${inkFor(c.color)}" data-store="${esc(c.label)}" aria-pressed="false"><span class="dot" style="background:${c.color}"></span>${esc(c.label)}</button>`).join("");
-    const present = new Set(offers.map((o) => o.category));
-    $("cats").innerHTML = `<button class="chip" data-cat="alle" aria-pressed="true">Alle</button>` +
-      categories.filter((c) => present.has(c.id)).map((c) => `<button class="chip" data-cat="${esc(c.id)}" aria-pressed="false">${esc(c.label)}</button>`).join("");
   }
 
   function header() {
@@ -287,11 +319,16 @@
   $("q").addEventListener("input", (e) => { state.q = e.target.value; render(); });
   $("sort").addEventListener("change", (e) => { state.sort = e.target.value; render(); });
   $("upcoming").addEventListener("change", (e) => { state.upcoming = e.target.checked; render(); });
+  $("hideJunk").addEventListener("change", (e) => { state.hideJunk = e.target.checked; savePrefs(); render(); });
+  $("consumables").addEventListener("change", (e) => { state.consumables = e.target.checked; savePrefs(); render(); });
   // image load errors do not bubble, so listen in the capture phase
   document.addEventListener("error", (e) => { if (e.target.tagName === "IMG") e.target.remove(); }, true);
 
   // ---- start
   state.favs = loadFavs();
+  const prefs = loadPrefs();
+  state.hideJunk = prefs.hideJunk !== false;   // on by default
+  state.consumables = prefs.consumables === true;
   fetch("data/offers.json", { cache: "no-cache" })
     .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then((data) => { state.data = data; header(); buildControls(); render(); })

@@ -1,13 +1,13 @@
 {
  "meta": {
-  "generated_at": "2026-10-22T22:06:54Z",
+  "generated_at": "2026-10-22T22:52:02Z",
   "location": "Lyngby",
   "sample": true,
   "notes": [
    "Sample data - not real offers"
   ],
   "errors": [],
-  "count": 24
+  "count": 35
  },
  "chains": [
   {
@@ -29,47 +29,78 @@
  "categories": [
   {
    "id": "frost",
-   "label": "Frost"
+   "label": "Frost",
+   "group": "consumable"
   },
   {
    "id": "fisk",
-   "label": "Fisk & skaldyr"
+   "label": "Fisk & skaldyr",
+   "group": "consumable"
   },
   {
    "id": "koed",
-   "label": "Kød & pålæg"
+   "label": "Kød & pålæg",
+   "group": "consumable"
   },
   {
    "id": "groent",
-   "label": "Frugt & grønt"
+   "label": "Frugt & grønt",
+   "group": "consumable"
   },
   {
    "id": "mejeri",
-   "label": "Mejeri & æg"
+   "label": "Mejeri & æg",
+   "group": "consumable"
   },
   {
    "id": "bagning",
-   "label": "Brød & bagning"
+   "label": "Brød & bagning",
+   "group": "consumable"
   },
   {
    "id": "drikke",
-   "label": "Drikkevarer"
+   "label": "Drikkevarer",
+   "group": "consumable"
   },
   {
    "id": "snacks",
-   "label": "Snacks & slik"
+   "label": "Snacks & slik",
+   "group": "consumable"
   },
   {
    "id": "kolonial",
-   "label": "Kolonial"
+   "label": "Kolonial",
+   "group": "consumable"
   },
   {
    "id": "husholdning",
-   "label": "Husholdning & pleje"
+   "label": "Husholdning & pleje",
+   "group": "consumable"
   },
   {
    "id": "andet",
-   "label": "Andet"
+   "label": "Andet",
+   "group": "other"
+  },
+  {
+   "id": "menu",
+   "label": "Menuer & buffet",
+   "group": "junk"
+  },
+  {
+   "id": "legetoej",
+   "label": "Legetøj & spil",
+   "group": "junk"
+  },
+  {
+   "id": "elektronik",
+   "label": "Elektronik",
+   "group": "junk"
+  },
+  {
+   "id": "boligting",
+   "label": "Tøj, bolig & have",
+   "group": "junk"
   }
  ],
  "offers": [
@@ -155,11 +186,28 @@
     "value": 62.5,
     "per": "l"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzVhOGZiMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U2hhbXBvbyBlbGxlciA8L3RleHQ+PC9zdmc+",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzQwMCcgZmlsbD0nIzVhOGZiMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMjAwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U2hhbXBvbyBlbGxlciBiYTwvdGV4dD48L3N2Zz4=",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f5",
    "category": "husholdning"
+  },
+  {
+   "id": "tjek:f9",
+   "chain": "Føtex",
+   "kind": "weekly",
+   "store": null,
+   "title": "Børnetrøjer 2 stk.",
+   "description": "Str. 92-128",
+   "price": 60.0,
+   "was_price": 100.0,
+   "discount_pct": 40,
+   "unit_price": null,
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzY4YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+QsO4cm5ldHLDuGplciAyIHN0PC90ZXh0Pjwvc3ZnPg==",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f9",
+   "category": "boligting"
   },
   {
    "id": "tjek:f1",
@@ -175,11 +223,45 @@
     "value": 195.0,
     "per": "kg"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2Q5Nzc0ZicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGFrcyBpIHNraXZlcjwvdGV4dD48L3N2Zz4=",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2Q5Nzc0ZicvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGFrcyBpIHNraXZlcjwvdGV4dD48L3N2Zz4=",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f1",
    "category": "fisk"
+  },
+  {
+   "id": "tjek:s7",
+   "chain": "SuperBrugsen",
+   "kind": "weekly",
+   "store": null,
+   "title": "Brætspil for hele familien",
+   "description": "Fra 8 år",
+   "price": 99.0,
+   "was_price": 149.0,
+   "discount_pct": 34,
+   "unit_price": null,
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzYzOScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+QnLDpnRzcGlsIGZvciBoZWw8L3RleHQ+PC9zdmc+",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/SuperBrugsen?publication=cat0b1e8&offer=s7",
+   "category": "legetoej"
+  },
+  {
+   "id": "tjek:s8",
+   "chain": "SuperBrugsen",
+   "kind": "weekly",
+   "store": null,
+   "title": "Mystisk ukendt vare",
+   "description": "Uden søgeord",
+   "price": 10.0,
+   "was_price": 15.0,
+   "discount_pct": 33,
+   "unit_price": null,
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzk5OScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TXlzdGlzayB1a2VuZHQgdjwvdGV4dD48L3N2Zz4=",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/SuperBrugsen?publication=cat0b1e8&offer=s8",
+   "category": "andet"
   },
   {
    "id": "tjek:f3",
@@ -195,11 +277,28 @@
     "value": 53.33,
     "per": "kg"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZTBjMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TW96emFyZWxsYTwvdGV4dD48L3N2Zz4=",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzYwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM2MCcgZmlsbD0nI2U4ZTBjMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTgwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TW96emFyZWxsYTwvdGV4dD48L3N2Zz4=",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f3",
    "category": "mejeri"
+  },
+  {
+   "id": "tjek:f10",
+   "chain": "Føtex",
+   "kind": "weekly",
+   "store": null,
+   "title": "Airfryer 4 liter",
+   "description": "Digital",
+   "price": 399.0,
+   "was_price": 599.0,
+   "discount_pct": 33,
+   "unit_price": null,
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzMzMycvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+QWlyZnJ5ZXIgNCBsaXRlcjwvdGV4dD48L3N2Zz4=",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f10",
+   "category": "elektronik"
   },
   {
    "id": "tjek:f6",
@@ -215,7 +314,7 @@
     "value": 15.0,
     "per": "kg"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2Q0YTAxNycvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UG9tbWVzIGZyaXRlczwvdGV4dD48L3N2Zz4=",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjMwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzIzMCcgZmlsbD0nI2Q0YTAxNycvPjx0ZXh0IHg9JzIwMCcgeT0nMTE1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UG9tbWVzIGZyaXRlczwvdGV4dD48L3N2Zz4=",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f6",
@@ -235,7 +334,7 @@
     "value": 88.24,
     "per": "kg"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2QwYTAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q2hpcHM8L3RleHQ+PC9zdmc+",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjYwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI2MCcgZmlsbD0nI2QwYTAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTMwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q2hpcHM8L3RleHQ+PC9zdmc+",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/SuperBrugsen?publication=cat0b1e8&offer=s4",
@@ -255,7 +354,7 @@
     "value": 100.0,
     "per": "kg"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzRiMmUxZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S2FmZmUgZm9ybWFsZXQ8L3RleHQ+PC9zdmc+",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzUwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM1MCcgZmlsbD0nIzRiMmUxZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTc1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S2FmZmUgZm9ybWFsZXQ8L3RleHQ+PC9zdmc+",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/SuperBrugsen?publication=cat0b1e8&offer=s3",
@@ -275,7 +374,7 @@
     "value": 90.0,
     "per": "kg"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2U4ZDA3MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U23DuHI8L3RleHQ+PC9zdmc+",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/SuperBrugsen?publication=cat0b1e8&offer=s5",
@@ -295,7 +394,7 @@
     "value": 20.0,
     "per": "kg"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2MwNDA2MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZibGVyIFBpbmsgTGFkPC90ZXh0Pjwvc3ZnPg==",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjEwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzIxMCcgZmlsbD0nI2MwNDA2MCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTA1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZibGVyIFBpbmsgTGFkeTwvdGV4dD48L3N2Zz4=",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/SuperBrugsen?publication=cat0b1e8&offer=s2",
@@ -315,7 +414,7 @@
     "value": 45.0,
     "per": "kg"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzljNGE0YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U3ZpbmVrb3RlbGV0IG08L3RleHQ+PC9zdmc+",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzIwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMyMCcgZmlsbD0nIzljNGE0YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U3ZpbmVrb3RlbGV0IG1lZDwvdGV4dD48L3N2Zz4=",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/SuperBrugsen?publication=cat0b1e8&offer=s1",
@@ -335,7 +434,7 @@
     "value": 36.0,
     "per": "kg"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2IyMjIyMicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VG9tYXRlciBpIGJha2s8L3RleHQ+PC9zdmc+",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjUwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI1MCcgZmlsbD0nI2IyMjIyMicvPjx0ZXh0IHg9JzIwMCcgeT0nMTI1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VG9tYXRlciBpIGJha2tlPC90ZXh0Pjwvc3ZnPg==",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f2",
@@ -355,10 +454,27 @@
     "value": 7.0,
     "per": "kg"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2JmYTc3YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SHZlZGVtZWw8L3RleHQ+PC9zdmc+",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjkwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI5MCcgZmlsbD0nI2JmYTc3YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTQ1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SHZlZGVtZWw8L3RleHQ+PC9zdmc+",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f4",
+   "category": "bagning"
+  },
+  {
+   "id": "tjek:f11",
+   "chain": "Føtex",
+   "kind": "weekly",
+   "store": null,
+   "title": "Pandekagepander",
+   "description": "Til 4 stk.",
+   "price": 59.0,
+   "was_price": 79.0,
+   "discount_pct": 25,
+   "unit_price": null,
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzU1NScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UGFuZGVrYWdlcGFuZGVyPC90ZXh0Pjwvc3ZnPg==",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f11",
    "category": "bagning"
   },
   {
@@ -375,7 +491,7 @@
     "value": 9.0,
     "per": "l"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzRhN2ZiNScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGV0bcOmbGsgMSBsaXRlPC90ZXh0Pjwvc3ZnPg==",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDIwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzQyMCcgZmlsbD0nIzRhN2ZiNScvPjx0ZXh0IHg9JzIwMCcgeT0nMjEwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TGV0bcOmbGsgMSBsaXRlcjwvdGV4dD48L3N2Zz4=",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n3",
@@ -395,11 +511,31 @@
     "value": 16.0,
     "per": "kg"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzZiNGEyYicvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UnVnYnLDuGQgaSBza2l2PC90ZXh0Pjwvc3ZnPg==",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzZiNGEyYicvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+UnVnYnLDuGQgaSBza2l2ZXI8L3RleHQ+PC9zdmc+",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n6",
    "category": "bagning"
+  },
+  {
+   "id": "tjek:n12",
+   "chain": "Netto",
+   "kind": "weekly",
+   "store": null,
+   "title": "Håndsæbe 250 ml",
+   "description": "Pumpe",
+   "price": 12.0,
+   "was_price": null,
+   "discount_pct": null,
+   "unit_price": {
+    "value": 48.0,
+    "per": "l"
+   },
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjgwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI4MCcgZmlsbD0nIzdiZCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTQwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SMOlbmRzw6ZiZSAyNTAgbWw8L3RleHQ+PC9zdmc+",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n12",
+   "category": "husholdning"
   },
   {
    "id": "tjek:n2",
@@ -415,7 +551,7 @@
     "value": 15.0,
     "per": "kg"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2M5YTQwMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w5hrb2xvZ2lza2UgYmFuPC90ZXh0Pjwvc3ZnPg==",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzIwMCcgZmlsbD0nI2M5YTQwMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTAwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w5hrb2xvZ2lza2UgYmFuYW48L3RleHQ+PC9zdmc+",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n2",
@@ -432,7 +568,7 @@
    "was_price": null,
    "discount_pct": null,
    "unit_price": null,
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2NhYTg2YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZnLCBmcmlsYW5kczwvdGV4dD48L3N2Zz4=",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjQwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI0MCcgZmlsbD0nI2NhYTg2YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTIwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+w4ZnLCBmcmlsYW5kczwvdGV4dD48L3N2Zz4=",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/SuperBrugsen?publication=cat0b1e8&offer=s6",
@@ -452,7 +588,7 @@
     "value": 250.0,
     "per": "kg"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzdhMmE1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S29tbWVuZGU6IEp1bGU8L3RleHQ+PC9zdmc+",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzdhMmE1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S29tbWVuZGU6IEp1bGVrYTwvdGV4dD48L3N2Zz4=",
    "valid_from": "2030-01-01T00:00:00Z",
    "valid_to": "2030-01-08T00:00:00Z",
    "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n8",
@@ -472,11 +608,28 @@
     "value": 64.0,
     "per": "kg"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzhhM2IyZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SGFra2V0IG9rc2Vrw7hkPC90ZXh0Pjwvc3ZnPg==",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjYwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI2MCcgZmlsbD0nIzhhM2IyZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTMwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SGFra2V0IG9rc2Vrw7hkIDg8L3RleHQ+PC9zdmc+",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n1",
    "category": "koed"
+  },
+  {
+   "id": "tjek:n11",
+   "chain": "Netto",
+   "kind": "weekly",
+   "store": null,
+   "title": "Toiletpapir 16 ruller",
+   "description": "Softesse",
+   "price": 39.0,
+   "was_price": null,
+   "discount_pct": null,
+   "unit_price": null,
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzQwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM0MCcgZmlsbD0nIzlhYycvPjx0ZXh0IHg9JzIwMCcgeT0nMTcwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VG9pbGV0cGFwaXIgMTYgcjwvdGV4dD48L3N2Zz4=",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n11",
+   "category": "husholdning"
   },
   {
    "id": "tjek:n5",
@@ -492,7 +645,7 @@
     "value": 49.0,
     "per": "kg"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2M5OGQ1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S3lsbGluZ2VicnlzdGY8L3RleHQ+PC9zdmc+",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjQwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzI0MCcgZmlsbD0nI2M5OGQ1YScvPjx0ZXh0IHg9JzIwMCcgeT0nMTIwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+S3lsbGluZ2VicnlzdGZpbDwvdGV4dD48L3N2Zz4=",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n5",
@@ -512,7 +665,7 @@
     "value": 19.75,
     "per": "l"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2IwMjAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q29jYS1Db2xhLCBGYW48L3RleHQ+PC9zdmc+",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzMwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMzMCcgZmlsbD0nI2IwMjAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTY1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Q29jYS1Db2xhLCBGYW50YTwvdGV4dD48L3N2Zz4=",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n4",
@@ -532,11 +685,79 @@
     "value": 15.03,
     "per": "l"
    },
-   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nIzJkNmEzZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTYwJyBmb250LXNpemU9JzI4JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VHVib3JnIENsYXNzaWM8L3RleHQ+PC9zdmc+",
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzgwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM4MCcgZmlsbD0nIzJkNmEzZScvPjx0ZXh0IHg9JzIwMCcgeT0nMTkwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+VHVib3JnIENsYXNzaWM8L3RleHQ+PC9zdmc+",
    "valid_from": "2026-10-20T00:00:00Z",
    "valid_to": "2026-12-31T21:59:59Z",
    "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n7",
    "category": "drikke"
+  },
+  {
+   "id": "tjek:f7",
+   "chain": "Føtex",
+   "kind": "weekly",
+   "store": null,
+   "title": "Den klassiske julefrokost",
+   "description": "Marinerede sild med løgringe og karrysalat. Pr. kuvert.",
+   "price": 119.0,
+   "was_price": null,
+   "discount_pct": null,
+   "unit_price": null,
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDMwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzQzMCcgZmlsbD0nI2EzMycvPjx0ZXh0IHg9JzIwMCcgeT0nMjE1JyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+RGVuIGtsYXNzaXNrZSBqdTwvdGV4dD48L3N2Zz4=",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f7",
+   "category": "menu"
+  },
+  {
+   "id": "tjek:n10",
+   "chain": "Netto",
+   "kind": "weekly",
+   "store": null,
+   "title": "Hovedtelefoner trådløse",
+   "description": "Bluetooth",
+   "price": 149.0,
+   "was_price": null,
+   "discount_pct": null,
+   "unit_price": null,
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMjIwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzIyMCcgZmlsbD0nIzIyMicvPjx0ZXh0IHg9JzIwMCcgeT0nMTEwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+SG92ZWR0ZWxlZm9uZXIgdDwvdGV4dD48L3N2Zz4=",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n10",
+   "category": "elektronik"
+  },
+  {
+   "id": "tjek:f8",
+   "chain": "Føtex",
+   "kind": "weekly",
+   "store": null,
+   "title": "Nytårsbuffet",
+   "description": "Ønsker du, at menuen skal stå på valgmuligheder",
+   "price": 189.0,
+   "was_price": null,
+   "discount_pct": null,
+   "unit_price": null,
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzgwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzM4MCcgZmlsbD0nI2E2MycvPjx0ZXh0IHg9JzIwMCcgeT0nMTkwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+Tnl0w6Vyc2J1ZmZldDwvdGV4dD48L3N2Zz4=",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Føtex?publication=catfoetex-sample&offer=f8",
+   "category": "menu"
+  },
+  {
+   "id": "tjek:n9",
+   "chain": "Netto",
+   "kind": "weekly",
+   "store": null,
+   "title": "LEGO City politistation",
+   "description": "Fra 6 år",
+   "price": 199.0,
+   "was_price": null,
+   "discount_pct": null,
+   "unit_price": null,
+   "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nMzAwJz48cmVjdCB3aWR0aD0nNDAwJyBoZWlnaHQ9JzMwMCcgZmlsbD0nI2QwMjAyMCcvPjx0ZXh0IHg9JzIwMCcgeT0nMTUwJyBmb250LXNpemU9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+TEVHTyBDaXR5IHBvbGl0aTwvdGV4dD48L3N2Zz4=",
+   "valid_from": "2026-10-20T00:00:00Z",
+   "valid_to": "2026-12-31T21:59:59Z",
+   "url": "https://etilbudsavis.dk/Netto?publication=cat9ba51&offer=n9",
+   "category": "legetoej"
   }
  ]
 }

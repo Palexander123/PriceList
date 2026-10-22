@@ -27,6 +27,31 @@ class Categories(unittest.TestCase):
     def test_fallback(self):
         self.assertEqual(categorize("Zzzz qqqq"), "andet")
 
+    def test_junk_is_detected(self):
+        self.assertEqual(categorize("Den klassiske julefrokost", "Marinerede sild"), "menu")
+        self.assertEqual(categorize("Mad til fest", "Pr. kuvert"), "menu")  # via description hint
+        self.assertEqual(categorize("LEGO City politistation"), "legetoej")
+        self.assertEqual(categorize("Hovedtelefoner trådløse"), "elektronik")
+        self.assertEqual(categorize("Kaffemaskine"), "elektronik")
+        self.assertEqual(categorize("Børnetrøjer 2 stk."), "boligting")
+
+    def test_food_is_not_mistaken_for_junk(self):
+        self.assertEqual(categorize("Pandekager", "Frost"), "bagning")
+        self.assertEqual(categorize("Kaffe formalet"), "drikke")
+        self.assertEqual(categorize("Pærer"), "groent")
+        self.assertEqual(categorize("Plantedrik"), "drikke")
+
+    def test_household_consumables(self):
+        self.assertEqual(categorize("Håndsæbe 250 ml"), "husholdning")
+        self.assertEqual(categorize("Toiletpapir 16 ruller"), "husholdning")
+
+    def test_every_category_has_a_group(self):
+        from categories import category_list
+        groups = {c["id"]: c["group"] for c in category_list()}
+        self.assertEqual(groups["menu"], "junk")
+        self.assertEqual(groups["mejeri"], "consumable")
+        self.assertEqual(groups["andet"], "other")
+
 
 class Helpers(unittest.TestCase):
     def test_pct_off(self):
