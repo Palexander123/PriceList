@@ -57,7 +57,9 @@
   .chip.store[aria-pressed="true"] { background: var(--c); border-color: var(--c); color: var(--cink); }
   .chip.store[aria-pressed="true"] .dot { background: var(--cink); border-color: transparent; }
   .chips { display: flex; flex-wrap: wrap; gap: 8px; width: 100%; }
-  .chip .n { opacity: .65; font-weight: 500; }
+  .chip .n { opacity: .65; font-weight: 500; display: inline-block; min-width: 3ch; text-align: right; font-variant-numeric: tabular-nums; }
+  .chip.zero { opacity: .45; }
+  .chip.zero[aria-pressed="true"] { opacity: 1; }
   .toggles { display: flex; flex-wrap: wrap; gap: 8px 22px; }
   .toggle input:disabled + span { opacity: .55; }
   .fav-chip[aria-pressed="true"] { background: var(--heart); border-color: var(--heart); color: #fff; }
@@ -121,8 +123,7 @@
 <div class="controls">
   <div class="wrap">
     <div class="row">
-      <input class="search" id="q" type="search" placeholder="Søg efter fx smør, kylling eller kaffe" aria-label="Søg i tilbud" autocomplete="off">
-      <label class="toggle"><input type="checkbox" id="wholeWord"><span>Kun hele ord</span></label>
+      <input class="search" id="q" type="search" placeholder="Søg fx sodavand, ost, frugt, rugbrød eller kaffe" aria-label="Søg i tilbud" autocomplete="off">
       <select class="select" id="sort" aria-label="Sortér efter">
         <option value="discount">Største rabat</option>
         <option value="price">Laveste pris</option>
@@ -159,8 +160,8 @@
   const FAV_KEY = "tilbud:favoritter:v1";
   const $ = (id) => document.getElementById(id);
   const PREF_KEY = "tilbud:filtre:v1";
-  const state = { data: null, q: "", sort: "discount", stores: new Set(), cat: "alle", favOnly: false, upcoming: false,
-                  hideJunk: true, consumables: false, onlyJunk: false, wholeWord: false, groups: {}, favs: {} };
+  const state = { data: null, q: "", sort: "discount", stores: new Set(), cats: new Set(), catKey: "", favOnly: false, upcoming: false,
+                  hideJunk: true, consumables: false, onlyJunk: false, groups: {}, catWords: {}, favs: {} };
   const loadPrefs = () => { try { return JSON.parse(localStorage.getItem(PREF_KEY)) || {}; } catch { return {}; } };
   const savePrefs = () => { try { localStorage.setItem(PREF_KEY, JSON.stringify({ hideJunk: state.hideJunk, consumables: state.consumables })); } catch {} };
 
@@ -196,14 +197,16 @@
       }
       if (!state.upcoming && o.valid_from && Date.parse(o.valid_from) > now) return false;
       if (state.stores.size && !state.stores.has(o.chain)) return false;
-      if (!skipCat && state.cat !== "alle" && o.category !== state.cat) return false;
+      if (!skipCat && state.cats.size && !state.cats.has(o.category)) return false;
       if (state.favOnly && !state.favs[favKey(o.title)]) return false;
       if (tokens.length) {
-        // Words, not letters: "øl" must not find "pølse". A search term matches a word
-        // that starts with it ("smør" finds "smørrebrød"), or only an exact word when
-        // "Kun hele ord" is ticked. Every term has to match.
-        o._words = o._words || (o.title + " " + (o.description || "") + " " + (o.type || "")).toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean);
-        const hit = (t) => state.wholeWord ? o._words.includes(t) : o._words.some((w) => w.startsWith(t));
+        // Words, not letters: "øl" must not find "pølse". A search term matches a word that starts
+        // with it ("smør" finds "smørrebrød"). The words searched are the title, the small print,
+        // the product type, the AI's tags ("sodavand", "frugt", ...) and the category's name,
+        // so a general word finds the whole group. Every term has to match.
+        o._words = o._words || (o.title + " " + (o.description || "") + " " + (o.type || "") + " " +
+          (o.tags || []).join(" ") + " " + (state.catWords[o.category] || "")).toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+        const hit = (t) => o._words.some((w) => w.startsWith(t));
         if (!tokens.every(hit)) return false;
       }
       return true;
@@ -252,17 +255,35 @@
     </article>`;
   }
 
+  // Category chips: none selected = everything; several can be selected. All categories of the current
+  // mode always stay on screen (0 hits are dimmed), so nothing moves while you click around.
+  function shownCats() {
+    return state.data.categories.filter((c) => {
+      const g = c.group;
+      if (state.onlyJunk) return g === "junk";
+      if (state.consumables) return g !== "junk";
+      if (state.hideJunk) return g !== "junk";
+      return true;
+    });
+  }
+
   function renderCats() {
     const counts = {};
     visible(true).forEach((o) => { counts[o.category] = (counts[o.category] || 0) + 1; });
-    if (state.cat !== "alle" && !counts[state.cat]) state.cat = "alle";
-    const total = Object.values(counts).reduce((a, b) => a + b, 0);
-    const focused = document.activeElement && document.activeElement.dataset ? document.activeElement.dataset.cat : null;
-    $("cats").innerHTML =
-      `<button class="chip" data-cat="alle" aria-pressed="${state.cat === "alle"}">Alle <span class="n">${total}</span></button>` +
-      state.data.categories.filter((c) => counts[c.id]).map((c) =>
-        `<button class="chip" data-cat="${esc(c.id)}" aria-pressed="${state.cat === c.id}">${esc(c.label)} <span class="n">${counts[c.id]}</span></button>`).join("");
-    if (focused) { const el = $("cats").querySelector(`[data-cat="${focused}"]`); if (el) el.focus(); }
+    const cats = shownCats(), key = cats.map((c) => c.id).join(",");
+    const box = $("cats");
+    if (key !== state.catKey) {           // the set of chips only changes when a mode switch changes it
+      state.catKey = key;
+      for (const id of [...state.cats]) if (!cats.some((c) => c.id === id)) state.cats.delete(id);
+      box.innerHTML = cats.map((c) =>
+        `<button class="chip cat" data-cat="${esc(c.id)}" aria-pressed="false">${c.emoji ? esc(c.emoji) + " " : ""}${esc(c.label)} <span class="n"></span></button>`).join("");
+    }
+    box.querySelectorAll(".chip").forEach((b) => {
+      const id = b.dataset.cat, n = counts[id] || 0;
+      b.setAttribute("aria-pressed", state.cats.has(id));
+      b.classList.toggle("zero", n === 0);
+      b.querySelector(".n").textContent = n;
+    });
   }
 
   function render() {
@@ -303,6 +324,7 @@
   function buildControls() {
     const { chains, categories } = state.data;
     state.groups = Object.fromEntries(categories.map((c) => [c.id, c.group]));
+    state.catWords = Object.fromEntries(categories.map((c) => [c.id, c.label]));
     $("stores").innerHTML = chains.map((c) =>
       `<button class="chip store" style="--c:${c.color};--cink:${inkFor(c.color)}" data-store="${esc(c.label)}" aria-pressed="false"><span class="dot" style="background:${c.color}"></span>${esc(c.label)}</button>`).join("");
   }
@@ -340,10 +362,10 @@
     const store = t.closest("[data-store]");
     if (store) { const s = store.dataset.store; state.stores.has(s) ? state.stores.delete(s) : state.stores.add(s); return render(); }
     const cat = t.closest("[data-cat]");
-    if (cat) { state.cat = cat.dataset.cat; return render(); }
+    if (cat) { const c = cat.dataset.cat; state.cats.has(c) ? state.cats.delete(c) : state.cats.add(c); return render(); }
     if (t.closest("#favOnly")) { state.favOnly = !state.favOnly; return render(); }
     if (t.closest("#reset")) {
-      Object.assign(state, { q: "", stores: new Set(), cat: "alle", favOnly: false });
+      Object.assign(state, { q: "", stores: new Set(), cats: new Set(), favOnly: false });
       $("q").value = ""; return render();
     }
   });
@@ -353,7 +375,6 @@
   $("hideJunk").addEventListener("change", (e) => { state.hideJunk = e.target.checked; savePrefs(); render(); });
   $("consumables").addEventListener("change", (e) => { state.consumables = e.target.checked; savePrefs(); render(); });
   $("onlyJunk").addEventListener("change", (e) => { state.onlyJunk = e.target.checked; render(); });
-  $("wholeWord").addEventListener("change", (e) => { state.wholeWord = e.target.checked; render(); });
   // image load errors do not bubble, so listen in the capture phase
   document.addEventListener("error", (e) => { if (e.target.tagName === "IMG") e.target.remove(); }, true);
 

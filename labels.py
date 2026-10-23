@@ -32,10 +32,12 @@ PART_SIZE = 300
 
 # What each category means, in the prompt that goes to the AI.
 DESC = {
-    "frost": "frozen food", "fisk": "fish and seafood", "koed": "meat and cold cuts",
+    "frost": "ONLY other products sold frozen from the freezer (frozen vegetables, frozen pizza, ice cream, frozen fish). Fresh or chilled meat and fish are NOT frost",
+    "faerdigret": "ready meals, frozen OR chilled (lasagne, stew, wok meals, pasta dishes, soups-to-heat, prepared dishes)",
+    "vin": "wine, sparkling wine, champagne, port and similar (also fortified wine)", "fisk": "fish and seafood", "koed": "meat and cold cuts",
     "groent": "fruit and vegetables", "mejeri": "dairy and eggs",
     "bagning": "bread, cakes, flour and baking",
-    "drikke": "drinks: soda, juice, beer, wine, coffee, tea",
+    "drikke": "other drinks: soda, juice, beer, spirits, coffee, tea, mulled wine, plant drinks (NOT wine)",
     "snacks": "snacks, sweets and chocolate",
     "kolonial": "pantry: pasta, rice, sauces, canned goods, oil, spices, cereal",
     "husholdning": "household and personal care that gets used up (toilet paper, soap, shampoo, detergent, pet food)",
@@ -50,7 +52,8 @@ ALIASES = {
     "meat": "koed", "fish": "fisk", "dairy": "mejeri", "bread": "bagning", "baking": "bagning",
     "drinks": "drikke", "drink": "drikke", "pantry": "kolonial", "household": "husholdning",
     "frozen": "frost", "other": "andet", "unknown": "andet", "electronics": "elektronik",
-    "home": "boligting",
+    "home": "boligting", "færdigretter": "faerdigret", "færdigret": "faerdigret",
+    "readymeals": "faerdigret", "readymeal": "faerdigret", "wine": "vin", "vine": "vin",
 }
 
 
@@ -84,14 +87,22 @@ def paths(root):
 def build_prompt(items, cats):
     """items: [(id, title)]. The ids are global, so one answer file can cover every part."""
     legend = "\n".join(f"{c['id']} = {DESC.get(c['id'], c['label'])}" for c in cats)
-    lines = "\n".join(f"{i}|{t.replace('|', '/')}" for i, t in items)
+    def line(it):
+        i, t = it[0], it[1]
+        d = (it[2] if len(it) > 2 else "").replace("|", "/").strip()
+        return f"{i}|{t.replace('|', '/')}" + (f" :: {d}" if d else "")
+    lines = "\n".join(line(it) for it in items)
     return f"""You are labelling Danish supermarket offers. For each numbered product below, reply with ONE line in this exact format:
-id|category|type
+id|category|type|tags
 
 category must be exactly one of these ids:
 {legend}
 
 type = the generic product a shopper would search for, in lowercase Danish, singular, at most 3 words (examples: pasta, pesto, rødvin, hakket oksekød, toiletpapir, lego). Use the same word for the same kind of product, so that spaghetti and penne both get "pasta".
+
+Some products have a hint after " :: " (the small print of the offer, for example whether it is frozen or fresh). Use it, but never repeat it in the reply.
+
+tags = 2 to 6 broader words a shopper might type to find this kind of product, lowercase Danish, separated by commas (never use | or ; inside the tags). Be generous: include the product group and its common names and synonyms, for example cola gets "sodavand, læskedrik, drikkevarer", rugbrød gets "brød, rugbrød, pålægsbrød", a banana gets "frugt, banan".
 
 Rules: reply with the lines only. No code block, no explanations, no header, no blank lines. One line per product, same order, do not skip any product. Keep the id numbers exactly as given (they may not start at 1). If you must stop early, stop after a complete line.
 
@@ -99,34 +110,40 @@ Example input:
 1|Barilla spaghetti 500 g
 2|Faxe Kondi 1,5 l
 Example reply:
-1|kolonial|pasta
-2|drikke|sodavand
+1|kolonial|pasta|pasta, spaghetti, nudler
+2|drikke|sodavand|sodavand, læskedrik, drikkevarer, kondi
 
 Products:
 {lines}
 """
 
 
-def write_prompts(root, offers, overrides, cats, size=PART_SIZE, include_all=False):
+def write_prompts(root, offers, overrides, cats, size=PART_SIZE, include_all=False, only=None):
     """Write labeling/prompt_N.txt for every product that has no label yet.
     Returns (number of products, list of prompt files)."""
     p = paths(root)
     p["dir"].mkdir(exist_ok=True)
     for old in p["dir"].glob("prompt_*.txt"):
         old.unlink()
-    titles = {}
+    titles, hints = {}, {}
     for o in offers:
         key = fo.norm_title(o["title"])
-        if key in titles or (not include_all and key in overrides):
+        if key in titles:
+            continue
+        if only:                       # only products that currently sit in these categories
+            if o.get("category") not in only:
+                continue
+        elif not include_all and key in overrides:
             continue
         titles[key] = o["title"]
+        hints[key] = " ".join((o.get("description") or "").split())[:70]
     keys = list(titles)
     meta = {"created": dt.datetime.now().isoformat(timespec="seconds"),
             "ids": {str(i + 1): k for i, k in enumerate(keys)}, "titles": titles}
     p["prompts"].write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
     files = []
     for start in range(0, len(keys), size):
-        chunk = [(i + 1, titles[keys[i]]) for i in range(start, min(start + size, len(keys)))]
+        chunk = [(i + 1, titles[keys[i]], hints[keys[i]]) for i in range(start, min(start + size, len(keys)))]
         f = p["dir"] / f"prompt_{start // size + 1}.txt"
         f.write_text(build_prompt(chunk, cats), encoding="utf-8")
         files.append(f)
@@ -172,15 +189,32 @@ def parse_answer(text):
     return found
 
 
-def resolve(fields, lookup):
-    """Find the category in the fields. Also copes with 'id|title|category|type'.
-    Returns (category or None, type, the text that was not understood)."""
+def clean_tags(fields):
+    """Search tags from the leftover fields: split on commas, lowercase, no duplicates, at most 8."""
+    tags = []
+    for f in fields:
+        for t in re.split(r"[,/]", f):
+            t = t.strip().lower()
+            if t and len(t) <= 30 and t not in tags:
+                tags.append(t)
+    return tags[:8]
+
+
+def parse_fields(fields, lookup):
+    """Find the category in the fields. Also copes with 'id|title|category|type|tags'.
+    Returns (category or None, type, tags, the text that was not understood)."""
     for i in range(min(2, len(fields))):
         cat = lookup.get(clean(fields[i]))
         if cat:
             typ = fields[i + 1] if len(fields) > i + 1 else ""
-            return cat, typ.lower()[:60], ""
-    return None, "", fields[0] if fields else ""
+            return cat, typ.lower()[:60], clean_tags(fields[i + 2:]), ""
+    return None, "", [], fields[0] if fields else ""
+
+
+def resolve(fields, lookup):
+    """Like parse_fields, without the tags: (category or None, type, text not understood)."""
+    cat, typ, _tags, bad = parse_fields(fields, lookup)
+    return cat, typ, bad
 
 
 def apply_answers(root, texts):
@@ -212,11 +246,13 @@ def apply_answers(root, texts):
         if not key:
             stray.append(pid)
             continue
-        cat, typ, badtext = resolve(fields, lookup)
+        cat, typ, tags, badtext = parse_fields(fields, lookup)
         if not cat:
             bad.append((meta["titles"][key], badtext))
             continue
         new[key] = {"c": cat, "t": typ}
+        if tags:
+            new[key]["g"] = tags
         if key in now_cat and now_cat[key] != cat:
             changes.append((meta["titles"][key], now_cat[key], cat))
     unanswered = [meta["titles"][k] for i, k in meta["ids"].items() if int(i) not in found]
@@ -271,7 +307,8 @@ def cmd_prompt(args):
     offers = json.loads(p["offers"].read_text(encoding="utf-8"))["offers"]
     cats = category_list()
     overrides, _ = fo.load_overrides({c["id"] for c in cats}, p["overrides"])
-    n, files = write_prompts(ROOT, offers, overrides, cats, size=args.size, include_all=args.all)
+    only = {c.strip() for c in args.only.split(",") if c.strip()} or None
+    n, files = write_prompts(ROOT, offers, overrides, cats, size=args.size, include_all=args.all, only=only)
     if not n:
         print("Every product already has a label. Use --all to label everything again.")
         return 0
@@ -323,6 +360,7 @@ def main(argv=None):
     sub = ap.add_subparsers(dest="cmd", required=True)
     pp = sub.add_parser("prompt", help="write prompt files for products without a label")
     pp.add_argument("--all", action="store_true", help="include products that already have a label")
+    pp.add_argument("--only", default="", help="only products now in these categories, e.g. --only frost,koed")
     pp.add_argument("--size", type=int, default=PART_SIZE, help="products per prompt file (default 300)")
     pa = sub.add_parser("apply", help="read the AI's answer and save the labels")
     pa.add_argument("--paste", action="store_true", help="paste the answer into the terminal")

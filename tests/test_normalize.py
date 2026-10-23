@@ -17,6 +17,16 @@ class Categories(unittest.TestCase):
         self.assertEqual(categorize("Kyllingebrystfilet", "Frost, 1 kg"), "koed")
         self.assertEqual(categorize("Pommes frites", "Frost, 1 kg"), "frost")
 
+    def test_fresh_meat_with_frost_in_small_print_is_not_frost(self):
+        self.assertEqual(categorize("Bistronne", "Culotte. Tidligere frosset, må ikke genfryses"), "koed")
+        self.assertEqual(categorize("Fersk", "Svinekød. Kan være frosset"), "koed")
+        self.assertEqual(categorize("Ukendt vare", "Dybfrost, 450 g"), "frost")
+
+    def test_wine_and_ready_meals_have_their_own_categories(self):
+        self.assertEqual(categorize("Rødvin Merlot"), "vin")
+        self.assertEqual(categorize("Coop færdigret"), "faerdigret")
+        self.assertEqual(categorize("Faxe Kondi"), "drikke")
+
     def test_compound_words(self):
         self.assertEqual(categorize("Svinekotelet med ben"), "koed")
         self.assertEqual(categorize("Hvedemel"), "bagning")
@@ -43,7 +53,7 @@ class Categories(unittest.TestCase):
 
     def test_real_titles_from_the_live_site(self):
         cases = {
-            "Veronia Appassimento": "drikke", "ØGO økologisk æblejuice": "drikke",
+            "Veronia Appassimento": "vin", "ØGO økologisk æblejuice": "drikke",
             "Harboe julebryg": "drikke", "Sjov dag i vandland": "legetoej",
             "Team Spideys hovedkvarter": "legetoej", "Brunchy bacon i skiver": "koed",
             "Bagepapir i ark, Træk&Luk fryseposer": "husholdning", "Pølser 8 stk": "koed",

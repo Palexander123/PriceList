@@ -66,11 +66,22 @@ JUNK_RULES = [
 ]
 
 FOOD_RULES = [
+    # Wine first, so that "Pinot noir" or a bottle named after a grape never lands in another list.
+    ("vin", "Vin", CONSUMABLE, [
+        "rødvin", "hvidvin", "rosévin", "rosé", "mousserende", "champagne", "prosecco", "^cava ",
+        "^vin ", "chardonnay", "merlot", "cabernet", "sauvignon", "riesling", "rioja", "chianti",
+        "pinot", "shiraz", "malbec", "primitivo", "appassimento", "ripasso", "amarone",
+        "coteaux", "^vila ", "chablis", "sancerre", "bordeaux", "barolo", "portvin", "boblevin",
+        "côtes", "ribera del", "tempranillo", "montepulciano", "grenache", "zinfandel",
+    ]),
     # Drinks that contain a fruit or similar word ("æblejuice") must be caught before the
     # fruit rule. The category appears once in the site's list.
     ("drikke", "Drikkevarer", CONSUMABLE, [
         "juice", "smoothie", "sodavand", "energidrik", "danskvand", "lemonade", "iste",
         "kakaomælk", "booster", "cocktail", "ready to drink",
+    ]),
+    ("faerdigret", "Færdigretter", CONSUMABLE, [
+        "færdigret", "færdigmad", "lasagne", "gryderet", "ready meal", "mikroret",
     ]),
     ("frost", "Frost", CONSUMABLE, [
         "frost", "frysevare", "isbæger", "kæmpeis", "flødeis", "pinde-is", "pizza",
@@ -109,14 +120,14 @@ FOOD_RULES = [
         "hvedemel", "bagemel", "durummel", "rugmel", "fuldkornsmel",
     ]),
     ("drikke", "Drikkevarer", CONSUMABLE, [
-        "øl", "^vin ", "cola", "sodavand", "juice", "^vand ", "danskvand", "saft",
-        "appassimento", "kildevand", "chardonnay", "merlot", "cabernet", "sauvignon",
-        "rioja", "chianti", "pinot", "shiraz", "malbec", "primitivo", "^cava ", "julebryg",
-        "påskebryg", "kondi", "faxe", "harboe", "^vila ", "coteaux", "ripasso", "amarone",
+        "øl", "cola", "sodavand", "juice", "^vand ", "danskvand", "saft",
+        "kildevand",
+        "julebryg",
+        "påskebryg", "kondi", "faxe", "harboe",
         "cider", "sprit", "vodka", "whisky", "gin", "rom ", "kaffe", "te ",
         "energidrik", "monster", "red bull", "tuborg", "carlsberg", "fanta",
         "sprite", "pepsi", "smoothie", "lemonade", "kakaomælk", "iste", "bouillon",
-        "prosecco", "champagne", "rosé", "rødvin", "hvidvin", "likør",
+        "likør",
         "havredrik", "plantedrik", "sojadrik", "mandeldrik",
     ]),
     ("snacks", "Snacks & slik", CONSUMABLE, [
@@ -144,6 +155,14 @@ FOOD_RULES = [
 
 OTHER = ("andet", "Andet", OTHER_GROUP)
 
+# One picture per category, shown on the site's filter buttons.
+EMOJI = {
+    "vin": "🍷", "drikke": "🥤", "faerdigret": "🍲", "frost": "🧊", "fisk": "🐟", "koed": "🥩",
+    "groent": "🥦", "mejeri": "🥛", "bagning": "🍞", "snacks": "🍫", "kolonial": "🥫",
+    "husholdning": "🧻", "andet": "❓", "menu": "🍽️", "legetoej": "🧸", "elektronik": "🔌",
+    "boligting": "🏠",
+}
+
 # Words in the description that mark a meal deal even when the title does not.
 MENU_DESCRIPTION_HINTS = ("kuvert", "bestil senest", "afhentning", "forudbestil")
 
@@ -170,6 +189,8 @@ def _compile(rules):
 
 _JUNK = _compile(JUNK_RULES)
 _FOOD = _compile(FOOD_RULES)
+_FOOD_NO_FROST = [r for r in _FOOD if r[0] != "frost"]
+_FROZEN_DESC = re.compile(r"dybfrost|dybfrys|frosne |frostvare|frysevare|(?<![a-zæøå])frost(?![a-zæøå])")
 
 
 def _match(compiled, text: str):
@@ -195,7 +216,12 @@ def classify(title: str, description: str = ""):
     for hint in MENU_DESCRIPTION_HINTS:
         if hint in desc:
             return "menu", f"beskrivelse: {hint}"
-    cat = _match(_FOOD, title) or _match(_FOOD, f"{title} {description}") or OTHER[0]
+    # The small print often says "frost" / "tidligere frosset" for FRESH meat, so frost is only decided
+    # by the title, or by clear freezer words in the description when nothing else fits.
+    cat = (_match(_FOOD, title)
+           or _match(_FOOD_NO_FROST, f"{title} {description}")
+           or ("frost" if _FROZEN_DESC.search(desc) else None)
+           or OTHER[0])
     return cat, None
 
 
@@ -211,5 +237,10 @@ def category_list():
     for cid, label, group, _ in rules:
         if cid not in seen:  # a category can have several rule lists
             seen.add(cid)
-            items.append({"id": cid, "label": label, "group": group})
+            items.append({"id": cid, "label": label, "group": group, "emoji": EMOJI.get(cid, "")})
+    # Wine is matched first, but should be listed right after the other drinks.
+    ids = [c["id"] for c in items]
+    if "vin" in ids and "drikke" in ids:
+        wine = items.pop(ids.index("vin"))
+        items.insert([c["id"] for c in items].index("drikke") + 1, wine)
     return items

@@ -308,6 +308,9 @@ def load_overrides(valid_ids, path=None):
     for key, val in items.items():
         if isinstance(val, dict) and val.get("c") in valid_ids:
             out[key] = {"c": val["c"], "t": str(val.get("t") or "").strip()[:60]}
+            tags = [str(g).strip().lower()[:30] for g in (val.get("g") or []) if str(g).strip()]
+            if tags:
+                out[key]["g"] = tags[:8]
     return out, None
 
 
@@ -319,8 +322,10 @@ def apply_overrides(offers, overrides, groups):
         if not ov:
             continue
         o["category"] = ov["c"]
-        if ov["t"]:
+        if ov.get("t"):
             o["type"] = ov["t"]
+        if ov.get("g"):
+            o["tags"] = ov["g"]
         if groups.get(ov["c"]) == "junk":
             o["junk_reason"] = "sortering"
         else:
@@ -359,7 +364,9 @@ def build_output(offers, notes, errors, cfg, sample=False):
             "errors": errors,
             "count": len(offers),
         },
-        "chains": [{"id": k, "label": v["label"], "color": v["color"]} for k, v in cfg["chains"].items()],
+        # a chain only gets a button if it has offers (Normal, for example, often has none)
+        "chains": [{"id": k, "label": v["label"], "color": v["color"]} for k, v in cfg["chains"].items()
+                   if sample or any(o["chain"] == k for o in offers)],
         "categories": category_list(),
         "offers": offers,
     }

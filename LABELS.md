@@ -4,6 +4,13 @@ The keyword rules in `categories.py` miss products with unusual names (a wine ca
 a toy set called "Hestestald og rideskole"). An AI chat is good at those. This is the copy-and-paste loop.
 Needs Python on your PC (check with `python --version`; on Windows `py` also works).
 
+## The easy way: one window
+
+Double-click `Start.bat` (or run `python app.py` in Anaconda Prompt). One window with four steps:
+fetch the offers, make the prompt (it is copied for you, with a button that opens ChatGPT in a
+private window), paste the answer and save the labels, then preview the site. Pushing is still done
+in GitHub Desktop. Everything below is the same routine done by hand with commands.
+
 ## Every time you scrape
 
 1. **Scrape.** In a terminal in the project folder:
@@ -46,6 +53,7 @@ Needs Python on your PC (check with `python --version`; on Windows `py` also wor
 - Products the AI skipped, or gave an unknown category, are asked about again in the next prompt.
   `python labels.py prompt` makes new prompt files without scraping again.
 - `python labels.py prompt --all` includes products that already have a label, to check them again.
+- The AI also gives each product a few **tags** (broad search words like "sodavand" or "frugt"). The site's search looks at the tags, the type and the category name, so a general word finds the whole group.
 - Besides the category, the AI gives each product a generic **type** (for example "pasta" for both spaghetti
   and penne). The site's search also looks at the type, so searching "pasta" finds all of them.
 - The `labeling` folder is only your working space and is not uploaded to GitHub.

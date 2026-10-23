@@ -44,6 +44,19 @@ Sig til hvis du vil have mere!"""
         self.assertEqual(labels.resolve(["Barilla spaghetti", "kolonial", "pasta"], LOOKUP), ("kolonial", "pasta", ""))
         self.assertEqual(labels.resolve(["mad", "noget"], LOOKUP)[0], None)
 
+    def test_everything_on_one_line(self):
+        got = labels.parse_answer("1|drikke|rødvin 2|kolonial|tomat 3|mejeri|revet ost 10|koed|pølser")
+        self.assertEqual(got, {1: ["drikke", "rødvin"], 2: ["kolonial", "tomat"],
+                               3: ["mejeri", "revet ost"], 10: ["koed", "pølser"]})
+
+    def test_tags_are_read(self):
+        cat, typ, tags, bad = labels.parse_fields(["drikke", "Sodavand", "sodavand, Læskedrik / kondi", "kondi"], LOOKUP)
+        self.assertEqual((cat, typ, bad), ("drikke", "sodavand", ""))
+        self.assertEqual(tags, ["sodavand", "læskedrik", "kondi"])
+        self.assertEqual(labels.parse_fields(["koed", "bøf"], LOOKUP)[2], [])
+        self.assertEqual(labels.parse_fields(["Færdigretter", "lasagne"], LOOKUP)[0], "faerdigret")
+        self.assertEqual(labels.parse_fields(["Vin", "rødvin"], LOOKUP)[0], "vin")
+
 
 class Flow(unittest.TestCase):
     def setUp(self):
