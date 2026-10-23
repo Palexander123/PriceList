@@ -244,3 +244,31 @@ def category_list():
         wine = items.pop(ids.index("vin"))
         items.insert([c["id"] for c in items].index("drikke") + 1, wine)
     return items
+
+
+# --------------------------------------------------------------------------- #
+# Using the AI's "type" to correct its category
+# --------------------------------------------------------------------------- #
+# The AI is more reliable about WHAT a product is (type "rødvin") than about which of our
+# categories it belongs to, and old labels may predate a category (Vin, Færdigretter).
+_WINE_TYPES = {
+    "vin", "rødvin", "hvidvin", "rosévin", "rosé", "mousserende", "champagne", "prosecco", "cava",
+    "portvin", "dessertvin", "boblevin", "sherry", "vermouth",
+}
+_READY_TYPES = {"gryderet", "lasagne", "wokret", "færdigmad", "vegetarret"}
+_REFINABLE = {cid for cid, _l, group, _w in FOOD_RULES if group == CONSUMABLE} | {OTHER[0]}
+
+
+def refine(category: str, type_: str) -> str:
+    """Return the category after checking the AI's product type. Only food and drink are touched,
+    so a toy called "Vinylkugle" or a menu deal is never moved."""
+    if not type_ or category not in _REFINABLE:
+        return category
+    words = set(re.findall(r"[a-zæøåéü]+", type_.lower()))
+    if words & _WINE_TYPES:
+        return "vin"
+    if any("færdigret" in w for w in words) or words & _READY_TYPES:
+        return "faerdigret"
+    if category == "frost" and "suppe" in words:      # frozen soup to heat is a ready meal
+        return "faerdigret"
+    return category

@@ -1,0 +1,321 @@
+# Fixed list of search words ("tags"). One word per line; lines starting with # are ignored.
+# ChatGPT may only pick tags from this list, and any other tag is dropped. Add or remove words freely.
+# Built from the tags and product types that at least 2 products had on 2026-10-23. Toy words were then cut down to the 10 most useful ones: legetøj, brætspil, familiespil, byggesæt, lego, dukke, bamse, køretøj, kreativt legetøj, actionlegetøj.
+actionlegetøj
+adventslys
+akrylgarn
+alkohol
+and
+andelår
+andemenu
+asiatisk mad
+asiatiske varer
+australsk vin
+avocado
+babypleje
+babytøj
+babyudstyr
+bacon
+bag-in-box
+bamse
+batterier
+bearnaisesauce
+beklædning
+belysning
+ble
+bleer
+bloklys
+blomster
+blomsterdekoration
+bluse
+bog
+boligindretning
+boligpynt
+brie
+brætspil
+brød
+buffet
+burger
+burgerboller
+byggesæt
+bøf
+børnebog
+børnemenu
+børnetøj
+børneur
+chardonnay
+chips
+chokolade
+chokoladebar
+classic
+cocktail
+cola
+computerudstyr
+controller
+cykel
+cykellygter
+cykeludstyr
+dadler
+dansk mad
+dekoration
+dessert
+dessertost
+dessertvin
+druer
+dukke
+dyrefoder
+ea sports fc
+elektronik
+energidrik
+engangsbleer
+entrecote
+familiespil
+fersk fisk
+fersk kød
+festmad
+festmenu
+fisk
+fiskefilet
+fiskepålæg
+fjerkræ
+flæskesteg
+fløde
+flødeis
+fodboldspil
+formalet kaffe
+foto
+fototilbehør
+fraiche
+fransk vin
+frikadelle
+frikadeller
+frostvarer
+fyrfadslys
+færdigmad
+færdigret
+gaming
+gedeost
+gin
+gløgg
+grillmad
+grisekød
+græsk yoghurt
+græskar
+grøntsager
+gul ost
+gulerødder
+hakkede tomater
+hakket kød
+hakket oksekød
+headset
+hel and
+hel kylling
+hele bønner
+hobbykit
+honning
+hummus
+husholdning
+hvidvin
+håndarbejde
+håndsæbe
+høretelefon
+høretelefoner
+instant kaffe
+is
+italiensk vin
+juice
+julebelysning
+juledrik
+julefrokost
+julefrokostmenu
+julegløgg
+julekager
+julelys
+julemad
+julemenu
+julepynt
+juleslik
+juletræ
+juletræspynt
+juleøl
+kaffe
+kaffebønne
+kaffebønner
+kaffepulver
+kage
+kager
+kakaomælk
+kalenderlys
+kamera
+kamerafilm
+kanelsnegl
+kartofler
+kat
+kefir
+knækbrød
+konfekt
+kopnudler
+kosmetiktaske
+kosttilskud
+koteletter
+kransekage
+kreativt legetøj
+kronelys
+kylling
+kyllingebryst
+kyllingekød
+kyllingelår
+kyllingenuggets
+kødboller
+køkkenudstyr
+køretøj
+lager
+laks
+laksefilet
+lampe
+lanterne
+led
+legetøj
+lego
+leverpostej
+lighter
+lydudstyr
+lys
+lyskæde
+læskedrik
+løg
+madlavning
+makrel
+mandler
+marcipan
+marmelade
+mayonnaise
+mejeri
+menu
+mineraler
+mineralvand
+morgenmad
+morgenmadsprodukt
+moussekage
+mousserende vin
+mozzarella
+musikinstrument
+mælk
+møbler
+müslibar
+nakkefilet
+nintendo switch
+nudler
+nytår
+nytårsmad
+nytårsmenu
+nødder
+oksekød
+olie
+olivenolie
+on-ear
+opbevaring
+opbevaringsboks
+opvaskemaskine
+opvaskemiddel
+opvasketabs
+ost
+paneret fisk
+pasta
+pastiller
+peanutbutter
+pesto
+pilsner
+pizza
+plantedrik
+plastboks
+playstation 5
+portvin
+ps5
+pude
+pålæg
+pålægssalat
+pølse
+pølser
+ramen
+rejer
+rejsetilbehør
+remoulade
+rengøring
+rengøringsmiddel
+ribeye
+rodfrugter
+rom
+rosévin
+rugbrød
+rødkål
+rødvin
+saft
+sandwichbrød
+sauce
+selskabsmad
+servietter
+shampoo
+showergel
+sild
+skaldyr
+skelet
+skiveost
+skyr
+skål
+skæreost
+slik
+smartwatch
+småretter
+smør
+smørrebrød
+snacks
+sodavand
+sojasauce
+spansk vin
+specialiteter
+specialkaffe
+spegepølse
+spilkonsol
+spillekonsol
+spiltilbehør
+spiritus
+stagelys
+stearinlys
+steg
+stentøj
+strikning
+strømpegarn
+strømper
+sundhed
+suppe
+svinekød
+søde sager
+tandpasta
+tandpleje
+tapas
+te
+tilbehør
+toiletpapir
+toilettaske
+tøjvask
+udendørslys
+usb
+varme drikke
+vaskemiddel
+videospil
+vin
+vingummi
+vinterdrik
+vinyl
+vitaminer
+wc-rens
+whisky
+yoghurt
+æbler
+æg
+økologisk
+økologisk kaffe
+økologisk kød
+øl
+ølpakke

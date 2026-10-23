@@ -57,6 +57,27 @@ Sig til hvis du vil have mere!"""
         self.assertEqual(labels.parse_fields(["Færdigretter", "lasagne"], LOOKUP)[0], "faerdigret")
         self.assertEqual(labels.parse_fields(["Vin", "rødvin"], LOOKUP)[0], "vin")
 
+    def test_tags_outside_the_fixed_list_are_dropped(self):
+        vocab = {"sodavand", "drikkevarer"}
+        got = labels.parse_fields(["drikke", "sodavand", "Sodavand, læskedrik, drikkevarer"], LOOKUP, vocab)
+        self.assertEqual(got[2], ["sodavand", "drikkevarer"])
+        prompt = labels.build_prompt([(1, "Faxe Kondi", "")], CATS, ["drikkevarer", "sodavand"])
+        self.assertIn("Fixed list of tags:\ndrikkevarer, sodavand", prompt)
+        self.assertNotIn("Fixed list of tags", labels.build_prompt([(1, "Faxe Kondi", "")], CATS))
+
+    def test_csv_replies(self):
+        csv_text = "```csv\n1,drikke,sodavand,sodavand,læskedrik\n12,vin,rødvin,vin\n105,koed,bøf\n```"
+        self.assertEqual(labels.parse_answer(csv_text), {1: ["drikke", "sodavand", "sodavand", "læskedrik"],
+                                                        12: ["vin", "rødvin", "vin"], 105: ["koed", "bøf"]})
+        self.assertEqual(labels.parse_answer("id,category,type,tag1\n7,groent,banan,frugt, banan"),
+                         {7: ["groent", "banan", "frugt", "banan"]})                      # header ignored, spaces ok
+        self.assertEqual(labels.parse_answer('3,"mejeri","skyr","skyr, mejeri"'), {3: ["mejeri", "skyr", "skyr, mejeri"]})
+        one_line = "1,drikke,øl,øl,bryg 2,vin,rødvin,vin,rødvin 3,koed,bøf,ea sports fc 27, gaming"
+        self.assertEqual(sorted(labels.parse_answer(one_line)), [1, 2, 3])
+        cat, typ, tags, _ = labels.parse_fields(["vin", "rødvin", "vin", "rødvin", "drikkevarer"], LOOKUP)
+        self.assertEqual((cat, typ, tags), ("vin", "rødvin", ["vin", "rødvin", "drikkevarer"]))
+        self.assertIn("id,category,type,tag1,tag2,tag3", labels.build_prompt([(1, "Faxe Kondi", "")], CATS))
+
 
 class Flow(unittest.TestCase):
     def setUp(self):
@@ -90,10 +111,10 @@ class Flow(unittest.TestCase):
         self.assertEqual(r["stray"], [99])
         self.assertEqual(len(r["unanswered"]), 5)
         saved = json.loads((self.root / "site" / "data" / "category_overrides.json").read_text(encoding="utf-8"))
-        self.assertEqual(saved["items"]["vila annone"], {"c": "drikke", "t": "rødvin"})
+        self.assertEqual(saved["items"]["vila annone"], {"c": "vin", "t": "rødvin"})
         doc = json.loads((self.root / "site" / "data" / "offers.json").read_text(encoding="utf-8"))
         wine = [o for o in doc["offers"] if "annone" in o["title"].lower()]
-        self.assertTrue(all(o["category"] == "drikke" and o["type"] == "rødvin" for o in wine))
+        self.assertTrue(all(o["category"] == "vin" and o["type"] == "rødvin" for o in wine))
         self.assertTrue((self.root / "labeling" / "report.txt").exists())
 
     def test_second_round_keeps_earlier_labels(self):

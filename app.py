@@ -48,7 +48,7 @@ class App(tk.Tk):
         ttk.Combobox(row, textvariable=self.var_which, state="readonly", width=34,
                      values=[label for _id, label in self.choices]).pack(side="left", padx=(4, 0))
         ttk.Label(row, text="   Products per prompt:").pack(side="left")
-        self.var_size = tk.IntVar(value=300)
+        self.var_size = tk.IntVar(value=600)
         ttk.Spinbox(row, from_=50, to=2000, increment=50, width=6, textvariable=self.var_size).pack(side="left")
         row = ttk.Frame(f2)
         row.pack(fill="x", padx=8, pady=6)

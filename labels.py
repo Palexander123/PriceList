@@ -17,6 +17,7 @@ keyword rules in categories.py.
 Only the Python standard library is used.
 """
 import argparse
+import csv
 import datetime as dt
 import json
 import re
@@ -25,10 +26,10 @@ import sys
 from pathlib import Path
 
 import fetch_offers as fo
-from categories import category_list
+from categories import category_list, refine
 
 ROOT = Path(__file__).resolve().parent
-PART_SIZE = 300
+PART_SIZE = 600
 
 # What each category means, in the prompt that goes to the AI.
 DESC = {
@@ -84,7 +85,13 @@ def paths(root):
 # --------------------------------------------------------------------------- #
 # step 1: the prompt
 # --------------------------------------------------------------------------- #
-def build_prompt(items, cats):
+def load_vocab(root):
+    """The fixed tag list as a sorted list, or None if there is no vocabulary.txt."""
+    words = fo.load_vocabulary(Path(root) / "vocabulary.txt")
+    return sorted(words) if words else None
+
+
+def build_prompt(items, cats, vocab=None):
     """items: [(id, title)]. The ids are global, so one answer file can cover every part."""
     legend = "\n".join(f"{c['id']} = {DESC.get(c['id'], c['label'])}" for c in cats)
     def line(it):
@@ -92,8 +99,18 @@ def build_prompt(items, cats):
         d = (it[2] if len(it) > 2 else "").replace("|", "/").strip()
         return f"{i}|{t.replace('|', '/')}" + (f" :: {d}" if d else "")
     lines = "\n".join(line(it) for it in items)
-    return f"""You are labelling Danish supermarket offers. For each numbered product below, reply with ONE line in this exact format:
-id|category|type|tags
+    if vocab:
+        tag_rule = ("tags = 2 to 6 search words a shopper might type to find this kind of product. Choose ONLY from the fixed list "
+                    "below, written exactly as in the list, one tag per column. Be generous: pick every "
+                    "word that fits (the product group and its synonyms). If no word fits, write no tag columns. Never invent a word. "
+                    "The tags in the example below are only an illustration.\n\nFixed list of tags:\n" + ", ".join(vocab))
+    else:
+        tag_rule = ('tags = 2 to 6 broader words a shopper might type to find this kind of product, lowercase Danish, one tag per column. '
+                    'Be generous: include the product group and its common names and synonyms, '
+                    'for example cola gets the tags sodavand, læskedrik, drikkevarer; rugbrød gets brød, rugbrød, pålægsbrød; a banana gets frugt, banan.')
+    return f"""You are labelling Danish supermarket offers. For each numbered product below, reply with ONE row of CSV in this exact format (no header row):
+id,category,type,tag1,tag2,tag3
+The row has as many tag columns as needed (2 to 6); rows may have different lengths.
 
 category must be exactly one of these ids:
 {legend}
@@ -102,16 +119,18 @@ type = the generic product a shopper would search for, in lowercase Danish, sing
 
 Some products have a hint after " :: " (the small print of the offer, for example whether it is frozen or fresh). Use it, but never repeat it in the reply.
 
-tags = 2 to 6 broader words a shopper might type to find this kind of product, lowercase Danish, separated by commas (never use | or ; inside the tags). Be generous: include the product group and its common names and synonyms, for example cola gets "sodavand, læskedrik, drikkevarer", rugbrød gets "brød, rugbrød, pålægsbrød", a banana gets "frugt, banan".
+{tag_rule}
 
-Rules: reply with the lines only. No code block, no explanations, no header, no blank lines. One line per product, same order, do not skip any product. Keep the id numbers exactly as given (they may not start at 1). If you must stop early, stop after a complete line.
+Rules: reply with ONE code block (```) that contains the CSV rows and nothing else: no text before or after it, no header row, no blank lines, no extra spaces. One row per product, same order, do not skip any product. Never put a comma inside a value (every value is a single word or short phrase). Keep the id numbers exactly as given (they may not start at 1). If you must stop early, stop after a complete row.
 
 Example input:
 1|Barilla spaghetti 500 g
 2|Faxe Kondi 1,5 l
 Example reply:
-1|kolonial|pasta|pasta, spaghetti, nudler
-2|drikke|sodavand|sodavand, læskedrik, drikkevarer, kondi
+```
+1,kolonial,pasta,pasta,spaghetti,nudler
+2,drikke,sodavand,sodavand,læskedrik,drikkevarer,kondi
+```
 
 Products:
 {lines}
@@ -142,10 +161,11 @@ def write_prompts(root, offers, overrides, cats, size=PART_SIZE, include_all=Fal
             "ids": {str(i + 1): k for i, k in enumerate(keys)}, "titles": titles}
     p["prompts"].write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
     files = []
+    vocab = load_vocab(root)
     for start in range(0, len(keys), size):
         chunk = [(i + 1, titles[keys[i]], hints[keys[i]]) for i in range(start, min(start + size, len(keys)))]
         f = p["dir"] / f"prompt_{start // size + 1}.txt"
-        f.write_text(build_prompt(chunk, cats), encoding="utf-8")
+        f.write_text(build_prompt(chunk, cats, vocab), encoding="utf-8")
         files.append(f)
     return len(keys), files
 
@@ -172,42 +192,49 @@ def announce_prompts(root, offers):
 # step 3: read the answer
 # --------------------------------------------------------------------------- #
 def parse_answer(text):
-    """Return {id: [fields]}. Accepts 12|koed|pasta, bullets, code fences, markdown tables,
-    spaces around the bars, and ';' or tab as separators. Anything else is ignored."""
+    """Return {id: [fields]}. Accepts CSV rows (12,koed,pasta,pasta,spaghetti), 12|koed|pasta, bullets,
+    code fences, markdown tables, spaces around the separators, and ';' or tab as separators.
+    A header row or any other text is ignored."""
     found = {}
     text = re.sub(r"```[A-Za-z]*", "", str(text or ""))
     pieces = []
     for raw in text.splitlines():
-        # Some chats put every answer on ONE line: "1|a|b 2|c|d 3|e|f". Split before each "<digits>|".
-        pieces.extend(re.split(r"\s+(?=\d+\s*\|)", raw.strip()))
+        # Some chats put every answer on ONE line: "1|a|b 2|c|d" or "1,a,b 2,c,d". Split before each id.
+        pieces.extend(re.split(r"\s+(?=\d+\s*\|)|\s+(?=\d+,[^\s,])", raw.strip()))
     for raw in pieces:
-        line = re.sub(r"^[\s\-*•>]+", "", raw)          # bullet markers, never digits
-        line = re.sub(r"[\t;]", "|", line).strip().strip("|")
-        fields = [f.strip() for f in line.split("|")]
+        line = re.sub(r"^[\s\-*•>]+", "", raw).strip()   # bullet markers, never digits
+        if re.search(r"[|\t;]", line):
+            line = re.sub(r"[\t;]", "|", line).strip().strip("|")
+            fields = [f.strip() for f in line.split("|")]
+        else:                                              # CSV, with or without quotes
+            try:
+                fields = [f.strip() for f in next(csv.reader([line], skipinitialspace=True))]
+            except (csv.Error, StopIteration):
+                continue
         if len(fields) >= 2 and fields[0].isdigit():
             found[int(fields[0])] = fields[1:]
     return found
 
 
-def clean_tags(fields):
+def clean_tags(fields, vocab=None):
     """Search tags from the leftover fields: split on commas, lowercase, no duplicates, at most 8."""
     tags = []
     for f in fields:
         for t in re.split(r"[,/]", f):
             t = t.strip().lower()
-            if t and len(t) <= 30 and t not in tags:
+            if t and len(t) <= 30 and t not in tags and (vocab is None or t in vocab):
                 tags.append(t)
     return tags[:8]
 
 
-def parse_fields(fields, lookup):
+def parse_fields(fields, lookup, vocab=None):
     """Find the category in the fields. Also copes with 'id|title|category|type|tags'.
     Returns (category or None, type, tags, the text that was not understood)."""
     for i in range(min(2, len(fields))):
         cat = lookup.get(clean(fields[i]))
         if cat:
             typ = fields[i + 1] if len(fields) > i + 1 else ""
-            return cat, typ.lower()[:60], clean_tags(fields[i + 2:]), ""
+            return cat, typ.lower()[:60], clean_tags(fields[i + 2:], vocab), ""
     return None, "", [], fields[0] if fields else ""
 
 
@@ -229,6 +256,7 @@ def apply_answers(root, texts):
     groups = {c["id"]: c["group"] for c in cats}
     labels = {c["id"]: c["label"] for c in cats}
 
+    vocab = set(load_vocab(root) or []) or None
     found = {}
     for t in texts:
         found.update(parse_answer(t))
@@ -246,10 +274,11 @@ def apply_answers(root, texts):
         if not key:
             stray.append(pid)
             continue
-        cat, typ, tags, badtext = parse_fields(fields, lookup)
+        cat, typ, tags, badtext = parse_fields(fields, lookup, vocab)
         if not cat:
             bad.append((meta["titles"][key], badtext))
             continue
+        cat = refine(cat, typ)
         new[key] = {"c": cat, "t": typ}
         if tags:
             new[key]["g"] = tags
@@ -270,7 +299,7 @@ def apply_answers(root, texts):
                                   encoding="utf-8")
         if offers_doc:   # update the local data so you can preview before pushing
             valid = {k: v for k, v in items.items() if v.get("c") in groups}
-            fo.apply_overrides(offers_doc["offers"], valid, groups)
+            fo.apply_overrides(offers_doc["offers"], valid, groups, vocab)
             p["offers"].write_text(json.dumps(offers_doc, ensure_ascii=False, indent=1), encoding="utf-8")
 
     report = ["LABELS APPLIED", f"Saved: {len(new)} products   Total in file: {len(items)}", ""]
@@ -361,7 +390,7 @@ def main(argv=None):
     pp = sub.add_parser("prompt", help="write prompt files for products without a label")
     pp.add_argument("--all", action="store_true", help="include products that already have a label")
     pp.add_argument("--only", default="", help="only products now in these categories, e.g. --only frost,koed")
-    pp.add_argument("--size", type=int, default=PART_SIZE, help="products per prompt file (default 300)")
+    pp.add_argument("--size", type=int, default=PART_SIZE, help="products per prompt file (default 600)")
     pa = sub.add_parser("apply", help="read the AI's answer and save the labels")
     pa.add_argument("--paste", action="store_true", help="paste the answer into the terminal")
     args = ap.parse_args(argv)

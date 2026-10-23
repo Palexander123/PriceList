@@ -25,7 +25,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-from categories import classify, category_list
+from categories import classify, category_list, refine
 
 ROOT = Path(__file__).resolve().parent
 TJEK_BASE = "https://squid-api.tjek.com/v2"
@@ -289,6 +289,19 @@ def fetch_salling(cfg: dict, api_key: str):
 OVERRIDES_PATH = ROOT / "site" / "data" / "category_overrides.json"
 
 
+VOCAB_PATH = ROOT / "vocabulary.txt"
+
+
+def load_vocabulary(path=None):
+    """The fixed list of allowed search tags (one per line), or None when there is no list."""
+    try:
+        text = (path or VOCAB_PATH).read_text(encoding="utf-8")
+    except OSError:
+        return None
+    words = {ln.strip().lower() for ln in text.splitlines() if ln.strip() and not ln.lstrip().startswith("#")}
+    return words or None
+
+
 def norm_title(title):
     """Same normalisation as the sorter page: lowercase, single spaces."""
     return " ".join((title or "").lower().split())
@@ -314,19 +327,22 @@ def load_overrides(valid_ids, path=None):
     return out, None
 
 
-def apply_overrides(offers, overrides, groups):
+def apply_overrides(offers, overrides, groups, vocab=None):
     """Let the saved sorting win over the keyword rules. Returns how many offers changed."""
     changed = 0
     for o in offers:
         ov = overrides.get(norm_title(o["title"]))
         if not ov:
             continue
-        o["category"] = ov["c"]
+        o["category"] = refine(ov["c"], ov.get("t"))
         if ov.get("t"):
             o["type"] = ov["t"]
-        if ov.get("g"):
-            o["tags"] = ov["g"]
-        if groups.get(ov["c"]) == "junk":
+        tags = [g for g in ov.get("g") or [] if vocab is None or g in vocab]
+        if tags:
+            o["tags"] = tags
+        else:
+            o.pop("tags", None)
+        if groups.get(o["category"]) == "junk":
             o["junk_reason"] = "sortering"
         else:
             o.pop("junk_reason", None)
@@ -425,7 +441,7 @@ def main(argv=None) -> int:
     if warning:
         errors.append(warning)
     if overrides:
-        n = apply_overrides(offers, overrides, {c["id"]: c["group"] for c in cats})
+        n = apply_overrides(offers, overrides, {c["id"]: c["group"] for c in cats}, load_vocabulary())
         notes.append(f"Sorting: {n} offers use category_overrides.json ({len(overrides)} saved products)")
 
     out = build_output(offers, notes, errors, cfg, sample=args.sample)

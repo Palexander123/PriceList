@@ -27,6 +27,27 @@ class Categories(unittest.TestCase):
         self.assertEqual(categorize("Coop færdigret"), "faerdigret")
         self.assertEqual(categorize("Faxe Kondi"), "drikke")
 
+    def test_type_corrects_the_category(self):
+        from categories import refine
+        self.assertEqual(refine("drikke", "rødvin"), "vin")
+        self.assertEqual(refine("andet", "vin"), "vin")
+        self.assertEqual(refine("frost", "færdigret"), "faerdigret")
+        self.assertEqual(refine("frost", "asiatisk færdigret"), "faerdigret")
+        self.assertEqual(refine("frost", "suppe"), "faerdigret")
+        self.assertEqual(refine("kolonial", "suppe"), "kolonial")
+        self.assertEqual(refine("koed", "svinekød"), "koed")        # "svin" is not wine
+        self.assertEqual(refine("legetoej", "vin"), "legetoej")      # junk is never moved
+        self.assertEqual(refine("menu", "færdigret"), "menu")
+        self.assertEqual(refine("drikke", "øl"), "drikke")
+
+    def test_saved_tags_are_filtered_by_the_fixed_list(self):
+        offers = [{"title": "Cola", "category": "andet"}]
+        ov = {"cola": {"c": "drikke", "t": "sodavand", "g": ["sodavand", "læskedrik"]}}
+        fo.apply_overrides(offers, ov, {"drikke": "consumable"}, vocab={"sodavand"})
+        self.assertEqual(offers[0]["tags"], ["sodavand"])
+        fo.apply_overrides(offers, ov, {"drikke": "consumable"})          # no list: everything stays
+        self.assertEqual(offers[0]["tags"], ["sodavand", "læskedrik"])
+
     def test_compound_words(self):
         self.assertEqual(categorize("Svinekotelet med ben"), "koed")
         self.assertEqual(categorize("Hvedemel"), "bagning")
@@ -162,7 +183,7 @@ class Overrides(unittest.TestCase):
         ov = {"vila annone": {"c": "drikke", "t": "rødvin"}, "pølser": {"c": "legetoej", "t": ""}}
         n = fo.apply_overrides(offers, ov, {"drikke": "consumable", "legetoej": "junk"})
         self.assertEqual(n, 2)
-        self.assertEqual((offers[0]["category"], offers[0]["type"]), ("drikke", "rødvin"))
+        self.assertEqual((offers[0]["category"], offers[0]["type"]), ("vin", "rødvin"))
         self.assertEqual(offers[1]["junk_reason"], "sortering")
         self.assertEqual(offers[2]["category"], "andet")
 

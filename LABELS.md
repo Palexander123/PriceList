@@ -20,10 +20,10 @@ in GitHub Desktop. Everything below is the same routine done by hand with comman
    ```
 
    At the end it writes the prompt files and tells you how many products have no label yet:
-   `labeling\prompt_1.txt`, `prompt_2.txt` and so on (300 products each).
+   `labeling\prompt_1.txt`, `prompt_2.txt` and so on (600 products each).
 
 2. **Ask the AI.** Open `labeling\prompt_1.txt`, copy everything, and paste it into ChatGPT (or another chat).
-   It answers with one short line per product, like `12|koed|hakket oksekød`.
+   It answers with one CSV row per product, in a code block, like `12,koed,hakket oksekød,kød,oksekød,hakket`.
    Repeat for `prompt_2.txt` and the rest, in a new message each time.
    If the chat stops early, write "continue" and copy the whole answer anyway.
 
@@ -53,7 +53,7 @@ in GitHub Desktop. Everything below is the same routine done by hand with comman
 - Products the AI skipped, or gave an unknown category, are asked about again in the next prompt.
   `python labels.py prompt` makes new prompt files without scraping again.
 - `python labels.py prompt --all` includes products that already have a label, to check them again.
-- The AI also gives each product a few **tags** (broad search words like "sodavand" or "frugt"). The site's search looks at the tags, the type and the category name, so a general word finds the whole group.
+- The tags can only come from the fixed list in `vocabulary.txt` (one word per line, edit it freely); any other tag is dropped. The AI also gives each product a few **tags** (broad search words like "sodavand" or "frugt"). The site's search looks at the tags, the type and the category name, so a general word finds the whole group.
 - Besides the category, the AI gives each product a generic **type** (for example "pasta" for both spaghetti
   and penne). The site's search also looks at the type, so searching "pasta" finds all of them.
 - The `labeling` folder is only your working space and is not uploaded to GitHub.
