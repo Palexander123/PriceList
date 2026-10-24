@@ -25,7 +25,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-from categories import classify, category_list, refine
+from categories import EXTRA_FALLBACK, EXTRA_IDS, category_list, classify, extras, extras_from_type, refine
 
 ROOT = Path(__file__).resolve().parent
 TJEK_BASE = "https://squid-api.tjek.com/v2"
@@ -159,6 +159,9 @@ def normalize_tjek(o: dict, chain: str):
         link = f"https://etilbudsavis.dk/{slug}?publication={o['catalog_id']}&offer={o['id']}"
     description = (o.get("description") or "").strip()
     category, why = classify(title, description)
+    ex = extras(title)
+    if category == "andet" and ex:
+        category = EXTRA_FALLBACK[ex[0]]
     item = {
         "id": f"tjek:{o.get('id')}",
         "chain": chain,
@@ -178,6 +181,8 @@ def normalize_tjek(o: dict, chain: str):
     }
     if why:
         item["junk_reason"] = why
+    if ex:
+        item["extra"] = ex
     return item
 
 
@@ -239,6 +244,9 @@ def normalize_salling(entry: dict, store: dict):
         store_label = f"{store_label}, {addr['street']}"
     pct = num(offer.get("percentDiscount"))
     category, why = classify(title, cat_text)
+    ex = extras(title)
+    if category == "andet" and ex:
+        category = EXTRA_FALLBACK[ex[0]]
     item = {
         "id": f"sal:{store.get('id')}:{product.get('ean') or title}",
         "chain": chain,
@@ -258,6 +266,8 @@ def normalize_salling(entry: dict, store: dict):
     }
     if why:
         item["junk_reason"] = why
+    if ex:
+        item["extra"] = ex
     return item
 
 
@@ -324,6 +334,9 @@ def load_overrides(valid_ids, path=None):
             tags = [str(g).strip().lower()[:30] for g in (val.get("g") or []) if str(g).strip()]
             if tags:
                 out[key]["g"] = tags[:8]
+            xs = [x for x in (val.get("x") or []) if x in EXTRA_IDS]
+            if xs:
+                out[key]["x"] = xs
     return out, None
 
 
@@ -334,7 +347,21 @@ def apply_overrides(offers, overrides, groups, vocab=None):
         ov = overrides.get(norm_title(o["title"]))
         if not ov:
             continue
-        o["category"] = refine(ov["c"], ov.get("t"))
+        keyword_cat = o["category"]
+        cat = ov["c"]
+        extra = set(o.get("extra") or []) | set(ov.get("x") or [])
+        if cat in EXTRA_IDS:             # an answer that says "ready meal" or "pålæg" as its category
+            extra.add(cat)
+            cat = keyword_cat if keyword_cat != "andet" and keyword_cat not in EXTRA_IDS else EXTRA_FALLBACK[cat]
+        elif cat == "andet" and keyword_cat != "andet":    # the AI gave up, so the keyword rules decide
+            cat = keyword_cat
+        cat = refine(cat, ov.get("t"), o["title"])
+        o["category"] = cat
+        extra |= set(extras_from_type(cat, ov.get("t")))
+        if extra:
+            o["extra"] = [e for e in EXTRA_IDS if e in extra]
+        else:
+            o.pop("extra", None)
         if ov.get("t"):
             o["type"] = ov["t"]
         tags = [g for g in ov.get("g") or [] if vocab is None or g in vocab]
@@ -342,7 +369,7 @@ def apply_overrides(offers, overrides, groups, vocab=None):
             o["tags"] = tags
         else:
             o.pop("tags", None)
-        if groups.get(o["category"]) == "junk":
+        if groups.get(cat) == "junk":
             o["junk_reason"] = "sortering"
         else:
             o.pop("junk_reason", None)

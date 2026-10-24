@@ -78,10 +78,7 @@ FOOD_RULES = [
     # fruit rule. The category appears once in the site's list.
     ("drikke", "Drikkevarer", CONSUMABLE, [
         "juice", "smoothie", "sodavand", "energidrik", "danskvand", "lemonade", "iste",
-        "kakaomælk", "booster", "cocktail", "ready to drink",
-    ]),
-    ("faerdigret", "Færdigretter", CONSUMABLE, [
-        "færdigret", "færdigmad", "lasagne", "gryderet", "ready meal", "mikroret",
+        "kakaomælk", "booster", "cocktail", "ready to drink", "gløgg",
     ]),
     ("frost", "Frost", CONSUMABLE, [
         "frost", "frysevare", "isbæger", "kæmpeis", "flødeis", "pinde-is", "pizza",
@@ -91,7 +88,7 @@ FOOD_RULES = [
         "laks", "torsk", "rejer", "sild", "makrel", "tun", "fisk", "skaldyr",
         "muslinger", "ørred", "rødspætte", "fiskefilet", "krabbe", "hummer",
     ]),
-    ("koed", "Kød & pålæg", CONSUMABLE, [
+    ("koed", "Kød", CONSUMABLE, [
         "kød", "oksekød", "svinekød", "kylling", "kalkun", "bacon", "pølse",
         "frikadelle", "medister", "kotelet", "mørbrad", "bøf", "steg", "culotte",
         "schnitzel", "pålæg", "skinke", "hakket", "flæsk", "ribbe", "leverpostej",
@@ -108,14 +105,19 @@ FOOD_RULES = [
         "nektarin", "fersken", "blomme", "kiwi", "rødbede", "asparges",
     ]),
     ("mejeri", "Mejeri & æg", CONSUMABLE, [
+        "skiveost", "skæreost",
         "mælk", "yoghurt", "yogurt", "skyr", "ost", "smør", "fløde", "creme fraiche",
         "æg", "kefir", "cheddar", "mozzarella", "feta", "kvark", "tykmælk",
         "minimælk", "letmælk", "kærnemælk", "lurpak", "arla", "cheasy", "hytteost",
     ]),
+    # Biscuits and cookies are snacks, even though the word "kage" is in them; this rule comes before bread & baking.
+    ("snacks", "Snacks & slik", CONSUMABLE, [
+        "småkage", "julekage", "pebernød", "brunkage", "vaniljekrans", "cookie",
+    ]),
     ("bagning", "Brød & bagning", CONSUMABLE, [
-        "*brød", "toast", "bolle", "kage", "croissant", "tebirkes",
+        "schulstad", "*brød", "toast", "bolle", "*kage", "croissant", "tebirkes",
         "wienerbrød", "mel", "sukker", "gær", "bagepulver", "vanille", "kakao",
-        "bagning", "flormelis", "marcipan", "tærte", "boller", "baguette",
+        "bagning", "*kage", "flormelis", "marcipan", "tærte", "boller", "baguette",
         "morgenbrød", "kiks", "muffin", "pandekage", "dej", "cupcake",
         "hvedemel", "bagemel", "durummel", "rugmel", "fuldkornsmel",
     ]),
@@ -155,9 +157,22 @@ FOOD_RULES = [
 
 OTHER = ("andet", "Andet", OTHER_GROUP)
 
+# "Extra" categories are not exclusive: a product keeps its normal category (a frozen lasagne is
+# Frost) and may ALSO be a ready meal or a cold cut. The site lets you filter on them like any category.
+EXTRA_RULES = [
+    ("faerdigret", "Færdigretter", CONSUMABLE, [
+        "færdigret", "færdigmad", "lasagne", "gryderet", "ready meal", "mikroret",
+    ]),
+    ("paalaeg", "Pålæg", CONSUMABLE, [
+        "pålæg", "leverpostej", "postej", "salami", "pepperoni", "spegepølse", "rullepølse",
+        "hamburgerryg", "skiveost", "mortadella", "hønsesalat", "tunmousse", "pålægssalat",
+    ]),
+]
+EXTRA_IDS = [r[0] for r in EXTRA_RULES]
+
 # One picture per category, shown on the site's filter buttons.
 EMOJI = {
-    "vin": "🍷", "drikke": "🥤", "faerdigret": "🍲", "frost": "🧊", "fisk": "🐟", "koed": "🥩",
+    "paalaeg": "🥪", "vin": "🍷", "drikke": "🥤", "faerdigret": "🍲", "frost": "🧊", "fisk": "🐟", "koed": "🥩",
     "groent": "🥦", "mejeri": "🥛", "bagning": "🍞", "snacks": "🍫", "kolonial": "🥫",
     "husholdning": "🧻", "andet": "❓", "menu": "🍽️", "legetoej": "🧸", "elektronik": "🔌",
     "boligting": "🏠",
@@ -189,6 +204,7 @@ def _compile(rules):
 
 _JUNK = _compile(JUNK_RULES)
 _FOOD = _compile(FOOD_RULES)
+_EXTRA = _compile(EXTRA_RULES)
 _FOOD_NO_FROST = [r for r in _FOOD if r[0] != "frost"]
 _FROZEN_DESC = re.compile(r"dybfrost|dybfrys|frosne |frostvare|frysevare|(?<![a-zæøå])frost(?![a-zæøå])")
 
@@ -225,6 +241,12 @@ def classify(title: str, description: str = ""):
     return cat, None
 
 
+def extras(title: str) -> list:
+    """The extra (non-exclusive) categories a title belongs to, e.g. ['faerdigret']."""
+    t = (title or "").lower()
+    return [cid for cid, _l, _g, pattern in _EXTRA if pattern.search(t)]
+
+
 def categorize(title: str, description: str = "") -> str:
     """Return just the category id."""
     return classify(title, description)[0]
@@ -238,6 +260,13 @@ def category_list():
         if cid not in seen:  # a category can have several rule lists
             seen.add(cid)
             items.append({"id": cid, "label": label, "group": group, "emoji": EMOJI.get(cid, "")})
+    for cid, label, group, _w in EXTRA_RULES:
+        items.append({"id": cid, "label": label, "group": group, "emoji": EMOJI.get(cid, ""), "extra": True})
+    ids = [c["id"] for c in items]
+    for cid, after in (("paalaeg", "koed"), ("faerdigret", "kolonial")):     # show them next to their relatives
+        item = items.pop(ids.index(cid))
+        items.insert([c["id"] for c in items].index(after) + 1, item)
+        ids = [c["id"] for c in items]
     # Wine is matched first, but should be listed right after the other drinks.
     ids = [c["id"] for c in items]
     if "vin" in ids and "drikke" in ids:
@@ -256,19 +285,42 @@ _WINE_TYPES = {
     "portvin", "dessertvin", "boblevin", "sherry", "vermouth",
 }
 _READY_TYPES = {"gryderet", "lasagne", "wokret", "færdigmad", "vegetarret"}
+_COOKIE_TYPES = {"småkage", "småkager", "julekage", "julekager", "cookies", "pebernødder", "brunkager"}
 _REFINABLE = {cid for cid, _l, group, _w in FOOD_RULES if group == CONSUMABLE} | {OTHER[0]}
+# Clear-cut title words that win over a wrong AI label (checked after the AI, food and drink only).
+_HARD_TITLE = [(re.compile(p), cid) for p, cid in (
+    (r"gløgg", "drikke"), (r"småkage|julekage|pebernød|brunkage|vaniljekrans", "snacks"),
+    (r"schulstad", "bagning"),
+)]
+# When a ready meal / cold cut has no usable normal category.
+EXTRA_FALLBACK = {"faerdigret": "kolonial", "paalaeg": "koed"}
 
 
-def refine(category: str, type_: str) -> str:
-    """Return the category after checking the AI's product type. Only food and drink are touched,
-    so a toy called "Vinylkugle" or a menu deal is never moved."""
-    if not type_ or category not in _REFINABLE:
+def refine(category: str, type_: str, title: str = "") -> str:
+    """Return the category after checking the AI's product type and a few unmistakable title words.
+    Only food and drink are touched, so a toy called "Vinylkugle" or a menu deal is never moved."""
+    if category not in _REFINABLE:
         return category
-    words = set(re.findall(r"[a-zæøåéü]+", type_.lower()))
+    t = (title or "").lower()
+    for pattern, cid in _HARD_TITLE:
+        if pattern.search(t):
+            return cid
+    words = set(re.findall(r"[a-zæøåéü]+", (type_ or "").lower()))
     if words & _WINE_TYPES:
         return "vin"
-    if any("færdigret" in w for w in words) or words & _READY_TYPES:
-        return "faerdigret"
-    if category == "frost" and "suppe" in words:      # frozen soup to heat is a ready meal
-        return "faerdigret"
+    if words & _COOKIE_TYPES:
+        return "snacks"
+    if "gløgg" in words:
+        return "drikke"
     return category
+
+
+def extras_from_type(category: str, type_: str) -> list:
+    """Ready meals are recognised by the AI's product type as well (a frozen soup is a ready meal)."""
+    words = set(re.findall(r"[a-zæøåéü]+", (type_ or "").lower()))
+    out = []
+    if any("færdigret" in w for w in words) or words & _READY_TYPES or (category == "frost" and "suppe" in words):
+        out.append("faerdigret")
+    if words & {"pålæg", "leverpostej", "postej", "salami", "pepperoni", "spegepølse", "rullepølse"}:
+        out.append("paalaeg")
+    return out

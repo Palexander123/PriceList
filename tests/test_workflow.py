@@ -50,6 +50,21 @@ class Workflow(unittest.TestCase):
         body = only.split("Products:\n")[1].strip().splitlines()
         self.assertEqual(len(body), len({fo.norm_title(o["title"]) for o in offers if o["category"] == cat}))
 
+    def test_extra_categories_come_from_tags(self):
+        root = sample_root()
+        wf.make_prompts(root=root)
+        meta = json.loads((root / "labeling" / "prompts.json").read_text(encoding="utf-8"))
+        ids = sorted(int(i) for i in meta["ids"])
+        rows = [f"{ids[0]},frost,lasagne,lasagne,færdigret,pasta", f"{ids[1]},koed,skinke,skinke,paalaeg",
+                f"{ids[2]},faerdigret,gryderet"]
+        wf.apply_text("\n".join(rows), root=root)
+        items = json.loads((root / "site" / "data" / "category_overrides.json").read_text(encoding="utf-8"))["items"]
+        a, b, c = (items[meta["ids"][str(i)]] for i in ids[:3])
+        self.assertEqual((a["c"], a["x"]), ("frost", ["faerdigret"]))
+        self.assertEqual((b["c"], b["x"]), ("koed", ["paalaeg"]))
+        self.assertEqual(c["x"], ["faerdigret"])
+        self.assertNotIn(c["c"], ("faerdigret", "paalaeg"))               # always a normal category too
+
     def test_smaller_parts(self):
         root = sample_root()
         n = wf.status(root)["products"]

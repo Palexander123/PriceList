@@ -98,7 +98,7 @@ class Flow(unittest.TestCase):
         self.assertEqual(len(files), 3)
         second = files[1].read_text(encoding="utf-8")
         self.assertIn("\n4|Vare nummer 4\n", second)  # part 2 continues at 4
-        self.assertIn("koed = meat and cold cuts", second)
+        self.assertIn("koed = fresh and processed meat", second)
         n2, _ = labels.write_prompts(self.root, self.offers, {"vila annone": {"c": "drikke", "t": ""}}, CATS)
         self.assertEqual(n2, 7)
 

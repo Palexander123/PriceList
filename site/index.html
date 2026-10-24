@@ -72,11 +72,14 @@
      to right), so every card keeps its natural height with no gaps under short ones.
      Images loading later only push cards down within their own column; cards never
      jump between columns. */
+  html { scrollbar-gutter: stable; }   /* the page width never changes when a scrollbar appears, so the column count stays put */
   .grid { display: flex; align-items: flex-start; gap: 14px; padding: 0 0 56px; }
   .col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
   .card { position: relative; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-  .pic { position: relative; min-height: 110px; background: #fff; display: grid; place-items: center; }
-  .pic img { position: relative; z-index: 1; width: 100%; height: auto; display: block; }
+  /* A fixed, square picture box: tall or wide photos are fitted inside it, so every card has the same
+     picture height from the start and nothing shifts when images load. */
+  .pic { position: relative; aspect-ratio: 1 / 1; background: #fff; overflow: hidden; }
+  .pic img { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: contain; display: block; }
   .pic .ph { position: absolute; inset: 0; display: grid; place-items: center; font-size: 3rem; font-weight: 800; color: rgba(255,255,255,.9); background: var(--c); }
   .store-tag { z-index: 2; position: absolute; left: 10px; top: 10px; padding: 3px 10px; border-radius: 999px; background: var(--c); color: var(--cink); font-size: .8rem; font-weight: 700; box-shadow: 0 1px 2px rgba(0,0,0,.25); }
   .heart { z-index: 2; position: absolute; right: 8px; top: 8px; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,.25); }
@@ -184,6 +187,8 @@
   }
 
   // ---- filtering and sorting
+  // A product has one normal category and may also belong to "extra" ones (Færdigretter, Pålæg).
+  const memberOf = (o) => (o.extra && o.extra.length ? [o.category, ...o.extra] : [o.category]);
   // skipCat: ignore the selected category, used to count how many offers each category chip would show
   function visible(skipCat) {
     const now = Date.now(), q = state.q.trim().toLowerCase();
@@ -197,7 +202,7 @@
       }
       if (!state.upcoming && o.valid_from && Date.parse(o.valid_from) > now) return false;
       if (state.stores.size && !state.stores.has(o.chain)) return false;
-      if (!skipCat && state.cats.size && !state.cats.has(o.category)) return false;
+      if (!skipCat && state.cats.size && !memberOf(o).some((c) => state.cats.has(c))) return false;
       if (state.favOnly && !state.favs[favKey(o.title)]) return false;
       if (tokens.length) {
         // Words, not letters: "øl" must not find "pølse". A search term matches a word that starts
@@ -205,7 +210,7 @@
         // the product type, the AI's tags ("sodavand", "frugt", ...) and the category's name,
         // so a general word finds the whole group. Every term has to match.
         o._words = o._words || (o.title + " " + (o.description || "") + " " + (o.type || "") + " " +
-          (o.tags || []).join(" ") + " " + (state.catWords[o.category] || "")).toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+          (o.tags || []).join(" ") + " " + memberOf(o).map((c) => state.catWords[c] || "").join(" ")).toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean);
         const hit = (t) => o._words.some((w) => w.startsWith(t));
         if (!tokens.every(hit)) return false;
       }
@@ -269,7 +274,7 @@
 
   function renderCats() {
     const counts = {};
-    visible(true).forEach((o) => { counts[o.category] = (counts[o.category] || 0) + 1; });
+    visible(true).forEach((o) => memberOf(o).forEach((c) => { counts[c] = (counts[c] || 0) + 1; }));
     const cats = shownCats(), key = cats.map((c) => c.id).join(",");
     const box = $("cats");
     if (key !== state.catKey) {           // the set of chips only changes when a mode switch changes it
@@ -319,7 +324,11 @@
     return Math.max(2, Math.floor((width + gap) / (min + gap)));
   };
   let lastCols = 0;
-  window.addEventListener("resize", () => { if (state.data && colCount() !== lastCols) render(); });
+  let resizeTimer = 0;   // wait until resizing/zooming has settled before dealing the cards out again
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => { if (state.data && colCount() !== lastCols) render(); }, 200);
+  });
 
   function buildControls() {
     const { chains, categories } = state.data;

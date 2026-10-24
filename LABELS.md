@@ -53,6 +53,7 @@ in GitHub Desktop. Everything below is the same routine done by hand with comman
 - Products the AI skipped, or gave an unknown category, are asked about again in the next prompt.
   `python labels.py prompt` makes new prompt files without scraping again.
 - `python labels.py prompt --all` includes products that already have a label, to check them again.
+- **Færdigretter** and **Pålæg** are not exclusive categories: a product keeps its normal category (a frozen lasagne is Frost) and ChatGPT adds the tag `faerdigret` or `paalaeg`. On the site they are filter buttons like the others.
 - The tags can only come from the fixed list in `vocabulary.txt` (one word per line, edit it freely); any other tag is dropped. The AI also gives each product a few **tags** (broad search words like "sodavand" or "frugt"). The site's search looks at the tags, the type and the category name, so a general word finds the whole group.
 - Besides the category, the AI gives each product a generic **type** (for example "pasta" for both spaghetti
   and penne). The site's search also looks at the type, so searching "pasta" finds all of them.

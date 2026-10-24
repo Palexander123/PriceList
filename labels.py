@@ -26,7 +26,7 @@ import sys
 from pathlib import Path
 
 import fetch_offers as fo
-from categories import category_list, refine
+from categories import EXTRA_FALLBACK, EXTRA_IDS, category_list, classify, extras_from_type, refine
 
 ROOT = Path(__file__).resolve().parent
 PART_SIZE = 600
@@ -35,7 +35,8 @@ PART_SIZE = 600
 DESC = {
     "frost": "ONLY other products sold frozen from the freezer (frozen vegetables, frozen pizza, ice cream, frozen fish). Fresh or chilled meat and fish are NOT frost",
     "faerdigret": "ready meals, frozen OR chilled (lasagne, stew, wok meals, pasta dishes, soups-to-heat, prepared dishes)",
-    "vin": "wine, sparkling wine, champagne, port and similar (also fortified wine)", "fisk": "fish and seafood", "koed": "meat and cold cuts",
+    "vin": "wine, sparkling wine, champagne, port and similar (also fortified wine)", "fisk": "fish and seafood", "koed": "fresh and processed meat, poultry and sausages (cold cuts are NOT a category, see the tag paalaeg)",
+    "paalaeg": "cold cuts and spreads for bread",
     "groent": "fruit and vegetables", "mejeri": "dairy and eggs",
     "bagning": "bread, cakes, flour and baking",
     "drikke": "other drinks: soda, juice, beer, spirits, coffee, tea, mulled wine, plant drinks (NOT wine)",
@@ -47,13 +48,16 @@ DESC = {
     "andet": "only if you truly cannot tell",
 }
 # Other ways a chat might write a category.
+# Words in the tag columns that mean "also a ready meal" / "also a cold cut".
+EXTRA_WORDS = {"faerdigret": "faerdigret", "færdigret": "faerdigret", "færdigretter": "faerdigret",
+               "paalaeg": "paalaeg", "pålæg": "paalaeg", "paalæg": "paalaeg"}
 ALIASES = {
-    "kød": "koed", "pålæg": "koed", "kødogpålæg": "koed", "grønt": "groent", "frugt": "groent",
+    "kød": "koed", "pålæg": "paalaeg", "kødogpålæg": "koed", "grønt": "groent", "frugt": "groent",
     "frugtgrønt": "groent", "legetøj": "legetoej", "legetøjspil": "legetoej", "toys": "legetoej",
     "meat": "koed", "fish": "fisk", "dairy": "mejeri", "bread": "bagning", "baking": "bagning",
     "drinks": "drikke", "drink": "drikke", "pantry": "kolonial", "household": "husholdning",
     "frozen": "frost", "other": "andet", "unknown": "andet", "electronics": "elektronik",
-    "home": "boligting", "færdigretter": "faerdigret", "færdigret": "faerdigret",
+    "home": "boligting", "færdigretter": "faerdigret", "færdigret": "faerdigret", "paalæg": "paalaeg",
     "readymeals": "faerdigret", "readymeal": "faerdigret", "wine": "vin", "vine": "vin",
 }
 
@@ -93,7 +97,7 @@ def load_vocab(root):
 
 def build_prompt(items, cats, vocab=None):
     """items: [(id, title)]. The ids are global, so one answer file can cover every part."""
-    legend = "\n".join(f"{c['id']} = {DESC.get(c['id'], c['label'])}" for c in cats)
+    legend = "\n".join(f"{c['id']} = {DESC.get(c['id'], c['label'])}" for c in cats if not c.get("extra"))
     def line(it):
         i, t = it[0], it[1]
         d = (it[2] if len(it) > 2 else "").replace("|", "/").strip()
@@ -120,6 +124,8 @@ type = the generic product a shopper would search for, in lowercase Danish, sing
 Some products have a hint after " :: " (the small print of the offer, for example whether it is frozen or fresh). Use it, but never repeat it in the reply.
 
 {tag_rule}
+
+Ready meals and cold cuts are NOT categories. Choose the normal category as usual (a frozen lasagne is frost) and ADD the tag faerdigret for any ready meal, frozen or chilled, and the tag paalaeg for cold cuts, liver pâté, salami, sliced cheese and other bread toppings. Write them as ordinary tag columns.
 
 Rules: reply with ONE code block (```) that contains the CSV rows and nothing else: no text before or after it, no header row, no blank lines, no extra spaces. One row per product, same order, do not skip any product. Never put a comma inside a value (every value is a single word or short phrase). Keep the id numbers exactly as given (they may not start at 1). If you must stop early, stop after a complete row.
 
@@ -150,7 +156,7 @@ def write_prompts(root, offers, overrides, cats, size=PART_SIZE, include_all=Fal
         if key in titles:
             continue
         if only:                       # only products that currently sit in these categories
-            if o.get("category") not in only:
+            if o.get("category") not in only and not set(o.get("extra") or []) & only:
                 continue
         elif not include_all and key in overrides:
             continue
@@ -222,7 +228,7 @@ def clean_tags(fields, vocab=None):
     for f in fields:
         for t in re.split(r"[,/]", f):
             t = t.strip().lower()
-            if t and len(t) <= 30 and t not in tags and (vocab is None or t in vocab):
+            if t and len(t) <= 30 and t not in tags and (vocab is None or t in vocab or t in EXTRA_WORDS):
                 tags.append(t)
     return tags[:8]
 
@@ -278,10 +284,19 @@ def apply_answers(root, texts):
         if not cat:
             bad.append((meta["titles"][key], badtext))
             continue
-        cat = refine(cat, typ)
+        title = meta["titles"][key]
+        extra = {EXTRA_WORDS[t] for t in tags if t in EXTRA_WORDS}
+        if cat in EXTRA_IDS:             # old-style answer: the "category" is a ready meal / cold cut
+            extra.add(cat)
+            base = classify(title)[0]
+            cat = base if base != "andet" and base not in EXTRA_IDS else EXTRA_FALLBACK[cat]
+        cat = refine(cat, typ, title)
+        extra |= set(extras_from_type(cat, typ))
         new[key] = {"c": cat, "t": typ}
         if tags:
             new[key]["g"] = tags
+        if extra:
+            new[key]["x"] = [e for e in EXTRA_IDS if e in extra]
         if key in now_cat and now_cat[key] != cat:
             changes.append((meta["titles"][key], now_cat[key], cat))
     unanswered = [meta["titles"][k] for i, k in meta["ids"].items() if int(i) not in found]

@@ -24,17 +24,27 @@ class Categories(unittest.TestCase):
 
     def test_wine_and_ready_meals_have_their_own_categories(self):
         self.assertEqual(categorize("Rødvin Merlot"), "vin")
-        self.assertEqual(categorize("Coop færdigret"), "faerdigret")
+        from categories import extras
+        self.assertEqual(extras("Coop færdigret"), ["faerdigret"])          # not a category of its own
+        self.assertEqual(extras("Leverpostej"), ["paalaeg"])
+        self.assertEqual(categorize("Det Gode fra Schulstad"), "bagning")
+        self.assertEqual(categorize("Irma økologiske julekager"), "snacks")
+        self.assertEqual(categorize("Julesmåkager*"), "snacks")
+        self.assertEqual(categorize("Luksus gløgg*"), "drikke")
         self.assertEqual(categorize("Faxe Kondi"), "drikke")
 
     def test_type_corrects_the_category(self):
         from categories import refine
         self.assertEqual(refine("drikke", "rødvin"), "vin")
         self.assertEqual(refine("andet", "vin"), "vin")
-        self.assertEqual(refine("frost", "færdigret"), "faerdigret")
-        self.assertEqual(refine("frost", "asiatisk færdigret"), "faerdigret")
-        self.assertEqual(refine("frost", "suppe"), "faerdigret")
-        self.assertEqual(refine("kolonial", "suppe"), "kolonial")
+        from categories import extras_from_type
+        self.assertEqual(refine("frost", "færdigret"), "frost")             # keeps its normal category
+        self.assertEqual(extras_from_type("frost", "asiatisk færdigret"), ["faerdigret"])
+        self.assertEqual(extras_from_type("frost", "suppe"), ["faerdigret"])
+        self.assertEqual(extras_from_type("kolonial", "suppe"), [])
+        self.assertEqual(refine("bagning", "kage", "Irma økologiske julekager"), "snacks")
+        self.assertEqual(refine("kolonial", "småkager"), "snacks")
+        self.assertEqual(refine("andet", "", "Irma gløgg"), "drikke")
         self.assertEqual(refine("koed", "svinekød"), "koed")        # "svin" is not wine
         self.assertEqual(refine("legetoej", "vin"), "legetoej")      # junk is never moved
         self.assertEqual(refine("menu", "færdigret"), "menu")
@@ -175,6 +185,20 @@ class Overrides(unittest.TestCase):
             "vila annone": {"c": "drikke", "t": "rødvin"}, "x": {"c": "nonsense"}}}), encoding="utf-8")
         out, _ = fo.load_overrides({"drikke"})
         self.assertEqual(out, {"vila annone": {"c": "drikke", "t": "rødvin"}})
+
+    def test_ready_meals_and_cold_cuts_are_extra_categories(self):
+        groups = {"frost": "consumable", "koed": "consumable", "faerdigret": "consumable", "paalaeg": "consumable"}
+        offers = [{"title": "Lasagne", "category": "frost"}, {"title": "Skinke", "category": "koed"},
+                  {"title": "Ukendt", "category": "bagning"}, {"title": "Suppe", "category": "andet"}]
+        ov = {"lasagne": {"c": "faerdigret", "t": "lasagne"},                    # old-style answer
+              "skinke": {"c": "koed", "t": "skinke", "x": ["paalaeg"]},
+              "ukendt": {"c": "andet", "t": ""},                                  # the AI gave up
+              "suppe": {"c": "faerdigret", "t": "suppe"}}
+        fo.apply_overrides(offers, ov, groups)
+        self.assertEqual((offers[0]["category"], offers[0]["extra"]), ("frost", ["faerdigret"]))
+        self.assertEqual((offers[1]["category"], offers[1]["extra"]), ("koed", ["paalaeg"]))
+        self.assertEqual(offers[2]["category"], "bagning")                        # keyword answer kept
+        self.assertEqual((offers[3]["category"], offers[3]["extra"]), ("kolonial", ["faerdigret"]))
 
     def test_override_beats_the_keyword_rules(self):
         offers = [{"title": "  Vila   ANNONE ", "category": "andet"},
