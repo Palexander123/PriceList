@@ -78,6 +78,13 @@ Sig til hvis du vil have mere!"""
         self.assertEqual((cat, typ, tags), ("vin", "rødvin", ["vin", "rødvin", "drikkevarer"]))
         self.assertIn("id,category,type,tag1,tag2,tag3", labels.build_prompt([(1, "Faxe Kondi", "")], CATS))
 
+    def test_part_size_avoids_a_tiny_last_prompt(self):
+        self.assertEqual(labels.part_size(900), 300)
+        self.assertEqual(labels.part_size(620), 320)      # 300+300+20 would leave 20
+        self.assertEqual(labels.part_size(905), 320)
+        self.assertEqual(labels.part_size(350), 300)      # 300+50 is fine
+        self.assertEqual(labels.part_size(620, 500), 500) # a size you typed yourself is kept
+
 
 class Flow(unittest.TestCase):
     def setUp(self):

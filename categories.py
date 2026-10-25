@@ -52,6 +52,9 @@ JUNK_RULES = [
         "køkkenmaskine", "barbermaskine", "hårtørrer", "trimmer", "elektrisk",
         "^el-", "stikkontakt", "forlængerledning", "lampe", "lyskæde", "dronen",
         "gamingmus", "tastatur", "printer",
+        "induktion", "kogeplade", "^ovn ", "indbygningsovn", "mikrobølgeovn", "emhætte",
+        "opvaskemaskine", "vaskemaskine", "tørretumbler", "køleskab", "^fryser ", "^telefon",
+        "mobiltelefon", "^aeg ", "^samsung", "^sony ",
     ]),
     ("boligting", "Tøj, bolig & have", JUNK, [
         "^tøj", "sokker", "strømper", "bukser", "trøje", "jakke", "^sko ", "sengetøj",
@@ -62,6 +65,9 @@ JUNK_RULES = [
         "^bor ", "cykel", "^grill ", "parasol", "havemøbel", "kuffert", "rygsæk",
         "kuglepen", "skoletaske", "gardin", "^spejl", "^kasse ", "opbevaring",
         "julepapir", "gavepapir", "julekugler", "adventskrans", "juletræ",
+        "^seng", "madras", "^sofa", "lænestol", "^stol ", "^bord ", "kommode", "^reol",
+        "kniv", "donationskort", "gavekort", "^pynt", "^dekoration", "sukkertopgran",
+        "nordmannsgran", "nobilis", "^gran ", "potteplante",
     ]),
 ]
 
@@ -292,16 +298,27 @@ _HARD_TITLE = [(re.compile(p), cid) for p, cid in (
     (r"gløgg", "drikke"), (r"småkage|julekage|pebernød|brunkage|vaniljekrans", "snacks"),
     (r"schulstad", "bagning"),
 )]
+# Durable things the AI sometimes calls household or "other". These title words always win.
+_HARD_JUNK = _compile([
+    ("elektronik", "", JUNK, ["induktion", "kogeplade", "emhætte", "^ovn ", "indbygningsovn", "mikrobølgeovn",
+                              "smartphone", "mobiltelefon", "^telefon", "opvaskemaskine", "vaskemaskine", "køleskab"]),
+    ("boligting", "", JUNK, ["^seng", "madras", "kniv", "donationskort", "gavekort", "^pynt", "sukkertopgran",
+                             "nordmannsgran", "nobilis", "juletræ", "potteplante"]),
+])
 # When a ready meal / cold cut has no usable normal category.
 EXTRA_FALLBACK = {"faerdigret": "kolonial", "paalaeg": "koed"}
 
 
 def refine(category: str, type_: str, title: str = "") -> str:
     """Return the category after checking the AI's product type and a few unmistakable title words.
-    Only food and drink are touched, so a toy called "Vinylkugle" or a menu deal is never moved."""
+    Only food, drink, household and "other" are touched, so a toy called "Vinylkugle" or a menu deal
+    is never moved; an induction hob called "household" is moved to electronics."""
     if category not in _REFINABLE:
         return category
     t = (title or "").lower()
+    for cid, _l, _g, pattern in _HARD_JUNK:
+        if pattern.search(t):
+            return cid
     for pattern, cid in _HARD_TITLE:
         if pattern.search(t):
             return cid

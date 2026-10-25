@@ -10965,6 +10965,1104 @@
    "g": [
     "elektronik"
    ]
+  },
+  "kærgården": {
+   "c": "mejeri",
+   "t": "smør",
+   "g": [
+    "smør",
+    "mejeri"
+   ]
+  },
+  "grøn balance økologisk smoothie": {
+   "c": "drikke",
+   "t": "smoothie",
+   "g": [
+    "juice",
+    "økologisk"
+   ]
+  },
+  "risifrutti": {
+   "c": "mejeri",
+   "t": "risifrutti",
+   "g": [
+    "yoghurt",
+    "dessert"
+   ]
+  },
+  "pepsi eller faxe kondi": {
+   "c": "drikke",
+   "t": "sodavand",
+   "g": [
+    "sodavand",
+    "cola",
+    "læskedrik"
+   ]
+  },
+  "grøn balance danske økologiske gulerødder": {
+   "c": "groent",
+   "t": "gulerod",
+   "g": [
+    "gulerødder",
+    "grøntsager",
+    "økologisk"
+   ]
+  },
+  "matilde milkshake": {
+   "c": "drikke",
+   "t": "milkshake",
+   "g": [
+    "kakaomælk",
+    "mælk"
+   ]
+  },
+  "anthon berg marcipanbrød": {
+   "c": "snacks",
+   "t": "marcipanbrød",
+   "g": [
+    "marcipan",
+    "konfekt",
+    "chokolade"
+   ]
+  },
+  "chokoladebar": {
+   "c": "snacks",
+   "t": "chokoladebar",
+   "g": [
+    "chokoladebar",
+    "chokolade"
+   ]
+  },
+  "fun eller scoop": {
+   "c": "drikke",
+   "t": "saft",
+   "g": [
+    "saft",
+    "juice"
+   ]
+  },
+  "vel opvask": {
+   "c": "husholdning",
+   "t": "opvaskemiddel",
+   "g": [
+    "opvaskemiddel",
+    "rengøring"
+   ]
+  },
+  "haribo": {
+   "c": "snacks",
+   "t": "vingummi",
+   "g": [
+    "slik",
+    "søde sager"
+   ]
+  },
+  "pickwick te": {
+   "c": "drikke",
+   "t": "te",
+   "g": [
+    "te",
+    "varme drikke"
+   ]
+  },
+  "grøn balance økologiske citroner": {
+   "c": "groent",
+   "t": "citron",
+   "g": [
+    "økologisk"
+   ]
+  },
+  "faxe kondi booster eller pro": {
+   "c": "drikke",
+   "t": "energidrik",
+   "g": [
+    "energidrik",
+    "læskedrik"
+   ]
+  },
+  "gestus pålæg": {
+   "c": "koed",
+   "t": "pålæg",
+   "g": [
+    "pålæg",
+    "pålægssalat",
+    "spegepølse"
+   ],
+   "x": [
+    "paalaeg"
+   ]
+  },
+  "kornkammeret danske økologiske havregryn eller ruggryn": {
+   "c": "kolonial",
+   "t": "havregryn",
+   "g": [
+    "morgenmad",
+    "morgenmadsprodukt",
+    "økologisk"
+   ]
+  },
+  "palmolive personlig pleje": {
+   "c": "husholdning",
+   "t": "shampoo",
+   "g": [
+    "shampoo",
+    "showergel",
+    "håndsæbe"
+   ]
+  },
+  "soba nissin eller nissin kopnudler": {
+   "c": "kolonial",
+   "t": "kopnudler",
+   "g": [
+    "kopnudler",
+    "nudler",
+    "asiatiske varer"
+   ]
+  },
+  "gestus bacon i skiver": {
+   "c": "koed",
+   "t": "bacon",
+   "g": [
+    "bacon",
+    "grisekød"
+   ]
+  },
+  "karolines køkken hytteost, madlavningsfløde, creme fraiche 18% eller cheasy fraiche 5%": {
+   "c": "mejeri",
+   "t": "hytteost",
+   "g": [
+    "mejeri",
+    "fløde",
+    "fraiche"
+   ]
+  },
+  "kohberg favorit rugbrød eller velsmag sandwich": {
+   "c": "bagning",
+   "t": "rugbrød",
+   "g": [
+    "rugbrød",
+    "sandwichbrød",
+    "brød"
+   ]
+  },
+  "rexona deospray eller roll-on": {
+   "c": "husholdning",
+   "t": "deodorant",
+   "g": [
+    "husholdning"
+   ]
+  },
+  "flæskesteg af dansk gris": {
+   "c": "koed",
+   "t": "flæskesteg",
+   "g": [
+    "flæskesteg",
+    "svinekød",
+    "fersk kød",
+    "grisekød"
+   ]
+  },
+  "barkholt skrabeæg": {
+   "c": "mejeri",
+   "t": "æg",
+   "g": [
+    "æg"
+   ]
+  },
+  "tulip leverpostej": {
+   "c": "koed",
+   "t": "leverpostej",
+   "g": [
+    "leverpostej",
+    "pålæg"
+   ],
+   "x": [
+    "paalaeg"
+   ]
+  },
+  "gestus sild": {
+   "c": "fisk",
+   "t": "sild",
+   "g": [
+    "sild",
+    "fisk",
+    "fiskepålæg"
+   ]
+  },
+  "kims nødder": {
+   "c": "snacks",
+   "t": "nødder",
+   "g": [
+    "nødder",
+    "mandler"
+   ]
+  },
+  "bagels, fladbrød, bao eller hvidløgsbrød": {
+   "c": "frost",
+   "t": "brød",
+   "g": [
+    "brød",
+    "frostvarer"
+   ]
+  },
+  "aarstiderne danske økologiske tricolore kartofler": {
+   "c": "groent",
+   "t": "kartofler",
+   "g": [
+    "kartofler",
+    "økologisk"
+   ]
+  },
+  "grøn balance øllingegaard økologisk yoghurt": {
+   "c": "mejeri",
+   "t": "yoghurt",
+   "g": [
+    "yoghurt",
+    "mejeri",
+    "økologisk"
+   ]
+  },
+  "klovborg skiveost": {
+   "c": "mejeri",
+   "t": "skiveost",
+   "g": [
+    "ost",
+    "skiveost",
+    "gul ost",
+    "pålæg"
+   ],
+   "x": [
+    "paalaeg"
+   ]
+  },
+  "grøn balance økologiske blåbær": {
+   "c": "groent",
+   "t": "blåbær",
+   "g": [
+    "økologisk"
+   ]
+  },
+  "rahbek indbagt fisk eller rejer": {
+   "c": "frost",
+   "t": "paneret fisk",
+   "g": [
+    "fiskefilet",
+    "rejer",
+    "skaldyr",
+    "frostvarer"
+   ]
+  },
+  "mini stokke med ophæng, giant jule smarties, julemandens ben skum eller icekonfekt": {
+   "c": "snacks",
+   "t": "juleslik",
+   "g": [
+    "slik",
+    "chokolade"
+   ]
+  },
+  "aarstiderne dansk økologisk grønkål": {
+   "c": "groent",
+   "t": "grønkål",
+   "g": [
+    "grøntsager",
+    "økologisk"
+   ]
+  },
+  "ajax, klorin, vel regular 2-pak eller pink stuff rengøring": {
+   "c": "husholdning",
+   "t": "rengøringsmiddel",
+   "g": [
+    "rengøring",
+    "rengøringsmiddel",
+    "opvaskemiddel"
+   ]
+  },
+  "rynkeby 16-serien": {
+   "c": "drikke",
+   "t": "juice",
+   "g": [
+    "juice"
+   ]
+  },
+  "panda licorice": {
+   "c": "snacks",
+   "t": "lakrids",
+   "g": [
+    "slik",
+    "søde sager"
+   ]
+  },
+  "grøn balance økologisk svampemix": {
+   "c": "groent",
+   "t": "svampe",
+   "g": [
+    "grøntsager",
+    "økologisk"
+   ]
+  },
+  "findus fish & crisp eller wingfood crispy chicken": {
+   "c": "frost",
+   "t": "kyllingenuggets",
+   "g": [
+    "kylling",
+    "fiskefilet",
+    "paneret fisk",
+    "frostvarer"
+   ]
+  },
+  "lotus toiletpapir eller køkkenruller": {
+   "c": "husholdning",
+   "t": "toiletpapir",
+   "g": [
+    "toiletpapir",
+    "husholdning"
+   ]
+  },
+  "grøn balance økologiske æbleskiver": {
+   "c": "frost",
+   "t": "æbleskiver",
+   "g": [
+    "æbler",
+    "frostvarer"
+   ]
+  },
+  "sydeuropæisk charcuteri eller gestus pizzabunde": {
+   "c": "koed",
+   "t": "charcuteri",
+   "g": [
+    "pålæg",
+    "grisekød"
+   ],
+   "x": [
+    "paalaeg"
+   ]
+  },
+  "toms snebolde eller marcipanhjerter": {
+   "c": "snacks",
+   "t": "marcipanhjerte",
+   "g": [
+    "marcipan",
+    "chokolade",
+    "konfekt"
+   ]
+  },
+  "patak, go-tan eller blue dragon sauce": {
+   "c": "kolonial",
+   "t": "sauce",
+   "g": [
+    "sauce",
+    "sojasauce",
+    "asiatiske varer"
+   ]
+  },
+  "holmens brændte mandler eller pez dispenser": {
+   "c": "snacks",
+   "t": "brændte mandler",
+   "g": [
+    "mandler",
+    "nødder",
+    "slik"
+   ]
+  },
+  "aarstiderne økologiske æbler": {
+   "c": "groent",
+   "t": "æbler",
+   "g": [
+    "æbler",
+    "økologisk"
+   ]
+  },
+  "omhu blommer": {
+   "c": "groent",
+   "t": "blomme"
+  },
+  "jacobsen, grimbergen eller 1664 blanc": {
+   "c": "drikke",
+   "t": "øl",
+   "g": [
+    "øl",
+    "pilsner",
+    "alkohol"
+   ]
+  },
+  "nestlé morgenmad": {
+   "c": "kolonial",
+   "t": "morgenmadsprodukt",
+   "g": [
+    "morgenmad",
+    "morgenmadsprodukt"
+   ]
+  },
+  "graasten remoulade eller miracle whip": {
+   "c": "kolonial",
+   "t": "remoulade",
+   "g": [
+    "remoulade",
+    "mayonnaise",
+    "sauce"
+   ]
+  },
+  "paulúns granola, fras, marvel chocolate stars eller guldkorn": {
+   "c": "kolonial",
+   "t": "granola",
+   "g": [
+    "morgenmad",
+    "morgenmadsprodukt",
+    "chokolade"
+   ]
+  },
+  "k-salat pålægssalat eller sauce": {
+   "c": "kolonial",
+   "t": "pålægssalat",
+   "g": [
+    "pålægssalat",
+    "sauce"
+   ]
+  },
+  "sun-maid rosiner": {
+   "c": "kolonial",
+   "t": "rosiner",
+   "g": [
+    "dadler",
+    "morgenmad"
+   ]
+  },
+  "touch of taste fond": {
+   "c": "kolonial",
+   "t": "fond",
+   "g": [
+    "sauce",
+    "madlavning"
+   ]
+  },
+  "aarstiderne økologiske croissants, thebirkes eller kanelsnurrer": {
+   "c": "frost",
+   "t": "croissant",
+   "g": [
+    "brød",
+    "kage",
+    "kanelsnegl",
+    "frostvarer"
+   ]
+  },
+  "crispy kylling": {
+   "c": "frost",
+   "t": "kyllingenuggets",
+   "g": [
+    "kylling",
+    "kyllingebryst",
+    "kyllingekød",
+    "frostvarer"
+   ]
+  },
+  "carte d’or eller frisko favorites is": {
+   "c": "frost",
+   "t": "flødeis",
+   "g": [
+    "is",
+    "flødeis",
+    "frostvarer"
+   ]
+  },
+  "steff houlberg maxi eller tulip middagsretter": {
+   "c": "frost",
+   "t": "færdigret",
+   "g": [
+    "færdigret",
+    "frostvarer"
+   ],
+   "x": [
+    "faerdigret"
+   ]
+  },
+  "pastariget dansk manitoba boller med hørfrø": {
+   "c": "bagning",
+   "t": "boller",
+   "g": [
+    "brød"
+   ]
+  },
+  "beauvais middagsretter": {
+   "c": "kolonial",
+   "t": "færdigret",
+   "g": [
+    "færdigret"
+   ],
+   "x": [
+    "faerdigret"
+   ]
+  },
+  "gøl pølser": {
+   "c": "koed",
+   "t": "pølser",
+   "g": [
+    "pølser",
+    "svinekød",
+    "grisekød"
+   ]
+  },
+  "burgerboost af dansk oksekød": {
+   "c": "koed",
+   "t": "bøf",
+   "g": [
+    "bøf",
+    "burger",
+    "hakket oksekød",
+    "oksekød"
+   ]
+  },
+  "bki, karat eller peter larsen formalet kaffe": {
+   "c": "drikke",
+   "t": "formalet kaffe",
+   "g": [
+    "kaffe",
+    "kaffepulver",
+    "formalet kaffe"
+   ]
+  },
+  "merrild crema instant kaffe": {
+   "c": "drikke",
+   "t": "instant kaffe",
+   "g": [
+    "kaffe",
+    "instant kaffe"
+   ]
+  },
+  "skaftkoteletter af dansk gris": {
+   "c": "koed",
+   "t": "koteletter",
+   "g": [
+    "koteletter",
+    "svinekød",
+    "grisekød",
+    "fersk kød"
+   ]
+  },
+  "deli spread hummus, tzatziki eller dip": {
+   "c": "kolonial",
+   "t": "hummus",
+   "g": [
+    "hummus"
+   ]
+  },
+  "tilkøb risalamande": {
+   "c": "menu",
+   "t": "risalamande",
+   "g": [
+    "dessert",
+    "julemad",
+    "menu"
+   ]
+  },
+  "kinder æg maxi eller celebration": {
+   "c": "snacks",
+   "t": "chokoladeæg",
+   "g": [
+    "chokolade",
+    "chokoladebar",
+    "slik"
+   ]
+  },
+  "stunt bros eller kamona bay sauvignon blanc": {
+   "c": "vin",
+   "t": "hvidvin",
+   "g": [
+    "hvidvin",
+    "australsk vin"
+   ]
+  },
+  "rodalon eller vanish": {
+   "c": "husholdning",
+   "t": "vaskemiddel",
+   "g": [
+    "vaskemiddel",
+    "tøjvask",
+    "rengøring"
+   ]
+  },
+  "youcook færdigretter": {
+   "c": "kolonial",
+   "t": "færdigret",
+   "g": [
+    "færdigret"
+   ],
+   "x": [
+    "faerdigret"
+   ]
+  },
+  "himmerland hele lår uden rygben af dansk kylling": {
+   "c": "koed",
+   "t": "kyllingelår",
+   "g": [
+    "kylling",
+    "kyllingelår",
+    "fjerkræ",
+    "fersk kød"
+   ]
+  },
+  "økologisk tofterup": {
+   "c": "vin",
+   "t": "vin",
+   "g": [
+    "vin",
+    "spansk vin",
+    "rosévin",
+    "hvidvin",
+    "rødvin"
+   ]
+  },
+  "himmerland inderfilet af dansk kylling": {
+   "c": "koed",
+   "t": "kyllingebryst",
+   "g": [
+    "kylling",
+    "kyllingebryst",
+    "fjerkræ",
+    "fersk kød"
+   ]
+  },
+  "them skæreost": {
+   "c": "mejeri",
+   "t": "skæreost",
+   "g": [
+    "ost",
+    "skæreost",
+    "gul ost",
+    "pålæg"
+   ],
+   "x": [
+    "paalaeg"
+   ]
+  },
+  "frikadeller eller skinke med flødekartofler": {
+   "c": "koed",
+   "t": "frikadeller",
+   "g": [
+    "frikadeller",
+    "svinekød",
+    "færdigret"
+   ],
+   "x": [
+    "faerdigret"
+   ]
+  },
+  "omhu færøsk laks eller håndpillede rejer": {
+   "c": "fisk",
+   "t": "laks",
+   "g": [
+    "laks",
+    "laksefilet",
+    "rejer",
+    "skaldyr"
+   ]
+  },
+  "neophos additiver": {
+   "c": "husholdning",
+   "t": "opvaskemiddel",
+   "g": [
+    "opvaskemaskine",
+    "opvasketabs"
+   ]
+  },
+  "perfect fit eller sheba kattemad, perfect fit eller cesar hundemad": {
+   "c": "husholdning",
+   "t": "dyrefoder",
+   "g": [
+    "kat",
+    "dyrefoder"
+   ]
+  },
+  "mørbrad af dansk frilandsgris": {
+   "c": "koed",
+   "t": "mørbrad",
+   "g": [
+    "svinekød",
+    "grisekød",
+    "fersk kød",
+    "økologisk kød"
+   ]
+  },
+  "økologisk cono sur": {
+   "c": "vin",
+   "t": "rødvin",
+   "g": [
+    "rødvin",
+    "vin"
+   ]
+  },
+  "ebrius governo all’uso toscano rosso eller ebrius verona chardonnay": {
+   "c": "vin",
+   "t": "rødvin",
+   "g": [
+    "rødvin",
+    "italiensk vin",
+    "hvidvin",
+    "chardonnay"
+   ]
+  },
+  "ole’s gård økologisk pizza": {
+   "c": "frost",
+   "t": "pizza",
+   "g": [
+    "pizza",
+    "frostvarer"
+   ]
+  },
+  "røget hamburgerryg af dansk gris": {
+   "c": "koed",
+   "t": "hamburgerryg",
+   "g": [
+    "pålæg",
+    "svinekød",
+    "grisekød"
+   ],
+   "x": [
+    "paalaeg"
+   ]
+  },
+  "wienerschnitzler af dansk kalv": {
+   "c": "koed",
+   "t": "wienerschnitzel",
+   "g": [
+    "fersk kød"
+   ]
+  },
+  "cockburn’s special reserve portvin eller cockburn’s port o provador reserva tawny": {
+   "c": "vin",
+   "t": "portvin",
+   "g": [
+    "portvin",
+    "dessertvin",
+    "alkohol"
+   ]
+  },
+  "gestus dansk kyllingebrystfilet": {
+   "c": "koed",
+   "t": "kyllingebryst",
+   "g": [
+    "kylling",
+    "kyllingebryst",
+    "fjerkræ",
+    "fersk kød"
+   ]
+  },
+  "freygaard tykstegsbøffer eller tykstegsmedaljoner": {
+   "c": "koed",
+   "t": "tykstegsbøf",
+   "g": [
+    "bøf",
+    "oksekød",
+    "entrecote",
+    "fersk kød"
+   ]
+  },
+  "økologisk allram": {
+   "c": "vin",
+   "t": "hvidvin",
+   "g": [
+    "hvidvin"
+   ]
+  },
+  "omo flydende vask": {
+   "c": "husholdning",
+   "t": "vaskemiddel",
+   "g": [
+    "vaskemiddel",
+    "tøjvask"
+   ]
+  },
+  "lavazza hele bønner": {
+   "c": "drikke",
+   "t": "kaffebønner",
+   "g": [
+    "kaffe",
+    "kaffebønner",
+    "hele bønner"
+   ]
+  },
+  "ferrero collection": {
+   "c": "snacks",
+   "t": "chokolade",
+   "g": [
+    "chokolade",
+    "konfekt"
+   ]
+  },
+  "coca-cola, tuborg squash eller fanta": {
+   "c": "drikke",
+   "t": "sodavand",
+   "g": [
+    "sodavand",
+    "cola",
+    "læskedrik"
+   ]
+  },
+  "porto valdouro lbv port, ramón bilbao rioja reserva eller m.de ligny bourgogne chardonnay": {
+   "c": "vin",
+   "t": "vin",
+   "g": [
+    "portvin",
+    "rødvin",
+    "hvidvin",
+    "chardonnay"
+   ]
+  },
+  "marineret kyllingefilet med röstikartofler eller kyllingespyd med flødekartofler": {
+   "c": "koed",
+   "t": "kyllingefilet",
+   "g": [
+    "kylling",
+    "kyllingebryst",
+    "færdigret"
+   ],
+   "x": [
+    "faerdigret"
+   ]
+  },
+  "guigal côtes du rhône": {
+   "c": "vin",
+   "t": "rødvin",
+   "g": [
+    "rødvin",
+    "fransk vin"
+   ]
+  },
+  "lalande de pomerol château tour de bossuet eller mâcon-chardonnay": {
+   "c": "vin",
+   "t": "vin",
+   "g": [
+    "rødvin",
+    "fransk vin",
+    "hvidvin",
+    "chardonnay"
+   ]
+  },
+  "himmerland hel kylling eller brystfilet af dansk kylling": {
+   "c": "koed",
+   "t": "kylling",
+   "g": [
+    "kyllingebryst",
+    "kyllingekød",
+    "hel kylling",
+    "fjerkræ"
+   ]
+  },
+  "børnemenu": {
+   "c": "menu",
+   "t": "børnemenu",
+   "g": [
+    "børnemenu",
+    "festmenu",
+    "menu"
+   ]
+  },
+  "aalborg akvavit": {
+   "c": "drikke",
+   "t": "akvavit",
+   "g": [
+    "spiritus",
+    "alkohol"
+   ]
+  },
+  "canadian club whisky eller stoli vodka": {
+   "c": "drikke",
+   "t": "whisky",
+   "g": [
+    "whisky",
+    "spiritus",
+    "alkohol"
+   ]
+  },
+  "oksekød bearnaise, kyllingebryst med mozzarella og flødekartofler eller mørbrad af gris og kartoffeltårne": {
+   "c": "koed",
+   "t": "færdigret",
+   "g": [
+    "oksekød",
+    "kyllingebryst",
+    "svinekød",
+    "færdigret"
+   ],
+   "x": [
+    "faerdigret"
+   ]
+  },
+  "antipasti party": {
+   "c": "koed",
+   "t": "antipasti",
+   "g": [
+    "tapas",
+    "specialiteter",
+    "pålæg"
+   ],
+   "x": [
+    "paalaeg"
+   ]
+  },
+  "frokostplatte eller luksusstjerneskud": {
+   "c": "menu",
+   "t": "frokostplatte",
+   "g": [
+    "menu",
+    "festmad",
+    "smørrebrød",
+    "småretter"
+   ]
+  },
+  "il sincero rosso eller eastern point select rød- eller hvidvin": {
+   "c": "vin",
+   "t": "rødvin",
+   "g": [
+    "rødvin",
+    "hvidvin",
+    "bag-in-box",
+    "australsk vin",
+    "italiensk vin"
+   ]
+  },
+  "villa boheme white eller red": {
+   "c": "vin",
+   "t": "vin",
+   "g": [
+    "rødvin",
+    "hvidvin",
+    "bag-in-box",
+    "australsk vin"
+   ]
+  },
+  "holten grove": {
+   "c": "vin",
+   "t": "rødvin",
+   "g": [
+    "rødvin",
+    "hvidvin",
+    "vin"
+   ]
+  },
+  "tuborg eller carlsberg": {
+   "c": "drikke",
+   "t": "øl",
+   "g": [
+    "øl",
+    "pilsner",
+    "classic"
+   ]
+  },
+  "anton landand eller julius andebryststeg": {
+   "c": "frost",
+   "t": "andebryst",
+   "g": [
+    "andemenu",
+    "hel and",
+    "frostvarer"
+   ]
+  },
+  "château cangruey médoc cru bourgeois 2016, peter weinbach riesling medium dry, crudo white eller apassionata appassimento": {
+   "c": "vin",
+   "t": "vin",
+   "g": [
+    "rødvin",
+    "hvidvin",
+    "fransk vin"
+   ]
+  },
+  "fernet-branca eller branca menta": {
+   "c": "drikke",
+   "t": "spiritus",
+   "g": [
+    "spiritus",
+    "alkohol"
+   ]
+  },
+  "nugan third generation shiraz eller chardonnay": {
+   "c": "vin",
+   "t": "rødvin",
+   "g": [
+    "rødvin",
+    "hvidvin",
+    "bag-in-box",
+    "australsk vin"
+   ]
+  },
+  "grøn tuborg, tuborg classic eller carlsberg pilsner": {
+   "c": "drikke",
+   "t": "øl",
+   "g": [
+    "øl",
+    "pilsner",
+    "classic",
+    "ølpakke"
+   ]
+  },
+  "casalforte collezione rosso veneto eller roman graeff riesling classic pfalz": {
+   "c": "vin",
+   "t": "rødvin",
+   "g": [
+    "rødvin",
+    "hvidvin",
+    "bag-in-box",
+    "italiensk vin"
+   ]
+  },
+  "entrecote": {
+   "c": "koed",
+   "t": "entrecote",
+   "g": [
+    "entrecote",
+    "oksekød",
+    "bøf",
+    "fersk kød"
+   ]
+  },
+  "oksemedaljon med bacon eller okseroast med kryddersmør og kartoffeltårne": {
+   "c": "koed",
+   "t": "færdigret",
+   "g": [
+    "oksekød",
+    "bacon",
+    "færdigret"
+   ],
+   "x": [
+    "faerdigret"
+   ]
+  },
+  "jack daniel’s eller diplomatico mantuano rom": {
+   "c": "drikke",
+   "t": "rom",
+   "g": [
+    "rom",
+    "whisky",
+    "spiritus",
+    "alkohol"
+   ]
+  },
+  "chivas regal 12 års whisky eller havana club añejo 7 años rom": {
+   "c": "drikke",
+   "t": "whisky",
+   "g": [
+    "whisky",
+    "rom",
+    "spiritus",
+    "alkohol"
+   ]
+  },
+  "terra twins california pinot noir eller chardonnay, ramón bilbao rioja crianza eller le preare ripasso classico superiore": {
+   "c": "vin",
+   "t": "rødvin",
+   "g": [
+    "rødvin",
+    "hvidvin",
+    "italiensk vin",
+    "spansk vin"
+   ]
+  },
+  "glenfiddich single malt scotch whisky eller monkey shoulder whisky": {
+   "c": "drikke",
+   "t": "whisky",
+   "g": [
+    "whisky",
+    "spiritus",
+    "alkohol"
+   ]
   }
  }
 }

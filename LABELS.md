@@ -20,7 +20,7 @@ in GitHub Desktop. Everything below is the same routine done by hand with comman
    ```
 
    At the end it writes the prompt files and tells you how many products have no label yet:
-   `labeling\prompt_1.txt`, `prompt_2.txt` and so on (600 products each).
+   `labeling\prompt_1.txt`, `prompt_2.txt` and so on (300 products each, or 320 when 300 would leave a last file with fewer than 50).
 
 2. **Ask the AI.** Open `labeling\prompt_1.txt`, copy everything, and paste it into ChatGPT (or another chat).
    It answers with one CSV row per product, in a code block, like `12,koed,hakket oksekød,kød,oksekød,hakket`.

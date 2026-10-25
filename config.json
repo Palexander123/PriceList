@@ -11,7 +11,8 @@
     "Føtex": { "label": "Føtex", "color": "#1B4F9C", "dealer_id": null, "match_names": ["føtex", "fotex", "foetex"] },
     "SuperBrugsen": { "label": "SuperBrugsen", "color": "#C31314", "dealer_id": "0b1e8" },
     "365discount": { "label": "365discount", "color": "#01AA46", "dealer_id": "DWZE1w" },
-    "Normal": { "label": "Normal", "color": "#E2001A", "dealer_id": "pZEC1r" }
+    "Normal": { "label": "Normal", "color": "#E2001A", "dealer_id": "pZEC1r" },
+    "Meny": { "label": "Meny", "color": "#7A1F2B", "dealer_id": null, "match_names": ["meny"] }
   },
   "salling_zips": ["2800"],
   "salling_brands": ["netto", "foetex"],

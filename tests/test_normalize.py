@@ -58,6 +58,16 @@ class Categories(unittest.TestCase):
         fo.apply_overrides(offers, ov, {"drikke": "consumable"})          # no list: everything stays
         self.assertEqual(offers[0]["tags"], ["sodavand", "læskedrik"])
 
+    def test_durable_things_are_junk(self):
+        from categories import refine
+        for title, cid in [("Induktionskogeplade", "elektronik"), ("AEG ovn", "elektronik"), ("Loftemhætte", "elektronik"),
+                           ("Seng 90x200", "boligting"), ("Knivsæt", "boligting"), ("Donationskort", "boligting"),
+                           ("Pynt", "boligting"), ("Sukkertopgran", "boligting")]:
+            self.assertEqual(categorize(title), cid, title)
+            self.assertEqual(refine("husholdning", "", title), cid, title)   # beats a wrong AI label
+        self.assertEqual(categorize("Kagepynt"), "bagning")
+        self.assertEqual(refine("legetoej", "", "Min første smartphone"), "legetoej")
+
     def test_compound_words(self):
         self.assertEqual(categorize("Svinekotelet med ben"), "koed")
         self.assertEqual(categorize("Hvedemel"), "bagning")

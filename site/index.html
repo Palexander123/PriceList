@@ -44,11 +44,26 @@
   .notice { margin: 12px 0 0; padding: 10px 14px; border-radius: 10px; background: var(--tag); color: var(--tag-ink); font-weight: 600; }
   .notice.warn { background: transparent; border: 1px solid var(--line); color: var(--muted); font-weight: 400; }
 
-  .controls { padding: 10px 0 12px; border-bottom: 1px solid var(--line); }
-  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
-  .row:first-child { margin-top: 0; }
-  .search { flex: 1 1 240px; min-width: 0; padding: 11px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); }
-  .select { padding: 11px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); }
+  /* ---- top bar: search, sort, favourites and basket stay at hand while scrolling */
+  .topbar { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .topbar .wrap { display: flex; gap: 8px; align-items: center; padding-top: 10px; padding-bottom: 10px; }
+  .searchbox { position: relative; flex: 1 1 auto; min-width: 0; }
+  .searchbox svg { position: absolute; left: 12px; top: 50%; width: 18px; height: 18px; transform: translateY(-50%); stroke: var(--muted); fill: none; stroke-width: 2; pointer-events: none; }
+  .search { width: 100%; padding: 11px 14px 11px 38px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); }
+  .select { padding: 8px 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); }
+  .iconbtn { position: relative; display: inline-flex; align-items: center; gap: 6px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); font-weight: 700; cursor: pointer; white-space: nowrap; }
+  .iconbtn[aria-pressed="true"] { background: var(--heart); border-color: var(--heart); color: #fff; }
+  .iconbtn .badge-n { min-width: 22px; padding: 1px 6px; border-radius: 999px; background: var(--ink); color: var(--bg); font-size: .8rem; text-align: center; }
+  .iconbtn .badge-n:empty { display: none; }
+  #basketBtn { background: var(--tag); color: var(--tag-ink); border-color: var(--tag); }
+  #basketBtn .badge-n { background: var(--tag-ink); color: var(--tag); }
+  @media (max-width: 640px) { .iconbtn .lbl { display: none; } .iconbtn { padding: 10px 11px; } }
+
+  /* ---- filters */
+  .filters { padding-top: 14px; padding-bottom: 4px; }
+  .fgroup { display: grid; grid-template-columns: 92px 1fr; gap: 6px 12px; align-items: start; margin-bottom: 12px; }
+  .flabel { padding-top: 8px; font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  @media (max-width: 640px) { .fgroup { grid-template-columns: 1fr; } .flabel { padding-top: 0; } }
 
   .chip { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; white-space: nowrap; font-weight: 600; }
   .chip:hover { border-color: var(--muted); }
@@ -60,13 +75,25 @@
   .chip .n { opacity: .65; font-weight: 500; display: inline-block; min-width: 3ch; text-align: right; font-variant-numeric: tabular-nums; }
   .chip.zero { opacity: .45; }
   .chip.zero[aria-pressed="true"] { opacity: 1; }
-  .toggles { display: flex; flex-wrap: wrap; gap: 8px 22px; }
-  .toggle input:disabled + span { opacity: .55; }
-  .fav-chip[aria-pressed="true"] { background: var(--heart); border-color: var(--heart); color: #fff; }
-  .toggle { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); cursor: pointer; }
-  .toggle input { width: 18px; height: 18px; accent-color: var(--ink); }
+  .chip.small { padding: 5px 11px; font-size: .88rem; }
+  @media (max-width: 520px) { .chip { padding: 7px 11px; font-size: .92rem; gap: 6px; } }
 
-  .count { margin: 16px 0 12px; color: var(--muted); }
+  .more { margin: 0 0 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+  .more summary { cursor: pointer; padding: 10px 14px; font-weight: 700; list-style: none; display: flex; gap: 10px; align-items: center; }
+  .more summary::-webkit-details-marker { display: none; }
+  .more summary::before { content: "▸"; color: var(--muted); transition: transform .15s; }
+  .more[open] summary::before { transform: rotate(90deg); }
+  .more summary .state { color: var(--muted); font-weight: 400; font-size: .9rem; }
+  .toggles { display: flex; flex-direction: column; gap: 10px; padding: 2px 14px 14px; }
+  .toggle { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); cursor: pointer; }
+  .toggle input { width: 18px; height: 18px; accent-color: var(--ink); flex: none; }
+  .toggle input:disabled + span { opacity: .55; }
+  .toggle small { color: var(--muted); }
+
+  .resultbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 6px 0 12px; }
+  .linkbtn { border: 0; background: none; color: var(--focus); font-weight: 700; cursor: pointer; padding: 6px 0; }
+  .linkbtn[hidden] { display: none; }
+  .count { margin: 0; color: var(--muted); }
 
   /* Independent columns: each card is assigned to a column once (in sort order, left
      to right), so every card keeps its natural height with no gaps under short ones.
@@ -105,6 +132,66 @@
   .valid { margin: 8px 0 0; padding-top: 8px; border-top: 1px dashed var(--line); font-size: .82rem; color: var(--muted); display: flex; justify-content: space-between; gap: 8px; }
   .madspild { font-weight: 700; color: var(--save); }
 
+  .card { cursor: pointer; }
+  .card:hover { border-color: var(--muted); }
+  /* basket control: the same height whether it shows "add" or the - 2 + stepper, so cards never change size */
+  .buy { display: flex; align-items: stretch; height: 40px; margin-top: 10px; border-radius: 10px; overflow: hidden; }
+  .buy .add { flex: 1; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); font-weight: 700; cursor: pointer; }
+  .buy .add:hover { border-color: var(--ink); }
+  .buy .qbtn { width: 44px; flex: none; border: 0; background: var(--ink); color: var(--bg); font-size: 1.3rem; font-weight: 700; cursor: pointer; }
+  @media (max-width: 520px) { .grid .buy .ik { display: none; } .grid .buy .qbtn { width: 38px; } }
+  .buy .qty { flex: 1; display: flex; align-items: center; justify-content: center; background: var(--tag); color: var(--tag-ink); font-weight: 800; font-size: .92rem; white-space: nowrap; }
+
+  /* ---- dialogs (product details and basket) */
+  dialog.sheet { border: 0; padding: 0; background: var(--surface); color: var(--ink); border-radius: 16px; width: min(880px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); overflow: auto; box-shadow: 0 20px 60px rgba(0,0,0,.35); }
+  dialog.sheet::backdrop { background: rgba(10,15,20,.55); }
+  .sheet-head { position: sticky; top: 0; z-index: 3; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; background: var(--surface); border-bottom: 1px solid var(--line); }
+  .sheet-head h2 { margin: 0; font-size: 1.2rem; }
+  .close { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--bg); font-size: 1.3rem; line-height: 1; cursor: pointer; }
+  .sheet-body { padding: 16px; }
+  #basket { margin: 0 0 0 auto; height: 100dvh; max-height: 100dvh; width: min(520px, 100vw); border-radius: 16px 0 0 16px; }
+  @media (max-width: 640px) { dialog.sheet, #basket { width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh; margin: 0; border-radius: 0; } }
+
+  .detail { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 20px; }
+  @media (max-width: 640px) { .detail { grid-template-columns: 1fr; } }
+  .detail .pic { border-radius: 12px; border: 1px solid var(--line); }
+  .detail .store-tag { position: static; display: inline-block; margin-bottom: 6px; }
+  .detail h3 { margin: 0 0 6px; font-size: 1.4rem; line-height: 1.2; }
+  .detail .desc-full { margin: 10px 0 0; color: var(--muted); white-space: pre-line; }
+  .facts { display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; margin: 16px 0 0; align-items: start; }
+  .facts dt { color: var(--muted); font-size: .85rem; font-weight: 700; padding-top: 5px; }
+  .facts dd { margin: 0; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .detail .buy { max-width: 320px; }
+  .favbtn { margin-top: 10px; padding: 9px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); font-weight: 700; cursor: pointer; }
+  .favbtn[aria-pressed="true"] { background: var(--heart); border-color: var(--heart); color: #fff; }
+  .similar { margin-top: 22px; }
+  .similar h4, .basket-section h3 { margin: 0 0 8px; font-size: 1rem; }
+  .simrow { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); text-align: left; cursor: pointer; margin-bottom: 6px; }
+  .simrow .price { font-weight: 800; white-space: nowrap; }
+  .muted { color: var(--muted); }
+  .small { font-size: .85rem; }
+
+  .bline { display: grid; grid-template-columns: 56px 1fr; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .bline img, .bline .noimg { width: 56px; height: 56px; object-fit: contain; background: #fff; border-radius: 8px; border: 1px solid var(--line); }
+  .bline .t { font-weight: 700; line-height: 1.25; cursor: pointer; }
+  .bline .meta { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-size: .85rem; color: var(--muted); margin-top: 2px; }
+  .bline .row2 { display: flex; gap: 10px; align-items: center; justify-content: space-between; margin-top: 6px; }
+  .bline .buy { margin: 0; width: 170px; height: 36px; }
+  .bline .sum { font-weight: 800; white-space: nowrap; }
+  .rm { border: 0; background: none; color: var(--muted); text-decoration: underline; cursor: pointer; font-size: .85rem; padding: 4px 0; }
+  .gone { color: var(--heart); font-weight: 700; }
+  .basket-section { margin-top: 22px; }
+  .storecmp { border: 1px solid var(--line); border-radius: 12px; margin-bottom: 8px; background: var(--bg); }
+  .storecmp summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; padding: 10px 12px; }
+  .storecmp summary::-webkit-details-marker { display: none; }
+  .storecmp .tot { font-size: 1.25rem; font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .storecmp.best { border: 2px solid var(--save); }
+  .storecmp .best-lbl { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 6px; background: var(--save-bg); color: var(--save); font-size: .8rem; font-weight: 800; }
+  .storecmp ul { margin: 0; padding: 0 12px 10px 34px; font-size: .88rem; }
+  .storecmp li { margin: 3px 0; }
+  .storecmp .dot { width: 14px; height: 14px; border-radius: 50%; }
+  .note { margin-top: 14px; font-size: .85rem; color: var(--muted); }
+
   .empty { flex: 1; text-align: center; padding: 56px 16px; color: var(--muted); }
   .empty h2 { margin: 0 0 6px; color: var(--ink); font-size: 1.3rem; }
   .btn { margin-top: 14px; padding: 10px 18px; border-radius: 10px; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); font-weight: 700; cursor: pointer; }
@@ -123,55 +210,76 @@
   <div id="notices"></div>
 </header>
 
-<div class="controls">
+<div class="topbar">
   <div class="wrap">
-    <div class="row">
+    <label class="searchbox">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input class="search" id="q" type="search" placeholder="Søg fx sodavand, ost, frugt, rugbrød eller kaffe" aria-label="Søg i tilbud" autocomplete="off">
-      <select class="select" id="sort" aria-label="Sortér efter">
-        <option value="discount">Største rabat</option>
-        <option value="price">Laveste pris</option>
-        <option value="unit">Laveste kilopris</option>
-        <option value="ending">Slutter snarest</option>
-      </select>
-    </div>
-    <div class="row"><div class="chips" id="stores" role="group" aria-label="Butikker"></div></div>
-    <div class="row"><div class="chips" id="cats" role="group" aria-label="Kategorier"></div></div>
-    <div class="row">
-      <button class="chip fav-chip" id="favOnly" aria-pressed="false">♥ Mine favoritter <span id="favCount"></span></button>
-      <div class="toggles">
-        <label class="toggle"><input type="checkbox" id="hideJunk"><span>Skjul skrammel (legetøj, elektronik, menuer, tøj og bolig)</span></label>
-        <label class="toggle"><input type="checkbox" id="consumables"><span>Kun forbrugsvarer (mad, drikke og husholdning)</span></label>
-        <label class="toggle"><input type="checkbox" id="upcoming"><span>Vis også kommende tilbud</span></label>
-        <label class="toggle"><input type="checkbox" id="onlyJunk"><span>Vis kun skrammel (til fejlfinding)</span></label>
-      </div>
-    </div>
+    </label>
+    <button class="iconbtn" id="favOnly" aria-pressed="false" title="Vis kun mine favoritter">♥ <span class="lbl">Favoritter</span> <span class="badge-n" id="favCount"></span></button>
+    <button class="iconbtn" id="basketBtn" title="Indkøbskurv">🛒 <span class="lbl">Kurv</span> <span class="badge-n" id="basketCount"></span></button>
   </div>
 </div>
 
+<section class="wrap filters" aria-label="Filtre">
+  <div class="fgroup"><div class="flabel">Butikker</div><div class="chips" id="stores" role="group" aria-label="Butikker"></div></div>
+  <div class="fgroup"><div class="flabel">Kategorier</div><div class="chips" id="cats" role="group" aria-label="Kategorier"></div></div>
+  <details class="more" id="more">
+    <summary>Visning <span class="state" id="moreState"></span></summary>
+    <div class="toggles">
+      <label class="toggle"><input type="checkbox" id="hideJunk"><span>Skjul skrammel <small>(legetøj, elektronik, menuer, tøj og bolig)</small></span></label>
+      <label class="toggle"><input type="checkbox" id="consumables"><span>Kun forbrugsvarer <small>(mad, drikke og husholdning)</small></span></label>
+      <label class="toggle"><input type="checkbox" id="upcoming"><span>Vis også kommende tilbud</span></label>
+      <label class="toggle"><input type="checkbox" id="onlyJunk"><span>Vis kun skrammel <small>(til fejlfinding)</small></span></label>
+    </div>
+  </details>
+</section>
+
 <main class="wrap">
-  <p class="count" id="count" aria-live="polite"></p>
+  <div class="resultbar"><p class="count"><span id="count" aria-live="polite"></span> <button class="linkbtn" id="clearAll" hidden>· Nulstil filtre</button></p>
+    <select class="select" id="sort" aria-label="Sortér efter">
+      <option value="discount">Største rabat</option>
+      <option value="price">Laveste pris</option>
+      <option value="unit">Laveste kilopris</option>
+      <option value="ending">Slutter snarest</option>
+    </select>
+  </div>
   <div class="grid" id="grid"></div>
 </main>
 
+<dialog class="sheet" id="detail" aria-labelledby="detailTitle">
+  <div class="sheet-head"><h2 id="detailTitle">Vare</h2><button class="close" data-close aria-label="Luk">×</button></div>
+  <div class="sheet-body" id="detailBody"></div>
+</dialog>
+
+<dialog class="sheet" id="basket" aria-labelledby="basketTitle">
+  <div class="sheet-head"><h2 id="basketTitle">Indkøbskurv</h2><button class="close" data-close aria-label="Luk">×</button></div>
+  <div class="sheet-body" id="basketBody"></div>
+</dialog>
+
 <footer class="wrap">
   <p>Priserne kommer fra butikkernes ugeaviser og fra Salling Groups madspild-oversigt. Tjek altid prisen i butikken, da tilbud kan variere fra butik til butik.</p>
-  <p>Favoriter gemmes kun i denne browser. Rydder du browserens data, forsvinder de.</p>
+  <p>Favoritter og indkøbskurv gemmes kun i denne browser. Rydder du browserens data, forsvinder de.</p>
 </footer>
 
 <script>
 (() => {
   const FAV_KEY = "tilbud:favoritter:v1";
-  const $ = (id) => document.getElementById(id);
+  const BASKET_KEY = "tilbud:kurv:v1";
   const PREF_KEY = "tilbud:filtre:v1";
+  const $ = (id) => document.getElementById(id);
   const state = { data: null, q: "", sort: "discount", stores: new Set(), cats: new Set(), catKey: "", favOnly: false, upcoming: false,
-                  hideJunk: true, consumables: false, onlyJunk: false, groups: {}, catWords: {}, favs: {} };
-  const loadPrefs = () => { try { return JSON.parse(localStorage.getItem(PREF_KEY)) || {}; } catch { return {}; } };
-  const savePrefs = () => { try { localStorage.setItem(PREF_KEY, JSON.stringify({ hideJunk: state.hideJunk, consumables: state.consumables })); } catch {} };
+                  hideJunk: true, consumables: false, onlyJunk: false, groups: {}, catWords: {}, catById: {}, favs: {},
+                  basket: {}, byId: new Map(), chainInfo: {}, detailId: null };
+  const store = {
+    get(key, fallback) { try { return JSON.parse(localStorage.getItem(key)) || fallback; } catch { return fallback; } },
+    set(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch {} },
+  };
+  const savePrefs = () => store.set(PREF_KEY, { hideJunk: state.hideJunk, consumables: state.consumables });
 
   // ---- favourites (per product name, so they survive the weekly leaflet change)
   const favKey = (title) => title.toLowerCase().replace(/\s+/g, " ").trim();
-  const loadFavs = () => { try { return JSON.parse(localStorage.getItem(FAV_KEY)) || {}; } catch { return {}; } };
-  const saveFavs = () => { try { localStorage.setItem(FAV_KEY, JSON.stringify(state.favs)); } catch {} };
+  const saveFavs = () => store.set(FAV_KEY, state.favs);
 
   // ---- formatting
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -181,33 +289,36 @@
     const n = parseInt(hex.slice(1), 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255;
     return (0.299 * r + 0.587 * g + 0.114 * b) > 160 ? "#15202b" : "#ffffff";
   };
+  const chainStyle = (chain) => { const c = state.chainInfo[chain] || { color: "#555555" }; return `--c:${c.color};--cink:${inkFor(c.color)}`; };
   function priceTag(p) {
     const whole = Math.floor(p + 1e-9), ore = Math.round((p - whole) * 100);
     return `<span class="tag" aria-label="${money(p)} kroner"><span class="kr">${whole}</span>${ore ? `<span class="ore">${String(ore).padStart(2, "0")}</span>` : `<span class="dash">,-</span>`}</span>`;
   }
+  const isUpcoming = (o) => o.valid_from && Date.parse(o.valid_from) > Date.now();
+  const unitText = (o) => o.unit_price ? `${money(o.unit_price.value)} kr/${o.unit_price.per === "l" ? "l" : "kg"}` : "";
 
   // ---- filtering and sorting
   // A product has one normal category and may also belong to "extra" ones (Færdigretter, Pålæg).
   const memberOf = (o) => (o.extra && o.extra.length ? [o.category, ...o.extra] : [o.category]);
   // skipCat: ignore the selected category, used to count how many offers each category chip would show
   function visible(skipCat) {
-    const now = Date.now(), q = state.q.trim().toLowerCase();
+    const q = state.q.trim().toLowerCase();
     const tokens = q ? q.split(/\s+/) : [];
-    let list = state.data.offers.filter((o) => {
+    const list = state.data.offers.filter((o) => {
       const group = state.groups[o.category] || "other";
       if (state.onlyJunk) { if (group !== "junk") return false; }   // debugging view
       else {
         if (state.consumables && group !== "consumable") return false;
         if (state.hideJunk && group === "junk") return false;
       }
-      if (!state.upcoming && o.valid_from && Date.parse(o.valid_from) > now) return false;
+      if (!state.upcoming && isUpcoming(o)) return false;
       if (state.stores.size && !state.stores.has(o.chain)) return false;
       if (!skipCat && state.cats.size && !memberOf(o).some((c) => state.cats.has(c))) return false;
       if (state.favOnly && !state.favs[favKey(o.title)]) return false;
       if (tokens.length) {
         // Words, not letters: "øl" must not find "pølse". A search term matches a word that starts
         // with it ("smør" finds "smørrebrød"). The words searched are the title, the small print,
-        // the product type, the AI's tags ("sodavand", "frugt", ...) and the category's name,
+        // the product type, the AI's tags ("sodavand", "frugt", ...) and the category names,
         // so a general word finds the whole group. Every term has to match.
         o._words = o._words || (o.title + " " + (o.description || "") + " " + (o.type || "") + " " +
           (o.tags || []).join(" ") + " " + memberOf(o).map((c) => state.catWords[c] || "").join(" ")).toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean);
@@ -225,15 +336,184 @@
     return list.sort(by);
   }
 
-  // ---- rendering
-  function cardHtml(o, chains) {
-    const c = chains[o.chain] || { color: "#555" };
+  // ---- basket
+  // A line remembers a snapshot of the offer, so it still shows if the offer disappears next week.
+  const basketQty = (id) => (state.basket[id] ? state.basket[id].qty : 0);
+  const basketCount = () => Object.values(state.basket).reduce((a, l) => a + l.qty, 0);
+  function setQty(id, qty) {
+    const o = state.byId.get(id), line = state.basket[id];
+    if (qty <= 0) delete state.basket[id];
+    else if (line) line.qty = qty;
+    else if (o) state.basket[id] = { id, qty, title: o.title, chain: o.chain, price: o.price, type: o.type || "", image: o.image || "", key: favKey(o.title) };
+    store.set(BASKET_KEY, state.basket);
+    document.querySelectorAll(`.buy[data-id="${CSS.escape(id)}"]`).forEach((el) => { el.innerHTML = buyInner(id); });
+    $("basketCount").textContent = basketCount() || "";
+    if ($("basket").open) renderBasket();
+  }
+  const buyInner = (id) => {
+    const q = basketQty(id);
+    return q ? `<button class="qbtn dec" aria-label="Fjern én">−</button><span class="qty">${q}<span class="ik">&nbsp;i kurven</span></span><button class="qbtn inc" aria-label="Læg én mere i kurven">+</button>`
+             : `<button class="add">＋ Læg i kurv</button>`;
+  };
+  const buyHtml = (id) => `<div class="buy" data-id="${esc(id)}">${buyInner(id)}</div>`;
+
+  // Which offer in a given store matches a product? 1) the very same offer, 2) the same product name,
+  // 3) the same kind of product (the AI's "type", e.g. "hakket oksekød"). The cheapest one wins.
+  function buildIndex() {
+    state.index = {};
+    for (const o of state.data.offers) {
+      const ix = state.index[o.chain] || (state.index[o.chain] = { key: new Map(), type: new Map() });
+      const k = favKey(o.title);
+      ix.key.has(k) ? ix.key.get(k).push(o) : ix.key.set(k, [o]);
+      if (o.type) ix.type.has(o.type) ? ix.type.get(o.type).push(o) : ix.type.set(o.type, [o]);
+    }
+  }
+  const cheapest = (list) => {
+    const live = (list || []).filter((o) => !isUpcoming(o));
+    return live.length ? live.reduce((a, b) => (b.price < a.price ? b : a)) : null;
+  };
+  function matchIn(chain, item) {
+    const ix = state.index[chain];
+    if (!ix) return null;
+    if (item.id) { const o = state.byId.get(item.id); if (o && o.chain === chain && !isUpcoming(o)) return { o, how: "same" }; }
+    const byName = cheapest(ix.key.get(item.key));
+    if (byName) return { o: byName, how: "name" };
+    const byType = item.type ? cheapest(ix.type.get(item.type)) : null;
+    return byType ? { o: byType, how: "type" } : null;
+  }
+
+  function renderBasket() {
+    const lines = Object.values(state.basket);
+    const body = $("basketBody");
+    if (!lines.length) {
+      body.innerHTML = `<div class="empty"><h2>Kurven er tom</h2><p>Tryk «Læg i kurv» på et tilbud. Så regner siden ud, hvad kurven koster i hver butik.</p></div>`;
+      return;
+    }
+    let chosen = 0;
+    const rows = lines.map((l) => {
+      const o = state.byId.get(l.id);
+      const price = o ? o.price : l.price;
+      chosen += price * l.qty;
+      const img = (o && o.image) || l.image;
+      return `<div class="bline">
+        ${img ? `<img src="${esc(img)}" alt="" loading="lazy">` : `<span class="noimg"></span>`}
+        <div>
+          <div class="t" data-open="${esc(l.id)}">${esc(l.title)}</div>
+          <div class="meta"><span class="chip small store" style="${chainStyle(l.chain)}" aria-pressed="true">${esc(l.chain)}</span>
+            <span>${money(price)} kr/stk</span>${o ? "" : `<span class="gone">Ikke længere på tilbud</span>`}</div>
+          <div class="row2">${buyHtml(l.id)}<span class="sum">${money(price * l.qty)} kr</span></div>
+          <button class="rm" data-rm="${esc(l.id)}">Fjern</button>
+        </div>
+      </div>`;
+    }).join("");
+
+    // the same basket priced in every store
+    const n = lines.reduce((a, l) => a + l.qty, 0);
+    const totals = state.data.chains.map((c) => {
+      let total = 0, found = 0;
+      const items = lines.map((l) => {
+        const m = matchIn(c.label, l);
+        if (!m) return `<li class="muted">${esc(l.title)}: ikke på tilbud her</li>`;
+        total += m.o.price * l.qty; found += l.qty;
+        const how = m.how === "same" ? "" : m.how === "name" ? " <span class=\"muted\">(samme vare)</span>" : ` <span class="muted">(tilsvarende: ${esc(m.o.title)})</span>`;
+        return `<li>${l.qty} × ${esc(m.how === "type" ? l.title : m.o.title)}${how}: <b>${money(m.o.price * l.qty)} kr</b></li>`;
+      });
+      return { c, total, found, items };
+    });
+    const complete = totals.filter((t) => t.found === n);
+    const best = complete.length ? complete.reduce((a, b) => (b.total < a.total ? b : a)) : null;
+    totals.sort((a, b) => (b.found - a.found) || (a.total - b.total));
+    const cmp = totals.map((t) => `<details class="storecmp${t === best ? " best" : ""}">
+        <summary><span class="dot" style="background:${t.c.color}"></span>
+          <span><b>${esc(t.c.label)}</b>${t === best ? '<span class="best-lbl">Billigst</span>' : ""}<br>
+          <span class="small muted">${t.found === n ? `Alle ${n} varer` : `${t.found} af ${n} varer på tilbud`}</span></span>
+          <span class="tot">${t.found ? money(t.total) + " kr" : "–"}</span></summary>
+        <ul>${t.items.join("")}</ul></details>`).join("");
+
+    body.innerHTML = `${rows}
+      <p class="row2" style="display:flex;justify-content:space-between;margin:12px 0 0"><b>Som valgt (${n} varer)</b><b>${money(chosen)} kr</b></p>
+      <div class="basket-section"><h3>Hvad koster kurven i hver butik?</h3>${cmp}
+        <p class="note">Kun tilbud er med: findes en vare ikke på tilbud i en butik, kender vi ikke prisen dér. «Tilsvarende» er den billigste vare af samme slags (fx samme type kaffe), så tjek størrelsen. Tryk på en butik for at se varerne.</p>
+      </div>
+      <button class="btn" id="emptyBasket">Tøm kurven</button>`;
+  }
+
+  // ---- product details
+  function detailHtml(o) {
     const fav = !!state.favs[favKey(o.title)];
-    const upcoming = o.valid_from && Date.parse(o.valid_from) > Date.now();
-    const unit = o.unit_price ? `${money(o.unit_price.value)} kr/${o.unit_price.per === "l" ? "l" : "kg"}` : "";
-    const valid = upcoming ? `Fra ${day(o.valid_from)}` : o.valid_to ? `Til ${day(o.valid_to)}` : "";
+    const valid = isUpcoming(o) ? `Fra ${day(o.valid_from)}` : o.valid_to ? `Gælder til ${day(o.valid_to)}` : "";
+    const cats = memberOf(o).map((id) => {
+      const c = state.catById[id];
+      return c ? `<button class="chip small" data-pick-cat="${esc(id)}">${c.emoji ? esc(c.emoji) + " " : ""}${esc(c.label)}</button>` : "";
+    }).join("");
+    const tags = (o.tags || []).map((t) => `<button class="chip small" data-search="${esc(t)}">${esc(t)}</button>`).join("");
+    const item = { id: o.id, key: favKey(o.title), type: o.type || "" };
+    const similar = state.data.chains.filter((c) => c.label !== o.chain).map((c) => {
+      const m = matchIn(c.label, item);
+      return m ? `<button class="simrow" data-open="${esc(m.o.id)}"><span class="chip small store" style="${chainStyle(c.label)}" aria-pressed="true">${esc(c.label)}</span>
+        <span>${esc(m.o.title)}${m.how === "type" ? ' <span class="muted small">(tilsvarende)</span>' : ""}</span><span class="price">${money(m.o.price)} kr</span></button>` : "";
+    }).join("");
+    return `<div class="detail" style="${chainStyle(o.chain)}">
+      <div class="pic">${o.image ? `<img src="${esc(o.image)}" alt="">` : `<span class="ph" aria-hidden="true">${esc(o.title.charAt(0))}</span>`}</div>
+      <div>
+        <span class="store-tag">${esc(o.chain)}</span>
+        <h3>${esc(o.title)}</h3>
+        <div class="price-row" style="justify-content:flex-start;gap:16px">${priceTag(o.price)}
+          <div class="side" style="align-items:flex-start;text-align:left">
+            ${o.discount_pct ? `<span class="badge">−${o.discount_pct}%</span>` : ""}
+            ${o.was_price ? `<span class="was">${money(o.was_price)} kr</span>` : ""}
+            ${unitText(o) ? `<span class="unit">${unitText(o)}</span>` : ""}
+          </div></div>
+        ${o.description ? `<p class="desc-full">${esc(o.description)}</p>` : ""}
+        ${buyHtml(o.id)}
+        <button class="favbtn" data-fav="${esc(favKey(o.title))}" data-title="${esc(o.title)}" aria-pressed="${fav}">${fav ? "♥ Favorit" : "♡ Gem som favorit"}</button>
+        <dl class="facts">
+          ${valid ? `<dt>Gyldig</dt><dd>${valid}${o.kind === "clearance" ? ' · <span class="madspild">Madspild</span>' : ""}</dd>` : ""}
+          ${o.store ? `<dt>Butik</dt><dd>${esc(o.store)}</dd>` : ""}
+          <dt>Kategori</dt><dd>${cats}</dd>
+          ${o.type ? `<dt>Type</dt><dd>${esc(o.type)}</dd>` : ""}
+          ${tags ? `<dt>Søgeord</dt><dd>${tags}</dd>` : ""}
+          ${o.url ? `<dt>Avis</dt><dd><a href="${esc(o.url)}" target="_blank" rel="noopener">Se tilbuddet i avisen ↗</a></dd>` : ""}
+        </dl>
+      </div>
+    </div>
+    ${similar ? `<div class="similar"><h4>Samme slags i andre butikker</h4>${similar}</div>` : ""}`;
+  }
+  function openDetail(id) {
+    const o = state.byId.get(id);
+    if (!o) return;
+    state.detailId = id;
+    $("detailTitle").textContent = o.chain;
+    $("detailBody").innerHTML = detailHtml(o);
+    $("detail").scrollTop = 0;
+    openDialog($("detail"));
+  }
+
+  // ---- dialogs: the phone's back button closes the top one instead of leaving the page
+  const stack = [];
+  function openDialog(d) {
+    if (d.open) return;
+    d.showModal();
+    stack.push(d);
+    history.pushState({ dlg: d.id }, "");
+  }
+  function closeTop() { if (stack.length) history.back(); }
+  let silentPop = false;
+  window.addEventListener("popstate", () => {
+    if (silentPop) { silentPop = false; return; }
+    const d = stack.pop(); if (d && d.open) d.close();
+  });
+  document.querySelectorAll("dialog").forEach((d) => {
+    d.addEventListener("cancel", (e) => { e.preventDefault(); closeTop(); });          // Esc
+    d.addEventListener("click", (e) => { if (e.target === d) closeTop(); });          // click on the dark backdrop
+  });
+
+  // ---- rendering
+  function cardHtml(o) {
+    const fav = !!state.favs[favKey(o.title)];
+    const valid = isUpcoming(o) ? `Fra ${day(o.valid_from)}` : o.valid_to ? `Til ${day(o.valid_to)}` : "";
     const link = o.url ? `<a href="${esc(o.url)}" target="_blank" rel="noopener">Se i avis</a>` : "";
-    return `<article class="card" style="--c:${c.color};--cink:${inkFor(c.color)}" data-key="${esc(favKey(o.title))}">
+    return `<article class="card" style="${chainStyle(o.chain)}" data-id="${esc(o.id)}" data-key="${esc(favKey(o.title))}" tabindex="0">
       <div class="pic">
         <span class="ph" aria-hidden="true">${esc(o.title.charAt(0))}</span>
         ${o.image ? `<img src="${esc(o.image)}" alt="" loading="lazy" decoding="async">` : ""}
@@ -252,10 +532,11 @@
           <div class="side">
             ${o.discount_pct ? `<span class="badge">−${o.discount_pct}%</span>` : ""}
             ${o.was_price ? `<span class="was">${money(o.was_price)} kr</span>` : ""}
-            ${unit ? `<span class="unit">${unit}</span>` : ""}
+            ${unitText(o) ? `<span class="unit">${unitText(o)}</span>` : ""}
           </div>
         </div>
         <p class="valid"><span>${o.kind === "clearance" ? '<span class="madspild">Madspild</span> ' : ""}${valid}</span>${link}</p>
+        ${buyHtml(o.id)}
       </div>
     </article>`;
   }
@@ -264,10 +545,8 @@
   // mode always stay on screen (0 hits are dimmed), so nothing moves while you click around.
   function shownCats() {
     return state.data.categories.filter((c) => {
-      const g = c.group;
-      if (state.onlyJunk) return g === "junk";
-      if (state.consumables) return g !== "junk";
-      if (state.hideJunk) return g !== "junk";
+      if (state.onlyJunk) return c.group === "junk";
+      if (state.consumables || state.hideJunk) return c.group !== "junk";
       return true;
     });
   }
@@ -292,16 +571,19 @@
   }
 
   function render() {
-    const chains = Object.fromEntries(state.data.chains.map((c) => [c.label, c]));
     $("hideJunk").checked = state.hideJunk || state.consumables;
     $("hideJunk").disabled = state.consumables || state.onlyJunk;
     $("consumables").checked = state.consumables;
     $("consumables").disabled = state.onlyJunk;
     $("onlyJunk").checked = state.onlyJunk;
+    $("upcoming").checked = state.upcoming;
+    $("moreState").textContent = state.onlyJunk ? "· kun skrammel" :
+      [state.consumables ? "kun forbrugsvarer" : state.hideJunk ? "skjuler skrammel" : "alt vises", state.upcoming ? "med kommende" : ""].filter(Boolean).join(" · ");
     renderCats();
     const list = visible();
     $("count").textContent = list.length === 1 ? "1 tilbud" : `${list.length} tilbud`;
-    $("favCount").textContent = Object.keys(state.favs).length ? `(${Object.keys(state.favs).length})` : "";
+    $("clearAll").hidden = !(state.q || state.stores.size || state.cats.size || state.favOnly);
+    $("favCount").textContent = Object.keys(state.favs).length || "";
     $("favOnly").setAttribute("aria-pressed", state.favOnly);
     document.querySelectorAll("#stores .chip").forEach((b) => b.setAttribute("aria-pressed", state.stores.has(b.dataset.store)));
     if (!list.length) {
@@ -314,7 +596,7 @@
     // deal cards out to the columns left to right, so the best offers fill the top row
     const n = lastCols = colCount();
     const cols = Array.from({ length: n }, () => []);
-    list.forEach((o, i) => cols[i % n].push(cardHtml(o, chains)));
+    list.forEach((o, i) => cols[i % n].push(cardHtml(o)));
     $("grid").innerHTML = cols.map((c) => `<div class="col">${c.join("")}</div>`).join("");
   }
 
@@ -334,49 +616,96 @@
     const { chains, categories } = state.data;
     state.groups = Object.fromEntries(categories.map((c) => [c.id, c.group]));
     state.catWords = Object.fromEntries(categories.map((c) => [c.id, c.label]));
+    state.catById = Object.fromEntries(categories.map((c) => [c.id, c]));
+    state.chainInfo = Object.fromEntries(chains.map((c) => [c.label, c]));
+    state.byId = new Map(state.data.offers.map((o) => [o.id, o]));
+    buildIndex();
     $("stores").innerHTML = chains.map((c) =>
-      `<button class="chip store" style="--c:${c.color};--cink:${inkFor(c.color)}" data-store="${esc(c.label)}" aria-pressed="false"><span class="dot" style="background:${c.color}"></span>${esc(c.label)}</button>`).join("");
+      `<button class="chip store" style="${chainStyle(c.label)}" data-store="${esc(c.label)}" aria-pressed="false"><span class="dot" style="background:${c.color}"></span>${esc(c.label)}</button>`).join("");
+    $("basketCount").textContent = basketCount() || "";
   }
 
   function header() {
     const m = state.data.meta;
     const when = new Date(m.generated_at).toLocaleString("da-DK", { weekday: "long", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Copenhagen" });
-    $("sub").textContent = `Netto, Føtex og SuperBrugsen. Opdateret ${when}.`;
+    const names = state.data.chains.map((c) => c.label);
+    const list = names.length > 1 ? names.slice(0, -1).join(", ") + " og " + names[names.length - 1] : names.join("");
+    $("sub").textContent = `${list}. Opdateret ${when}.`;
     let html = "";
     if (m.sample) html += `<p class="notice">Det her er eksempeldata, ikke rigtige tilbud. Kør hentningen for at se de rigtige priser.</p>`;
     if (m.errors && m.errors.length) html += `<p class="notice warn">Nogle tilbud kunne ikke hentes ved sidste opdatering: ${esc(m.errors.join("; "))}</p>`;
     $("notices").innerHTML = html;
   }
 
+  function toggleFav(key, title) {
+    if (state.favs[key]) delete state.favs[key]; else state.favs[key] = title;
+    saveFavs();
+    const on = !!state.favs[key];
+    // update every card with this product without re-rendering the whole grid
+    document.querySelectorAll(".card").forEach((c) => {
+      if (c.dataset.key !== key) return;
+      const b = c.querySelector(".heart");
+      b.setAttribute("aria-pressed", on);
+      b.setAttribute("aria-label", `${on ? "Fjern fra favoritter" : "Gem som favorit"}: ${title}`);
+    });
+    document.querySelectorAll(`.favbtn[data-fav="${CSS.escape(key)}"]`).forEach((b) => {
+      b.setAttribute("aria-pressed", on); b.textContent = on ? "♥ Favorit" : "♡ Gem som favorit";
+    });
+    $("favCount").textContent = Object.keys(state.favs).length || "";
+    if (state.favOnly && !on) render();
+  }
+  function closeAllDialogs(then) {
+    const n = stack.length;
+    while (stack.length) { const d = stack.pop(); if (d.open) d.close(); }
+    if (n) { silentPop = true; history.go(-n); }
+    then();
+  }
+
   // ---- events
   document.addEventListener("click", (e) => {
     const t = e.target;
-    const heart = t.closest(".heart");
-    if (heart) {
-      const card = heart.closest(".card"), key = card.dataset.key;
-      const title = card.querySelector(".title").textContent;
-      if (state.favs[key]) delete state.favs[key]; else state.favs[key] = title;
-      saveFavs();
-      // update every card with this product without re-rendering the whole grid
-      document.querySelectorAll(".card").forEach((c) => {
-        if (c.dataset.key !== key) return;
-        const b = c.querySelector(".heart"), on = !!state.favs[key];
-        b.setAttribute("aria-pressed", on);
-        b.setAttribute("aria-label", `${on ? "Fjern fra favoritter" : "Gem som favorit"}: ${title}`);
-      });
-      $("favCount").textContent = Object.keys(state.favs).length ? `(${Object.keys(state.favs).length})` : "";
-      if (state.favOnly && !state.favs[key]) render();
+    if (t.closest("[data-close]")) return closeTop();
+    const buy = t.closest(".buy");
+    if (buy) {
+      const id = buy.dataset.id;
+      if (t.closest(".add") || t.closest(".inc")) setQty(id, basketQty(id) + 1);
+      else if (t.closest(".dec")) setQty(id, basketQty(id) - 1);
       return;
     }
-    const store = t.closest("[data-store]");
-    if (store) { const s = store.dataset.store; state.stores.has(s) ? state.stores.delete(s) : state.stores.add(s); return render(); }
+    const heart = t.closest(".heart");
+    if (heart) { const card = heart.closest(".card"); return toggleFav(card.dataset.key, card.querySelector(".title").textContent); }
+    const favb = t.closest(".favbtn");
+    if (favb) return toggleFav(favb.dataset.fav, favb.dataset.title);
+    const rm = t.closest("[data-rm]");
+    if (rm) return setQty(rm.dataset.rm, 0);
+    if (t.closest("#emptyBasket")) { state.basket = {}; store.set(BASKET_KEY, {}); document.querySelectorAll(".buy").forEach((el) => { el.innerHTML = buyInner(el.dataset.id); }); $("basketCount").textContent = ""; return renderBasket(); }
+    if (t.closest("#basketBtn")) { renderBasket(); return openDialog($("basket")); }
+    const open = t.closest("[data-open]");
+    if (open) {
+      const id = open.dataset.open;
+      if (!state.byId.has(id)) return;
+      if ($("detail").open) { state.detailId = id; $("detailBody").innerHTML = detailHtml(state.byId.get(id)); $("detailTitle").textContent = state.byId.get(id).chain; $("detail").scrollTop = 0; return; }
+      return openDetail(id);
+    }
+    const tagb = t.closest("[data-search]");
+    if (tagb) { const q = tagb.dataset.search; return closeAllDialogs(() => { state.q = q; $("q").value = q; render(); window.scrollTo({ top: 0 }); }); }
+    const pick = t.closest("[data-pick-cat]");
+    if (pick) { const c = pick.dataset.pickCat; return closeAllDialogs(() => { state.cats = new Set([c]); render(); window.scrollTo({ top: 0 }); }); }
+    if (t.closest("a")) return;                         // "Se i avis" links work as normal
+    const card = t.closest(".card");
+    if (card) return openDetail(card.dataset.id);
+    const st = t.closest("[data-store]");
+    if (st && st.closest("#stores")) { const s = st.dataset.store; state.stores.has(s) ? state.stores.delete(s) : state.stores.add(s); return render(); }
     const cat = t.closest("[data-cat]");
     if (cat) { const c = cat.dataset.cat; state.cats.has(c) ? state.cats.delete(c) : state.cats.add(c); return render(); }
     if (t.closest("#favOnly")) { state.favOnly = !state.favOnly; return render(); }
-    if (t.closest("#reset")) {
+    if (t.closest("#reset") || t.closest("#clearAll")) {
       Object.assign(state, { q: "", stores: new Set(), cats: new Set(), favOnly: false });
       $("q").value = ""; return render();
     }
+  });
+  document.addEventListener("keydown", (e) => {
+    if ((e.key === "Enter" || e.key === " ") && e.target.classList && e.target.classList.contains("card")) { e.preventDefault(); openDetail(e.target.dataset.id); }
   });
   $("q").addEventListener("input", (e) => { state.q = e.target.value; render(); });
   $("sort").addEventListener("change", (e) => { state.sort = e.target.value; render(); });
@@ -384,17 +713,20 @@
   $("hideJunk").addEventListener("change", (e) => { state.hideJunk = e.target.checked; savePrefs(); render(); });
   $("consumables").addEventListener("change", (e) => { state.consumables = e.target.checked; savePrefs(); render(); });
   $("onlyJunk").addEventListener("change", (e) => { state.onlyJunk = e.target.checked; render(); });
-  // image load errors do not bubble, so listen in the capture phase
-  document.addEventListener("error", (e) => { if (e.target.tagName === "IMG") e.target.remove(); }, true);
+  // a broken picture is hidden; its box keeps its size, so nothing moves
+  document.addEventListener("error", (e) => { if (e.target.tagName === "IMG") e.target.style.visibility = "hidden"; }, true);
 
   // ---- start
-  state.favs = loadFavs();
-  const prefs = loadPrefs();
+  state.favs = store.get(FAV_KEY, {});
+  state.basket = store.get(BASKET_KEY, {});
+  const prefs = store.get(PREF_KEY, {});
   state.hideJunk = prefs.hideJunk !== false;   // on by default
   state.consumables = prefs.consumables === true;
-  fetch("data/offers.json", { cache: "no-cache" })
-    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then((data) => { state.data = data; header(); buildControls(); render(); })
+  // Wait (briefly) for the web font before the first layout: text that changes font after the cards are
+  // placed changes their height and pushes the cards below it around.
+  const fontsReady = Promise.race([document.fonts ? document.fonts.ready : Promise.resolve(), new Promise((r) => setTimeout(r, 1200))]);
+  Promise.all([fetch("data/offers.json", { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }), fontsReady])
+    .then(([data]) => { state.data = data; header(); buildControls(); render(); })
     .catch(() => {
       $("sub").textContent = "Tilbuddene kunne ikke indlæses.";
       $("grid").innerHTML = `<div class="empty"><h2>Der er ingen data endnu</h2><p>Siden henter tilbud fra data/offers.json. Kør hentningen, eller vent på næste automatiske opdatering.</p></div>`;

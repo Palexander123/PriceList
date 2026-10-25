@@ -29,7 +29,16 @@ import fetch_offers as fo
 from categories import EXTRA_FALLBACK, EXTRA_IDS, category_list, classify, extras_from_type, refine
 
 ROOT = Path(__file__).resolve().parent
-PART_SIZE = 600
+PART_SIZE = 300          # products per prompt ...
+PART_SIZE_ALT = 320      # ... but 320 when 300 would leave a last prompt with fewer than MIN_LAST_PART products
+MIN_LAST_PART = 50
+
+
+def part_size(n, size=PART_SIZE):
+    """Products per prompt for n products. Only the default size is adjusted."""
+    if size == PART_SIZE and 0 < n % PART_SIZE < MIN_LAST_PART:
+        return PART_SIZE_ALT
+    return size
 
 # What each category means, in the prompt that goes to the AI.
 DESC = {
@@ -42,10 +51,11 @@ DESC = {
     "drikke": "other drinks: soda, juice, beer, spirits, coffee, tea, mulled wine, plant drinks (NOT wine)",
     "snacks": "snacks, sweets and chocolate",
     "kolonial": "pantry: pasta, rice, sauces, canned goods, oil, spices, cereal",
-    "husholdning": "household and personal care that gets used up (toilet paper, soap, shampoo, detergent, pet food)",
+    "husholdning": "household and personal care that gets USED UP (toilet paper, soap, shampoo, detergent, bin bags, candles, pet food). Durable things are never husholdning",
     "menu": "ready-made party menus and buffets", "legetoej": "toys and games",
-    "elektronik": "electronics and appliances", "boligting": "clothing, home, garden and tools",
-    "andet": "only if you truly cannot tell",
+    "elektronik": "electronics and appliances: phones, headphones, TVs, computers, games consoles, ovens, induction hobs, cooker hoods, fridges, vacuum cleaners, coffee machines, lamps",
+    "boligting": "every other thing that is not used up: furniture and beds, home and Christmas decorations (pynt), kitchen utensils, pots, pans and knives, plants, flowers and Christmas trees (e.g. sukkertopgran), clothing and shoes, garden, tools, gift cards and donation cards",
+    "andet": "only if you truly cannot tell (never for things that are not food: use legetoej, elektronik or boligting)",
 }
 # Other ways a chat might write a category.
 # Words in the tag columns that mean "also a ready meal" / "also a cold cut".
@@ -119,6 +129,8 @@ The row has as many tag columns as needed (2 to 6); rows may have different leng
 category must be exactly one of these ids:
 {legend}
 
+Rule of thumb: anything that is not food, drink or a household/personal-care product that gets used up belongs in legetoej, elektronik, boligting or menu, even when a supermarket sells it.
+
 type = the generic product a shopper would search for, in lowercase Danish, singular, at most 3 words (examples: pasta, pesto, rødvin, hakket oksekød, toiletpapir, lego). Use the same word for the same kind of product, so that spaghetti and penne both get "pasta".
 
 Some products have a hint after " :: " (the small print of the offer, for example whether it is frozen or fresh). Use it, but never repeat it in the reply.
@@ -168,6 +180,7 @@ def write_prompts(root, offers, overrides, cats, size=PART_SIZE, include_all=Fal
     p["prompts"].write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
     files = []
     vocab = load_vocab(root)
+    size = part_size(len(keys), size)
     for start in range(0, len(keys), size):
         chunk = [(i + 1, titles[keys[i]], hints[keys[i]]) for i in range(start, min(start + size, len(keys)))]
         f = p["dir"] / f"prompt_{start // size + 1}.txt"
@@ -405,7 +418,7 @@ def main(argv=None):
     pp = sub.add_parser("prompt", help="write prompt files for products without a label")
     pp.add_argument("--all", action="store_true", help="include products that already have a label")
     pp.add_argument("--only", default="", help="only products now in these categories, e.g. --only frost,koed")
-    pp.add_argument("--size", type=int, default=PART_SIZE, help="products per prompt file (default 600)")
+    pp.add_argument("--size", type=int, default=PART_SIZE, help="products per prompt file (default 300, or 320 if that avoids a last file under 50)")
     pa = sub.add_parser("apply", help="read the AI's answer and save the labels")
     pa.add_argument("--paste", action="store_true", help="paste the answer into the terminal")
     args = ap.parse_args(argv)

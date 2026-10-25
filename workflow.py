@@ -74,7 +74,7 @@ def status(root=ROOT):
             "unlabeled": len(titles) - labeled}
 
 
-def make_prompts(include_all=False, size=600, root=ROOT, only=None):
+def make_prompts(include_all=False, size=300, root=ROOT, only=None):
     """Write labeling/prompt_N.txt. Returns the list of prompt TEXTS (empty if nothing to label)."""
     root = Path(root)
     path = _offers_path(root)
