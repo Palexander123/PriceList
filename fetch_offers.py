@@ -60,8 +60,12 @@ def get_json(url: str, headers=None, retries: int = 3, pause: float = 1.5):
             with urllib.request.urlopen(req, timeout=30) as resp:
                 return json.loads(resp.read().decode("utf-8"))
         except urllib.error.HTTPError as e:
-            last_error = f"HTTP {e.code} for {url.split('?')[0]}"
-            if e.code in (401, 403, 404):  # retrying will not help
+            try:
+                detail = " ".join(e.read().decode("utf-8", "replace").split())[:200]
+            except Exception:
+                detail = ""
+            last_error = f"HTTP {e.code} for {url.split('?')[0]}" + (f" ({detail})" if detail else "")
+            if e.code in (400, 401, 403, 404):  # retrying the same request will not help
                 break
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
             last_error = f"{type(e).__name__}: {e}"
@@ -186,36 +190,65 @@ def normalize_tjek(o: dict, chain: str):
     return item
 
 
+def _tjek_chain(chain, dealer_id, loc, pause, sizes):
+    """All offers of one chain near the location. On HTTP 400 it retries with smaller pages,
+    because the API limits how many offers one request may ask for. Returns a list of raw offers."""
+    last = None
+    for size in list(sizes):
+        raw_all = []
+        try:
+            for page in range(MAX_PAGES):
+                url = f"{TJEK_BASE}/offers?" + urllib.parse.urlencode({
+                    "dealer_ids": dealer_id,
+                    "r_lat": loc["lat"], "r_lng": loc["lng"], "r_radius": loc["radius_m"],
+                    "limit": size, "offset": page * size,
+                })
+                batch = get_json(url)
+                if not isinstance(batch, list):
+                    raise RuntimeError("unexpected data")
+                raw_all += batch
+                if len(batch) < size:
+                    break
+                time.sleep(pause)
+            while sizes[0] != size:      # remember the size that works for the next chains
+                sizes.pop(0)
+            return raw_all
+        except RuntimeError as e:
+            last = e
+            if "HTTP 400" not in str(e):
+                break
+    raise RuntimeError(str(last))
+
+
 def fetch_tjek(cfg: dict):
+    """Each chain is fetched on its own: one failing chain (a wrong dealer id, say) never
+    stops the others. Raises only when every chain failed."""
     pause = cfg.get("request_pause_seconds", 0.6)
     loc = cfg["location"]
     ids = resolve_dealer_ids(cfg["chains"], pause)
-    offers, notes = [], []
+    offers, notes, failed = [], [], []
+    sizes = [PAGE_SIZE, 50, 24]
     for chain in cfg["chains"]:
         dealer_id = ids.get(chain)
         if not dealer_id:
             notes.append(f"Tjek: could not find a dealer id for {chain}")
             continue
+        try:
+            raw = _tjek_chain(chain, dealer_id, loc, pause, sizes)
+        except RuntimeError as e:
+            failed.append(f"{chain} (dealer id {dealer_id}): {e}")
+            notes.append(f"Tjek: FAILED for {chain} (dealer id {dealer_id}): {e}")
+            continue
         count = 0
-        for page in range(MAX_PAGES):
-            url = f"{TJEK_BASE}/offers?" + urllib.parse.urlencode({
-                "dealer_ids": dealer_id,
-                "r_lat": loc["lat"], "r_lng": loc["lng"], "r_radius": loc["radius_m"],
-                "limit": PAGE_SIZE, "offset": page * PAGE_SIZE,
-            })
-            batch = get_json(url)
-            if not isinstance(batch, list):
-                raise RuntimeError(f"Tjek returned unexpected data for {chain}")
-            for raw in batch:
-                item = normalize_tjek(raw, chain)
-                if item:
-                    offers.append(item)
-                    count += 1
-            if len(batch) < PAGE_SIZE:
-                break
-            time.sleep(pause)
+        for r in raw:
+            item = normalize_tjek(r, chain)
+            if item:
+                offers.append(item)
+                count += 1
         notes.append(f"Tjek: {count} offers for {chain}")
         time.sleep(pause)
+    if failed and not offers:
+        raise RuntimeError("; ".join(failed))
     return offers, notes
 
 
@@ -449,7 +482,8 @@ def main(argv=None) -> int:
         try:
             got, n = fetch_tjek(cfg)
             offers += got
-            notes += n
+            notes += [x for x in n if "FAILED" not in x]
+            errors += [x.replace("Tjek: FAILED for", "Tjek failed for") for x in n if "FAILED" in x]
         except RuntimeError as e:
             errors.append(f"Tjek failed: {e}")
         key = os.environ.get("SALLING_API_KEY", "").strip()

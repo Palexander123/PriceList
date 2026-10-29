@@ -222,5 +222,36 @@ class Overrides(unittest.TestCase):
         self.assertEqual(offers[2]["category"], "andet")
 
 
+
+class TjekFetching(unittest.TestCase):
+    def test_one_bad_chain_does_not_stop_the_others_and_page_size_adapts(self):
+        calls = []
+
+        def fake(url, headers=None, retries=3, pause=1.5):
+            calls.append(url)
+            q = dict(p.split("=") for p in url.split("?")[1].split("&"))
+            if q["dealer_ids"] == "BAD":
+                raise RuntimeError("HTTP 400 for x (unknown dealer)")
+            if int(q["limit"]) > 50:
+                raise RuntimeError("HTTP 400 for x (limit too high)")
+            off = int(q["offset"])
+            return [{"id": f"{q['dealer_ids']}{i}", "heading": f"Vare {i}", "pricing": {"price": 10}}
+                    for i in range(off, min(off + int(q["limit"]), 120))]
+
+        old_get, old_sleep = fo.get_json, fo.time.sleep
+        fo.get_json, fo.time.sleep = fake, (lambda s: None)
+        try:
+            cfg = {"location": {"lat": 1, "lng": 2, "radius_m": 3},
+                   "chains": {"A": {"dealer_id": "AA"}, "B": {"dealer_id": "BAD"}, "C": {"dealer_id": "CC"}}}
+            offers, notes = fo.fetch_tjek(cfg)
+            self.assertEqual(len(offers), 240)
+            self.assertTrue(any("FAILED for B" in n for n in notes))
+            cfg["chains"] = {"B": {"dealer_id": "BAD"}}
+            with self.assertRaises(RuntimeError):
+                fo.fetch_tjek(cfg)
+        finally:
+            fo.get_json, fo.time.sleep = old_get, old_sleep
+
+
 if __name__ == "__main__":
     unittest.main()

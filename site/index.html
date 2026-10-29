@@ -95,10 +95,8 @@
   .linkbtn[hidden] { display: none; }
   .count { margin: 0; color: var(--muted); }
 
-  /* Independent columns: each card is assigned to a column once (in sort order, left
-     to right), so every card keeps its natural height with no gaps under short ones.
-     Images loading later only push cards down within their own column; cards never
-     jump between columns. */
+  /* Independent columns: every card is measured once and placed in the shortest column, so the
+     columns end at nearly the same height and no card ever moves after it has been placed. */
   html { scrollbar-gutter: stable; }   /* the page width never changes when a scrollbar appears, so the column count stays put */
   .grid { display: flex; align-items: flex-start; gap: 14px; padding: 0 0 56px; }
   .col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
@@ -593,11 +591,30 @@
         <button class="btn" id="reset">Nulstil filtre</button></div>`;
       return;
     }
-    // deal cards out to the columns left to right, so the best offers fill the top row
+    // Measure every card once (pictures have a fixed size, so the height is known before they load),
+    // then put each card in the column that is currently shortest. The columns end at nearly the same
+    // height, and the best offers still fill the top rows.
+    const grid = $("grid");
     const n = lastCols = colCount();
-    const cols = Array.from({ length: n }, () => []);
-    list.forEach((o, i) => cols[i % n].push(cardHtml(o)));
-    $("grid").innerHTML = cols.map((c) => `<div class="col">${c.join("")}</div>`).join("");
+    lastWidth = grid.clientWidth;
+    const gap = parseFloat(getComputedStyle(grid).columnGap) || 14;
+    const width = (grid.clientWidth - gap * (n - 1)) / n;
+    const html = list.map(cardHtml);
+    const probe = document.createElement("div");
+    probe.className = "col";
+    probe.style.cssText = `position:absolute;visibility:hidden;left:-10000px;top:0;width:${width}px`;
+    probe.innerHTML = html.join("");
+    grid.appendChild(probe);
+    const heights = Array.from(probe.children, (el) => el.offsetHeight);
+    probe.remove();
+    const cols = Array.from({ length: n }, () => ({ h: 0, items: [] }));
+    html.forEach((card, i) => {
+      let best = 0;
+      for (let c = 1; c < n; c++) if (cols[c].h < cols[best].h - 1) best = c;   // leftmost on a tie
+      cols[best].items.push(card);
+      cols[best].h += heights[i] + gap;
+    });
+    grid.innerHTML = cols.map((c) => `<div class="col">${c.items.join("")}</div>`).join("");
   }
 
   const colCount = () => {
@@ -605,11 +622,11 @@
     const width = $("grid").clientWidth || window.innerWidth - 32;
     return Math.max(2, Math.floor((width + gap) / (min + gap)));
   };
-  let lastCols = 0;
+  let lastCols = 0, lastWidth = 0;
   let resizeTimer = 0;   // wait until resizing/zooming has settled before dealing the cards out again
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => { if (state.data && colCount() !== lastCols) render(); }, 200);
+    resizeTimer = setTimeout(() => { if (state.data && (colCount() !== lastCols || Math.abs($("grid").clientWidth - lastWidth) > 2)) render(); }, 200);
   });
 
   function buildControls() {
@@ -707,7 +724,8 @@
   document.addEventListener("keydown", (e) => {
     if ((e.key === "Enter" || e.key === " ") && e.target.classList && e.target.classList.contains("card")) { e.preventDefault(); openDetail(e.target.dataset.id); }
   });
-  $("q").addEventListener("input", (e) => { state.q = e.target.value; render(); });
+  let typing = 0;   // wait for a short pause in typing, so the grid is not rebuilt on every key
+  $("q").addEventListener("input", (e) => { clearTimeout(typing); typing = setTimeout(() => { state.q = e.target.value; render(); }, 180); });
   $("sort").addEventListener("change", (e) => { state.sort = e.target.value; render(); });
   $("upcoming").addEventListener("change", (e) => { state.upcoming = e.target.checked; render(); });
   $("hideJunk").addEventListener("change", (e) => { state.hideJunk = e.target.checked; savePrefs(); render(); });
